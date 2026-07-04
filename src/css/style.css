@@ -1,0 +1,468 @@
+/* ================== DESIGN SYSTEM TOKENS v1.1 Laxura E-commerce ======================================== */
+@font-face{
+   font-family: "Estedad";
+   src: url("../assets/fonts/Estedad-VariableFont_wght.woff2") format('truetype');
+   font-weight: 900;
+   font-style: black;
+   font-display: swap;
+}
+@font-face{
+   font-family: "IranYekan-black";
+   src: url("../assets/fonts/Qs_Iranyekan\ black.woff2") format('truetype');
+   font-weight: 900;
+   font-style: black;
+   font-display: swap;
+}
+@font-face{
+   font-family: "IranYekan-thin";
+   src: url("../assets/fonts/Qs_Iranyekan\ thin.woff2") format('truetype');
+   font-weight: 400;
+   font-style: thin;
+   font-display: swap;
+}
+@font-face{
+   font-family: "IranYekan";
+   src: url("../assets/fonts/Qs_Iranyekan.woff2") format('truetype');
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+}
+@font-face{
+   font-family: "Playfair Display";
+   src: url("../assets/fonts/PlayfairDisplay-VariableFont_wght.woff2") format('truetype');
+   /* font-weight: 900;
+   font-style: black; */
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+}
+@font-face{
+   font-family: "Montsrrate";
+   src: url("../assets/fonts/Montserrat-VariableFont_wght.woff2") format('truetype');
+   font-weight: 700;
+   font-style: bold;
+   font-display: swap;
+}
+@font-face{
+   font-family: "Inter";
+   src: url("../assets/fonts/Inter-VariableFont_opsz\,wght.woff2") format('truetype');
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+}
+:root {
+    /* ================== COLORS ================== */
+    --color-mauve-pale: #F6F0F4; 
+    --color-mauve-pink: #C9A3B9; 
+    --color-mauve-dusty: #A77A95; 
+    --color-mauve-deep: #6F4E63;
+    --color-background: #FCFAFB; 
+    --color-surface: #FFFFFF;
+    --color-primary: var(--color-mauve-deep);
+    --color-secondary: var(--color-mauve-dusty); 
+    --color-accent: var(--color-mauve-pink); 
+    --color-surface: var(--color-mauve-pale);  
+    /* --color-primary-hover: var(--color-mauve-dusty); 
+    --color-primary-soft: var(--color-mauve-pale); */
+    --color-white: #FFFFFF;
+    --color-neutral-50: #FAF8F9; 
+    --color-neutral-100: #F4F1F3; 
+    --color-neutral-200: #ECE7EA; 
+    --color-neutral-300: #D9D1D6; 
+    --color-neutral-400: #B7AFB4; 
+    --color-neutral-500: #8C858A; 
+    --color-neutral-600: #6B656A; 
+    --color-neutral-700: #4A4549; 
+    --color-neutral-800: #312D31; 
+    --color-neutral-900: #1E1C1E;
+    --color-text-primary: #2D2430; 
+    --color-text-secondary: #5F5663; 
+    --color-text-muted: #8A838E;
+    --color-border: #E7DFE4;
+    --color-success: #4F8A6F; 
+    --color-warning: #D4A24C; 
+    --color-error: #C75B5B; 
+    --color-info: #6D8BC3;
+
+    /* ================== TYPOGRAPHY ================== */
+    --font-display-fa: "Estedad", serif; 
+    --font-heading-fa: "IranYekan-thin", sans-serif; 
+    --font-body-fa: "IranYekan", sans-serif;
+    --font-thin-fa: "IranYekan-thin", sans-serif; 
+    --font-display-en: "Playfair Display", serif; 
+    --font-heading-en: "Montsrrate", sans-serif; 
+    --font-body-en: "Inter", sans-serif;
+    /* ============== FONT SIZES  ============== */
+    --fs-display: 56px;
+    --fs-h1: 48px; 
+    --fs-h2: 36px; 
+    --fs-h3: 28px; 
+    --fs-h4: 24px;
+    --fs-body-lg: 18px; 
+    --fs-body: 16px; 
+    --fs-body-sm: 14px;
+    --fs-caption: 12px;
+    --fw-regular: 400; 
+    --fw-medium: 500; 
+    --fw-semibold: 600; 
+    --fw-bold: 700;
+    --lh-heading: 1.2; 
+    --lh-body: 1.6;
+    /* letter spacing for display font */
+    --playfiar-letter-space: 2px;
+    /* ================== SPACING ================== */
+    --space-1: 4px; 
+    --space-2: 8px; 
+    --space-3: 12px; 
+    --space-4: 16px; 
+    --space-5: 24px; 
+    --space-6: 32px; 
+    --space-7: 40px; 
+    --space-8: 48px; 
+    --space-9: 64px; 
+    --space-10: 80px; 
+    --space-11: 96px; 
+    --space-12: 120px;
+    /* CONTAINER */
+      --container-max-width: 1440px;
+    /* COMPONENT */
+    --thumbnail-width: 80px;
+    --thumbnail-height: 100px;
+    --product-media-ratio: 4/5;
+    /* SECTIONS */
+    --section-spacing: 64px;
+    /* ================= BORDER RADIUS ================== */
+    --radius-sm: 8px; 
+    --radius-md: 12px; 
+    --radius-lg: 16px; 
+    --radius-xl: 24px;
+    /* ================== BORDER WIDTH ================== */
+    --border-thin: 1px; 
+    --border-medium: 2px;
+    /* ================== SHADOWS ================== */
+    --shadow-sm: 0 2px 8px rgba(0,0,0,.06);
+    --shadow-md: 0 8px 20px rgba(0,0,0,.08);
+    --shadow-lg: 0 16px 40px rgba(0,0,0,.10);
+    /* ================== TRANSITIONS ================== */
+    --transition-fast: 150ms ease;
+    --transition-normal: 250ms ease;
+    --transition-slow: 350ms ease;
+    /* ================== BREAKPOINTS ================== */
+    --bp-mobile: 480px; 
+    --bp-tablet: 768px; 
+    --bp-laptop: 1024px; 
+    --bp-desktop: 1280px; 
+    --bp-wide: 1440px;
+    /* ================== CONTAINERS ================== */
+    --container-tablet: 720px; 
+    --container-laptop: 1140px; 
+    --container-desktop: 1320px;
+    --container-padding-mobile: 16px; 
+    --container-padding-desktop: 24px;
+    /* ================== HEADER ================== */
+    --header-height-mobile: 72px; 
+    --header-height-desktop: 88px;
+    /* ================== ACCESSIBILITY ================== */
+    --focus-ring: 0 0 0 3px rgba(167,122,149,.25);
+    /* ================== IMAGE RATIOS ================== */
+    --ratio-product-card: 4 / 5;
+    --ratio-category-card: 1 / 1;
+    --ratio-banner: 16 / 9;
+    /* ================== ICONS ================== */
+    --icon-sm: 16px; 
+    --icon-md: 20px; 
+    --icon-lg: 24px; 
+    --icon-xl: 32px;
+    /* ================== FORM VALIDATION ================== */
+    --input-success-color: var(--color-success);
+    --input-error-color: var(--color-error);
+    /* ================== GRID ================== */
+    --grid-columns-desktop: 4;
+    --grid-columns-tablet: 3;
+    --grid-columns-mobile: 2;
+    /* ================== Z-INDEX ================== */
+    --z-base: 1;
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-overlay: 400;
+    --z-modal: 500;
+    --z-toast: 600;
+    --z-tooltip: 1000;
+
+
+
+/* ================== COMPONENT RULES v1.0 Fashion & Beauty E-commerce ================== */
+/* ==================   BUTTON   ================== */
+/*
+Variants:
+- Primary
+- Secondary
+- Outline
+- WhatsApp
+*/
+--button-height: 48px;
+--button-padding-inline: var(--space-5);
+--button-gap: var(--space-2);
+--button-radius: var(--radius-md);
+--button-font-size: var(--fs-body);
+--button-font-weight: var(--fw-semibold);
+--button-transition: var(--transition-normal);
+--button-shadow: none;
+--button-hover-shadow: var(--shadow-sm);
+/* ======  INPU   ================== */
+--input-height: 48px;
+--input-padding-inline: var(--space-4);
+--input-radius: var(--radius-md);
+--input-font-size: var(--fs-body);
+--input-border-width: var(--border-thin);
+--input-background: var(--color-surface);
+/* =================   HEADE   ================== */
+--header-background: var(--color-surface)
+--header-border-width: var(--border-thin);
+--header-shadow: none;
+--header-z-index: var(--z-sticky);
+/* ==================   NAVIGATION   ================== */
+--nav-item-gap: var(--space-5);
+--nav-font-size: var(--fs-body);
+--nav-font-weight: var(--fw-medium);
+/* ================   DROPDOWN ME   ================== */
+--dropdown-width: 280p
+--dropdown-padding: va(--space-4);
+--dropdown-gap: var(--space-3);
+--dropdown-radius: var(--radius-lg);
+--dropdown-shadow: var(--shadow-md);
+--dropdown-z-index: var(--z-dropdown);
+/* =================   LANGUAGE SWITCHE   ================== */
+--language-switcher-height: 40px;
+--language-switcher-radius: var(--radius-md);
+/* ==================   HERO BANNER   ================== */
+--hero-radius: var(--radius-xl);
+--hero-padding-inline: var(--space-8);
+--hero-padding-block: var(--space-12);
+--hero-content-max-width: 600px;
+/* ==================   CTA SECTION   ================== */
+--cta-radius: var(--radius-xl);
+--cta-padding: var(--space-8);
+
+/* ==================   PRODUCT GALLERY PDP   ================== */
+--gallery-gap: var(--space-3);
+--gallery-radius: var(--radius-xl);
+--gallery-thumbnail-radius: var(--radius-md);
+/* =================   PRODUCT INFO   PDP  ================== */
+--product-info-gap: var(--space-5);
+--product-info-max-width: 520px;
+/* =============  SIZE SELEC  ================== */
+--size-option-width: 44
+--size-option-height: 4px;
+--size-option-radius: var(--radius-md);
+--size-option-gap: var(--space-2);
+/* =================  QUANTITY SELECTO  ================== */
+--quantity-height: 48px
+--quantity-radius: var(--radius-md);
+--quantity-button-width: 48px;/* ==================   CART ITEM ================== */--cart-item-padding: var(--space-4);
+--cart-item-gap: var(--space-4);
+--cart-item-radius: var(--radius-lg);
+--cart-item-shadow: var(--shadow-sm);
+/* ==================   CART SUMMARY   ================== */
+--cart-summary-padding: var(--space-5);
+--cart-summary-radius: var(--radius-xl);
+--cart-summary-shadow: var(--shadow-md);
+/* ========WHATSAPP ORDER BUTTON================== */
+--whatsapp-tton-height: 56px;
+--whatsapp-button-radius: var(--radius-lg);
+--whatsapp-button-font-weight: var(--fw-semibold);
+/* ==================  MODAL  ================== */
+--modal-max-width: 520px;
+--modal-padding: var(--space-6);
+--modal-radius: var(--radius-xl);
+--modal-shadow: var(--shadow-lg);
+--modal-z-index: var(--z-modal);
+/* ==================  ALERT  ================== */
+--alert-padding: var(--space-4);
+--alert-radius: var(--radius-md);
+/* ==================  PAGINATION ================== */
+--pagination-item-size: 44px;
+--pagination-gap: var(--space-2);
+--pagination-radius: var(--radius-md);
+/* ==================  FILTER PANEL  PLP  ================== */
+--filter-panel-width: 280px;
+--filter-panel-gap: var(--space-4);
+--filter-panel-padding: var(--space-5);
+/* ==================  SECTION  ================== */
+--section-spacing-mobile: var(--space-8);
+--section-spacing-desktop: var(--space-12);
+/* =================   CONTAINE   ================== */
+--container-max-width: var(--container-destop)
+/* ==================   FOOTER   ================== */
+--footer-padding-top: var(--space-10);
+--footer-padding-bottom: var(--space-8);
+--footer-gap: var(--space-6);
+  /* UTILITIES */
+  --swatch-size: 20px;
+  --pill-radius: 999px;
+  --spec-table-label-width: 30%;
+  --transition-normal: 250ms;
+/* skeleton tokens*/
+  --skeleton-base: var(--color-border);
+  --skeleton-highlight: var(--color-mauve-pale);
+  --button-height: 44px;
+  --skeleton-label-width: 120px;
+  --skeleton-price-width: 140px;
+  --skeleton-spec-height: 48px;
+}
+
+/* ==================
+   RESET
+================== */
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+a:focus,
+button:focus {
+  outline: none;
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-mauve-dusty);
+  outline-offset: 4px;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  padding:24px;
+  background:var(--color-background);
+}
+a{
+  text-decoration:none;
+}
+.container{
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+p, .number, table{
+   font-family: var(--font-body-en);
+}
+ /* ==================BUTTON BASE=============== */    
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:var(--space-2);
+    height:var(--button-height);
+    padding:0 var(--space-5);
+    border:none;
+    border-radius:var(--radius-md);
+    cursor:pointer;
+    text-decoration:none;
+    font-weight:600;
+    transition:var(--transition-normal);
+    font-family: var(--font-body-en);
+}
+  /* ==================  PRIMARY BUTTON================= */
+.btn-primary{
+    background:var(--color-mauve-dusty);
+    color:var(--color-white);
+    font-family: var(--font-heading-en);
+}
+  .btn-primary:hover{
+    background:var(--color-mauve-deep);
+}
+/* ==================  SECONDARY BUTTON================= */
+.btn-secondary{
+  background:transparent;
+  color:var(--color-mauve-deep);
+  border:1px solid var(--color-mauve-deep);
+}
+.btn-secondary:hover{
+  background:var(--color-mauve-pale);
+}
+/* ==================   GHOST BUTTON================== */
+.btn-ghost{
+  background:transparent;
+  color:var(--color-mauve-deep);
+  font-family: var(--font-body-en);
+}
+.btn-ghost:hover{
+  text-decoration:underline;
+}
+/* ==================  ICON BUTTON================= */
+.btn-icon{
+  width:var(--button-height);
+  height:var(--button-height);
+  padding:0;
+  border:none;
+  border-radius:50%;
+  background:var(--color-mauve-dusty);
+  color:white;
+  cursor:pointer;
+  transition:var(--transition-normal);
+}
+.btn-icon:hover{
+  background:var(--color-mauve-deep);
+}
+/* search box   */
+.search-box {
+   display: flex;
+   align-items: center;
+   gap: var(--space-3);
+   width: 100%;
+   height: 52px;
+   padding-inline: 16px;
+   background: var(--color-surface);
+   border: 1px solid var(--color-border);
+   border-radius: var(--radius-md);
+   margin-bottom: var(--space-6);
+   transition: var(--transition-normal); 
+ }
+ .search-box:focus-within {
+   border-color: var(--color-mauve-dusty);
+   box-shadow: 0 0 0 3px rgba(180, 155, 170, .15); 
+ }
+ .search-box__icon {
+   width: 20px;
+   height: 20px;
+   flex-shrink: 0;
+   color: var(--color-text-muted); 
+ }
+ .search-box__input {
+   flex: 1;
+   border: none;
+   outline: none;
+   background: transparent;
+   color: var(--color-text-primary);  
+   font-size: var(--font-size-md);
+ }  
+ .search-box__input::placeholder {
+   color: var(--color-text-muted); 
+ }
+ /* breadCrumb */
+ .breadcrumb{
+   display:flex;
+   flex-wrap:wrap;
+   gap:var(--space-2);
+   font-family: var(--font-body-en);
+   font-size:var(--font-size-sm);
+   color:var(--color-text-muted);
+   margin-bottom: var( --space-1);
+ }
+ .breadcrumb a{
+   color:inherit;
+ }
+ .cart-overlay{
+   position:fixed;
+   inset:0;
+   background:rgba(0,0,0,.35);
+   backdrop-filter:blur(2px);
+   z-index:9998; 
+}
+    /* Breakpoints
+    480px  Mobile
+    768px  Tablet
+    1024px Laptop
+    1280px Desktop
+    1440px Wide 
+ */    

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404</title>
+  <link rel="stylesheet" href="./src/css/style.css">
+  <style type="text/css" media="all">
+  
+  /* ========================================
+   404 PAGE
+======================================== */
+
+.error-404{
+
+  min-height:70vh;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+  padding:
+    var(--space-8)
+    var(--space-5);
+
+}
+
+/* ========================================
+   CODE
+======================================== */
+
+.error-404__code{
+
+  font-size:120px;
+
+  font-weight:800;
+
+  line-height:1;
+
+  color:var(--color-mauve-pink);
+
+  margin-bottom:var(--space-4);
+
+}
+
+/* ========================================
+   TITLE
+======================================== */
+
+.error-404__title{
+
+  margin-bottom:var(--space-3);
+
+  color:var(--color-text-primary);
+
+}
+.error-404__code, .error-404__title{
+    font-family: var(--font-heading-en);
+}
+/* ========================================
+   TEXT
+======================================== */
+
+.error-404__text{
+
+  max-width:520px;
+
+  color:var(--color-text-secondary);
+
+  line-height:1.8;
+
+  margin-bottom:var(--space-6);
+
+}
+
+/* ========================================
+   ACTIONS
+======================================== */
+
+.error-404__actions{
+
+  display:flex;
+
+  gap:var(--space-3);
+
+  flex-wrap:wrap;
+
+  justify-content:center;
+
+}
+
+/* ========================================
+   BUTTON OVERRIDES
+======================================== */
+
+.error-404 .btn{
+
+  width:auto;
+
+  min-width:180px;
+
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media(max-width:768px){
+
+  .error-404{
+
+    min-height:60vh;
+
+  }
+
+  .error-404__code{
+
+    font-size:80px;
+
+  }
+
+  .error-404__actions{
+
+    width:100%;
+
+    flex-direction:column;
+
+  }
+
+  .error-404 .btn{
+
+    width:100%;
+
+  }
+
+}
+/* ========================================
+   GLOBAL ERROR
+======================================== */
+
+.global-error{
+
+  min-height:60vh;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+  padding:
+    var(--space-8)
+    var(--space-5);
+
+}
+
+/* ========================================
+   ICON
+======================================== */
+
+.global-error__icon{
+
+  font-size:64px;
+
+  margin-bottom:var(--space-4);
+
+}
+
+/* ========================================
+   TITLE
+======================================== */
+
+.global-error__title{
+  margin-bottom:var(--space-3);
+  color:var(--color-text-primary);
+  font-family: var(--font-heading-en);
+}
+
+/* ========================================
+   TEXT
+======================================== */
+
+.global-error__text{
+
+  max-width:480px;
+
+  color:var(--color-text-secondary);
+
+  line-height:1.8;
+
+  margin-bottom:var(--space-6);
+
+}
+
+/* ========================================
+   BUTTON
+======================================== */
+
+.global-error .btn{
+
+  width:auto;
+
+  min-width:180px;
+
+}
+
+/* ========================================
+   RTL / LTR
+======================================== */
+
+[dir="rtl"] .global-error{
+
+  direction:rtl;
+
+}
+
+[dir="ltr"] .global-error{
+
+  direction:ltr;
+
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media(max-width:768px){
+
+  .global-error__icon{
+
+    font-size:48px;
+
+  }
+
+  .global-error .btn{
+
+    width:100%;
+
+  }
+
+}
+
+[dir="rtl"] .error-404 {
+  direction: rtl;
+}
+
+[dir="ltr"] .error-404 {
+  direction: ltr;
+}
+  </style>
+</head>
+
+<body>
+  <section class="error-404">
+
+  <div class="error-404__code">
+
+    404
+
+  </div>
+
+  <h1 class="error-404__title">
+
+    Page Not Found
+
+  </h1>
+
+  <p class="error-404__text">
+
+    Sorry, the page you are looking for
+    does not exist or has been moved.
+
+  </p>
+
+  <div class="error-404__actions">
+
+    <a
+      href="/categories"
+      class="btn btn-primary"
+    >
+      Browse Categories
+    </a>
+
+    <a
+      href="/"
+      class="btn btn-secondary"
+    >
+      Back To Home
+    </a>
+
+  </div>
+
+</section>
+
+
+<h1>global errores</h1>
+<p>این toast که برای global error ساخته شده بصورت یک صفحه جداگانه نبوده بلکه مانند toast در هطاهای عمومی نشان داده میشود.</p>
+<p>این نمونه ففط یک showcase هست و شامل 404 هم نمیشود.</p>
+<section class="global-error">
+  
+  <div class="global-error__icon">
+    
+    ⚠
+    
+  </div>
+  
+  <h1 class="global-error__title">
+    
+    Something Went Wrong
+    
+  </h1>
+  
+  <p class="global-error__text">
+    
+    We couldn't load this page.
+    Please try again.
+    
+  </p>
+  
+  <button class="btn btn-primary">
+  
+    Try Again
+    
+  </button>
+  
+</section>
+</body>
+
+</html>
