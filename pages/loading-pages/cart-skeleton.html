@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../../src/css/style.css">
+    <style>
+        /* ============   CART SKELETON ============ */
+        .cart-skeleton {
+          width: 40%;
+          display: flex;
+          flex-direction: column;
+          gap: var(--space-5); 
+        }
+        /* ============   ITEM============ */
+        .cart-skeleton__item {
+          display: flex;
+          gap: var(--space-3);
+          padding-bottom: var(--space-4);
+          border-bottom: 1px solid var(--color-border); 
+        }
+        /* ============   RTL SUPPORT============ */
+        [dir="rtl"] .cart-skeleton__item {
+          flex-direction: row-reverse; 
+        }
+        [dir="ltr"] .cart-skeleton__item {
+          flex-direction: row; 
+        }
+        /* ============   IMAGE============ */
+        .cart-skeleton__image {
+          width: var(--thumbnail-width);
+          height: var(--thumbnail-height);
+          flex-shrink: 0;
+          border-radius: var(--radius-md); 
+        }
+        /* ============   CONTENT============ */
+        .cart-skeleton__content {
+          flex: 1; 
+        }
+        .cart-skeleton__category {
+          width: 30%;
+          height: var(--space-3);
+          border-radius: var(--radius-sm);
+          margin-bottom: var(--space-2); 
+        }
+        .cart-skeleton__title {
+          width: 75%;
+          height: var(--space-5);
+          border-radius: var(--radius-sm);
+          margin-bottom: var(--space-3); 
+        }
+        .cart-skeleton__price {
+          width: 25%;
+          height: var(--space-4);
+          border-radius: var(--radius-sm); 
+        }
+        /* ============   SUMMARY============ */
+        .cart-skeleton__summary {
+          padding-top: var(--space-4); 
+        }
+        .cart-skeleton__subtotal {
+          width: 40%;
+          height: var(--space-5);
+          border-radius: var(--radius-sm);
+          margin-bottom: var(--space-4); 
+        }
+        .cart-skeleton__button {
+          width: 100%;
+          height: var(--button-height);
+          border-radius: var(--radius-md); 
+        }
+        /* ============   MOBILE============ */
+        @media(max-width:768px) {
+          .cart-skeleton__image {
+            width: 72px;
+            height: 90px; 
+          }
+          .cart-skeleton__title {
+            width: 90%; 
+          }
+          .cart-skeleton__price {
+            width: 35%; 
+          }
+          .cart-skeleton__subtotal {
+            width: 60%; 
+          }  
+        }
+    </style>
+</head>
+<body>
+    <h1>Cart loading skeleton</h1>
+    <section class="cart-skeleton">
+      <div class="cart-skeleton__item">
+        <div class="skeleton cart-skeleton__image"></div>
+        <div class="cart-skeleton__content">
+          <div class="skeleton cart-skeleton__category"></div>
+          <div class="skeleton cart-skeleton__title"></div>
+          <div class="skeleton cart-skeleton__price"></div>
+        </div>
+      </div>
+      <div class="cart-skeleton__item">
+        <div class="skeleton cart-skeleton__image"></div>
+        <div class="cart-skeleton__content">
+          <div class="skeleton cart-skeleton__category"></div>
+          <div class="skeleton cart-skeleton__title"></div>
+          <div class="skeleton cart-skeleton__price"></div>
+        </div>
+      </div>
+      <div class="cart-skeleton__item">
+        <div class="skeleton cart-skeleton__image"></div>
+        <div class="cart-skeleton__content">
+          <div class="skeleton cart-skeleton__category"></div>
+          <div class="skeleton cart-skeleton__title"></div>
+          <div class="skeleton cart-skeleton__price"></div>
+        </div>
+      </div>
+      <div class="cart-skeleton__summary">
+        <div class="skeleton cart-skeleton__subtotal"></div>
+        <div class="skeleton cart-skeleton__button"></div>
+      </div>     
+    </section> 
+</body>
+</html>

@@ -1,314 +1,64 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
   <link rel="stylesheet" href="../src/css/style.css">
-  <style type="text/css" media="all">
-
-  /* ========================================
-   TOAST CONTAINER
-======================================== */
-
-.toast-container{
-
-  position:fixed;
-
-  top:var(--space-5);
-
-  display:flex;
-
-  flex-direction:column;
-
-  gap:var(--space-3);
-
-  z-index:9999;
-
-}
-
-/* RTL */
-
-[dir="rtl"] .toast-container{
-
-  left:var(--space-5);
-
-  right:auto;
-
-}
-
-/* LTR */
-
-[dir="ltr"] .toast-container{
-
-  right:var(--space-5);
-
-  left:auto;
-
-}
-
-/* ========================================
-   TOAST
-======================================== */
-
-.toast{
-
-  display:flex;
-
-  align-items:center;
-
-  gap:var(--space-3);
-
-  width:fit-content;
-
-  min-width:280px;
-
-  max-width:420px;
-
-  padding:
-    var(--space-3)
-    var(--space-4);
-
-  background:var(--color-surface);
-
-  border-radius:var(--radius-md);
-
-  box-shadow:var(--shadow-lg);
-
-  border-inline-start:4px solid;
-
-  animation:toast-enter .3s ease;
-
-}
-
-/* ========================================
-   ICON
-======================================== */
-
-.toast__icon{
-
-  flex-shrink:0;
-
-  width:24px;
-
-  height:24px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  font-size:16px;
-
-  font-weight:700;
-
-}
-
-/* ========================================
-   MESSAGE
-======================================== */
-
-.toast__message{
-
-  flex:1;
-
-  font-size:var(--font-size-sm);
-
-  color:var(--color-text-primary);
-
-  line-height:1.6;
-
-  font-weight:500;
-
-}
-
-/* ========================================
-   SUCCESS
-======================================== */
-
-.toast-success{
-
-  border-color:var(--color-mauve-deep);
-
-}
-
-.toast-success .toast__icon{
-
-  color:var(--color-mauve-deep);
-
-}
-
-/* ========================================
-   REMOVE
-======================================== */
-
-.toast-remove{
-
-  border-color:var(--color-mauve-dusty);
-
-}
-
-.toast-remove .toast__icon{
-
-  color:var(--color-mauve-dusty);
-
-}
-
-/* ========================================
-   WARNING
-======================================== */
-
-.toast-warning{
-
-  border-color:#D9A441;
-
-}
-
-.toast-warning .toast__icon{
-
-  color:#D9A441;
-
-}
-
-/* ========================================
-   ERROR
-======================================== */
-
-.toast-error{
-
-  border-color:#C75A5A;
-
-}
-
-.toast-error .toast__icon{
-
-  color:#C75A5A;
-
-}
-
-/* ========================================
-   ANIMATION
-======================================== */
-
-@keyframes toast-enter{
-
-  from{
-
-    opacity:0;
-
-    transform:translateY(-8px);
-
-  }
-
-  to{
-
-    opacity:1;
-
-    transform:translateY(0);
-
-  }
-
-}
-
-/* ========================================
-   MOBILE
-======================================== */
-
-@media(max-width:768px){
-
-  .toast-container{
-
-    left:var(--space-4);
-
-    right:var(--space-4);
-
-    top:var(--space-4);
-
-  }
-
-  .toast{
-
-    width:100%;
-
-    min-width:0;
-
-    max-width:none;
-
-  }
-
-}
-  </style>
+  <STYle>
+    /* ==============   TOAST CONTAINER   ============== */
+    .toast-container{
+      position:fixed;
+      top:var(--space-5);
+      display:flex;
+      flex-direction:column;
+      gap:var(--space-3);
+      z-index:9999;
+    }
+    /* RTL */
+    [dir="rtl"] .toast-container{
+      left:var(--space-5);
+      right:auto;
+    }
+    /* LTR */
+    [dir="ltr"] .toast-container{
+      right:var(--space-5);
+      left:auto;
+    }
+  </STYle>
 </head>
 
 <body>
   <div class="toast-container">
-  <!-- Success -->
-
-<div class="toast toast-success">
-  
-  <span class="toast__icon">✓</span>
-  
-  <span class="toast__message">
-    Product added to cart
-  </span>
-  
-</div>
-
-<!-- Removed -->
-
-<div class="toast toast-remove">
-  
-  <span class="toast__icon">✓</span>
-  
-  <span class="toast__message">
-    Product removed from cart
-  </span>
-  
-</div>
-
-<!-- Warning -->
-
-<div class="toast toast-warning">
-  
-  <span class="toast__icon">⚠</span>
-  
-  <span class="toast__message">
-    Product is out of stock
-  </span>
-  
-</div>
-
-<!-- Error -->
-
-<div class="toast toast-error">
-  
-  <span class="toast__icon">✕</span>
-  
-  <span class="toast__message">
-    Something went wrong
-  </span>
-  
-</div> 
-</div>
-     <!-- Breadcrumb -->
-     <nav class="breadcrumb">
-        <a href="./plp-collection.html">Collection</a>
-        <span>/</span>
-        <a href="./plp-product.html">product</a>
-        <span>/</span>
-        <a href="./fonts.html">fonts</a>
-        <span>/</span>
-        <a href="./cart.html">cart</a>
-        <span>/</span>
-        <a href="./buttons.html">buttons</a>
-        <span>/</span>
-        <a href="./plp-product.html">product</a>
-        <span>/</span>
-        <a href="./pdp.html"></a>
-        <span></span>
-      </nav>
+    <!-- Success -->
+    <div class="toast toast-success">
+      <span class="toast__icon">✓</span>
+      <span class="toast__message">
+        Product added to cart
+      </span>
+    </div>
+    <!-- Removed -->
+    <div class="toast toast-remove">
+      <span class="toast__icon">✓</span>
+      <span class="toast__message">
+        Product removed from cart
+      </span>
+    </div>
+    <!-- Warning -->
+    <div class="toast toast-warning">
+      <span class="toast__icon">⚠</span>
+      <span class="toast__message">
+        Product is out of stock
+      </span>
+    </div>
+    <!-- Error -->
+    <div class="toast toast-error">
+      <span class="toast__icon">✕</span>
+      <span class="toast__message">
+        Something went wrong
+      </span>  
+    </div> 
+  </div>
 </body>
 
 </html>

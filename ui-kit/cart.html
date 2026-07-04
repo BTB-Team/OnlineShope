@@ -1,468 +1,70 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
   <link rel="stylesheet" href="../src/css/style.css">
-  <style type="text/css" media="all">
 
-/* ========================================
-   DRAWER
-======================================== */
-
-.cart-drawer{
-
-  position:fixed;
-
-  top:0;
-
-  right:0;
-
-  width:480px;
-
-  height:100vh;
-
-  background:var(--color-surface);
-
-  box-shadow:var(--shadow-lg);
-
-  z-index:9999;
-
-  display:flex;
-
-  flex-direction:column;
-
-}
-
-/* ========================================
-   HEADER
-======================================== */
-
-.cart-header{
-
-  display:flex;
-
-  justify-content:space-between;
-
-  align-items:center;
-
-  padding:var(--space-5);
-
-  border-bottom:1px solid var(--color-border);
-
-}
-
-.cart-title{
-  color:var(--color-text-primary);
-}
-.cart-item__title , .cart-title{
-    font-family: var(--font-heading-en);
-}
-.cart-close{
-
-  border:none;
-
-  background:none;
-
-  cursor:pointer;
-
-  font-size:24px;
-
-}
-
-/* ========================================
-   BODY
-======================================== */
-
-.cart-body{
-
-  flex:1;
-
-  overflow-y:auto;
-
-  padding:var(--space-4);
-
-}
-
-/* ========================================
-   ITEM
-======================================== */
-
-.cart-item{
-
-  display:grid;
-
-  grid-template-columns:
-  72px
-  1fr
-  auto;
-
-  gap:var(--space-3);
-
-  padding:var(--space-3);
-
-  border:1px solid var(--color-border);
-
-  border-radius:var(--radius-sm);
-
-  background:var(--color-surface);
-
-  margin-bottom:var(--space-3);
-
-}
-
-/* ========================================
-   IMAGE
-======================================== */
-.cart-item__image {
-  
-  width: 80px;
-  
-  aspect-ratio: 4/5;
-  
-  object-fit: cover;
-  
-}
-
-/* ========================================
-   CONTENT
-======================================== */
-
-.cart-item__content{
-
-  display:flex;
-
-  flex-direction:column;
-
-  gap:var(--space-1);
-
-}
-
-.cart-item__title{
-
-  font-size:16px;
-
-  font-weight:600;
-
-  color:var(--color-text-primary);
-
-}
-
-.cart-item__category{
-
-  font-size:14px;
-
-  color:var(--color-text-secondary);
-
-}
-
-.cart-item__price{
-
-  font-weight:700;
-
-  color:var(--color-mauve-deep);
-
-}
-
-/* ========================================
-   ACTIONS
-======================================== */
-
-.cart-item__actions{
-
-  display:flex;
-
-  flex-direction:column;
-
-  justify-content:space-between;
-
-  align-items:flex-end;
-
-}
-
-/* ========================================
-   QUANTITY
-======================================== */
-
-.cart-qty{
-
-  display:flex;
-
-  align-items:center;
-
-  gap:var(--space-2);
-
-}
-
-.cart-qty button{
-
-  width:32px;
-
-  height:32px;
-
-  border:none;
-
-  border-radius:var(--radius-sm);
-
-  background:var(--color-mauve-dusty);
-
-  color:#fff;
-
-  cursor:pointer;
-
-}
-
-/* ========================================
-   REMOVE
-======================================== */
-
-.cart-remove{
-
-  border:none;
-
-  background:none;
-
-  color:#D64545;
-
-  cursor:pointer;
-
-}
-
-/* ========================================
-   FOOTER
-======================================== */
-
-.cart-footer{
-
-  padding:var(--space-5);
-
-  border-top:1px solid var(--color-border);
-
-}
-
-.cart-total{
-
-  display:flex;
-
-  justify-content:space-between;
-
-  margin-bottom:var(--space-4);
-
-}
-
-.cart-checkout{
-
-  width:100%;
-
-  height:48px;
-
-  border:none;
-
-  border-radius:var(--radius-sm);
-
-  background:var(--color-mauve-dusty);
-
-  color:#fff;
-
-  font-weight:600;
-
-  cursor:pointer;
-
-  transition:var(--transition-normal);
-
-}
-
-.cart-checkout:hover{
-
-  background:var(--color-mauve-deep);
-
-}
-
-/* ========================================
-   MOBILE
-======================================== */
-
-@media(max-width:768px){
-
-  .cart-drawer{
-
-    width:90%;
-
-  }
-
-}
-  </style>
 </head>
-
 <body>
-  <!-- ========================================
-     CART DRAWER
-======================================== -->
-
+  <!-- ===========    CART DRAWER========== -->
 <div class="cart-overlay"></div>
-
 <aside class="cart-drawer">
-
   <!-- Header -->
-
   <div class="cart-header">
-
-    <h2 class="cart-title">
-      Your Cart
-    </h2>
-
-    <button
-      class="cart-close"
-      aria-label="Close Cart"
-    >
-      ✕
-    </button>
-
+    <h2 class="cart-title"> Your Cart</h2>
+    <button  class="cart-close"  aria-label="Close Cart">✕</button>
   </div>
-
   <!-- Body -->
-
   <div class="cart-body">
-
     <!-- Item -->
-
     <div class="cart-item">
-
-      <img
-        class="cart-item__image"
-        src="./images/white-high.jpg"
-        alt="Formal Leather Shoes"
-      >
-
+      <img  class="cart-item__image"  src="./images/white-high.jpg"  alt="Formal Leather Shoes">
       <div class="cart-item__content">
-
-        <h3 class="cart-item__title">
-          Formal Leather Shoes
-        </h3>
-
-        <p class="cart-item__category">
-          Women's Shoes
-        </p>
-
-        <span class="cart-item__price number ">
-          $96
-        </span>
-
+        <h3 class="cart-item__title"> Formal Leather Shoes</h3>
+        <p class="cart-item__category"> Women's Shoes</p>
+        <span class="cart-item__price number "> $96</span>
       </div>
-
       <div class="cart-item__actions">
-
         <div class="cart-qty">
-
           <button class="number">-</button>
-
           <span class="number" class="number">1</span>
-
           <button>+</button>
-
         </div>
-
-        <button class="cart-remove">
-          Remove
-        </button>
-
+        <button class="cart-remove"> Remove</button>
       </div>
-
     </div>
-
     <!-- Item -->
-
     <div class="cart-item">
-
-      <img
-        class="cart-item__image"
-        src="./images/goshwara-2.jpg"
-        alt="Leather Handbag"
-      >
-
+      <img class="cart-item__image" src="./images/goshwara-2.jpg" alt="Leather Handbag"/>
       <div class="cart-item__content">
-
-        <h3 class="cart-item__title">
-          Leather Handbag
-        </h3>
-
-        <p class="cart-item__category">
-          Accessories
-        </p>
-
-        <span class="cart-item__price number">
-          $120
-        </span>
-
+        <h3 class="cart-item__title">Leather Handbag</h3>
+        <p class="cart-item__category">Accessories</p>
+        <span class="cart-item__price number">$120</span>
       </div>
-
       <div class="cart-item__actions">
-
         <div class="cart-qty">
-
           <button class="number">-</button>
-
           <span class="number">2</span>
-
           <button class="number">+</button>
-
         </div>
-
-        <button class="cart-remove">
-          Remove
-        </button>
-
+        <button class="cart-remove">Remove</button>
       </div>
-
     </div>
-
   </div>
-
   <!-- Footer -->
-
   <div class="cart-footer">
-
     <div class="cart-total">
-
-      <span class="number" >
-        Subtotal
-      </span>
-
+      <span class="number" >Subtotal</span>
       <span class="number" class="number">
-        <strong >
-        $336
-      </strong>
-
+      <strong >$336</strong>
     </div>
-
     <button class="cart-checkout">
-
       Checkout via WhatsApp
-
     </button>
-
   </div>
-
 </aside>
-         <!-- Breadcrumb -->
-         <nav class="breadcrumb">
-            <a href="./plp-collection.html">Collection</a>
-            <span>/</span>
-            <a href="./plp-product.html">product</a>
-            <span>/</span>
-            <a href="./fonts.html">fonts</a>
-            <span>/</span>
-            <a href="./cart.html">cart</a>
-            <span>/</span>
-            <a href="./buttons.html">buttons</a>
-            <span>/</span>
-            <a href="./plp-product.html">product</a>
-            <span>/</span>
-            <a href="./pdp.html"></a>
-            <span></span>
-          </nav>
 </body>
 
 </html>
