@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../../../src/css/style.css">
+    <link rel="stylesheet" href="./../../../../src/css/pages/plp-product.css">
+    <title>Women Skin Care</title>
+</head>
+
+<body>
+
+<section class="ui-section">
+    <div class="container">
+
+                <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <a href="#">Home</a>
+            <span>/</span>
+
+            <a href="#">Women</a>
+            <span>/</span>
+
+            <a href="#">Beauty</a>
+            <span>/</span>
+
+            <span>Skincare</span>
+        </nav>
+
+        <!-- Header -->
+        <section class="plp-header">
+
+            <h1 class="plp-header__title">
+                Skincare
+            </h1>
+
+            <p class="plp-header__description">
+                Discover premium skincare products designed to nourish,
+                hydrate, and protect your skin every day.
+            </p>
+
+            <span class="plp-header__count number">
+                24 Products
+            </span>
+
+        </section>
+
+        <!-- Search -->
+        <div class="search-box">
+
+            <svg
+                class="search-box__icon"
+                viewBox="0 0 24 24"
+                aria-hidden="true">
+
+                <path
+                    d="M10 18a8 8 0 1 1 5.292-14.002A8 8 0 0 1 10 18zm11 3-6-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"/>
+
+            </svg>
+
+            <input
+                type="search"
+                class="search-box__input"
+                placeholder="Search skincare products...">
+
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid" id="productGrid">
+            <!-- Product cards will be rendered by JavaScript -->
+        </div>
+
+    </div>
+</section>
+
+<script type="module" src="beauty-p-data.js"></script>
+<script type="module" src="beauty-p-preview.js"></script>
+</body>
+
+</html>
