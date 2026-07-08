@@ -21,6 +21,7 @@ const productGrid =
     document.getElementById("productGrid");
 
 
+
 const productSearch =
     document.getElementById("productSearch");
 
