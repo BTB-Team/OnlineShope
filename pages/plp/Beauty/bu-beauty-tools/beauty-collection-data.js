@@ -112,3 +112,5 @@ export const beautyCategories = [
     }
 
 ];
+
+
