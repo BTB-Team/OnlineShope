@@ -228,3 +228,44 @@ border-radius: var(--radius-sm);
   grid-template-columns: repeat(2, 1fr); 
 }
 }
+
+/* language button  */
+.language-switcher {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-bottom: 24px;
+
+}
+
+
+.language-switcher__button {
+
+    min-width: 50px;
+
+    height: 36px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 20px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+
+}
+
+
+.language-switcher__button:hover {
+
+    background: #111;
+
+    color: white;
+
+}

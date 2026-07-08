@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+
+    <title>
+        Beauty Products
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="./../../../../src/css/style.css">
+
+
+    <link
+        rel="stylesheet"
+        href="../../../../src/css/pages/plp-product.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- PLP HEADER -->
+
+    <header class="plp-header">
+
+        <div class="container">
+
+
+            <div class="language-switcher">
+
+                <button
+                    id="languageToggle"
+                    class="language-switcher__button"
+                    type="button">
+
+                    FA
+
+                </button>
+
+            </div>
+
+
+
+            <h1
+                id="pageTitle"
+                class="plp-header__title">
+
+                Beauty Products
+
+            </h1>
+
+
+
+            <p
+                id="pageDescription"
+                class="plp-header__description">
+
+                Discover our beauty collection.
+
+            </p>
+
+
+
+            <p
+                id="productsCount"
+                class="plp-header__count">
+
+            </p>
+
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <section class="beauty-products">
+
+
+            <div class="container">
+
+
+
+                <!-- SEARCH -->
+
+
+                <div class="products-toolbar">
+
+
+                    <div class="search-box">
+
+    <svg
+        class="search-box__icon"
+        viewBox="0 0 24 24"
+        aria-hidden="true">
+
+        <path
+            d="M10 18a8 8 0 1 1 5.292-14.002A8 8 0 0 1 10 18zm11 3-6-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"/>
+
+    </svg>
+
+
+    <input
+
+        id="productSearch"
+
+        type="search"
+
+        class="search-box__input"
+
+        placeholder="Search products..."
+
+        autocomplete="off">
+
+</div>
+
+                </div>
+
+
+
+                <!-- PRODUCT GRID -->
+
+
+                <div id="productGrid" class="product-grid">
+
+
+
+                <!-- EMPTY STATE -->
+
+
+                <div
+
+                    id="emptyState"
+
+                    class="empty-state hidden">
+
+
+                    <h2
+
+                        id="emptyTitle">
+
+                        No Products Found
+
+                    </h2>
+
+
+
+                    <p
+
+                        id="emptyDescription">
+
+                        Try another keyword.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+        
+
+
+    
+        <!-- PREVIEW MODAL -->
+
+
+    <div
+
+        id="previewModal"
+
+        class="preview-modal">
+
+
+
+        <div
+
+            class="preview-overlay">
+
+        </div>
+
+
+
+        <div
+
+            class="preview-content">
+
+
+
+            <!-- <button
+
+                id="closePreview"
+
+                class="preview-close"
+
+                type="button">
+
+
+                ×
+
+
+            </button> -->
+
+
+
+
+            <!-- <div
+
+                class="preview-image">
+
+
+                <img
+
+                    id="previewImage"
+
+                    src=""
+
+                    alt="">
+
+
+            </div> -->
+
+
+
+
+
+            <!-- <div
+
+                class="preview-body">
+
+
+
+
+
+                <span
+
+                    id="previewCategory"
+
+                    class="preview-category">
+
+
+                </span>
+
+
+
+
+
+                <h2
+
+                    id="previewTitle"
+
+                    class="preview-title">
+
+
+                </h2>
+
+
+
+
+
+                <p
+
+                    id="previewDescription"
+
+                    class="preview-description">
+
+
+                </p>
+
+
+
+
+
+                <div
+
+                    class="preview-footer">
+
+
+
+
+
+                    <div
+
+                        class="preview-price">
+
+
+                        <span
+
+                            id="previewPrice">
+
+
+                        </span>
+
+
+                    </div>
+
+
+
+
+
+                    <button
+
+                        id="previewDetailsBtn"
+
+                        class="details-btn"
+
+                        type="button">
+
+
+                        View Details
+
+
+                    </button>
+
+
+
+
+
+                </div>
+
+
+
+
+
+            </div> -->
+
+
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+    <script
+
+        type="module"
+
+        src="./beauty-products-preview.js">
+
+
+    </script>
+
+
+</main>
+
+
+</body>
+
+
+</html>
