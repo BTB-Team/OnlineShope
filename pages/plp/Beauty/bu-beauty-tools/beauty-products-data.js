@@ -103,7 +103,7 @@ export const beautyProducts = [
         badge: "NEW",
 
         image:
-        "https://i.pinimg.com/736x/89/35/83/893583912a44d214ada48d6a473d618b.jpg"
+        "https://i.pinimg.com/1200x/72/f8/55/72f85522d23eaef44695a601b0c11089.jpg"
 
     },
 
@@ -180,7 +180,7 @@ export const beautyProducts = [
     badge: "BEST",
 
     image:
-    "https://i.pinimg.com/1200x/3b/37/e3/3b37e34cadf740e0079d1735f96ff840.jpg"
+    "https://i.pinimg.com/1200x/1e/a9/c7/1ea9c71456d9fc6184c21f1794d31286.jpg"
 
 },
 
@@ -207,7 +207,7 @@ export const beautyProducts = [
     badge: "SALE",
 
     image:
-    "https://i.pinimg.com/736x/89/35/83/893583912a44d214ada48d6a473d618b.jpg"
+    "https://i.pinimg.com/736x/30/eb/0b/30eb0b1f0e4a5c7b0d1334ca2a9b63f8.jpg"
 
 },
 
@@ -234,7 +234,7 @@ export const beautyProducts = [
     badge: "NEW",
 
     image:
-    "https://i.pinimg.com/1200x/37/2a/e1/372ae11b54ffc1e0d40f9fe33ee0afa8.jpg"
+    "https://i.pinimg.com/736x/f9/7a/7c/f97a7ce8b1ea35adeb17a68a24f2949a.jpg"
 
 },
 
@@ -245,7 +245,7 @@ export const beautyProducts = [
     category: "facial-tools",
 
     title: {
-        en: "Jade Facial Roller",
+        en: "Electronical Mask",
         fa: "رولر یشم صورت"
     },
 
@@ -261,7 +261,7 @@ export const beautyProducts = [
     badge: "SALE",
 
     image:
-    "https://i.pinimg.com/736x/fe/a0/83/fea0834970e8e59e4172b635536ea668.jpg"
+    "https://i.pinimg.com/736x/67/19/3b/67193ba5343769a4919ef4ba7a1786c3.jpg"
 
 },
 
@@ -288,7 +288,7 @@ export const beautyProducts = [
     badge: "BEST",
 
     image:
-    "https://i.pinimg.com/736x/1b/00/1b/1b001bac2215efe61072c9a70eaefa99.jpg"
+    "https://i.pinimg.com/736x/fd/a9/31/fda9318595fa033e667582b3617519b5.jpg"
 
 },
 
@@ -315,7 +315,7 @@ export const beautyProducts = [
     badge: "NEW",
 
     image:
-    "https://i.pinimg.com/1200x/7e/ad/b2/7eadb202382cc87aa144243e256131f1.jpg"
+    "https://i.pinimg.com/1200x/c7/9a/f1/c79af190710c6376ffaa416fb1c64d5d.jpg"
 
 },
 
@@ -342,7 +342,7 @@ export const beautyProducts = [
     badge: "SALE",
 
     image:
-    "https://i.pinimg.com/1200x/7e/ad/b2/7eadb202382cc87aa144243e256131f1.jpg"
+    "https://i.pinimg.com/736x/88/87/78/8887785483794d47700f334b1b055856.jpg"
 
 }
 
