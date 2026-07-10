@@ -7,6 +7,16 @@ export const languages = {
 
 export const translations = {
     en: {
+        home: "Home",
+
+        women: "Women",
+
+        beautyTools:
+        "Beauty Tools",
+
+        products:
+        "Products",
+        
         pageTitle: "Beauty Products",
         pageDescription: "Discover our beauty collection.",
 
@@ -20,10 +30,22 @@ export const translations = {
         productsCount: (count) =>
             `${count} Product${count !== 1 ? "s" : ""}`,
 
-        currency: "$",
+        currency: "AFN",
     },
 
     fa: {
+        home:
+        "خانه",
+
+        women:
+        "زنانه",
+
+        beautyTools:
+        "ابزارهای زیبایی",
+
+        products:
+        "محصولات",
+        
         pageTitle: "محصولات آرایشی",
 
         pageDescription:
@@ -41,7 +63,7 @@ export const translations = {
         productsCount: (count) =>
             `${count} محصول`,
 
-        currency: "$",
+        currency: "افغانی",
     },
 };
 
@@ -146,10 +168,27 @@ export function formatPrice(price) {
 
     const language = getLanguage();
 
+    const number =
+        new Intl.NumberFormat(
+            language === "fa"
+                ? "fa-AF"
+                : "en-US"
+        ).format(Number(price));
+
+
     const currency =
         translations[language].currency;
 
-    return `${currency}${Number(price).toFixed(2)}`;
+
+    if(language === "fa"){
+
+        return `${number} ${currency}`;
+
+    }
+
+
+    return `${number} ${currency}`;
+
 }
 
 export function initializeLanguage() {

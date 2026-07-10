@@ -2,12 +2,9 @@ export const collectionTranslations = {
 
     en: {
 
-        breadcrumbHome: "Home",
+        home: "Home",
 
-        breadcrumbWomen: "Women",
-
-        breadcrumbBeauty: "Beauty Tools",
-
+beauty: "Beauty",
 
         pageTitle: "Women Beauty Tools",
 
@@ -32,13 +29,11 @@ export const collectionTranslations = {
 
 
     fa: {
+        home: "خانه",
 
-        breadcrumbHome: "خانه",
+        beauty: "زیبایی",
 
-        breadcrumbWomen: "زنانه",
-
-        breadcrumbBeauty: "ابزارهای زیبایی",
-
+    
 
         pageTitle:
             "ابزارهای زیبایی زنانه",

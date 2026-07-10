@@ -323,3 +323,58 @@ margin-bottom:var(--space-2);
   flex-direction:row;
 }
 }
+
+/* language button  */
+.language-switcher {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-bottom: 24px;
+
+}
+
+
+.language-switcher__button {
+
+    min-width: 50px;
+
+    height: 36px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 20px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+
+}
+
+
+.language-switcher__button:hover {
+
+    background: #111;
+
+    color: white;
+
+}
+
+html[dir="rtl"] .pdp-specs table{
+    direction: rtl;
+}
+
+html[dir="rtl"] .pdp-specs td,
+html[dir="rtl"] .pdp-specs th{
+    text-align: right;
+}
+
+html[dir="ltr"] .pdp-specs td,
+html[dir="ltr"] .pdp-specs th{
+    text-align: left;
+}

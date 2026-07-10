@@ -45,6 +45,17 @@ const pageTitle =
 const pageDescription =
     document.getElementById("pageDescription");
 
+const breadcrumbHome =
+    document.getElementById("breadcrumbHome");
+
+const breadcrumbWomen =
+    document.getElementById("breadcrumbWomen");
+
+const breadcrumbBeautyTools =
+    document.getElementById("breadcrumbBeautyTools");
+
+const breadcrumbProducts =
+    document.getElementById("breadcrumbProducts");
 
 const emptyTitle =
     document.getElementById("emptyTitle");
@@ -53,7 +64,20 @@ const emptyTitle =
 const emptyDescription =
     document.getElementById("emptyDescription");
 
+const homeText =
+    document.getElementById("homeText");
 
+
+const womenText =
+    document.getElementById("womenText");
+
+
+const beautyToolsText =
+    document.getElementById("beautyToolsText");
+
+
+const productsText =
+    document.getElementById("productsText");
 
 // ================= STATE =================
 
@@ -99,11 +123,53 @@ function init() {
 
     bindEvents();
 
+    homeText.textContent =
+    translate("home");
+
+
+womenText.textContent =
+    translate("women");
+
+
+beautyToolsText.textContent =
+    translate("beautyTools");
+
+
+productsText.textContent =
+    translate("products");
+}
+
+
+if (breadcrumbHome) {
+
+    breadcrumbHome.textContent =
+        translate("home");
 
 }
 
 
+if (breadcrumbWomen) {
 
+    breadcrumbWomen.textContent =
+        translate("women");
+
+}
+
+
+if (breadcrumbBeautyTools) {
+
+    breadcrumbBeautyTools.textContent =
+        translate("beautyTools");
+
+}
+
+
+if (breadcrumbProducts) {
+
+    breadcrumbProducts.textContent =
+        translate("products");
+
+}
 
 
 // ================= STATIC TEXT =================
@@ -358,8 +424,11 @@ function createProductCard(product) {
                     data-action="details">
 
 
-                    ${translate("viewDetails")} →
-
+                    ${
+                    getLanguage() === "fa"
+                    ? translate("viewDetails") + " ←"
+                    : translate("viewDetails") + " →"
+                    }
 
                 </a>
 
@@ -584,7 +653,7 @@ function handleProductClick(event) {
         )
     );
 
-
+    window.location.href = `./pdp/beauty-pdp.html?id=${selectedProduct.id}`;
 
     console.log(
         "Saved product:",

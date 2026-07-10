@@ -2,6 +2,11 @@ import { beautyCategories } from "./beauty-collection-data.js";
 
 import { collectionTranslations } from "./beauty-collection-i18n.js";
 
+const homeText =
+document.getElementById("homeText");
+
+const beautyText =
+    document.getElementById("beautyText");
 
 const categoryGrid =
 document.getElementById("categoryGrid");
@@ -61,7 +66,12 @@ currentLanguage === "fa"
     pageDescription.textContent =
     text.pageDescription;
 
+    homeText.textContent =
+text.home;
 
+beautyText.textContent =
+        text.beauty;
+    
     searchInput.placeholder =
     text.searchPlaceholder;
 
