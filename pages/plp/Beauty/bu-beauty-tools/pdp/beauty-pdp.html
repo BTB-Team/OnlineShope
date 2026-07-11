@@ -1,271 +1,127 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Beauty Product Details</title>
 
-    <link rel="stylesheet" href="../../../../../src/css/style.css">
-    <link rel="stylesheet" href="../../../../../src/css/pages/pdp.css">
+    <link rel="stylesheet" href="../../../../../src/css/style.css" />
+    <link rel="stylesheet" href="../../../../../src/css/pages/pdp.css" />
+  </head>
 
-</head>
+  <body>
+    <section class="pdp-showcase">
+      <!-- ================= BREADCRUMB ================= -->
 
-<body>
-
-<section class="pdp-showcase">
-
-    <!-- ================= BREADCRUMB ================= -->
-
-    <nav class="breadcrumb">
-
-        <a href="#" id="homeText">
-            Home
-        </a>
+      <nav class="breadcrumb">
+        <a href="#" id="homeText"> Home </a>
 
         <span>/</span>
 
-        <a href="#" id="beautyText">
-            Beauty
-        </a>
+        <a href="#" id="womenText"> Women </a>
 
         <span>/</span>
 
-        <span id="breadcrumbTitle">
-            Product
-        </span>
+        <a href="#" id="beautyToolsText"> Beauty Tools </a>
 
-    </nav>
+        <span>/</span>
 
+        <a href="#" id="productsText"> Beauty Products </a>
 
-    <div class="language-switcher">
+        <span>/</span>
 
-        <button
-            id="languageSwitcher"
-            class="language-switcher__button">
+        <span id="breadcrumbTitle"> Product Details </span>
+      </nav>
 
-            EN
-
+      <div class="language-switcher">
+        <button id="languageSwitcher" class="language-switcher__button">
+          EN
         </button>
+      </div>
 
-    </div>
+      <!-- ================= PRODUCT ================= -->
 
-
-    <!-- ================= PRODUCT ================= -->
-
-    <div class="pdp">
-
+      <div class="pdp">
         <!-- ================= MEDIA ================= -->
 
         <div class="pdp-media">
+          <div id="thumbnails" class="pdp-thumbnails"></div>
 
-            <div
-                id="thumbnails"
-                class="pdp-thumbnails">
-            </div>
-
-            <div class="pdp-main-media">
-
-                <img
-                    id="mainImage"
-                    src=""
-                    alt="Product image">
-
-            </div>
-
+          <div class="pdp-main-media">
+            <img id="mainImage" src="" alt="Product image" />
+          </div>
         </div>
-
 
         <!-- ================= INFO ================= -->
 
         <div class="pdp-info">
+          <span id="productCategory" class="pdp-category"> Collection </span>
 
-            <span
-                id="productCategory"
-                class="pdp-category">
+          <h1 id="productTitle" class="pdp-title">Product Title</h1>
 
-                Collection
+          <p id="productSubtitle" class="pdp-subtitle">Product description</p>
 
-            </span>
+          <div class="pdp-price">
+            <span id="oldPrice" class="pdp-old-price number"> </span>
 
-            <h1
-                id="productTitle"
-                class="pdp-title">
+            <span id="currentPrice" class="pdp-current-price number"> </span>
+          </div>
 
-                Product Title
-
-            </h1>
-
-            <p
-                id="productSubtitle"
-                class="pdp-subtitle">
-
-                Product description
-
-            </p>
-
-            <div class="pdp-price">
-
-                <span
-                    id="oldPrice"
-                    class="pdp-old-price number">
-                </span>
-
-                <span
-                    id="currentPrice"
-                    class="pdp-current-price number">
-                </span>
-
-            </div>
-
-            <button
-                id="addToCartBtn"
-                class="btn btn-primary">
-
-                Add To Cart
-
-            </button>
-
+          <button id="addToCartBtn" class="btn btn-primary">Add To Cart</button>
         </div>
+      </div>
 
-    </div>
+      <!-- ================= DESCRIPTION ================= -->
 
+      <section class="pdp-description">
+        <h2 id="descriptionTitle">Description</h2>
 
-    <!-- ================= DESCRIPTION ================= -->
+        <p id="productDescription">Product description</p>
+      </section>
 
-    <section class="pdp-description">
+      <!-- ================= SPECIFICATIONS ================= -->
 
-        <h2 id="descriptionTitle">
-
-            Description
-
-        </h2>
-
-        <p id="productDescription">
-
-            Product description
-
-        </p>
-
-    </section>
-
-
-    <!-- ================= SPECIFICATIONS ================= -->
-
-    <section class="pdp-specs">
-
-        <h2 id="specificationsTitle">
-
-            Specifications
-
-        </h2>
+      <section class="pdp-specs">
+        <h2 id="specificationsTitle">Specifications</h2>
 
         <table>
-
-            <tbody id="specificationsTable">
-
-            </tbody>
-
+          <tbody id="specificationsTable"></tbody>
         </table>
-
+      </section>
     </section>
 
-</section>
+    <!-- ================= CART DRAWER ================= -->
 
+    <div id="cartOverlay" class="cart-overlay"></div>
 
-<!-- ================= CART DRAWER ================= -->
+    <aside id="cartDrawer" class="cart-drawer">
+      <div class="cart-header">
+        <h2 id="cartTitle" class="cart-title">Your Cart</h2>
 
-<div
-    id="cartOverlay"
-    class="cart-overlay">
-</div>
+        <button id="cartClose" class="cart-close" type="button">✕</button>
+      </div>
 
+      <div id="cartItems" class="cart-body"></div>
 
-<aside
-    id="cartDrawer"
-    class="cart-drawer">
+      <div id="emptyCart" class="cart-empty">Your cart is empty</div>
 
-    <div class="cart-header">
-
-        <h2
-            id="cartTitle"
-            class="cart-title">
-
-            Your Cart
-
-        </h2>
-
-        <button
-            id="cartClose"
-            class="cart-close"
-            type="button">
-
-            ✕
-
-        </button>
-
-    </div>
-
-
-    <div
-        id="cartItems"
-        class="cart-body">
-
-    </div>
-
-    <div
-        id="emptyCart"
-        class="cart-empty">
-
-        Your cart is empty
-
-    </div>
-
-
-    <div class="cart-footer">
-
+      <div class="cart-footer">
         <div class="cart-total">
+          <span id="subtotalTitle"> Subtotal </span>
 
-            <span id="subtotalTitle">
-
-                Subtotal
-
-            </span>
-
-            <strong
-                id="cartSubtotal"
-                class="number">
-
-                $0.00
-
-            </strong>
-
+          <strong id="cartSubtotal" class="number"> $0.00 </strong>
         </div>
 
-        <button
-            id="cartCheckout"
-            class="cart-checkout"
-            type="button">
-
-            Checkout via WhatsApp
-
+        <button id="cartCheckout" class="cart-checkout" type="button">
+          Checkout via WhatsApp
         </button>
+      </div>
+    </aside>
 
-    </div>
+    <div id="toastContainer" class="toast-container"></div>
 
-</aside>
-
-<div id="toastContainer" class="toast-container"></div>
-
-<script
-    type="module"
-    src="./beauty-pdp-preview.js">
-</script>
-
-</body>
+    <script type="module" src="./beauty-pdp-preview.js"></script>
+  </body>
 </html>

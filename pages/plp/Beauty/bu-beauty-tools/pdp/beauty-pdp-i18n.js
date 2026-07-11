@@ -1,376 +1,157 @@
 // ================= BEAUTY PDP I18N =================
 
-
 // ================= LANGUAGE STATE =================
 
-let currentLanguage =
-    localStorage.getItem("language") || "en";
-
-
-
+let currentLanguage = localStorage.getItem("language") || "en";
 
 // ================= TRANSLATIONS =================
 
 const translations = {
+  en: {
+    // PDP
 
+    home: "Home",
 
-    en: {
+    beauty: "Beauty",
 
+    product: "Product",
 
-        // PDP
+    description: "Description",
 
-        home: "Home",
+    specifications: "Specifications",
 
-        beauty: "Beauty",
+    addToCart: "Add To Cart",
 
-        product: "Product",
+    collection: "Collection",
 
-        description: "Description",
+    noSpecifications: "No specifications available",
 
-        specifications: "Specifications",
+    // CART
 
-        addToCart: "Add To Cart",
+    yourCart: "Your Cart",
 
-        collection: "Collection",
+    subtotal: "Subtotal",
 
-        noSpecifications:
-            "No specifications available",
+    emptyCart: "Your cart is empty",
 
+    remove: "Remove",
 
+    checkout: "Checkout via WhatsApp",
 
-        // CART
+    // TOAST
 
-        yourCart:
-            "Your Cart",
+    addedToCart: "Product added to cart",
+  },
 
-        subtotal:
-            "Subtotal",
+  fa: {
+    // PDP
 
-        emptyCart:
-            "Your cart is empty",
+    home: "خانه",
 
-        remove:
-            "Remove",
+    beauty: "زیبایی",
 
-        checkout:
-            "Checkout via WhatsApp",
+    product: "محصول",
 
+    description: "توضیحات",
 
+    specifications: "مشخصات",
 
-        // TOAST
+    addToCart: "افزودن به سبد خرید",
 
-        addedToCart:
-            "Product added to cart"
+    collection: "کالکشن",
 
+    noSpecifications: "مشخصاتی موجود نیست",
 
-    },
+    // CART
 
+    yourCart: "سبد خرید شما",
 
+    subtotal: "جمع کل",
 
+    emptyCart: "سبد خرید شما خالی است",
 
+    remove: "حذف",
 
-    fa: {
+    checkout: "تسویه حساب از طریق واتساپ",
 
+    // TOAST
 
-        // PDP
-
-        home:
-            "خانه",
-
-        beauty:
-            "زیبایی",
-
-        product:
-            "محصول",
-
-        description:
-            "توضیحات",
-
-        specifications:
-            "مشخصات",
-
-        addToCart:
-            "افزودن به سبد خرید",
-
-        collection:
-            "کالکشن",
-
-        noSpecifications:
-            "مشخصاتی موجود نیست",
-
-
-
-        // CART
-
-        yourCart:
-            "سبد خرید شما",
-
-        subtotal:
-            "جمع کل",
-
-        emptyCart:
-            "سبد خرید شما خالی است",
-
-        remove:
-            "حذف",
-
-        checkout:
-            "تسویه حساب از طریق واتساپ",
-
-
-
-        // TOAST
-
-        addedToCart:
-            "محصول به سبد خرید اضافه شد"
-
-
-    }
-
-
+    addedToCart: "محصول به سبد خرید اضافه شد",
+  },
 };
-
-
-
-
-
-
 
 // ================= INITIALIZE =================
 
+export function initializeLanguage() {
+  currentLanguage = localStorage.getItem("language") || "en";
 
-export function initializeLanguage(){
-
-
-    currentLanguage =
-        localStorage.getItem("language")
-        || "en";
-
-
-    applyDirection();
-
-
+  applyDirection();
 }
-
-
-
-
-
-
 
 // ================= GET LANGUAGE =================
 
-
-export function getLanguage(){
-
-
-    return currentLanguage;
-
-
+export function getLanguage() {
+  return currentLanguage;
 }
-
-
-
-
-
-
 
 // ================= TOGGLE LANGUAGE =================
 
+export function toggleLanguage() {
+  const newLanguage = currentLanguage === "en" ? "fa" : "en";
 
-export function toggleLanguage(){
+  currentLanguage = newLanguage;
 
-    const newLanguage =
-        currentLanguage === "en"
-            ? "fa"
-            : "en";
-
-
-    currentLanguage = newLanguage;
-
-
-    localStorage.setItem(
-        "language",
-        newLanguage
-    );
-
-
+  localStorage.setItem("language", newLanguage);
 }
-
-
-
-
-
-
 
 // ================= TRANSLATE =================
 
-
-export function translate(key){
-
-
-    return (
-
-        translations[currentLanguage]?.[key]
-        ||
-
-        key
-
-    );
-
-
+export function translate(key) {
+  return translations[currentLanguage]?.[key] || key;
 }
-
-
-
-
-
-
 
 // ================= RTL / LTR =================
 
+function applyDirection() {
+  document.documentElement.lang = currentLanguage;
 
-function applyDirection(){
-
-
-    document.documentElement.lang =
-        currentLanguage;
-
-
-
-    document.documentElement.dir =
-        currentLanguage === "fa"
-            ? "rtl"
-            : "ltr";
-
-
+  document.documentElement.dir = currentLanguage === "fa" ? "rtl" : "ltr";
 }
-
-
-
-
-
-
-
 
 // ================= PRODUCT TITLE =================
 
+export function getProductTitle(product) {
+  if (!product?.title) {
+    return "";
+  }
 
-export function getProductTitle(product){
+  if (typeof product.title === "object") {
+    return product.title[currentLanguage] || product.title.en;
+  }
 
-
-    if(!product?.title){
-
-        return "";
-
-    }
-
-
-
-    if(
-        typeof product.title === "object"
-    ){
-
-
-        return (
-
-            product.title[currentLanguage]
-            ||
-
-            product.title.en
-
-        );
-
-
-    }
-
-
-
-    return product.title;
-
-
+  return product.title;
 }
-
-
-
-
-
-
-
 
 // ================= PRODUCT DESCRIPTION =================
 
+export function getProductDescription(product) {
+  if (!product?.description) {
+    return "";
+  }
 
-export function getProductDescription(product){
+  if (typeof product.description === "object") {
+    return product.description[currentLanguage] || product.description.en;
+  }
 
-
-    if(!product?.description){
-
-        return "";
-
-    }
-
-
-
-    if(
-        typeof product.description === "object"
-    ){
-
-
-        return (
-
-            product.description[currentLanguage]
-            ||
-
-            product.description.en
-
-        );
-
-
-    }
-
-
-
-    return product.description;
-
-
+  return product.description;
 }
-
-
-
-
-
-
-
 
 // ================= PRICE =================
 
+export function formatPrice(price) {
+  if (currentLanguage === "fa") {
+    return new Intl.NumberFormat("fa-IR").format(price) + " افغانی";
+  }
 
-export function formatPrice(price){
-
-
-    if(currentLanguage === "fa"){
-
-
-        return (
-
-            new Intl.NumberFormat(
-                "fa-IR"
-            )
-            .format(price)
-
-            +
-
-            " افغانی"
-
-        );
-
-
-    }
-
-
-
-    return Number(price).toFixed(2) + " AFN";
-
-
+  return Number(price).toFixed(2) + " AFN";
 }

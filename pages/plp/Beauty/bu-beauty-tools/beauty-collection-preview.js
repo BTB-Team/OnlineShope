@@ -2,52 +2,105 @@ import { beautyCategories } from "./beauty-collection-data.js";
 
 import { collectionTranslations } from "./beauty-collection-i18n.js";
 
-const homeText = document.getElementById("homeText");
-const beautyText = document.getElementById("beautyText");
-const breadcrumbTitle = document.getElementById("breadcrumbTitle");
+const homeText =
+document.getElementById("homeText");
 
-const languageButton = document.getElementById("languageButton");
+const beautyText =
+    document.getElementById("beautyText");
 
-const pageTitle = document.getElementById("pageTitle");
+const categoryGrid =
+document.getElementById("categoryGrid");
 
-const pageDescription = document.getElementById("pageDescription");
 
-const searchInput = document.getElementById("searchInput");
+const languageButton =
+document.getElementById("languageButton");
 
-const breadcrumbTitle = document.getElementById("breadcrumbTitle");
 
-let currentLanguage = localStorage.getItem("language") || "en";
+const pageTitle =
+document.getElementById("pageTitle");
 
-let filteredCategories = beautyCategories;
 
-function renderPageLanguage() {
-  const text = collectionTranslations[currentLanguage];
+const pageDescription =
+document.getElementById("pageDescription");
 
-  document.documentElement.lang = currentLanguage;
 
-  document.documentElement.dir = currentLanguage === "fa" ? "rtl" : "ltr";
+const searchInput =
+document.getElementById("searchInput");
 
-  pageTitle.textContent = text.pageTitle;
 
-  pageDescription.textContent = text.pageDescription;
+const breadcrumbTitle =
+document.getElementById("breadcrumbTitle");
 
-  homeText.textContent = text.home;
 
-  beautyText.textContent = text.beauty;
 
-  searchInput.placeholder = text.searchPlaceholder;
+let currentLanguage =
+localStorage.getItem("language") || "en";
 
-  breadcrumbTitle.textContent = text.breadcrumbBeauty;
 
-  languageButton.textContent = currentLanguage === "en" ? "FA" : "EN";
+
+let filteredCategories =
+beautyCategories;
+
+
+
+
+function renderPageLanguage(){
+
+
+    const text =
+    collectionTranslations[currentLanguage];
+
+    document.documentElement.lang =
+currentLanguage;
+
+
+document.documentElement.dir =
+currentLanguage === "fa"
+? "rtl"
+            : "ltr";
+    
+    pageTitle.textContent =
+    text.pageTitle;
+
+
+    pageDescription.textContent =
+    text.pageDescription;
+
+    homeText.textContent =
+text.home;
+
+beautyText.textContent = text.women;
+    
+    searchInput.placeholder =
+    text.searchPlaceholder;
+
+
+    breadcrumbTitle.textContent =
+    text.breadcrumbBeauty;
+
+
+    languageButton.textContent =
+    currentLanguage === "en"
+    ? "FA"
+    : "EN";
+
+
 }
 
-function renderCategories() {
-  const text = collectionTranslations[currentLanguage];
 
-  categoryGrid.innerHTML = filteredCategories
-    .map(
-      (category) => `
+
+
+function renderCategories(){
+
+
+    const text =
+    collectionTranslations[currentLanguage];
+
+
+    categoryGrid.innerHTML =
+
+
+    filteredCategories.map(category => `
 
 
     <a
@@ -93,32 +146,78 @@ href="beauty-products.html?category=${category.slug}">
 </a>
 
 
-    `,
-    )
-    .join("");
+    `).join("");
+
 }
 
-languageButton.addEventListener("click", () => {
-  currentLanguage = currentLanguage === "en" ? "fa" : "en";
 
-  localStorage.setItem("language", currentLanguage);
 
-  filteredCategories = beautyCategories;
 
-  renderPageLanguage();
+languageButton.addEventListener(
+"click",
+()=>{
 
-  renderCategories();
+
+    currentLanguage =
+    currentLanguage === "en"
+    ? "fa"
+    : "en";
+
+
+    localStorage.setItem(
+        "language",
+        currentLanguage
+    );
+
+
+    filteredCategories =
+    beautyCategories;
+
+
+    renderPageLanguage();
+
+    renderCategories();
+
+
 });
 
-searchInput.addEventListener("input", () => {
-  const value = searchInput.value.toLowerCase();
 
-  filteredCategories = beautyCategories.filter((category) => {
-    return category.title[currentLanguage].toLowerCase().includes(value);
-  });
 
-  renderCategories();
+
+
+searchInput.addEventListener(
+"input",
+()=>{
+
+
+    const value =
+    searchInput.value
+    .toLowerCase();
+
+
+
+    filteredCategories =
+
+    beautyCategories.filter(category => {
+
+
+        return category.title[currentLanguage]
+        .toLowerCase()
+        .includes(value);
+
+
+    });
+
+
+
+    renderCategories();
+
+
 });
+
+
+
+
 
 renderPageLanguage();
 
