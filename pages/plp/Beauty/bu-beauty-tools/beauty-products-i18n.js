@@ -1,203 +1,141 @@
 const STORAGE_KEY = "language";
 
 export const languages = {
-    en: "en",
-    fa: "fa",
+  en: "en",
+  fa: "fa",
 };
 
 export const translations = {
-    en: {
-        home: "Home",
+  en: {
+    home: "Home",
 
-        women: "Women",
+    women: "Women",
 
-        beautyTools:
-        "Beauty Tools",
+    beautyTools: "Beauty Tools",
 
-        products:
-        "Products",
-        
-        pageTitle: "Beauty Products",
-        pageDescription: "Discover our beauty collection.",
+    products: "Products",
 
-        searchPlaceholder: "Search products...",
+    pageTitle: "Beauty Products",
+    pageDescription: "Discover our beauty collection.",
 
-        emptyTitle: "No Products Found",
-        emptyDescription: "Try another keyword.",
+    searchPlaceholder: "Search products...",
 
-        viewDetails: "View Details",
+    emptyTitle: "No Products Found",
+    emptyDescription: "Try another keyword.",
 
-        productsCount: (count) =>
-            `${count} Product${count !== 1 ? "s" : ""}`,
+    viewDetails: "View Details",
 
-        currency: "AFN",
-    },
+    productsCount: (count) => `${count} Product${count !== 1 ? "s" : ""}`,
 
-    fa: {
-        home:
-        "خانه",
+    currency: "AFN",
+  },
 
-        women:
-        "زنانه",
+  fa: {
+    home: "خانه",
 
-        beautyTools:
-        "ابزارهای زیبایی",
+    women: "زنانه",
 
-        products:
-        "محصولات",
-        
-        pageTitle: "محصولات آرایشی",
+    beautyTools: "ابزارهای زیبایی",
 
-        pageDescription:
-            "مجموعه‌ای از بهترین محصولات آرایشی را مشاهده کنید.",
+    products: "محصولات",
 
-        searchPlaceholder: "جستجوی محصول...",
+    pageTitle: "محصولات آرایشی",
 
-        emptyTitle: "محصولی پیدا نشد",
+    pageDescription: "مجموعه‌ای از بهترین محصولات آرایشی را مشاهده کنید.",
 
-        emptyDescription:
-            "عبارت دیگری را جستجو کنید.",
+    searchPlaceholder: "جستجوی محصول...",
 
-        viewDetails: "مشاهده جزئیات",
+    emptyTitle: "محصولی پیدا نشد",
 
-        productsCount: (count) =>
-            `${count} محصول`,
+    emptyDescription: "عبارت دیگری را جستجو کنید.",
 
-        currency: "افغانی",
-    },
+    viewDetails: "مشاهده جزئیات",
+
+    productsCount: (count) => `${count} محصول`,
+
+    currency: "افغانی",
+  },
 };
 
 export function getLanguage() {
+  const savedLanguage = localStorage.getItem(STORAGE_KEY);
 
-    const savedLanguage =
-        localStorage.getItem(STORAGE_KEY);
+  if (savedLanguage && languages[savedLanguage]) {
+    return savedLanguage;
+  }
 
-    if (
-        savedLanguage &&
-        languages[savedLanguage]
-    ) {
-        return savedLanguage;
-    }
-
-    return languages.en;
+  return languages.en;
 }
 
 export function setLanguage(language) {
+  localStorage.setItem(STORAGE_KEY, language);
 
-    localStorage.setItem(
-        STORAGE_KEY,
-        language
-    );
+  document.documentElement.lang = language;
 
-    document.documentElement.lang =
-        language;
-
-    document.documentElement.dir =
-        language === "fa"
-            ? "rtl"
-            : "ltr";
+  document.documentElement.dir = language === "fa" ? "rtl" : "ltr";
 }
 
 export function toggleLanguage() {
+  const nextLanguage = getLanguage() === "en" ? "fa" : "en";
 
-    const nextLanguage =
-        getLanguage() === "en"
-            ? "fa"
-            : "en";
+  setLanguage(nextLanguage);
 
-    setLanguage(nextLanguage);
-
-    return nextLanguage;
+  return nextLanguage;
 }
 export function translate(key) {
+  const language = getLanguage();
 
-    const language = getLanguage();
-
-    return translations[language][key];
+  return translations[language][key];
 }
 
 export function translateCount(count) {
+  const language = getLanguage();
 
-    const language = getLanguage();
-
-    return translations[language]
-        .productsCount(count);
+  return translations[language].productsCount(count);
 }
 
 export function getProductTitle(product) {
+  const language = getLanguage();
 
-    const language = getLanguage();
-
-    return (
-        product?.title?.[language] ??
-        product?.title?.en ??
-        ""
-    );
+  return product?.title?.[language] ?? product?.title?.en ?? "";
 }
 
 export function getProductDescription(product) {
+  const language = getLanguage();
 
-    const language = getLanguage();
-
-    return (
-        product?.description?.[language] ??
-        product?.description?.en ??
-        ""
-    );
+  return product?.description?.[language] ?? product?.description?.en ?? "";
 }
 
 export function getProductCategory(product) {
+  const language = getLanguage();
 
-    const language = getLanguage();
+  if (typeof product.category === "object" && product.category !== null) {
+    return product.category[language] ?? product.category.en ?? "";
+  }
 
-    if (
-        typeof product.category === "object" &&
-        product.category !== null
-    ) {
-        return (
-            product.category[language] ??
-            product.category.en ??
-            ""
-        );
-    }
-
-    return product.category ?? "";
+  return product.category ?? "";
 }
 
 export function formatPrice(price) {
+  const language = getLanguage();
 
-    const language = getLanguage();
+  const number = new Intl.NumberFormat(
+    language === "fa" ? "fa-AF" : "en-US",
+  ).format(Number(price));
 
-    const number =
-        new Intl.NumberFormat(
-            language === "fa"
-                ? "fa-AF"
-                : "en-US"
-        ).format(Number(price));
+  const currency = translations[language].currency;
 
-
-    const currency =
-        translations[language].currency;
-
-
-    if(language === "fa"){
-
-        return `${number} ${currency}`;
-
-    }
-
-
+  if (language === "fa") {
     return `${number} ${currency}`;
+  }
 
+  return `${number} ${currency}`;
 }
 
 export function initializeLanguage() {
+  const language = getLanguage();
 
-    const language = getLanguage();
+  setLanguage(language);
 
-    setLanguage(language);
-
-    return language;
+  return language;
 }
-
-

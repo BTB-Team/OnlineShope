@@ -1,152 +1,141 @@
 export const beautyProducts = [
+  {
+    id: 1,
 
-    {
-        id: 1,
+    category: "brushes-applicators",
 
-        category: "brushes-applicators",
-
-        title: {
-            en: "Professional Makeup Brush Set",
-            fa: "ست براش حرفه‌ای آرایش"
-        },
-
-        description: {
-            en: "Soft and professional brushes for flawless makeup.",
-            fa: "براش‌های نرم و حرفه‌ای برای آرایش بی‌نقص."
-        },
-
-        oldPrice: 45,
-
-        price: 32,
-
-        badge: "NEW",
-
-        image:
-        "https://i.pinimg.com/736x/b2/72/67/b27267bc7e77f36c8dee01de7d434367.jpg"
-
+    title: {
+      en: "Professional Makeup Brush Set",
+      fa: "ست براش حرفه‌ای آرایش",
     },
 
-
-    {
-        id: 2,
-
-        category: "brushes-applicators",
-
-        title: {
-            en: "Foundation Applicator Sponge",
-            fa: "اسفنج اپلیکاتور کرم پودر"
-        },
-
-        description: {
-            en: "Beauty sponge for smooth foundation application.",
-            fa: "اسفنج آرایشی برای پخش یکنواخت کرم پودر."
-        },
-
-        oldPrice: 20,
-
-        price: 14,
-
-        badge: "SALE",
-
-        image:
-        "https://i.pinimg.com/1200x/12/97/75/129775042afca3991e1e6489ebc6208e.jpg"
-
+    description: {
+      en: "Soft and professional brushes for flawless makeup.",
+      fa: "براش‌های نرم و حرفه‌ای برای آرایش بی‌نقص.",
     },
 
+    oldPrice: 45,
 
-    {
-        id: 3,
+    price: 32,
 
-        category: "brushes-applicators",
+    badge: "NEW",
 
-        title: {
-            en: "Blending Eye Brush",
-            fa: "براش ترکیب سایه چشم"
-        },
+    image:
+      "https://i.pinimg.com/736x/b2/72/67/b27267bc7e77f36c8dee01de7d434367.jpg",
+  },
 
-        description: {
-            en: "Precision brush for eye makeup blending.",
-            fa: "براش دقیق برای ترکیب سایه چشم."
-        },
+  {
+    id: 2,
 
-        oldPrice: 25,
+    category: "brushes-applicators",
 
-        price: 18,
-
-        badge: "BEST",
-
-        image:
-        "https://i.pinimg.com/1200x/3b/37/e3/3b37e34cadf740e0079d1735f96ff840.jpg"
-
+    title: {
+      en: "Foundation Applicator Sponge",
+      fa: "اسفنج اپلیکاتور کرم پودر",
     },
 
-
-    {
-        id: 4,
-
-        category: "hair-styling-tools",
-
-        title: {
-            en: "Professional Hair Dryer",
-            fa: "سشوار حرفه‌ای"
-        },
-
-        description: {
-            en: "Powerful hair dryer for styling.",
-            fa: "سشوار قدرتمند برای حالت‌دهی مو."
-        },
-
-        oldPrice: 90,
-
-        price: 70,
-
-        badge: "NEW",
-
-        image:
-        "https://i.pinimg.com/1200x/72/f8/55/72f85522d23eaef44695a601b0c11089.jpg"
-
+    description: {
+      en: "Beauty sponge for smooth foundation application.",
+      fa: "اسفنج آرایشی برای پخش یکنواخت کرم پودر.",
     },
 
+    oldPrice: 20,
 
-    {
-        id: 5,
+    price: 14,
 
-        category: "facial-tools",
+    badge: "SALE",
 
-        title: {
-            en: "Facial Massage Roller",
-            fa: "رولر ماساژ صورت"
-        },
+    image:
+      "https://i.pinimg.com/1200x/12/97/75/129775042afca3991e1e6489ebc6208e.jpg",
+  },
 
-        description: {
-            en: "Facial tool for skincare routines.",
-            fa: "ابزار مراقبت صورت برای روتین پوستی."
-        },
+  {
+    id: 3,
 
-        oldPrice: 35,
+    category: "brushes-applicators",
 
-        price: 25,
+    title: {
+      en: "Blending Eye Brush",
+      fa: "براش ترکیب سایه چشم",
+    },
 
-        badge: "SALE",
+    description: {
+      en: "Precision brush for eye makeup blending.",
+      fa: "براش دقیق برای ترکیب سایه چشم.",
+    },
 
-        image:
-        "https://i.pinimg.com/736x/fe/a0/83/fea0834970e8e59e4172b635536ea668.jpg"
+    oldPrice: 25,
 
-    }
+    price: 18,
 
-    ,{
+    badge: "BEST",
+
+    image:
+      "https://i.pinimg.com/1200x/3b/37/e3/3b37e34cadf740e0079d1735f96ff840.jpg",
+  },
+
+  {
+    id: 4,
+
+    category: "hair-styling-tools",
+
+    title: {
+      en: "Professional Hair Dryer",
+      fa: "سشوار حرفه‌ای",
+    },
+
+    description: {
+      en: "Powerful hair dryer for styling.",
+      fa: "سشوار قدرتمند برای حالت‌دهی مو.",
+    },
+
+    oldPrice: 90,
+
+    price: 70,
+
+    badge: "NEW",
+
+    image:
+      "https://i.pinimg.com/1200x/72/f8/55/72f85522d23eaef44695a601b0c11089.jpg",
+  },
+
+  {
+    id: 5,
+
+    category: "facial-tools",
+
+    title: {
+      en: "Facial Massage Roller",
+      fa: "رولر ماساژ صورت",
+    },
+
+    description: {
+      en: "Facial tool for skincare routines.",
+      fa: "ابزار مراقبت صورت برای روتین پوستی.",
+    },
+
+    oldPrice: 35,
+
+    price: 25,
+
+    badge: "SALE",
+
+    image:
+      "https://i.pinimg.com/736x/fe/a0/83/fea0834970e8e59e4172b635536ea668.jpg",
+  },
+  {
     id: 6,
 
     category: "nail-care-tools",
 
     title: {
-        en: "Professional Nail Care Set",
-        fa: "ست حرفه‌ای مراقبت ناخن"
+      en: "Professional Nail Care Set",
+      fa: "ست حرفه‌ای مراقبت ناخن",
     },
 
     description: {
-        en: "Complete tools for nail care and manicure.",
-        fa: "مجموعه کامل ابزارهای مراقبت و مانیکور ناخن."
+      en: "Complete tools for nail care and manicure.",
+      fa: "مجموعه کامل ابزارهای مراقبت و مانیکور ناخن.",
     },
 
     oldPrice: 30,
@@ -156,21 +145,21 @@ export const beautyProducts = [
     badge: "NEW",
 
     image:
-    " https://i.pinimg.com/736x/ee/3e/ac/ee3eacbbf6a13604680848474204d368.jpg "
-    },
-    {
+      " https://i.pinimg.com/736x/ee/3e/ac/ee3eacbbf6a13604680848474204d368.jpg ",
+  },
+  {
     id: 7,
 
     category: "brushes-applicators",
 
     title: {
-        en: "Eye Makeup Brush Set",
-        fa: "ست براش آرایش چشم"
+      en: "Eye Makeup Brush Set",
+      fa: "ست براش آرایش چشم",
     },
 
     description: {
-        en: "Professional eye brushes for makeup artists.",
-        fa: "براش‌های حرفه‌ای برای آرایش چشم."
+      en: "Professional eye brushes for makeup artists.",
+      fa: "براش‌های حرفه‌ای برای آرایش چشم.",
     },
 
     oldPrice: 40,
@@ -180,24 +169,22 @@ export const beautyProducts = [
     badge: "BEST",
 
     image:
-    "https://i.pinimg.com/1200x/1e/a9/c7/1ea9c71456d9fc6184c21f1794d31286.jpg"
+      "https://i.pinimg.com/1200x/1e/a9/c7/1ea9c71456d9fc6184c21f1794d31286.jpg",
+  },
 
-},
-
-
-{
+  {
     id: 8,
 
     category: "hair-styling-tools",
 
     title: {
-        en: "Hair Straightener",
-        fa: "اتو مو حرفه‌ای"
+      en: "Hair Straightener",
+      fa: "اتو مو حرفه‌ای",
     },
 
     description: {
-        en: "Professional hair straightener.",
-        fa: "اتو موی حرفه‌ای برای حالت‌دهی."
+      en: "Professional hair straightener.",
+      fa: "اتو موی حرفه‌ای برای حالت‌دهی.",
     },
 
     oldPrice: 80,
@@ -207,24 +194,22 @@ export const beautyProducts = [
     badge: "SALE",
 
     image:
-    "https://i.pinimg.com/736x/30/eb/0b/30eb0b1f0e4a5c7b0d1334ca2a9b63f8.jpg"
+      "https://i.pinimg.com/736x/30/eb/0b/30eb0b1f0e4a5c7b0d1334ca2a9b63f8.jpg",
+  },
 
-},
-
-
-{
+  {
     id: 9,
 
     category: "hair-styling-tools",
 
     title: {
-        en: "Hair Curling Iron",
-        fa: "فر کننده مو"
+      en: "Hair Curling Iron",
+      fa: "فر کننده مو",
     },
 
     description: {
-        en: "Create beautiful curls easily.",
-        fa: "ایجاد فرهای زیبا به راحتی."
+      en: "Create beautiful curls easily.",
+      fa: "ایجاد فرهای زیبا به راحتی.",
     },
 
     oldPrice: 70,
@@ -234,24 +219,22 @@ export const beautyProducts = [
     badge: "NEW",
 
     image:
-    "https://i.pinimg.com/736x/f9/7a/7c/f97a7ce8b1ea35adeb17a68a24f2949a.jpg"
+      "https://i.pinimg.com/736x/f9/7a/7c/f97a7ce8b1ea35adeb17a68a24f2949a.jpg",
+  },
 
-},
-
-
-{
+  {
     id: 10,
 
     category: "facial-tools",
 
     title: {
-        en: "Electronical Mask",
-        fa: "رولر یشم صورت"
+      en: "Electronical Mask",
+      fa: "رولر یشم صورت",
     },
 
     description: {
-        en: "Facial massage tool for skincare.",
-        fa: "ابزار ماساژ صورت برای مراقبت پوست."
+      en: "Facial massage tool for skincare.",
+      fa: "ابزار ماساژ صورت برای مراقبت پوست.",
     },
 
     oldPrice: 45,
@@ -261,24 +244,22 @@ export const beautyProducts = [
     badge: "SALE",
 
     image:
-    "https://i.pinimg.com/736x/67/19/3b/67193ba5343769a4919ef4ba7a1786c3.jpg"
+      "https://i.pinimg.com/736x/67/19/3b/67193ba5343769a4919ef4ba7a1786c3.jpg",
+  },
 
-},
-
-
-{
+  {
     id: 11,
 
     category: "facial-tools",
 
     title: {
-        en: "Skin Cleansing Brush",
-        fa: "برس پاکسازی پوست"
+      en: "Skin Cleansing Brush",
+      fa: "برس پاکسازی پوست",
     },
 
     description: {
-        en: "Deep cleansing facial brush.",
-        fa: "برس پاکسازی عمیق پوست."
+      en: "Deep cleansing facial brush.",
+      fa: "برس پاکسازی عمیق پوست.",
     },
 
     oldPrice: 55,
@@ -288,24 +269,22 @@ export const beautyProducts = [
     badge: "BEST",
 
     image:
-    "https://i.pinimg.com/736x/fd/a9/31/fda9318595fa033e667582b3617519b5.jpg"
+      "https://i.pinimg.com/736x/e7/e4/3e/e7e43eb51c6dc2e268182d919077b70c.jpg",
+  },
 
-},
-
-
-{
+  {
     id: 12,
 
     category: "nail-care-tools",
 
     title: {
-        en: "Professional Nail Care Kit",
-        fa: "ست حرفه‌ای مراقبت ناخن"
+      en: "Professional Nail Care Kit",
+      fa: "ست حرفه‌ای مراقبت ناخن",
     },
 
     description: {
-        en: "Complete manicure and nail care tools.",
-        fa: "مجموعه کامل ابزار مانیکور و مراقبت ناخن."
+      en: "Complete manicure and nail care tools.",
+      fa: "مجموعه کامل ابزار مانیکور و مراقبت ناخن.",
     },
 
     oldPrice: 35,
@@ -315,24 +294,22 @@ export const beautyProducts = [
     badge: "NEW",
 
     image:
-    "https://i.pinimg.com/1200x/c7/9a/f1/c79af190710c6376ffaa416fb1c64d5d.jpg"
+      "https://i.pinimg.com/1200x/c7/9a/f1/c79af190710c6376ffaa416fb1c64d5d.jpg",
+  },
 
-},
-
-
-{
+  {
     id: 13,
 
     category: "nail-care-tools",
 
     title: {
-        en: "Electric Nail File",
-        fa: "سوهان برقی ناخن"
+      en: "Electric Nail File",
+      fa: "سوهان برقی ناخن",
     },
 
     description: {
-        en: "Professional nail shaping tool.",
-        fa: "ابزار حرفه‌ای فرم دادن ناخن."
+      en: "Professional nail shaping tool.",
+      fa: "ابزار حرفه‌ای فرم دادن ناخن.",
     },
 
     oldPrice: 60,
@@ -342,10 +319,6 @@ export const beautyProducts = [
     badge: "SALE",
 
     image:
-    "https://i.pinimg.com/736x/88/87/78/8887785483794d47700f334b1b055856.jpg"
-
-}
-
+      "https://i.pinimg.com/1200x/96/d0/2e/96d02e42bab6f2da96bc81f3e7c28166.jpg",
+  },
 ];
-
-

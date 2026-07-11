@@ -2,106 +2,52 @@ import { beautyCategories } from "./beauty-collection-data.js";
 
 import { collectionTranslations } from "./beauty-collection-i18n.js";
 
-const homeText =
-document.getElementById("homeText");
+const homeText = document.getElementById("homeText");
+const beautyText = document.getElementById("beautyText");
+const breadcrumbTitle = document.getElementById("breadcrumbTitle");
 
-const beautyText =
-    document.getElementById("beautyText");
+const languageButton = document.getElementById("languageButton");
 
-const categoryGrid =
-document.getElementById("categoryGrid");
+const pageTitle = document.getElementById("pageTitle");
 
+const pageDescription = document.getElementById("pageDescription");
 
-const languageButton =
-document.getElementById("languageButton");
+const searchInput = document.getElementById("searchInput");
 
+const breadcrumbTitle = document.getElementById("breadcrumbTitle");
 
-const pageTitle =
-document.getElementById("pageTitle");
+let currentLanguage = localStorage.getItem("language") || "en";
 
+let filteredCategories = beautyCategories;
 
-const pageDescription =
-document.getElementById("pageDescription");
+function renderPageLanguage() {
+  const text = collectionTranslations[currentLanguage];
 
+  document.documentElement.lang = currentLanguage;
 
-const searchInput =
-document.getElementById("searchInput");
+  document.documentElement.dir = currentLanguage === "fa" ? "rtl" : "ltr";
 
+  pageTitle.textContent = text.pageTitle;
 
-const breadcrumbTitle =
-document.getElementById("breadcrumbTitle");
+  pageDescription.textContent = text.pageDescription;
 
+  homeText.textContent = text.home;
 
+  beautyText.textContent = text.beauty;
 
-let currentLanguage =
-localStorage.getItem("language") || "en";
+  searchInput.placeholder = text.searchPlaceholder;
 
+  breadcrumbTitle.textContent = text.breadcrumbBeauty;
 
-
-let filteredCategories =
-beautyCategories;
-
-
-
-
-function renderPageLanguage(){
-
-
-    const text =
-    collectionTranslations[currentLanguage];
-
-    document.documentElement.lang =
-currentLanguage;
-
-
-document.documentElement.dir =
-currentLanguage === "fa"
-? "rtl"
-            : "ltr";
-    
-    pageTitle.textContent =
-    text.pageTitle;
-
-
-    pageDescription.textContent =
-    text.pageDescription;
-
-    homeText.textContent =
-text.home;
-
-beautyText.textContent =
-        text.beauty;
-    
-    searchInput.placeholder =
-    text.searchPlaceholder;
-
-
-    breadcrumbTitle.textContent =
-    text.breadcrumbBeauty;
-
-
-    languageButton.textContent =
-    currentLanguage === "en"
-    ? "FA"
-    : "EN";
-
-
+  languageButton.textContent = currentLanguage === "en" ? "FA" : "EN";
 }
 
+function renderCategories() {
+  const text = collectionTranslations[currentLanguage];
 
-
-
-function renderCategories(){
-
-
-    const text =
-    collectionTranslations[currentLanguage];
-
-
-    categoryGrid.innerHTML =
-
-
-    filteredCategories.map(category => `
+  categoryGrid.innerHTML = filteredCategories
+    .map(
+      (category) => `
 
 
     <a
@@ -147,78 +93,32 @@ href="beauty-products.html?category=${category.slug}">
 </a>
 
 
-    `).join("");
-
+    `,
+    )
+    .join("");
 }
 
+languageButton.addEventListener("click", () => {
+  currentLanguage = currentLanguage === "en" ? "fa" : "en";
 
+  localStorage.setItem("language", currentLanguage);
 
+  filteredCategories = beautyCategories;
 
-languageButton.addEventListener(
-"click",
-()=>{
+  renderPageLanguage();
 
-
-    currentLanguage =
-    currentLanguage === "en"
-    ? "fa"
-    : "en";
-
-
-    localStorage.setItem(
-        "language",
-        currentLanguage
-    );
-
-
-    filteredCategories =
-    beautyCategories;
-
-
-    renderPageLanguage();
-
-    renderCategories();
-
-
+  renderCategories();
 });
 
+searchInput.addEventListener("input", () => {
+  const value = searchInput.value.toLowerCase();
 
+  filteredCategories = beautyCategories.filter((category) => {
+    return category.title[currentLanguage].toLowerCase().includes(value);
+  });
 
-
-
-searchInput.addEventListener(
-"input",
-()=>{
-
-
-    const value =
-    searchInput.value
-    .toLowerCase();
-
-
-
-    filteredCategories =
-
-    beautyCategories.filter(category => {
-
-
-        return category.title[currentLanguage]
-        .toLowerCase()
-        .includes(value);
-
-
-    });
-
-
-
-    renderCategories();
-
-
+  renderCategories();
 });
-
-
-
-
 
 renderPageLanguage();
 
