@@ -131,7 +131,9 @@ function renderCategories(){
 
 class="plp-category-card"
 
-href="w-bag-shoes-products.html?category=${category.slug}">
+<a
+class="plp-category-card"
+href="../plp-bag-shoes/w-plp-bag-shoes.html?category=${category.slug}">
 
 
 

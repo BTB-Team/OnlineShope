@@ -21,7 +21,7 @@ export const bagShoesProducts = [
 
         badge: "NEW",
 
-        image: ""
+        image: "https://i.pinimg.com/1200x/a4/92/27/a49227b18ba0f449723883435d5db73e.jpg"
     },
 
 
@@ -46,7 +46,7 @@ export const bagShoesProducts = [
 
         badge: "SALE",
 
-        image: ""
+        image: "https://i.pinimg.com/1200x/e8/b5/a0/e8b5a073ce07818ee7791f29ca23bd03.jpg"
     },
 
 
@@ -71,7 +71,7 @@ export const bagShoesProducts = [
 
         badge: "BEST",
 
-        image: ""
+        image: "https://i.pinimg.com/736x/f3/c1/aa/f3c1aa5ca82f108cae02d7ef3266d12d.jpg"
     },
 
 
@@ -96,7 +96,7 @@ export const bagShoesProducts = [
 
         badge: "NEW",
 
-        image: ""
+        image: "https://i.pinimg.com/1200x/f1/b3/07/f1b307a761104edd2a66ca8a2c34abd9.jpg"
     },
 
 
@@ -121,7 +121,7 @@ export const bagShoesProducts = [
 
         badge: "SALE",
 
-        image: ""
+        image: "https://i.pinimg.com/736x/07/0c/94/070c94e1a64377d450842e2278d4e6f4.jpg"
     },
 
 
@@ -146,7 +146,7 @@ export const bagShoesProducts = [
 
         badge: "BEST",
 
-        image: ""
+        image: "https://i.pinimg.com/736x/35/87/de/3587de1fc3b286266e5a65970f56ccae.jpg"
     },
 
 
@@ -171,7 +171,7 @@ export const bagShoesProducts = [
 
         badge: "NEW",
 
-        image: ""
+        image: "https://i.pinimg.com/1200x/fa/70/04/fa7004f36e760227cc00666ddd321ccd.jpg"
     },
 
 
@@ -196,7 +196,7 @@ export const bagShoesProducts = [
 
         badge: "BEST",
 
-        image: ""
+        image: "https://i.pinimg.com/1200x/2f/95/00/2f950057872000ed992bbe8a40e03d8f.jpg"
     },
 
 
@@ -221,7 +221,7 @@ export const bagShoesProducts = [
 
         badge: "SALE",
 
-        image: ""
+        image: "https://i.pinimg.com/1200x/76/57/c3/7657c3e5bc31324f249bc92245eeda71.jpg"
     },
 
 
@@ -246,7 +246,7 @@ export const bagShoesProducts = [
 
         badge: "NEW",
 
-        image: ""
+        image: "https://i.pinimg.com/736x/cf/7a/ca/cf7acab94abcd2f5c7cc15ecb46e5048.jpg"
     },
 
 
@@ -271,7 +271,7 @@ export const bagShoesProducts = [
 
         badge: "SALE",
 
-        image: ""
+        image: "https://i.pinimg.com/1200x/8e/d3/88/8ed388cf74974982b9bdb280133a4ac0.jpg"
     },
 
 
@@ -296,7 +296,7 @@ export const bagShoesProducts = [
 
         badge: "BEST",
 
-        image: ""
+        image: "https://i.pinimg.com/736x/07/a8/3b/07a83b5828b7e80918bb63f774aeae1b.jpg"
     },
 
 
@@ -321,7 +321,7 @@ export const bagShoesProducts = [
 
         badge: "NEW",
 
-        image: ""
+        image: "https://i.pinimg.com/736x/01/32/63/013263a013e3f6dcaf23987bcd1bbe86.jpg"
     }
 
 ];

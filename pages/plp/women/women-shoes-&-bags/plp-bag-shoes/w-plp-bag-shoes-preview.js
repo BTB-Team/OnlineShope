@@ -1,27 +1,21 @@
 import { bagShoesProducts } 
-from "./w-bag-shoes-products-data.js";
+from "./w-plp-bag-shoes-data.js";
 
 
 import {
 
-    initializeLanguage,
-
-    getLanguage,
-
-    toggleLanguage,
-
-    translate,
-
-    translateCount,
-
-    getProductTitle,
-
-    getProductDescription,
-
-    formatPrice
+initializeLanguage,
+getLanguage,
+toggleLanguage,
+translate,
+translateCount,
+getProductTitle,
+getProductDescription,
+formatPrice
 
 } 
-from "./w-bag-shoes-products-i18n.js";
+from "./w-plp-bag-shoes-i18n.js";
+
 
 
 
@@ -68,20 +62,13 @@ document.getElementById("breadcrumbWomen");
 
 
 const breadcrumbBagsShoes =
-document.getElementById(
-    "breadcrumbBagsShoes"
-);
-
-
-const breadcrumbProducts =
-
-document.getElementById("breadcrumbProducts")
+document.getElementById("breadcrumbBagsShoes")
 ||
 document.getElementById("breadcrumbTitle");
 
 
 
-// Empty State
+// Empty
 
 const emptyTitle =
 document.getElementById("emptyTitle");
@@ -89,6 +76,7 @@ document.getElementById("emptyTitle");
 
 const emptyDescription =
 document.getElementById("emptyDescription");
+
 
 
 
@@ -106,9 +94,20 @@ urlParams.get("category");
 
 
 
-let currentProducts =
+console.log(
+    "Selected Category:",
+    selectedCategory
+);
 
-selectedCategory
+
+console.log(
+    "Products:",
+    bagShoesProducts
+);
+
+
+
+let currentProducts = selectedCategory
 
 ?
 
@@ -123,6 +122,8 @@ product.category === selectedCategory
 :
 
 [...bagShoesProducts];
+
+
 
 
 
@@ -151,7 +152,11 @@ function init(){
 
 
 
-// ================= STATIC =================
+
+
+
+
+// ================= STATIC CONTENT =================
 
 
 function updateStaticContent(){
@@ -182,21 +187,15 @@ function updateStaticContent(){
 
 
 
-    if(pageTitle){
 
-        pageTitle.textContent =
-        translate("pageTitle");
-
-    }
+    pageTitle.textContent =
+    translate("pageTitle");
 
 
 
-    if(pageDescription){
+    pageDescription.textContent =
+    translate("pageDescription");
 
-        pageDescription.textContent =
-        translate("pageDescription");
-
-    }
 
 
 
@@ -229,12 +228,14 @@ function updateStaticContent(){
 
 
 
+
     if(emptyTitle){
 
         emptyTitle.textContent =
         translate("emptyTitle");
 
     }
+
 
 
 
@@ -247,7 +248,7 @@ function updateStaticContent(){
 
 
 
-    // Breadcrumb
+
 
 
     if(breadcrumbHome){
@@ -277,16 +278,11 @@ function updateStaticContent(){
 
 
 
-    if(breadcrumbProducts){
-
-        breadcrumbProducts.textContent =
-        translate("products");
-
-    }
-
-
-
 }
+
+
+
+
 
 
 
@@ -300,27 +296,18 @@ function renderProducts(products){
 
 
 
-    if(productsCount){
+    productsCount.textContent =
+    translateCount(products.length);
 
-        productsCount.textContent =
-        translateCount(
-            products.length
-        );
-
-    }
 
 
 
     if(products.length === 0){
 
 
-        if(emptyState){
-
-            emptyState.classList.remove(
-                "hidden"
-            );
-
-        }
+        emptyState.classList.remove(
+            "hidden"
+        );
 
 
         return;
@@ -329,13 +316,14 @@ function renderProducts(products){
 
 
 
-    if(emptyState){
 
-        emptyState.classList.add(
-            "hidden"
-        );
+    emptyState.classList.add(
+        "hidden"
+    );
 
-    }
+console.log(
+    emptyState.className
+);
 
 
 
@@ -344,17 +332,17 @@ function renderProducts(products){
 
 
 
+
     products.forEach(product=>{
 
 
         fragment.appendChild(
-
             createProductCard(product)
-
         );
 
 
     });
+
 
 
 
@@ -368,10 +356,14 @@ function renderProducts(products){
 
 
 
+
+
+
 // ================= CARD =================
 
 
 function createProductCard(product){
+
 
 
     const card =
@@ -380,12 +372,15 @@ function createProductCard(product){
     );
 
 
+
     card.className =
     "product-card";
 
 
     card.dataset.id =
     product.id;
+
+
 
 
 
@@ -430,6 +425,8 @@ ${product.badge}
 
 
 
+
+
 <button
 
 class="product-card__floating-cart icon-button"
@@ -438,14 +435,15 @@ type="button"
 
 data-action="cart">
 
-
 🛒
-
 
 </button>
 
 
+
 </div>
+
+
 
 
 
@@ -506,6 +504,7 @@ ${formatPrice(product.price)}
 </span>
 
 
+
 </div>
 
 
@@ -525,21 +524,22 @@ data-action="details">
 
 
 ${
-getLanguage()==="fa"
+
+getLanguage() === "fa"
 
 ?
 
-`${translate("viewDetails")} ←`
+translate("viewDetails")+" ←"
 
 :
 
-`${translate("viewDetails")} →`
+translate("viewDetails")+" →"
 
 }
 
 
-</a>
 
+</a>
 
 
 </div>
@@ -561,45 +561,47 @@ return card;
 
 
 
+
+
+
 // ================= EVENTS =================
 
 
 function bindEvents(){
 
 
-    if(productSearch){
+productSearch?.addEventListener(
 
-        productSearch.addEventListener(
-            "input",
-            handleSearch
-        );
+"input",
 
-    }
+handleSearch
 
-
-
-    if(languageToggle){
-
-        languageToggle.addEventListener(
-            "click",
-            handleLanguageChange
-        );
-
-    }
+);
 
 
 
-    if(productGrid){
+languageToggle?.addEventListener(
 
-        productGrid.addEventListener(
-            "click",
-            handleProductClick
-        );
+"click",
 
-    }
+handleLanguageChange
+
+);
+
+
+
+productGrid?.addEventListener(
+
+"click",
+
+handleProductClick
+
+);
 
 
 }
+
+
 
 
 
@@ -616,6 +618,7 @@ const value =
 event.target.value
 .trim()
 .toLowerCase();
+
 
 
 
@@ -647,11 +650,12 @@ return text.includes(value);
 
 
 renderProducts(
-    currentProducts
+currentProducts
 );
 
 
 }
+
 
 
 
@@ -667,13 +671,11 @@ function handleLanguageChange(){
 toggleLanguage();
 
 
-
 updateStaticContent();
 
 
-
 renderProducts(
-    currentProducts
+currentProducts
 );
 
 
@@ -691,30 +693,14 @@ renderProducts(
 function handleProductClick(event){
 
 
-
-const detailsButton =
-
-event.target.closest(
-"[data-action='details']"
-);
-
-
-
 const cartButton =
-
 event.target.closest(
 "[data-action='cart']"
 );
 
 
 
-
-
 if(cartButton){
-
-
-event.preventDefault();
-
 
 
 const card =
@@ -725,14 +711,11 @@ cartButton.closest(
 
 
 const product =
-
 bagShoesProducts.find(
 
-(item)=>
+item=>
 
-String(item.id)
-
-===
+String(item.id) ===
 
 String(card.dataset.id)
 
@@ -749,79 +732,12 @@ product
 
 return;
 
-
 }
 
 
 
-
-
-
-
-if(!detailsButton){
-
-return;
-
 }
 
-
-
-event.preventDefault();
-
-
-
-
-const card =
-
-detailsButton.closest(
-".product-card"
-);
-
-
-
-const product =
-
-bagShoesProducts.find(
-
-(item)=>
-
-String(item.id)
-
-===
-
-String(card.dataset.id)
-
-);
-
-
-
-if(!product){
-
-return;
-
-}
-
-
-
-
-localStorage.setItem(
-
-"selectedBagShoesProduct",
-
-JSON.stringify(product)
-
-);
-
-
-
-
-window.location.href =
-
-`../w-bag-shoes-pdp/w-bag-shoes-pdp.html?id=${product.id}`;
-
-
-
-}
 
 
 

@@ -389,3 +389,6 @@ border-radius: var(--radius-sm);
 
 }
 
+.hidden {
+    display: none !important;
+}
