@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Women Beauty Tools</title>
+
+    <link rel="stylesheet" href="./../../../../src/css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="./../../../../src/css/pages/plp-collection.css"
+    />
+  </head>
+
+  <body>
+    <section class="ui-section">
+      <div class="container">
+        <!-- Breadcrumb -->
+
+        <nav class="breadcrumb">
+          <a href="#" id="homeText"> Home </a>
+
+          <span>/</span>
+
+          <a href="#" id="beautyText"> Women </a>
+
+          <span>/</span>
+
+          <span id="breadcrumbTitle"> Beauty Tools </span>
+        </nav>
+
+        <!-- Header Actions -->
+
+        <div class="language-switcher">
+          <button id="languageButton" class="language-switcher__button">
+            EN
+          </button>
+        </div>
+
+        <!-- Hero -->
+
+        <section class="plp-hero">
+          <div class="plp-hero__content">
+            <h1 class="plp-hero__title" id="pageTitle">Women Beauty Tools</h1>
+
+            <p class="plp-hero__description" id="pageDescription">
+              Professional beauty tools for makeup, skincare, hair styling and
+              nail care.
+            </p>
+          </div>
+
+          <div class="plp-hero__media">
+            <img
+              id="heroImage"
+              src="https://i.pinimg.com/736x/4a/90/b0/4a90b0575f61d42fa4bf1a7738635885.jpg"
+              alt="Beauty Tools"
+              loading="lazy"
+            />
+          </div>
+        </section>
+
+        <!-- Search -->
+
+        <div class="search-box">
+          <svg class="search-box__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M10 18a8 8 0 1 1 5.292-14.002A8 8 0 0 1 10 18zm11 3-6-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+
+          <input
+            id="searchInput"
+            class="search-box__input"
+            type="search"
+            placeholder="Search Beauty Tools..."
+          />
+        </div>
+
+        <!-- Categories -->
+
+        <div class="plp-category-grid" id="categoryGrid"></div>
+      </div>
+    </section>
+
+    <script type="module" src="beauty-collection-preview.js"></script>
+  </body>
+</html>

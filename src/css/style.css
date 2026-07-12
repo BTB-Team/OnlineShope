@@ -712,3 +712,32 @@ p, .number, table{
     1280px Desktop
     1440px Wide 
  */    
+/* extra css */
+
+/* ================= CART DRAWER FIX ================= */
+
+.cart-overlay {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: var(--transition-normal);
+}
+
+
+.cart-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+
+.cart-drawer {
+    transform: translateX(100%);
+    transition: transform var(--transition-normal);
+}
+
+
+.cart-drawer.active {
+    transform: translateX(0);
+}
