@@ -1,390 +1,152 @@
-import { bagShoesProducts } 
-from "./w-plp-bag-shoes-data.js";
-
+import { bagShoesProducts } from "./w-plp-bag-shoes-data.js";
 
 import {
-
-initializeLanguage,
-getLanguage,
-toggleLanguage,
-translate,
-translateCount,
-getProductTitle,
-getProductDescription,
-formatPrice
-
-} 
-from "./w-plp-bag-shoes-i18n.js";
-
-
-
+  initializeLanguage,
+  getLanguage,
+  toggleLanguage,
+  translate,
+  translateCount,
+  getProductTitle,
+  getProductDescription,
+  formatPrice,
+} from "./w-plp-bag-shoes-i18n.js";
 
 // ================= DOM =================
 
+const productGrid = document.getElementById("productGrid");
 
-const productGrid =
-document.getElementById("productGrid");
+const productSearch = document.getElementById("productSearch");
 
+const productsCount = document.getElementById("productsCount");
 
-const productSearch =
-document.getElementById("productSearch");
+const emptyState = document.getElementById("emptyState");
 
+const languageToggle = document.getElementById("languageToggle");
 
-const productsCount =
-document.getElementById("productsCount");
+const pageTitle = document.getElementById("pageTitle");
 
-
-const emptyState =
-document.getElementById("emptyState");
-
-
-const languageToggle =
-document.getElementById("languageToggle");
-
-
-const pageTitle =
-document.getElementById("pageTitle");
-
-
-const pageDescription =
-document.getElementById("pageDescription");
-
-
+const pageDescription = document.getElementById("pageDescription");
 
 // Breadcrumb
 
-const breadcrumbHome =
-document.getElementById("breadcrumbHome");
+const breadcrumbHome = document.getElementById("breadcrumbHome");
 
-
-const breadcrumbWomen =
-document.getElementById("breadcrumbWomen");
-
+const breadcrumbWomen = document.getElementById("breadcrumbWomen");
 
 const breadcrumbBagsShoes =
-document.getElementById("breadcrumbBagsShoes")
-||
-document.getElementById("breadcrumbTitle");
-
-
+  document.getElementById("breadcrumbBagsShoes") ||
+  document.getElementById("breadcrumbTitle");
 
 // Empty
 
-const emptyTitle =
-document.getElementById("emptyTitle");
+const emptyTitle = document.getElementById("emptyTitle");
 
-
-const emptyDescription =
-document.getElementById("emptyDescription");
-
-
-
+const emptyDescription = document.getElementById("emptyDescription");
 
 // ================= STATE =================
 
+const urlParams = new URLSearchParams(window.location.search);
 
-const urlParams =
-new URLSearchParams(
-    window.location.search
-);
+const selectedCategory = urlParams.get("category");
 
+console.log("Selected Category:", selectedCategory);
 
-const selectedCategory =
-urlParams.get("category");
-
-
-
-console.log(
-    "Selected Category:",
-    selectedCategory
-);
-
-
-console.log(
-    "Products:",
-    bagShoesProducts
-);
-
-
+console.log("Products:", bagShoesProducts);
 
 let currentProducts = selectedCategory
-
-?
-
-bagShoesProducts.filter(
-
-(product)=>
-
-product.category === selectedCategory
-
-)
-
-:
-
-[...bagShoesProducts];
-
-
-
-
-
+  ? bagShoesProducts.filter((product) => product.category === selectedCategory)
+  : [...bagShoesProducts];
 
 // ================= INIT =================
 
+function init() {
+  initializeLanguage();
 
-function init(){
+  updateStaticContent();
 
+  renderProducts(currentProducts);
 
-    initializeLanguage();
-
-
-    updateStaticContent();
-
-
-    renderProducts(
-        currentProducts
-    );
-
-
-    bindEvents();
-
-
+  bindEvents();
 }
-
-
-
-
-
-
 
 // ================= STATIC CONTENT =================
 
+function updateStaticContent() {
+  const language = getLanguage();
 
-function updateStaticContent(){
+  document.documentElement.lang = language;
 
+  document.documentElement.dir = language === "fa" ? "rtl" : "ltr";
 
-    const language =
-    getLanguage();
+  pageTitle.textContent = translate("pageTitle");
 
+  pageDescription.textContent = translate("pageDescription");
 
+  if (productSearch) {
+    productSearch.placeholder = translate("searchPlaceholder");
+  }
 
-    document.documentElement.lang =
-    language;
+  if (languageToggle) {
+    languageToggle.textContent = language === "en" ? "FA" : "EN";
+  }
 
+  if (emptyTitle) {
+    emptyTitle.textContent = translate("emptyTitle");
+  }
 
+  if (emptyDescription) {
+    emptyDescription.textContent = translate("emptyDescription");
+  }
 
-    document.documentElement.dir =
+  if (breadcrumbHome) {
+    breadcrumbHome.textContent = translate("home");
+  }
 
-    language === "fa"
+  if (breadcrumbWomen) {
+    breadcrumbWomen.textContent = translate("women");
+  }
 
-    ?
-
-    "rtl"
-
-    :
-
-    "ltr";
-
-
-
-
-
-    pageTitle.textContent =
-    translate("pageTitle");
-
-
-
-    pageDescription.textContent =
-    translate("pageDescription");
-
-
-
-
-    if(productSearch){
-
-        productSearch.placeholder =
-        translate("searchPlaceholder");
-
-    }
-
-
-
-
-    if(languageToggle){
-
-        languageToggle.textContent =
-
-        language === "en"
-
-        ?
-
-        "FA"
-
-        :
-
-        "EN";
-
-    }
-
-
-
-
-
-    if(emptyTitle){
-
-        emptyTitle.textContent =
-        translate("emptyTitle");
-
-    }
-
-
-
-
-    if(emptyDescription){
-
-        emptyDescription.textContent =
-        translate("emptyDescription");
-
-    }
-
-
-
-
-
-
-    if(breadcrumbHome){
-
-        breadcrumbHome.textContent =
-        translate("home");
-
-    }
-
-
-
-    if(breadcrumbWomen){
-
-        breadcrumbWomen.textContent =
-        translate("women");
-
-    }
-
-
-
-    if(breadcrumbBagsShoes){
-
-        breadcrumbBagsShoes.textContent =
-        translate("bagsShoes");
-
-    }
-
-
-
+  if (breadcrumbBagsShoes) {
+    breadcrumbBagsShoes.textContent = translate("bagsShoes");
+  }
 }
-
-
-
-
-
-
 
 // ================= RENDER =================
 
+function renderProducts(products) {
+  productGrid.innerHTML = "";
 
-function renderProducts(products){
+  productsCount.textContent = translateCount(products.length);
 
+  if (products.length === 0) {
+    emptyState.classList.remove("hidden");
 
-    productGrid.innerHTML = "";
+    return;
+  }
 
+  emptyState.classList.add("hidden");
 
+  console.log(emptyState.className);
 
-    productsCount.textContent =
-    translateCount(products.length);
+  const fragment = document.createDocumentFragment();
 
+  products.forEach((product) => {
+    fragment.appendChild(createProductCard(product));
+  });
 
-
-
-    if(products.length === 0){
-
-
-        emptyState.classList.remove(
-            "hidden"
-        );
-
-
-        return;
-
-    }
-
-
-
-
-    emptyState.classList.add(
-        "hidden"
-    );
-
-console.log(
-    emptyState.className
-);
-
-
-
-    const fragment =
-    document.createDocumentFragment();
-
-
-
-
-    products.forEach(product=>{
-
-
-        fragment.appendChild(
-            createProductCard(product)
-        );
-
-
-    });
-
-
-
-
-    productGrid.appendChild(
-        fragment
-    );
-
-
+  productGrid.appendChild(fragment);
 }
-
-
-
-
-
-
 
 // ================= CARD =================
 
+function createProductCard(product) {
+  const card = document.createElement("article");
 
-function createProductCard(product){
+  card.className = "product-card";
 
+  card.dataset.id = product.id;
 
-
-    const card =
-    document.createElement(
-        "article"
-    );
-
-
-
-    card.className =
-    "product-card";
-
-
-    card.dataset.id =
-    product.id;
-
-
-
-
-
-    card.innerHTML = `
+  card.innerHTML = `
 
 
 <div class="product-card__media">
@@ -403,11 +165,8 @@ loading="lazy">
 
 
 ${
-product.badge
-
-?
-
-`
+  product.badge
+    ? `
 
 <span class="product-card__badge">
 
@@ -416,11 +175,7 @@ ${product.badge}
 </span>
 
 `
-
-:
-
-""
-
+    : ""
 }
 
 
@@ -475,11 +230,8 @@ ${getProductDescription(product)}
 
 
 ${
-product.oldPrice
-
-?
-
-`
+  product.oldPrice
+    ? `
 
 <span class="product-card__old-price number">
 
@@ -488,11 +240,7 @@ ${formatPrice(product.oldPrice)}
 </span>
 
 `
-
-:
-
-""
-
+    : ""
 }
 
 
@@ -524,17 +272,9 @@ data-action="details">
 
 
 ${
-
-getLanguage() === "fa"
-
-?
-
-translate("viewDetails")+" ←"
-
-:
-
-translate("viewDetails")+" →"
-
+  getLanguage() === "fa"
+    ? translate("viewDetails") + " ←"
+    : translate("viewDetails") + " →"
 }
 
 
@@ -551,83 +291,38 @@ translate("viewDetails")+" →"
 
 `;
 
-
-
-return card;
-
-
+  return card;
 }
-
-
-
-
-
-
 
 // ================= EVENTS =================
 
+function bindEvents() {
+  productSearch?.addEventListener(
+    "input",
 
-function bindEvents(){
+    handleSearch,
+  );
 
+  languageToggle?.addEventListener(
+    "click",
 
-productSearch?.addEventListener(
+    handleLanguageChange,
+  );
 
-"input",
+  productGrid?.addEventListener(
+    "click",
 
-handleSearch
-
-);
-
-
-
-languageToggle?.addEventListener(
-
-"click",
-
-handleLanguageChange
-
-);
-
-
-
-productGrid?.addEventListener(
-
-"click",
-
-handleProductClick
-
-);
-
-
+    handleProductClick,
+  );
 }
-
-
-
-
-
-
 
 // ================= SEARCH =================
 
+function handleSearch(event) {
+  const value = event.target.value.trim().toLowerCase();
 
-function handleSearch(event){
-
-
-const value =
-
-event.target.value
-.trim()
-.toLowerCase();
-
-
-
-
-currentProducts =
-
-bagShoesProducts.filter(product=>{
-
-
-const text = `
+  currentProducts = bagShoesProducts.filter((product) => {
+    const text = `
 
 ${product.title.en}
 
@@ -639,111 +334,58 @@ ${product.description.fa}
 
 `.toLowerCase();
 
+    return text.includes(value);
+  });
 
-
-return text.includes(value);
-
-
-
-});
-
-
-
-renderProducts(
-currentProducts
-);
-
-
+  renderProducts(currentProducts);
 }
-
-
-
-
-
-
 
 // ================= LANGUAGE =================
 
+function handleLanguageChange() {
+  toggleLanguage();
 
-function handleLanguageChange(){
+  updateStaticContent();
 
-
-toggleLanguage();
-
-
-updateStaticContent();
-
-
-renderProducts(
-currentProducts
-);
-
-
+  renderProducts(currentProducts);
 }
-
-
-
-
-
-
 
 // ================= CLICK =================
 
+function handleProductClick(event) {
+  const cartButton = event.target.closest("[data-action='cart']");
 
-function handleProductClick(event){
+  if (cartButton) {
+    const card = cartButton.closest(".product-card");
 
+    const product = bagShoesProducts.find(
+      (item) => String(item.id) === String(card.dataset.id),
+    );
 
-const cartButton =
-event.target.closest(
-"[data-action='cart']"
-);
+    console.log("Add To Cart:", product);
 
-
-
-if(cartButton){
-
-
-const card =
-cartButton.closest(
-".product-card"
-);
+    return;
+  }
 
 
-
-const product =
-bagShoesProducts.find(
-
-item=>
-
-String(item.id) ===
-
-String(card.dataset.id)
-
-);
+  const detailsButton = event.target.closest(
+    "[data-action='details']"
+  );
 
 
+  if (detailsButton) {
 
-console.log(
-"Add To Cart:",
-product
-);
+    const card = detailsButton.closest(".product-card");
+
+    const productId = card.dataset.id;
 
 
+    window.location.href =
+      `../pdp-bag-shoes/w-pdp-bag-shoes.html?id=${productId}`;
 
-return;
-
+  }
 }
-
-
-
-}
-
-
-
-
-
 
 // ================= START =================
-
 
 init();

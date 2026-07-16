@@ -1,235 +1,173 @@
-export default {
+// ================= BAG & SHOES PDP I18N =================
 
-    fa: {
+// ================= LANGUAGE STATE =================
 
+let currentLanguage = localStorage.getItem("language") || "en";
 
-        // Breadcrumb
+// ================= TRANSLATIONS =================
 
-        bagsShoes:
-            "کیف و کفش",
+const translations = {
+  en: {
+    // Breadcrumb
 
+    home: "Home",
 
-        products:
-            "محصولات",
+    women: "Women",
 
+    bagShoes: "Bags & Shoes",
 
+    products: "Products",
 
-        productDetails:
-            "جزئیات محصول",
+    product: "Product",
 
+    // PDP
 
+    description: "Description",
 
+    specifications: "Specifications",
 
-        // Product
+    addToCart: "Add To Cart",
 
-        description:
-            "توضیحات",
+    collection: "Collection",
 
+    noSpecifications: "No specifications available",
 
+    // CART
 
-        specifications:
-            "مشخصات",
+    yourCart: "Your Cart",
 
+    subtotal: "Subtotal",
 
+    emptyCart: "Your cart is empty",
 
-        addToCart:
-            "افزودن به سبد خرید",
+    remove: "Remove",
 
+    checkout: "Checkout via WhatsApp",
 
+    // TOAST
 
-        noSpecifications:
-            "مشخصاتی وجود ندارد",
+    addedToCart: "Product added to cart",
 
+    removedFromCart: "Product removed from cart",
+  },
 
+  fa: {
+    // Breadcrumb
 
+    home: "خانه",
 
-        // Cart
+    women: "زنانه",
 
-        addedToCart:
-            "محصول به سبد خرید اضافه شد",
+    bagShoes: "کیف و کفش",
 
+    products: "محصولات",
 
+    product: "محصول",
 
-        remove:
-            "حذف",
+    // PDP
 
+    description: "توضیحات",
 
+    specifications: "مشخصات",
 
-        removedFromCart:
-            "محصول حذف شد",
+    addToCart: "افزودن به سبد خرید",
 
+    collection: "کالکشن",
 
+    noSpecifications: "مشخصاتی موجود نیست",
 
-        yourCart:
-            "سبد خرید شما",
+    // CART
 
+    yourCart: "سبد خرید شما",
 
+    subtotal: "جمع کل",
 
-        emptyCart:
-            "سبد خرید خالی است",
+    emptyCart: "سبد خرید شما خالی است",
 
+    remove: "حذف",
 
+    checkout: "تسویه حساب از طریق واتساپ",
 
-        subtotal:
-            "جمع کل",
+    // TOAST
 
+    addedToCart: "محصول به سبد خرید اضافه شد",
 
-
-        checkout:
-            "تسویه حساب با واتساپ",
-
-
-
-
-        // Product categories
-
-        sneakers:
-            "کتانی",
-
-
-        heels:
-            "کفش پاشنه‌دار",
-
-
-        boots:
-            "بوت",
-
-
-        sandals:
-            "صندل",
-
-
-        handbags:
-            "کیف دستی",
-
-
-        shoulderBags:
-            "کیف دوشی",
-
-
-        backpacks:
-            "کوله‌پشتی"
-
-
-    },
-
-
-
-
-
-
-    en: {
-
-
-        // Breadcrumb
-
-        bagsShoes:
-            "Bags & Shoes",
-
-
-        products:
-            "Products",
-
-
-
-        productDetails:
-            "Product Details",
-
-
-
-
-        // Product
-
-        description:
-            "Description",
-
-
-
-        specifications:
-            "Specifications",
-
-
-
-        addToCart:
-            "Add To Cart",
-
-
-
-        noSpecifications:
-            "No specifications available",
-
-
-
-
-        // Cart
-
-        addedToCart:
-            "Product added to cart",
-
-
-
-        remove:
-            "Remove",
-
-
-
-        removedFromCart:
-            "Product removed",
-
-
-
-        yourCart:
-            "Your Cart",
-
-
-
-        emptyCart:
-            "Your cart is empty",
-
-
-
-        subtotal:
-            "Subtotal",
-
-
-
-        checkout:
-            "Checkout via WhatsApp",
-
-
-
-
-        // Product categories
-
-        sneakers:
-            "Sneakers",
-
-
-        heels:
-            "High Heels",
-
-
-        boots:
-            "Boots",
-
-
-        sandals:
-            "Sandals",
-
-
-        handbags:
-            "Handbags",
-
-
-        shoulderBags:
-            "Shoulder Bags",
-
-
-        backpacks:
-            "Backpacks"
-
-
-    }
-
-
+    removedFromCart: "محصول از سبد خرید حذف شد",
+  },
 };
+
+// ================= INITIALIZE =================
+
+export function initializeLanguage() {
+  currentLanguage = localStorage.getItem("language") || "en";
+
+  applyDirection();
+}
+
+// ================= GET LANGUAGE =================
+
+export function getLanguage() {
+  return currentLanguage;
+}
+
+// ================= TOGGLE LANGUAGE =================
+
+export function toggleLanguage() {
+  const newLanguage = currentLanguage === "en" ? "fa" : "en";
+
+  currentLanguage = newLanguage;
+
+  localStorage.setItem("language", newLanguage);
+}
+
+// ================= TRANSLATE =================
+
+export function translate(key) {
+  return translations[currentLanguage]?.[key] || key;
+}
+
+// ================= RTL / LTR =================
+
+function applyDirection() {
+  document.documentElement.lang = currentLanguage;
+
+  document.documentElement.dir = currentLanguage === "fa" ? "rtl" : "ltr";
+}
+
+// ================= PRODUCT TITLE =================
+
+export function getProductTitle(product) {
+  if (!product?.title) {
+    return "";
+  }
+
+  if (typeof product.title === "object") {
+    return product.title[currentLanguage] || product.title.en;
+  }
+
+  return product.title;
+}
+
+// ================= PRODUCT DESCRIPTION =================
+
+export function getProductDescription(product) {
+  if (!product?.description) {
+    return "";
+  }
+
+  if (typeof product.description === "object") {
+    return product.description[currentLanguage] || product.description.en;
+  }
+
+  return product.description;
+}
+
+// ================= PRICE =================
+
+export function formatPrice(price) {
+  if (currentLanguage === "fa") {
+    return new Intl.NumberFormat("fa-IR").format(price) + " افغانی";
+  }
+
+  return Number(price).toFixed(2) + " AFN";
+}

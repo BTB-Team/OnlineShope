@@ -146,7 +146,7 @@ export const bagShoesProducts = [
 
         badge: "BEST",
 
-        image: "https://i.pinimg.com/736x/35/87/de/3587de1fc3b286266e5a65970f56ccae.jpg"
+        image: "https://i.pinimg.com/1200x/6e/aa/4e/6eaa4e3316eda2bb08111d36720e2741.jpg"
     },
 
 
@@ -321,7 +321,7 @@ export const bagShoesProducts = [
 
         badge: "NEW",
 
-        image: "https://i.pinimg.com/736x/01/32/63/013263a013e3f6dcaf23987bcd1bbe86.jpg"
+        image: "https://i.pinimg.com/736x/76/e3/2a/76e32ab397a2c0d4244c794b56c6a763.jpg"
     }
 
 ];

@@ -1,302 +1,136 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<meta charset="UTF-8">
+    <title>Women Bags & Shoes Product Details</title>
 
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../../src/css/style.css" />
+    <link rel="stylesheet" href="../../../../../src/css/pages/pdp.css" />
+  </head>
 
+  <body>
+    <section class="pdp-showcase">
+      <!-- ================= BREADCRUMB ================= -->
 
-<title>
-Women Bags Shoes Product Details
-</title>
+      <nav class="breadcrumb">
+        <a href="#" id="homeText">Home</a>
 
+        <span>/</span>
 
-<link
-rel="stylesheet"
-href="./../../../../../src/css/style.css">
+        <a href="#" id="womenText">Women</a>
 
+        <span>/</span>
 
-<link
-rel="stylesheet"
-href="./../../../../../src/css/pages/pdp.css">
+        <a href="../plp-co-bag-shoes/w-bag-shoes-col.html" id="bagShoesText">Bags & Shoes</a>
 
+        <span>/</span>
 
-</head>
+        <a href="../plp-bag-shoes/w-plp-bag-shoes.html" id="productsText">Products</a>
 
+        <span>/</span>
 
-<body>
+        <span id="breadcrumbTitle">Product Details</span>
+      </nav>
 
+      <!-- ================= LANGUAGE SWITCHER ================= -->
 
-<section class="pdp-showcase">
+      <div class="language-switcher">
+        <button id="languageSwitcher" class="language-switcher__button">
+          EN
+        </button>
+      </div>
 
+      <!-- ================= PRODUCT ================= -->
 
+      <div class="pdp">
+        <!-- ================= MEDIA ================= -->
 
-<!-- Breadcrumb -->
+        <div class="pdp-media">
+          <div id="thumbnails" class="pdp-thumbnails"></div>
 
-<nav class="breadcrumb">
+          <div class="pdp-main-media">
+            <img id="mainImage" src="" alt="Women Bags & Shoes Product" />
+          </div>
+        </div>
 
+        <!-- ================= INFO ================= -->
 
-<a href="#">
-<span id="homeText">
-Home
-</span>
-</a>
+        <div class="pdp-info">
+          <span id="productCategory" class="pdp-category"> Bags & Shoes </span>
 
+          <h1 id="productTitle" class="pdp-title">Product Title</h1>
 
-<span>/</span>
+          <p id="productSubtitle" class="pdp-subtitle">Product description</p>
 
+          <div class="pdp-price">
+            <span id="oldPrice" class="pdp-old-price number"></span>
 
-<a href="#">
-<span id="womenText">
-Women
-</span>
-</a>
+            <span id="currentPrice" class="pdp-current-price number"></span>
+          </div>
 
+          <button id="addToCartBtn" class="btn btn-primary" type="button">
+            Add To Cart
+          </button>
+        </div>
+      </div>
 
-<span>/</span>
+      <!-- ================= DESCRIPTION ================= -->
 
+      <section class="pdp-description">
+        <h2 id="descriptionTitle">Description</h2>
 
-<a href="../w-bag-shoes-col.html">
+        <p id="productDescription">Product description</p>
+      </section>
 
-<span id="bagsShoesText">
-Bags & Shoes
-</span>
+      <!-- ================= SPECIFICATIONS ================= -->
 
-</a>
+      <section class="pdp-specs">
+        <h2 id="specificationsTitle">Specifications</h2>
 
+        <table>
+          <tbody id="specificationsTable"></tbody>
+        </table>
+      </section>
+    </section>
 
-<span>/</span>
+    <!-- ================= CART DRAWER ================= -->
 
+    <div id="cartOverlay" class="cart-overlay"></div>
 
-<a href="../plp-bag-shoes/w-bag-shoes-products.html">
+    <aside id="cartDrawer" class="cart-drawer">
+      <div class="cart-header">
+        <h2 id="cartTitle" class="cart-title">Your Cart</h2>
 
-<span id="productsText">
-Products
-</span>
+        <button id="cartClose" class="cart-close" type="button">✕</button>
+      </div>
 
-</a>
+      <div id="cartItems" class="cart-body"></div>
 
+      <div id="emptyCart" class="cart-empty">Your cart is empty</div>
 
-<span>/</span>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span id="subtotalTitle"> Subtotal </span>
 
+          <strong id="cartSubtotal" class="number"> $0.00 </strong>
+        </div>
 
-<span id="breadcrumbTitle">
-Product Details
-</span>
+        <button id="cartCheckout" class="cart-checkout" type="button">
+          Checkout via WhatsApp
+        </button>
+      </div>
+    </aside>
 
+    <!-- ================= TOAST ================= -->
 
-</nav>
+    <div id="toastContainer" class="toast-container"></div>
 
+    <!-- ================= PDP SCRIPT ================= -->
 
-
-<!-- Language -->
-
-<div class="language-switcher">
-
-<button
-id="languageSwitcher"
-class="language-switcher__button">
-
-FA
-
-</button>
-
-</div>
-
-
-
-
-
-<!-- PDP -->
-
-<div class="pdp">
-
-
-
-<!-- MEDIA -->
-
-<div class="pdp-media">
-
-
-<div
-id="thumbnails"
-class="pdp-thumbnails">
-
-</div>
-
-
-
-<div class="pdp-main-media">
-
-
-<img
-
-id="mainImage"
-
-src=""
-
-alt="Product image">
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-<!-- INFO -->
-
-
-<div class="pdp-info">
-
-
-<span
-id="productCategory"
-class="pdp-category">
-
-Category
-
-</span>
-
-
-
-<h1
-id="productTitle"
-class="pdp-title">
-
-Product Title
-
-</h1>
-
-
-
-
-<p
-id="productSubtitle"
-class="pdp-subtitle">
-
-Description
-
-</p>
-
-
-
-
-<div class="pdp-price">
-
-
-<span
-id="oldPrice"
-class="pdp-old-price number">
-
-</span>
-
-
-
-<span
-id="currentPrice"
-class="pdp-current-price number">
-
-</span>
-
-
-
-</div>
-
-
-
-<button
-id="addToCartBtn"
-class="btn btn-primary">
-
-Add To Cart
-
-</button>
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-<!-- DESCRIPTION -->
-
-
-<section class="pdp-description">
-
-
-<h2>
-Description
-</h2>
-
-
-<p
-id="productDescription">
-
-</p>
-
-
-</section>
-
-
-
-
-
-<!-- SPEC -->
-
-
-<section class="pdp-specs">
-
-
-<h2>
-Specifications
-</h2>
-
-
-
-<table>
-
-
-<tbody
-id="specificationsTable">
-
-</tbody>
-
-
-</table>
-
-
-
-</section>
-
-
-
-</section>
-
-
-
-
-
-<script
-type="module"
-src="./w-pdp-bag-shoes-preview.js">
-
-</script>
-
-
-
-</body>
-
+    <script type="module" src="./w-pdp-bag-shoes-preview.js"></script>
+  </body>
 </html>
+
