@@ -1,4 +1,172 @@
+import { bagShoesPdpData } from "./w-pdp-bag-shoes-data.js";
 
+import {
+  getProductTitle,
+  getProductDescription,
+  formatPrice,
+  initializeLanguage,
+  toggleLanguage,
+  translate,
+  getLanguage,
+} from "./w-pdp-bag-shoes-i18n.js";
+
+import { bagShoesProducts } from "../plp-bag-shoes/w-plp-bag-shoes-data.js";
+
+// ================= CONSTANT =================
+
+const CART_KEY = "bagShoesCart";
+
+// ================= PRODUCT =================
+
+const urlParams = new URLSearchParams(window.location.search);
+
+const productId = urlParams.get("id");
+
+const product = bagShoesProducts.find(
+  (item) => String(item.id) === String(productId),
+);
+
+const productDetails = bagShoesPdpData[productId];
+
+if (!product) {
+  window.location.href = "../plp-bag-shoes/w-plp-bag-shoes.html";
+
+  throw new Error("Product not found");
+}
+
+// ================= DOM =================
+
+// Gallery
+
+const mainImage = document.getElementById("mainImage");
+
+const thumbnails = document.getElementById("thumbnails");
+
+// Product Info
+
+const productTitle = document.getElementById("productTitle");
+
+const productSubtitle = document.getElementById("productSubtitle");
+
+const productDescription = document.getElementById("productDescription");
+
+const productCategory = document.getElementById("productCategory");
+
+const currentPrice = document.getElementById("currentPrice");
+
+const oldPrice = document.getElementById("oldPrice");
+
+// Specifications
+
+const specificationsTable = document.getElementById("specificationsTable");
+
+// Breadcrumb
+
+const homeText = document.getElementById("homeText");
+
+const womenText = document.getElementById("womenText");
+
+const bagShoesText = document.getElementById("bagShoesText");
+
+const productsText = document.getElementById("productsText");
+
+const breadcrumbTitle = document.getElementById("breadcrumbTitle");
+
+// Buttons
+
+const addToCartBtn = document.getElementById("addToCartBtn");
+
+const languageSwitcher = document.getElementById("languageSwitcher");
+
+// ================= CART DOM =================
+
+const toastContainer = document.getElementById("toastContainer");
+
+const cartDrawer = document.getElementById("cartDrawer");
+
+const cartOverlay = document.getElementById("cartOverlay");
+
+const cartClose = document.getElementById("cartClose");
+
+const cartItems = document.getElementById("cartItems");
+
+const cartSubtotal = document.getElementById("cartSubtotal");
+
+const emptyCart = document.getElementById("emptyCart");
+
+// ================= GALLERY =================
+
+function renderGallery() {
+  if (!mainImage || !thumbnails) {
+    return;
+  }
+
+  thumbnails.innerHTML = "";
+
+  const images = productDetails?.images || [product.image];
+
+  mainImage.src = images[0];
+
+  images.forEach((image, index) => {
+    const thumbnail = document.createElement("img");
+
+    thumbnail.src = image;
+
+    thumbnail.alt = getProductTitle(product);
+
+    thumbnail.className = "pdp-thumbnail";
+
+    if (index === 0) {
+      thumbnail.classList.add("active");
+    }
+
+    thumbnail.addEventListener("click", () => {
+      mainImage.src = image;
+
+      document.querySelectorAll(".pdp-thumbnail").forEach((item) => {
+        item.classList.remove("active");
+      });
+
+      thumbnail.classList.add("active");
+    });
+
+    thumbnails.appendChild(thumbnail);
+  });
+}
+
+// ================= PRODUCT INFO =================
+
+function renderInfo() {
+  if (productTitle) {
+    productTitle.textContent = getProductTitle(product);
+  }
+
+  if (productSubtitle) {
+    productSubtitle.textContent = getProductDescription(product);
+  }
+
+  if (productDescription) {
+    productDescription.textContent = getProductDescription(product);
+  }
+
+  if (productCategory) {
+    productCategory.textContent = product.category || "";
+  }
+
+  if (breadcrumbTitle) {
+    breadcrumbTitle.textContent = getProductTitle(product);
+  }
+
+  if (currentPrice) {
+    currentPrice.textContent = formatPrice(product.price);
+  }
+
+  if (oldPrice) {
+    oldPrice.textContent = product.oldPrice
+      ? formatPrice(product.oldPrice)
+      : "";
+  }
+}
 // ================= STATIC TEXT =================
 
 function renderStaticTexts() {
@@ -12,8 +180,8 @@ function renderStaticTexts() {
     womenText.textContent = translate("women");
   }
 
-  if (beautyToolsText) {
-    beautyToolsText.textContent = translate("beautyTools");
+  if (bagShoesText) {
+    bagShoesText.textContent = translate("bagShoes");
   }
 
   if (productsText) {
@@ -48,17 +216,11 @@ function renderSpecifications() {
 
   if (specifications.length === 0) {
     specificationsTable.innerHTML = `
-
       <tr>
-
         <td colspan="2">
-
           ${translate("noSpecifications")}
-
         </td>
-
       </tr>
-
     `;
 
     return;
@@ -70,21 +232,14 @@ function renderSpecifications() {
     const row = document.createElement("tr");
 
     row.innerHTML = `
+      <td>
+        ${item.name[language] || item.name.en}
+      </td>
 
-        <td>
-
-          ${item.name[language] || item.name.en}
-
-        </td>
-
-
-        <td>
-
-          ${item.value[language] || item.value.en}
-
-        </td>
-
-      `;
+      <td>
+        ${item.value[language] || item.value.en}
+      </td>
+    `;
 
     specificationsTable.appendChild(row);
   });
@@ -115,7 +270,6 @@ function addToCart() {
 
   localStorage.setItem(
     CART_KEY,
-
     JSON.stringify(cart),
   );
 
@@ -125,7 +279,6 @@ function addToCart() {
 
   showToast(translate("addedToCart"));
 }
-
 // ================= CART DRAWER =================
 
 function openCart() {
@@ -183,89 +336,48 @@ function renderCart() {
     cartItem.className = "cart-item";
 
     cartItem.innerHTML = `
+  <img
+    class="cart-item__image"
+    src="${item.image}"
+    alt=""
+  />
 
-        <img
+  <div class="cart-item__content">
+  <h3 class="cart-item__title">
+    ${item.title[getLanguage()] || item.title.en}
+  </h3>
 
-          class="cart-item__image"
+  <span class="cart-item__price">
+    ${formatPrice(item.price)}
+  </span>
+</div>
 
-          src="${item.image}"
+<div class="cart-item__actions">
+  <div class="cart-qty">
+    <button
+      class="cart-minus"
+      data-id="${item.id}">
+      -
+    </button>
 
-          alt="">
+    <span class="cart-item__quantity">
+      ${item.quantity}
+    </span>
 
+    <button
+      class="cart-plus"
+      data-id="${item.id}">
+      +
+    </button>
+  </div>
 
-
-        <div class="cart-item__content">
-
-
-          <h3 class="cart-item__title">
-
-            ${item.title[getLanguage()] || item.title.en}
-
-          </h3>
-
-
-
-          <span class="cart-item__price">
-
-            ${formatPrice(item.price)}
-
-          </span>
-
-
-        </div>
-
-
-
-        <div class="cart-item__actions">
-
-
-          <button
-
-            class="cart-minus"
-
-            data-id="${item.id}">
-
-            -
-
-          </button>
-
-
-
-          <span>
-
-            ${item.quantity}
-
-          </span>
-
-
-
-          <button
-
-            class="cart-plus"
-
-            data-id="${item.id}">
-
-            +
-
-          </button>
-
-
-
-          <button
-
-            class="cart-remove"
-
-            data-id="${item.id}">
-
-            ${translate("remove")}
-
-          </button>
-
-
-        </div>
-
-      `;
-
+  <button
+    class="cart-remove"
+    data-id="${item.id}">
+    ${translate("remove")}
+  </button>
+</div>
+`;
     cartItems.appendChild(cartItem);
   });
 
@@ -291,7 +403,6 @@ function updateQuantity(id, change) {
 
   localStorage.setItem(
     CART_KEY,
-
     JSON.stringify(cart),
   );
 
@@ -307,7 +418,6 @@ function removeFromCart(id) {
 
   localStorage.setItem(
     CART_KEY,
-
     JSON.stringify(cart),
   );
 
@@ -328,23 +438,13 @@ function showToast(message) {
   toast.className = "toast toast-success";
 
   toast.innerHTML = `
-
-
     <span class="toast__icon">
-
       ✓
-
     </span>
-
-
 
     <span class="toast__message">
-
       ${message}
-
     </span>
-
-
   `;
 
   toastContainer.appendChild(toast);
@@ -384,7 +484,6 @@ function bindEvents() {
   if (addToCartBtn) {
     addToCartBtn.addEventListener(
       "click",
-
       addToCart,
     );
   }
@@ -392,7 +491,6 @@ function bindEvents() {
   if (cartClose) {
     cartClose.addEventListener(
       "click",
-
       closeCart,
     );
   }
@@ -400,7 +498,6 @@ function bindEvents() {
   if (cartOverlay) {
     cartOverlay.addEventListener(
       "click",
-
       closeCart,
     );
   }
@@ -408,7 +505,6 @@ function bindEvents() {
   if (cartItems) {
     cartItems.addEventListener(
       "click",
-
       handleCartActions,
     );
   }
@@ -416,7 +512,6 @@ function bindEvents() {
   if (languageSwitcher) {
     languageSwitcher.addEventListener(
       "click",
-
       () => {
         toggleLanguage();
 
