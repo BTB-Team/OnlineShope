@@ -336,47 +336,48 @@ function renderCart() {
     cartItem.className = "cart-item";
 
     cartItem.innerHTML = `
-      <img
-        class="cart-item__image"
-        src="${item.image}"
-        alt=""
-      />
+  <img
+    class="cart-item__image"
+    src="${item.image}"
+    alt=""
+  />
 
-      <div class="cart-item__content">
-        <h3 class="cart-item__title">
-          ${item.title[getLanguage()] || item.title.en}
-        </h3>
+  <div class="cart-item__content">
+  <h3 class="cart-item__title">
+    ${item.title[getLanguage()] || item.title.en}
+  </h3>
 
-        <span class="cart-item__price">
-          ${formatPrice(item.price)}
-        </span>
-      </div>
+  <span class="cart-item__price">
+    ${formatPrice(item.price)}
+  </span>
+</div>
 
-      <div class="cart-item__actions">
-        <button
-          class="cart-minus"
-          data-id="${item.id}">
-          -
-        </button>
+<div class="cart-item__actions">
+  <div class="cart-qty">
+    <button
+      class="cart-minus"
+      data-id="${item.id}">
+      -
+    </button>
 
-        <span>
-          ${item.quantity}
-        </span>
+    <span class="cart-item__quantity">
+      ${item.quantity}
+    </span>
 
-        <button
-          class="cart-plus"
-          data-id="${item.id}">
-          +
-        </button>
+    <button
+      class="cart-plus"
+      data-id="${item.id}">
+      +
+    </button>
+  </div>
 
-        <button
-          class="cart-remove"
-          data-id="${item.id}">
-          ${translate("remove")}
-        </button>
-      </div>
-    `;
-
+  <button
+    class="cart-remove"
+    data-id="${item.id}">
+    ${translate("remove")}
+  </button>
+</div>
+`;
     cartItems.appendChild(cartItem);
   });
 
