@@ -7,12 +7,8 @@
 
     <title>Women Bags & Shoes Products</title>
 
-    <link rel="stylesheet" href="./../../../../../src/css/style.css" />
-
-    <link
-      rel="stylesheet"
-      href="./../../../../../src/css/pages/plp-product.css"
-    />
+    <link rel="stylesheet" href="../../../../../src/css/style.css" />
+    <link rel="stylesheet" href="../../../../../src/css/pages/plp-product.css"/>
   </head>
 
   <body>
@@ -21,34 +17,26 @@
       <a href="">
         <span id="breadcrumbHome"> Home </span>
       </a>
-
       <span>/</span>
-
       <a href="">
         <span id="breadcrumbWomen"> Women </span>
       </a>
-
       <span>/</span>
-
-      <a href="../plp-co-bag-shoes/w-bag-shoes-col.html">
+      <a href="../w-bag-shoes-col.html">
         <span id="breadcrumbBagsShoes"> Bags & Shoes </span>
       </a>
-
       <span>/</span>
-
       <span id="breadcrumbTitle"> Products </span>
     </nav>
 
     <!-- PLP HEADER -->
-
     <header class="plp-header">
       <div class="container">
         <div class="language-switcher">
           <button
             id="languageToggle"
             class="language-switcher__button"
-            type="button"
-          >
+            type="button">
             FA
           </button>
         </div>
@@ -101,7 +89,6 @@
           <div id="productGrid" class="product-grid"></div>
 
           <!-- EMPTY STATE -->
-
           <div id="emptyState" class="empty-state hidden">
             <h2 id="emptyTitle">No Products Found</h2>
 
@@ -111,14 +98,14 @@
       </section>
 
       <!-- PREVIEW MODAL -->
-
       <div id="previewModal" class="preview-modal">
         <div class="preview-overlay"></div>
 
         <div class="preview-content"></div>
       </div>
+      <div id="toastContainer" class="toast-container"></div>
     </main>
-
+    
     <script type="module" src="./w-plp-bag-shoes-preview.js"></script>
   </body>
 </html>
