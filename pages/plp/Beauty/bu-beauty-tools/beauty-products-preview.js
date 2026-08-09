@@ -19,6 +19,8 @@ const emptyState = document.getElementById("emptyState");
 const languageToggle = document.getElementById("languageToggle");
 const pageTitle = document.getElementById("pageTitle");
 const pageDescription = document.getElementById("pageDescription");
+const toastContainer =
+  document.getElementById("toastContainer");
 
 // Breadcrumb
 const breadcrumbHome = document.getElementById("breadcrumbHome");
@@ -219,6 +221,7 @@ function createProductCard(product) {
   `;
   return card;
 }
+
 // ================= EVENTS =================
 function bindEvents() {
   if (productSearch) {
@@ -256,6 +259,39 @@ function handleLanguageChange() {
   toggleLanguage();
   updateStaticContent();
   renderProducts(currentProducts);
+}
+// ================= CART =================
+
+const CART_KEY = "beautyCart";
+
+function addToCart(product) {
+  let cart =
+    JSON.parse(localStorage.getItem(CART_KEY)) || [];
+
+  const existingProduct = cart.find(
+    (item) => item.id === product.id
+  );
+
+  if (existingProduct) {
+    existingProduct.quantity += 1;
+  } else {
+    cart.push({
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      image: product.image,
+      quantity: 1,
+    });
+  }
+
+  localStorage.setItem(
+    CART_KEY,
+    JSON.stringify(cart)
+  );
+
+  showToast(
+    translate("addedToCart")
+  );
 }
 // ================= TOAST =================
 function showToast(message) {
@@ -295,7 +331,7 @@ function handleProductClick(event) {
     );
 
     if (!product) return;
-    console.log("Add To Cart:", product);
+    addToCart(product);
     return;
   }
   // View Details
