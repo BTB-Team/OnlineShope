@@ -18,31 +18,46 @@ export const beautyPdpData = {
           en: "Material",
           fa: "جنس",
         },
-
         value: {
-          en: "Synthetic Hair",
-          fa: "موی مصنوعی",
+          en: "Synthetic Bristles",
+          fa: "الیاف مصنوعی",
         },
       },
-
       {
         name: {
-          en: "Type",
-          fa: "نوع",
+          en: "Brush Count",
+          fa: "تعداد براش",
         },
-
         value: {
-          en: "Makeup Brush Set",
-          fa: "ست براش آرایش",
+          en: "12 Pieces",
+          fa: "۱۲ عدد",
         },
       },
-
+      {
+        name: {
+          en: "Bristle Type",
+          fa: "نوع الیاف",
+        },
+        value: {
+          en: "Soft Synthetic Fiber",
+          fa: "الیاف مصنوعی نرم",
+        },
+      },
+      {
+        name: {
+          en: "Handle",
+          fa: "دسته",
+        },
+        value: {
+          en: "Ergonomic Handle",
+          fa: "دسته ارگونومیک",
+        },
+      },
       {
         name: {
           en: "Usage",
           fa: "کاربرد",
         },
-
         value: {
           en: "Professional Makeup",
           fa: "آرایش حرفه‌ای",
@@ -71,8 +86,38 @@ export const beautyPdpData = {
           fa: "جنس",
         },
         value: {
-          en: "Beauty Sponge",
-          fa: "اسفنج آرایشی",
+          en: "Latex-Free Foam",
+          fa: "فوم بدون لاتکس",
+        },
+      },
+      {
+        name: {
+          en: "Shape",
+          fa: "شکل",
+        },
+        value: {
+          en: "Teardrop Shape",
+          fa: "اشکی",
+        },
+      },
+      {
+        name: {
+          en: "Texture",
+          fa: "بافت",
+        },
+        value: {
+          en: "Soft & Flexible",
+          fa: "نرم و انعطاف‌پذیر",
+        },
+      },
+      {
+        name: {
+          en: "Application",
+          fa: "روش استفاده",
+        },
+        value: {
+          en: "Wet or Dry",
+          fa: "مرطوب یا خشک",
         },
       },
       {
@@ -81,8 +126,8 @@ export const beautyPdpData = {
           fa: "کاربرد",
         },
         value: {
-          en: "Foundation Application",
-          fa: "پخش کرم پودر",
+          en: "Foundation & Concealer",
+          fa: "کرم پودر و کانسیلر",
         },
       },
     ],
@@ -104,12 +149,42 @@ export const beautyPdpData = {
     specifications: [
       {
         name: {
-          en: "Type",
-          fa: "نوع",
+          en: "Brush Type",
+          fa: "نوع براش",
         },
         value: {
-          en: "Eye Makeup Brush",
-          fa: "براش آرایش چشم",
+          en: "Blending Eye Brush",
+          fa: "براش ترکیب سایه",
+        },
+      },
+      {
+        name: {
+          en: "Bristle Material",
+          fa: "جنس الیاف",
+        },
+        value: {
+          en: "Soft Synthetic Fiber",
+          fa: "الیاف مصنوعی نرم",
+        },
+      },
+      {
+        name: {
+          en: "Brush Shape",
+          fa: "شکل براش",
+        },
+        value: {
+          en: "Rounded Blending Tip",
+          fa: "سر گرد ترکیبی",
+        },
+      },
+      {
+        name: {
+          en: "Handle",
+          fa: "دسته",
+        },
+        value: {
+          en: "Lightweight Ergonomic Handle",
+          fa: "دسته سبک و ارگونومیک",
         },
       },
       {
@@ -118,8 +193,8 @@ export const beautyPdpData = {
           fa: "کاربرد",
         },
         value: {
-          en: "Professional Makeup",
-          fa: "آرایش حرفه‌ای",
+          en: "Eye Shadow Blending",
+          fa: "ترکیب و محو کردن سایه چشم",
         },
       },
     ],
@@ -142,11 +217,41 @@ export const beautyPdpData = {
       {
         name: {
           en: "Power",
-          fa: "قدرت",
+          fa: "توان",
         },
         value: {
-          en: "Professional Hair Dryer",
-          fa: "سشوار حرفه‌ای",
+          en: "1800W",
+          fa: "۱۸۰۰ وات",
+        },
+      },
+      {
+        name: {
+          en: "Heat Settings",
+          fa: "تنظیمات حرارت",
+        },
+        value: {
+          en: "3 Heat Levels",
+          fa: "۳ سطح حرارت",
+        },
+      },
+      {
+        name: {
+          en: "Speed Settings",
+          fa: "تنظیمات سرعت",
+        },
+        value: {
+          en: "2 Speed Levels",
+          fa: "۲ سطح سرعت",
+        },
+      },
+      {
+        name: {
+          en: "Cool Shot",
+          fa: "باد سرد",
+        },
+        value: {
+          en: "Yes",
+          fa: "دارد",
         },
       },
       {
@@ -155,8 +260,8 @@ export const beautyPdpData = {
           fa: "کاربرد",
         },
         value: {
-          en: "Hair Styling",
-          fa: "حالت‌دهی مو",
+          en: "Hair Drying & Styling",
+          fa: "خشک کردن و حالت‌دهی مو",
         },
       },
     ],
@@ -188,12 +293,42 @@ export const beautyPdpData = {
       },
       {
         name: {
+          en: "Tool Type",
+          fa: "نوع ابزار",
+        },
+        value: {
+          en: "Facial Massage Roller",
+          fa: "رولر ماساژ صورت",
+        },
+      },
+      {
+        name: {
+          en: "Roller Head",
+          fa: "سری رولر",
+        },
+        value: {
+          en: "Dual-Sided Roller",
+          fa: "رولر دو طرفه",
+        },
+      },
+      {
+        name: {
+          en: "Skin Type",
+          fa: "نوع پوست",
+        },
+        value: {
+          en: "All Skin Types",
+          fa: "مناسب انواع پوست",
+        },
+      },
+      {
+        name: {
           en: "Usage",
           fa: "کاربرد",
         },
         value: {
-          en: "Facial Massage",
-          fa: "ماساژ صورت",
+          en: "Facial Massage & Skincare",
+          fa: "ماساژ صورت و مراقبت از پوست",
         },
       },
     ],
@@ -215,12 +350,42 @@ export const beautyPdpData = {
     specifications: [
       {
         name: {
-          en: "Type",
-          fa: "نوع",
+          en: "Set Type",
+          fa: "نوع ست",
         },
         value: {
           en: "Nail Care Set",
-          fa: "ست مراقبت ناخن",
+          fa: "ست مراقبت از ناخن",
+        },
+      },
+      {
+        name: {
+          en: "Tool Count",
+          fa: "تعداد ابزار",
+        },
+        value: {
+          en: "6 Pieces",
+          fa: "۶ عدد",
+        },
+      },
+      {
+        name: {
+          en: "Material",
+          fa: "جنس",
+        },
+        value: {
+          en: "Stainless Steel",
+          fa: "استیل ضد زنگ",
+        },
+      },
+      {
+        name: {
+          en: "Suitable For",
+          fa: "مناسب برای",
+        },
+        value: {
+          en: "Manicure & Nail Care",
+          fa: "مانیکور و مراقبت از ناخن",
         },
       },
       {
@@ -229,8 +394,8 @@ export const beautyPdpData = {
           fa: "کاربرد",
         },
         value: {
-          en: "Manicure",
-          fa: "مانیکور",
+          en: "Professional & Home Use",
+          fa: "استفاده حرفه‌ای و خانگی",
         },
       },
     ],
@@ -252,22 +417,52 @@ export const beautyPdpData = {
     specifications: [
       {
         name: {
-          en: "Type",
-          fa: "نوع",
+          en: "Set Type",
+          fa: "نوع ست",
         },
         value: {
-          en: "Eye Brush Set",
-          fa: "ست براش چشم",
+          en: "Eye Makeup Brush Set",
+          fa: "ست براش آرایش چشم",
         },
       },
       {
         name: {
-          en: "Material",
-          fa: "جنس",
+          en: "Brush Count",
+          fa: "تعداد براش",
         },
         value: {
-          en: "Synthetic Hair",
-          fa: "موی مصنوعی",
+          en: "8 Pieces",
+          fa: "۸ عدد",
+        },
+      },
+      {
+        name: {
+          en: "Bristle Material",
+          fa: "جنس الیاف",
+        },
+        value: {
+          en: "Soft Synthetic Fiber",
+          fa: "الیاف مصنوعی نرم",
+        },
+      },
+      {
+        name: {
+          en: "Brush Types",
+          fa: "انواع براش",
+        },
+        value: {
+          en: "Blending, Liner & Detail Brushes",
+          fa: "براش ترکیب، خط چشم و جزئیات",
+        },
+      },
+      {
+        name: {
+          en: "Usage",
+          fa: "کاربرد",
+        },
+        value: {
+          en: "Eye Makeup",
+          fa: "آرایش چشم",
         },
       },
     ],
@@ -299,12 +494,42 @@ export const beautyPdpData = {
       },
       {
         name: {
+          en: "Heat Settings",
+          fa: "تنظیمات حرارت",
+        },
+        value: {
+          en: "5 Temperature Levels",
+          fa: "۵ سطح تنظیم دما",
+        },
+      },
+      {
+        name: {
+          en: "Heating Plates",
+          fa: "صفحات حرارتی",
+        },
+        value: {
+          en: "Ceramic Plates",
+          fa: "صفحات سرامیکی",
+        },
+      },
+      {
+        name: {
+          en: "Temperature Range",
+          fa: "محدوده دما",
+        },
+        value: {
+          en: "160°C - 230°C",
+          fa: "۱۶۰ تا ۲۳۰ درجه سانتی‌گراد",
+        },
+      },
+      {
+        name: {
           en: "Usage",
           fa: "کاربرد",
         },
         value: {
-          en: "Hair Styling",
-          fa: "حالت‌دهی مو",
+          en: "Hair Straightening & Styling",
+          fa: "صاف کردن و حالت‌دهی مو",
         },
       },
     ],
@@ -330,8 +555,38 @@ export const beautyPdpData = {
           fa: "نوع",
         },
         value: {
-          en: "Makeup Tool",
-          fa: "ابزار آرایشی",
+          en: "Hair Curling Iron",
+          fa: "فر کننده مو",
+        },
+      },
+      {
+        name: {
+          en: "Barrel Material",
+          fa: "جنس میله",
+        },
+        value: {
+          en: "Ceramic Coating",
+          fa: "پوشش سرامیکی",
+        },
+      },
+      {
+        name: {
+          en: "Temperature Settings",
+          fa: "تنظیمات دما",
+        },
+        value: {
+          en: "Multiple Heat Levels",
+          fa: "چند سطح حرارت",
+        },
+      },
+      {
+        name: {
+          en: "Heat-Up Time",
+          fa: "زمان گرم شدن",
+        },
+        value: {
+          en: "Fast Heating",
+          fa: "گرم شدن سریع",
         },
       },
       {
@@ -340,8 +595,8 @@ export const beautyPdpData = {
           fa: "کاربرد",
         },
         value: {
-          en: "Daily Makeup",
-          fa: "آرایش روزانه",
+          en: "Hair Curling & Styling",
+          fa: "فر کردن و حالت‌دهی مو",
         },
       },
     ],
@@ -363,22 +618,52 @@ export const beautyPdpData = {
     specifications: [
       {
         name: {
-          en: "Material",
-          fa: "جنس",
+          en: "Type",
+          fa: "نوع",
         },
         value: {
-          en: "Premium Material",
-          fa: "جنس باکیفیت",
+          en: "Facial Massage Roller",
+          fa: "رولر ماساژ صورت",
         },
       },
       {
         name: {
-          en: "Category",
-          fa: "دسته‌بندی",
+          en: "Material",
+          fa: "جنس",
         },
         value: {
-          en: "Beauty Accessories",
-          fa: "لوازم جانبی آرایشی",
+          en: "Jade Stone",
+          fa: "سنگ یشم",
+        },
+      },
+      {
+        name: {
+          en: "Roller Design",
+          fa: "طراحی رولر",
+        },
+        value: {
+          en: "Dual-Sided Roller",
+          fa: "رولر دو طرفه",
+        },
+      },
+      {
+        name: {
+          en: "Skin Type",
+          fa: "نوع پوست",
+        },
+        value: {
+          en: "All Skin Types",
+          fa: "مناسب انواع پوست",
+        },
+      },
+      {
+        name: {
+          en: "Usage",
+          fa: "کاربرد",
+        },
+        value: {
+          en: "Facial Massage & Skincare",
+          fa: "ماساژ صورت و مراقبت از پوست",
         },
       },
     ],
@@ -404,18 +689,48 @@ export const beautyPdpData = {
           fa: "نوع",
         },
         value: {
-          en: "Professional Brush",
-          fa: "براش حرفه‌ای",
+          en: "Facial Cleansing Brush",
+          fa: "برس پاکسازی صورت",
         },
       },
       {
         name: {
-          en: "Material",
-          fa: "جنس",
+          en: "Brush Material",
+          fa: "جنس برس",
         },
         value: {
-          en: "Synthetic Fiber",
-          fa: "الیاف مصنوعی",
+          en: "Soft Synthetic Fiber",
+          fa: "الیاف مصنوعی نرم",
+        },
+      },
+      {
+        name: {
+          en: "Brush Texture",
+          fa: "بافت برس",
+        },
+        value: {
+          en: "Gentle & Soft",
+          fa: "نرم و ملایم",
+        },
+      },
+      {
+        name: {
+          en: "Skin Type",
+          fa: "نوع پوست",
+        },
+        value: {
+          en: "All Skin Types",
+          fa: "مناسب انواع پوست",
+        },
+      },
+      {
+        name: {
+          en: "Usage",
+          fa: "کاربرد",
+        },
+        value: {
+          en: "Deep Facial Cleansing",
+          fa: "پاکسازی عمیق صورت",
         },
       },
     ],
@@ -437,12 +752,42 @@ export const beautyPdpData = {
     specifications: [
       {
         name: {
-          en: "Type",
-          fa: "نوع",
+          en: "Set Type",
+          fa: "نوع ست",
         },
         value: {
-          en: "Beauty Device",
-          fa: "دستگاه زیبایی",
+          en: "Professional Nail Care Kit",
+          fa: "کیت حرفه‌ای مراقبت از ناخن",
+        },
+      },
+      {
+        name: {
+          en: "Tool Count",
+          fa: "تعداد ابزار",
+        },
+        value: {
+          en: "7 Pieces",
+          fa: "۷ عدد",
+        },
+      },
+      {
+        name: {
+          en: "Material",
+          fa: "جنس",
+        },
+        value: {
+          en: "Stainless Steel",
+          fa: "استیل ضد زنگ",
+        },
+      },
+      {
+        name: {
+          en: "Suitable For",
+          fa: "مناسب برای",
+        },
+        value: {
+          en: "Manicure & Pedicure",
+          fa: "مانیکور و پدیکور",
         },
       },
       {
@@ -451,8 +796,8 @@ export const beautyPdpData = {
           fa: "کاربرد",
         },
         value: {
-          en: "Skin Care",
-          fa: "مراقبت پوست",
+          en: "Nail Shaping & Care",
+          fa: "فرم‌دهی و مراقبت از ناخن",
         },
       },
     ],
@@ -478,8 +823,38 @@ export const beautyPdpData = {
           fa: "نوع",
         },
         value: {
-          en: "Beauty Kit",
-          fa: "کیت زیبایی",
+          en: "Electric Nail File",
+          fa: "سوهان برقی ناخن",
+        },
+      },
+      {
+        name: {
+          en: "Speed Settings",
+          fa: "تنظیمات سرعت",
+        },
+        value: {
+          en: "Variable Speed Control",
+          fa: "تنظیم سرعت متغیر",
+        },
+      },
+      {
+        name: {
+          en: "File Heads",
+          fa: "سری‌های سوهان",
+        },
+        value: {
+          en: "Multiple Interchangeable Heads",
+          fa: "چند سری قابل تعویض",
+        },
+      },
+      {
+        name: {
+          en: "Power",
+          fa: "توان",
+        },
+        value: {
+          en: "Rechargeable Electric",
+          fa: "برقی قابل شارژ",
         },
       },
       {
@@ -488,8 +863,8 @@ export const beautyPdpData = {
           fa: "کاربرد",
         },
         value: {
-          en: "Professional Care",
-          fa: "مراقبت حرفه‌ای",
+          en: "Nail Shaping & Polishing",
+          fa: "فرم‌دهی و پولیش ناخن",
         },
       },
     ],
