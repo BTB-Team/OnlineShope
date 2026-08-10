@@ -1,5 +1,4 @@
 import { beautyProducts } from "./beauty-products-data.js";
-
 import {
   initializeLanguage,
   getLanguage,
@@ -19,8 +18,7 @@ const emptyState = document.getElementById("emptyState");
 const languageToggle = document.getElementById("languageToggle");
 const pageTitle = document.getElementById("pageTitle");
 const pageDescription = document.getElementById("pageDescription");
-const toastContainer =
-  document.getElementById("toastContainer");
+const toastContainer = document.getElementById("toastContainer");
 
 // Breadcrumb
 const breadcrumbHome = document.getElementById("breadcrumbHome");
@@ -149,20 +147,20 @@ function createProductCard(product) {
           `
           : ""
       }
-
       <button
   class="product-card__floating-cart btn btn-icon"
   type="button"
   data-action="cart"
-  aria-label="Add to Cart">
-
+  aria-label="Add to Cart"
+>
   <svg
-    height="24"
-    width="24"
+    width="20"
+    height="20"
     viewBox="0 0 512 512"
+    fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    fill="#ffffff">
-
+    aria-hidden="true"
+  >
     <path
       fill="#ffffff"
       d="M456.169,230.305c-31.675-12.846-55.203-36.078-78.763-73.623
@@ -182,9 +180,9 @@ function createProductCard(product) {
       c0-17.74,4.484-34.168,7.829-40.955
       c7.673-15.55,25.97-32.282,48.022-32.282
       c22.052,0,40.349,16.732,48.022,32.282
-      c3.353,6.788,7.829,23.216,7.829,40.955V181.635z"/>
+      c3.353,6.788,7.829,23.216,7.829,40.955V181.635z"
+    />
   </svg>
-
 </button>
     </div>
     <div class="product-card__content">
@@ -203,7 +201,6 @@ function createProductCard(product) {
               </span>`
             : ""
         }
-
         <span class="product-card__new-price number">
           ${formatPrice(product.price)}
         </span>
@@ -263,15 +260,9 @@ function handleLanguageChange() {
 // ================= CART =================
 
 const CART_KEY = "beautyCart";
-
 function addToCart(product) {
-  let cart =
-    JSON.parse(localStorage.getItem(CART_KEY)) || [];
-
-  const existingProduct = cart.find(
-    (item) => item.id === product.id
-  );
-
+  let cart = JSON.parse(localStorage.getItem(CART_KEY)) || [];
+  const existingProduct = cart.find((item) => item.id === product.id);
   if (existingProduct) {
     existingProduct.quantity += 1;
   } else {
@@ -283,39 +274,27 @@ function addToCart(product) {
       quantity: 1,
     });
   }
-
-  localStorage.setItem(
-    CART_KEY,
-    JSON.stringify(cart)
-  );
-
-  showToast(
-    translate("addedToCart")
-  );
+  localStorage.setItem(CART_KEY, JSON.stringify(cart));
+  showToast(translate("addedToCart"));
 }
 // ================= TOAST =================
 function showToast(message) {
   console.log("TOAST:", message);
-
   const toast = document.createElement("div");
-
   toast.className = "toast toast-success";
-toast.style.position = "fixed";
-toast.style.top = "24px";
-toast.style.right = "24px";
-toast.style.zIndex = "99999";
+  toast.style.position = "fixed";
+  toast.style.top = "24px";
+  toast.style.right = "24px";
+  toast.style.zIndex = "99999";
   toast.innerHTML = `
     <span class="toast__icon">✓</span>
     <span class="toast__message">${message}</span>
   `;
-
   toastContainer.appendChild(toast);
-
   setTimeout(() => {
     toast.remove();
   }, 2500);
 }
-
 
 // ================= PRODUCT CLICK =================
 function handleProductClick(event) {
@@ -329,7 +308,6 @@ function handleProductClick(event) {
     const product = beautyProducts.find(
       (item) => String(item.id) === String(card.dataset.id),
     );
-
     if (!product) return;
     addToCart(product);
     return;

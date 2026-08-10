@@ -8,15 +8,12 @@ const pageTitle = document.getElementById("pageTitle");
 const pageDescription = document.getElementById("pageDescription");
 const searchInput = document.getElementById("searchInput");
 const breadcrumbTitle = document.getElementById("breadcrumbTitle");
-
 let currentLanguage = localStorage.getItem("language") || "en";
-
 let filteredCategories = beautyCategories;
 
 function renderPageLanguage() {
   const text = collectionTranslations[currentLanguage];
   document.documentElement.lang = currentLanguage;
-
   document.documentElement.dir = currentLanguage === "fa" ? "rtl" : "ltr";
   pageTitle.textContent = text.pageTitle;
   pageDescription.textContent = text.pageDescription;
@@ -51,7 +48,6 @@ function renderCategories() {
     )
     .join("");
 }
-
 languageButton.addEventListener("click", () => {
   currentLanguage = currentLanguage === "en" ? "fa" : "en";
   localStorage.setItem("language", currentLanguage);
@@ -60,7 +56,6 @@ languageButton.addEventListener("click", () => {
   renderPageLanguage();
   renderCategories();
 });
-
 searchInput.addEventListener("input", () => {
   const value = searchInput.value.toLowerCase();
   filteredCategories = beautyCategories.filter((category) => {

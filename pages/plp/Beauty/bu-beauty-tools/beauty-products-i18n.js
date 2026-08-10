@@ -3,7 +3,6 @@ export const languages = {
   en: "en",
   fa: "fa",
 };
-
 export const translations = {
   en: {
     home: "Home",
@@ -16,10 +15,10 @@ export const translations = {
     emptyTitle: "No Products Found",
     emptyDescription: "Try another keyword.",
     viewDetails: "View Details",
+    addedToCart: "Product added to cart",
     productsCount: (count) => `${count} Product${count !== 1 ? "s" : ""}`,
     currency: "AFN",
   },
-
   fa: {
     home: "خانه",
     women: "زنانه",
@@ -31,11 +30,11 @@ export const translations = {
     emptyTitle: "محصولی پیدا نشد",
     emptyDescription: "عبارت دیگری را جستجو کنید.",
     viewDetails: "مشاهده جزئیات",
+    addedToCart: "محصول به سبد خرید اضافه شد",
     productsCount: (count) => `${count} محصول`,
     currency: "افغانی",
   },
 };
-
 export function getLanguage() {
   const savedLanguage = localStorage.getItem(STORAGE_KEY);
   if (savedLanguage && languages[savedLanguage]) {
@@ -43,24 +42,20 @@ export function getLanguage() {
   }
   return languages.en;
 }
-
 export function setLanguage(language) {
   localStorage.setItem(STORAGE_KEY, language);
   document.documentElement.lang = language;
   document.documentElement.dir = language === "fa" ? "rtl" : "ltr";
 }
-
 export function toggleLanguage() {
   const nextLanguage = getLanguage() === "en" ? "fa" : "en";
   setLanguage(nextLanguage);
   return nextLanguage;
 }
-
 export function translate(key) {
   const language = getLanguage();
   return translations[language][key];
 }
-
 export function translateCount(count) {
   const language = getLanguage();
   return translations[language].productsCount(count);
@@ -69,12 +64,10 @@ export function getProductTitle(product) {
   const language = getLanguage();
   return product?.title?.[language] ?? product?.title?.en ?? "";
 }
-
 export function getProductDescription(product) {
   const language = getLanguage();
   return product?.description?.[language] ?? product?.description?.en ?? "";
 }
-
 export function getProductCategory(product) {
   const language = getLanguage();
   if (typeof product.category === "object" && product.category !== null) {
@@ -82,7 +75,6 @@ export function getProductCategory(product) {
   }
   return product.category ?? "";
 }
-
 export function formatPrice(price) {
   const language = getLanguage();
   const number = new Intl.NumberFormat(
@@ -94,7 +86,6 @@ export function formatPrice(price) {
   }
   return `${number} ${currency}`;
 }
-
 export function initializeLanguage() {
   const language = getLanguage();
   setLanguage(language);

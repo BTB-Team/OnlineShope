@@ -23,12 +23,12 @@ const translations = {
     addedToCart: "Product added to cart",
 
     beautyTools: "Beauty Tools",
-products: "Products",
+    products: "Products",
     women: "Women",
-brushesApplicators: "Brushes & Applicators",
-hairStylingTools: "Hair Styling Tools",
-facialTools: "Facial Tools",
-nailCareTools: "Nail Care Tools",
+    brushesApplicators: "Brushes & Applicators",
+    hairStylingTools: "Hair Styling Tools",
+    facialTools: "Facial Tools",
+    nailCareTools: "Nail Care Tools",
   },
 
   fa: {
@@ -40,22 +40,19 @@ nailCareTools: "Nail Care Tools",
     addToCart: "افزودن به سبد خرید",
     collection: "کالکشن",
     noSpecifications: "مشخصاتی موجود نیست",
-
     yourCart: "سبد خرید شما",
     subtotal: "جمع کل",
     emptyCart: "سبد خرید شما خالی است",
     remove: "حذف",
     checkout: "تسویه حساب از طریق واتساپ",
-
     addedToCart: "محصول به سبد خرید اضافه شد",
-
     beautyTools: "ابزارهای زیبایی",
     products: "محصولات",
     women: "زنانه",
-brushesApplicators: "براش و اپلیکاتورها",
-hairStylingTools: "ابزارهای حالت‌دهی مو",
-facialTools: "ابزارهای مراقبت از صورت",
-nailCareTools: "ابزارهای مراقبت از ناخن",
+    brushesApplicators: "براش و اپلیکاتورها",
+    hairStylingTools: "ابزارهای حالت‌دهی مو",
+    facialTools: "ابزارهای مراقبت از صورت",
+    nailCareTools: "ابزارهای مراقبت از ناخن",
   },
 };
 
@@ -123,8 +120,6 @@ export function translateCategory(category) {
     "facial-tools": "facialTools",
     "nail-care-tools": "nailCareTools",
   };
-
   const key = categoryMap[category];
-
   return key ? translate(key) : category;
 }
