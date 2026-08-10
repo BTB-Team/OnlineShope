@@ -1,5 +1,4 @@
 export const bagShoesProducts = [
-
     {
         id: 1,
         category: "sneakers",

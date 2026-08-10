@@ -1,5 +1,4 @@
 import { bagShoesProducts } from "./w-plp-bag-shoes-data.js";
-
 import {
   initializeLanguage,
   getLanguage,
@@ -12,7 +11,6 @@ import {
 } from "./w-plp-bag-shoes-i18n.js";
 
 // ================= DOM =================
-
 const productGrid = document.getElementById("productGrid");
 const productSearch = document.getElementById("productSearch");
 const productsCount = document.getElementById("productsCount");
@@ -25,10 +23,8 @@ const toastContainer = document.getElementById("toastContainer");
 // Breadcrumb
 const breadcrumbHome = document.getElementById("breadcrumbHome");
 const breadcrumbWomen = document.getElementById("breadcrumbWomen");
-const breadcrumbBagsShoes =
-  document.getElementById("breadcrumbBagsShoes");
-const breadCrumbTitle =
-  document.getElementById("breadcrumbTitle");
+const breadcrumbBagsShoes = document.getElementById("breadcrumbBagsShoes");
+const breadCrumbTitle = document.getElementById("breadcrumbTitle");
 
 // Empty
 const emptyTitle = document.getElementById("emptyTitle");
@@ -39,7 +35,6 @@ const urlParams = new URLSearchParams(window.location.search);
 const selectedCategory = urlParams.get("category");
 console.log("Selected Category:", selectedCategory);
 console.log("Products:", bagShoesProducts);
-
 let currentProducts = selectedCategory
   ? bagShoesProducts.filter((product) => product.category === selectedCategory)
   : [...bagShoesProducts];
@@ -47,37 +42,21 @@ let currentProducts = selectedCategory
 // ================= INIT =================
 function handleProductClick(event) {
   const card = event.target.closest(".product-card");
-
   if (!card) return;
-
   const productId = Number(card.dataset.id);
-  const product = bagShoesProducts.find(
-    (item) => item.id === productId
-  );
-
+  const product = bagShoesProducts.find((item) => item.id === productId);
   if (!product) return;
-
-  const cartButton = event.target.closest(
-    "[data-action='cart']"
-  );
-
+  const cartButton = event.target.closest("[data-action='cart']");
   if (cartButton) {
     event.preventDefault();
     event.stopPropagation();
-
     addToCart(product);
     return;
   }
-
-  const details = event.target.closest(
-    "[data-action='details']"
-  );
-
+  const details = event.target.closest("[data-action='details']");
   if (details) {
     event.preventDefault();
-
-    window.location.href =
-      `../pdp-bag-shoes/w-pdp-bag-shoes.html?id=${product.id}`;
+    window.location.href = `../pdp-bag-shoes/w-pdp-bag-shoes.html?id=${product.id}`;
   }
 }
 
@@ -95,7 +74,6 @@ function updateStaticContent() {
   document.documentElement.dir = language === "fa" ? "rtl" : "ltr";
   pageTitle.textContent = translate("pageTitle");
   pageDescription.textContent = translate("pageDescription");
-
   if (productSearch) {
     productSearch.placeholder = translate("searchPlaceholder");
   }
@@ -118,19 +96,16 @@ function updateStaticContent() {
     breadcrumbBagsShoes.textContent = translate("bagsShoes");
   }
   if (breadCrumbTitle) {
-    breadcrumbTitle.textContent =
-      translate("products");
+    breadcrumbTitle.textContent = translate("products");
   }
 }
 
 // ================= RENDER =================
-
 function renderProducts(products) {
   productGrid.innerHTML = "";
   productsCount.textContent = translateCount(products.length);
   if (products.length === 0) {
     emptyState.classList.remove("hidden");
-
     return;
   }
   emptyState.classList.add("hidden");
@@ -139,7 +114,6 @@ function renderProducts(products) {
   products.forEach((product) => {
     fragment.appendChild(createProductCard(product));
   });
-
   productGrid.appendChild(fragment);
 }
 
@@ -163,19 +137,8 @@ ${product.badge} </span>
 `
     : ""
 }
-<button
-  class="product-card__floating-cart"
-  data-action="cart"
-  type="button"
->
-
-  <svg
-    height="24"
-    width="24"
-    viewBox="0 0 512 512"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="#ffffff">
-
+<button class="product-card__floating-cart" data-action="cart" type="button">
+  <svg height="24" width="24" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
     <path
       fill="#ffffff"
       d="M456.169,230.305c-31.675-12.846-55.203-36.078-78.763-73.623
@@ -197,7 +160,6 @@ ${product.badge} </span>
       c22.052,0,40.349,16.732,48.022,32.282
       c3.353,6.788,7.829,23.216,7.829,40.955V181.635z"/>
   </svg>
-
 </button>
 </div>
 <div class="product-card__content">
@@ -211,7 +173,6 @@ ${getProductDescription(product)}
 ${
   product.oldPrice
     ? `
-
 <span class="product-card__old-price number">
 ${formatPrice(product.oldPrice)} </span>
 `
@@ -220,7 +181,6 @@ ${formatPrice(product.oldPrice)} </span>
 <span class="product-card__new-price number">
 ${formatPrice(product.price)} </span>
 </div>
-
 <div class="product-card__details">
 <a href="#" class="btn btn-ghost" data-action="details">
 ${
@@ -237,34 +197,26 @@ ${
 
 // ================= EVENTS =================
 const CART_KEY = "bagShoesCart";
-
 function showToast(message) {
   console.log("TOAST:", message);
-
   const toast = document.createElement("div");
-
   toast.className = "toast toast-success";
-toast.style.position = "fixed";
-toast.style.top = "24px";
-toast.style.right = "24px";
-toast.style.zIndex = "99999";
+  toast.style.position = "fixed";
+  toast.style.top = "24px";
+  toast.style.right = "24px";
+  toast.style.zIndex = "99999";
   toast.innerHTML = `
     <span class="toast__icon">✓</span>
     <span class="toast__message">${message}</span>
   `;
-
   toastContainer.appendChild(toast);
-
   setTimeout(() => {
     toast.remove();
   }, 2500);
 }
-
 function addToCart(product) {
   let cart = JSON.parse(localStorage.getItem(CART_KEY)) || [];
-
   const existing = cart.find((item) => item.id === product.id);
-
   if (existing) {
     existing.quantity += 1;
   } else {
@@ -276,16 +228,12 @@ function addToCart(product) {
       quantity: 1,
     });
   }
-
   localStorage.setItem(CART_KEY, JSON.stringify(cart));
-
   showToast(translate("addedToCart"));
 }
-
 function bindEvents() {
   productSearch?.addEventListener(
     "input",
-
     handleSearch,
   );
   languageToggle?.addEventListener("click", handleLanguageChange);
@@ -304,7 +252,6 @@ ${product.description.fa}
 `.toLowerCase();
     return text.includes(value);
   });
-
   renderProducts(currentProducts);
 }
 

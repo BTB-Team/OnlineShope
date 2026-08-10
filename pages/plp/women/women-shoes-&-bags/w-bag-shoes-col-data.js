@@ -37,7 +37,6 @@ export const bagShoesCategories = [
       en: "Boots",
       fa: "بوت‌ها",
     },
-
     description: {
       en: "Fashionable boots for every season and occasion.",
       fa: "بوت‌های مد روز برای هر فصل و موقعیت.",
@@ -53,7 +52,6 @@ export const bagShoesCategories = [
       en: "Sandals",
       fa: "صندل‌ها",
     },
-
     description: {
       en: "Lightweight sandals with stylish designs for warm days.",
       fa: "صندل‌های سبک و شیک برای روزهای گرم.",
@@ -69,7 +67,6 @@ export const bagShoesCategories = [
       en: "Handbags",
       fa: "کیف‌های دستی",
     },
-
     description: {
       en: "Elegant handbags designed for everyday style and special occasions.",
       fa: "کیف‌های دستی شیک برای استفاده روزمره و موقعیت‌های خاص.",
@@ -85,7 +82,6 @@ export const bagShoesCategories = [
       en: "Shoulder Bags",
       fa: "کیف‌های دوشی",
     },
-
     description: {
       en: "Stylish shoulder bags combining comfort and modern fashion.",
       fa: "کیف‌های دوشی شیک با ترکیب راحتی و طراحی مدرن.",
@@ -101,7 +97,6 @@ export const bagShoesCategories = [
       en: "Backpacks",
       fa: "کوله‌پشتی‌ها",
     },
-
     description: {
       en: "Practical backpacks perfect for daily use and travel.",
       fa: "کوله‌پشتی‌های کاربردی برای استفاده روزانه و سفر.",

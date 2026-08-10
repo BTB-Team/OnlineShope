@@ -1,5 +1,4 @@
 let currentLanguage = localStorage.getItem("language") || "en";
-
 // ================= TRANSLATIONS =================
 const translations = {
   en: {
@@ -9,32 +8,29 @@ const translations = {
     bagShoes: "Bags & Shoes",
     products: "Products",
     product: "Product",
-
-// ================= PRODUCT CATEGORIES =================
-categoryNames: {
-  sneakers: "Sneakers",
-  heels: "Heels",
-  boots: "Boots",
-  sandals: "Sandals",
-  handbags: "Handbags",
-  "shoulder-bags": "Shoulder Bags",
-  backpacks: "Backpacks",
-},
-
+    // ================= PRODUCT CATEGORIES =================
+    categoryNames: {
+      sneakers: "Sneakers",
+      heels: "Heels",
+      boots: "Boots",
+      sandals: "Sandals",
+      handbags: "Handbags",
+      "shoulder-bags": "Shoulder Bags",
+      backpacks: "Backpacks",
+    },
     // PDP
-description: "Description",
-specifications: "Specifications",
-addToCart: "Add To Cart",
-collection: "Collection",
-noSpecifications: "No specifications available",
+    description: "Description",
+    specifications: "Specifications",
+    addToCart: "Add To Cart",
+    collection: "Collection",
+    noSpecifications: "No specifications available",
 
-// Specifications
-category: "Category",
-gender: "Gender",
-color: "Color",
-sizes: "Sizes",
-material: "Material",
-
+    // Specifications
+    category: "Category",
+    gender: "Gender",
+    color: "Color",
+    sizes: "Sizes",
+    material: "Material",
 
     // CART
     yourCart: "Your Cart",
@@ -56,31 +52,30 @@ material: "Material",
     products: "محصولات",
     product: "محصول",
 
-
-  // ================= PRODUCT CATEGORIES =================
-categoryNames: {
-  sneakers: "کتانی",
-  heels: "کفش پاشنه‌دار",
-  boots: "بوت",
-  sandals: "صندل",
-  handbags: "کیف دستی",
-  "shoulder-bags": "کیف دوشی",
-  backpacks: "کوله‌پشتی",
-},
+    // ================= PRODUCT CATEGORIES =================
+    categoryNames: {
+      sneakers: "کتانی",
+      heels: "کفش پاشنه‌دار",
+      boots: "بوت",
+      sandals: "صندل",
+      handbags: "کیف دستی",
+      "shoulder-bags": "کیف دوشی",
+      backpacks: "کوله‌پشتی",
+    },
 
     // PDP
-description: "توضیحات",
-specifications: "مشخصات",
-addToCart: "افزودن به سبد خرید",
-collection: "کالکشن",
-noSpecifications: "مشخصاتی موجود نیست",
+    description: "توضیحات",
+    specifications: "مشخصات",
+    addToCart: "افزودن به سبد خرید",
+    collection: "کالکشن",
+    noSpecifications: "مشخصاتی موجود نیست",
 
-// Specifications
-category: "دسته‌بندی",
-gender: "جنسیت",
-color: "رنگ",
-sizes: "سایزها",
-material: "جنس",
+    // Specifications
+    category: "دسته‌بندی",
+    gender: "جنسیت",
+    color: "رنگ",
+    sizes: "سایزها",
+    material: "جنس",
 
     // CART
     yourCart: "سبد خرید شما",

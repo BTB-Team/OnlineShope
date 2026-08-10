@@ -101,8 +101,8 @@ function renderInfo() {
     productDescription.textContent = getProductDescription(product);
   }
   if (productCategory) {
-  productCategory.textContent = getCategoryName(product.category);
-}
+    productCategory.textContent = getCategoryName(product.category);
+  }
   if (breadcrumbTitle) {
     breadcrumbTitle.textContent = getProductTitle(product);
   }
@@ -110,7 +110,9 @@ function renderInfo() {
     currentPrice.textContent = formatPrice(product.price);
   }
   if (oldPrice) {
-    oldPrice.textContent = product.oldPrice ? formatPrice(product.oldPrice) : "";
+    oldPrice.textContent = product.oldPrice
+      ? formatPrice(product.oldPrice)
+      : "";
   }
 }
 // ================= STATIC TEXT =================
@@ -131,9 +133,9 @@ function renderStaticTexts() {
   if (breadcrumbTitle) {
     breadcrumbTitle.textContent = getProductTitle(product);
   }
-if (specificationsTitle) {
-  specificationsTitle.textContent = translate("specifications");
-}
+  if (specificationsTitle) {
+    specificationsTitle.textContent = translate("specifications");
+  }
   // Buttons
   if (addToCartBtn) {
     addToCartBtn.textContent = translate("addToCart");
@@ -159,7 +161,7 @@ if (cartCheckout) {
 // ================= SPECIFICATIONS =================
 function renderSpecifications() {
   if (!specificationsTable) return;
-  
+
   specificationsTable.innerHTML = "";
   const specifications = productDetails?.specifications;
   if (!specifications) {
@@ -172,38 +174,46 @@ function renderSpecifications() {
     return;
   }
   const language = getLanguage();
-
-const rows = [
-  {
-    label: translate("category"),
-    value: specifications.category?.[language] || specifications.category?.en || "-",
-  },
-  {
-    label: translate("gender"),
-    value: specifications.gender?.[language] || specifications.gender?.en || "-",
-  },
-  {
-    label: translate("color"),
-    value: Array.isArray(specifications.color)
-      ? specifications.color.map(
-          (c) =>
-            `<span class="color-dot" style="display:inline-block;width:20px;height:20px;border-radius:50%;background:${c};margin-right:5px;border:1px solid #ccc;"></span>`
-        ).join("")
-      : "-",
-  },
-  {
-    label: translate("sizes"),
-    value: Array.isArray(specifications.sizes)
-      ? specifications.sizes.join(", ")
-      : "-",
-  },
-  {
-    label: translate("material"),
-    value: specifications.material?.[language] || specifications.material?.en || "-",
-  },
-];
+  const rows = [
+    {
+      label: translate("category"),
+      value:
+        specifications.category?.[language] ||
+        specifications.category?.en ||
+        "-",
+    },
+    {
+      label: translate("gender"),
+      value:
+        specifications.gender?.[language] || specifications.gender?.en || "-",
+    },
+    {
+      label: translate("color"),
+      value: Array.isArray(specifications.color)
+        ? specifications.color
+            .map(
+              (c) =>
+                `<span class="color-dot" style="display:inline-block;width:20px;height:20px;border-radius:50%;background:${c};margin-right:5px;border:1px solid #ccc;"></span>`,
+            )
+            .join("")
+        : "-",
+    },
+    {
+      label: translate("sizes"),
+      value: Array.isArray(specifications.sizes)
+        ? specifications.sizes.join(", ")
+        : "-",
+    },
+    {
+      label: translate("material"),
+      value:
+        specifications.material?.[language] ||
+        specifications.material?.en ||
+        "-",
+    },
+  ];
   rows.forEach((item) => {
-    if(!item || !item.label) return;
+    if (!item || !item.label) return;
     const row = document.createElement("tr");
     const cellLabel = document.createElement("td");
     cellLabel.textContent = item.label;
@@ -212,7 +222,6 @@ const rows = [
     row.appendChild(cellLabel);
     row.appendChild(cellValue);
     specificationsTable.appendChild(row);
-
   });
 }
 // ================= CART =================
@@ -222,13 +231,15 @@ function addToCart() {
   if (existingProduct) {
     existingProduct.quantity += 1;
   } else {
-    cart.push({ id: product.id, title: product.title, price: product.price, image: product.image, quantity: 1,
+    cart.push({
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      image: product.image,
+      quantity: 1,
     });
   }
-  localStorage.setItem(
-    CART_KEY,
-    JSON.stringify(cart),
-  );
+  localStorage.setItem(CART_KEY, JSON.stringify(cart));
   renderCart();
   openCart();
   showToast(translate("addedToCart"));
@@ -251,7 +262,6 @@ function closeCart() {
     cartOverlay.classList.remove("active");
   }
 }
-
 function renderCart() {
   if (!cartItems) {
     return;
@@ -308,10 +318,7 @@ function updateQuantity(id, change) {
       cart = cart.filter((product) => product.id !== id);
     }
   }
-  localStorage.setItem(
-    CART_KEY,
-    JSON.stringify(cart),
-  );
+  localStorage.setItem(CART_KEY, JSON.stringify(cart));
   renderCart();
 }
 
@@ -319,10 +326,7 @@ function updateQuantity(id, change) {
 function removeFromCart(id) {
   let cart = JSON.parse(localStorage.getItem(CART_KEY)) || [];
   cart = cart.filter((item) => item.id !== id);
-  localStorage.setItem(
-    CART_KEY,
-    JSON.stringify(cart),
-  );
+  localStorage.setItem(CART_KEY, JSON.stringify(cart));
   renderCart();
   showToast(translate("removedFromCart"));
 }
@@ -365,37 +369,22 @@ function handleCartActions(event) {
 // ================= EVENTS =================
 function bindEvents() {
   if (addToCartBtn) {
-    addToCartBtn.addEventListener(
-      "click",
-      addToCart,
-    );
+    addToCartBtn.addEventListener("click", addToCart);
   }
   if (cartClose) {
-    cartClose.addEventListener(
-      "click",
-      closeCart,
-    );
+    cartClose.addEventListener("click", closeCart);
   }
   if (cartOverlay) {
-    cartOverlay.addEventListener(
-      "click",
-      closeCart,
-    );
+    cartOverlay.addEventListener("click", closeCart);
   }
   if (cartItems) {
-    cartItems.addEventListener(
-      "click",
-      handleCartActions,
-    );
+    cartItems.addEventListener("click", handleCartActions);
   }
   if (languageSwitcher) {
-    languageSwitcher.addEventListener(
-      "click",
-      () => {
-        toggleLanguage();
-        location.reload();
-      },
-    );
+    languageSwitcher.addEventListener("click", () => {
+      toggleLanguage();
+      location.reload();
+    });
   }
 }
 

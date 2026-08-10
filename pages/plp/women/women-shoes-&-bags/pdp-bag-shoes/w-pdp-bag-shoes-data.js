@@ -12,26 +12,23 @@ export const bagShoesPdpData = {
       "https://i.pinimg.com/736x/84/f5/e7/84f5e761269e32ea8af175830128f078.jpg",
     ],
     specifications: {
-  category: {
-    en: "Running Sneakers",
-    fa: "کتانی ورزشی",
+      category: {
+        en: "Running Sneakers",
+        fa: "کتانی ورزشی",
+      },
+
+      gender: {
+        en: "Women",
+        fa: "زنانه",
+      },
+      color: ["#ffffff", "#c0c0c0", "#000000"],
+      sizes: [36, 37, 38, 39, 40],
+      material: {
+        en: "Mesh Fabric",
+        fa: "پارچه مش",
+      },
+    },
   },
-
-  gender: {
-    en: "Women",
-    fa: "زنانه",
-  },
-
-  color: ["#ffffff", "#c0c0c0", "#000000"],
-
-  sizes: [36, 37, 38, 39, 40],
-
-  material: {
-    en: "Mesh Fabric",
-    fa: "پارچه مش",
-  },
-},
-},
   // ================= PRODUCT 2 =================
   2: {
     brand: {
@@ -45,26 +42,22 @@ export const bagShoesPdpData = {
       "https://i.pinimg.com/1200x/6d/7e/8f/6d7e8f36064c76cb3aaa9d044baf70a7.jpg",
     ],
     specifications: {
-  category: {
-    en: "Running Sneakers",
-    fa: "کتانی ورزشی",
+      category: {
+        en: "Running Sneakers",
+        fa: "کتانی ورزشی",
+      },
+      gender: {
+        en: "Women",
+        fa: "زنانه",
+      },
+      color: ["#ffffff", "#c0c0c0", "#000000"],
+      sizes: [36, 37, 38, 39, 40],
+      material: {
+        en: "Mesh Fabric",
+        fa: "پارچه مش",
+      },
+    },
   },
-
-  gender: {
-    en: "Women",
-    fa: "زنانه",
-  },
-
-  color: ["#ffffff", "#c0c0c0", "#000000"],
-
-  sizes: [36, 37, 38, 39, 40],
-
-  material: {
-    en: "Mesh Fabric",
-    fa: "پارچه مش",
-  },
-},
-},
   // ================= PRODUCT 3 =================
   3: {
     brand: {
@@ -78,26 +71,22 @@ export const bagShoesPdpData = {
       "https://i.pinimg.com/736x/56/c6/32/56c63228eca8d2c31608ad4bfab874db.jpg",
     ],
     specifications: {
-  category: {
-    en: "High Heels",
-    fa: "کفش پاشنه بلند",
+      category: {
+        en: "High Heels",
+        fa: "کفش پاشنه بلند",
+      },
+      gender: {
+        en: "Women",
+        fa: "زنانه",
+      },
+      color: ["#000000", "#ff0000", "#d4af37"],
+      sizes: [36, 37, 38, 39],
+      material: {
+        en: "Premium Leather",
+        fa: "چرم باکیفیت",
+      },
+    },
   },
-
-  gender: {
-    en: "Women",
-    fa: "زنانه",
-  },
-
-  color: ["#000000", "#ff0000", "#d4af37"],
-
-  sizes: [36, 37, 38, 39],
-
-  material: {
-    en: "Premium Leather",
-    fa: "چرم باکیفیت",
-  },
-},
-},
   // ================= PRODUCT 4 =================
   4: {
     brand: {
@@ -111,26 +100,22 @@ export const bagShoesPdpData = {
       "https://i.pinimg.com/1200x/2c/29/a0/2c29a09ed596efc481e3cedb07488038.jpg",
     ],
     specifications: {
-  category: {
-    en: "Classic Shoes",
-    fa: "کفش کلاسیک",
+      category: {
+        en: "Classic Shoes",
+        fa: "کفش کلاسیک",
+      },
+      gender: {
+        en: "Women",
+        fa: "زنانه",
+      },
+      color: ["#000000", "#964B00", "#ffffff"],
+      sizes: [36, 37, 38, 39, 40],
+      material: {
+        en: "Synthetic Leather",
+        fa: "چرم مصنوعی",
+      },
+    },
   },
-
-  gender: {
-    en: "Women",
-    fa: "زنانه",
-  },
-
-  color: ["#000000", "#964B00", "#ffffff"],
-
-  sizes: [36, 37, 38, 39, 40],
-
-  material: {
-    en: "Synthetic Leather",
-    fa: "چرم مصنوعی",
-  },
-},
-},
   // ================= PRODUCT 5 =================
   5: {
     brand: {
@@ -144,26 +129,22 @@ export const bagShoesPdpData = {
       "https://i.pinimg.com/1200x/56/5c/f0/565cf07c655569b0d2bae207258ff18a.jpg",
     ],
     specifications: {
-  category: {
-    en: "Ankle Boots",
-    fa: "بوت کوتاه",
-  },
-
-  gender: {
-    en: "Women",
-    fa: "زنانه",
-  },
-
-  color: ["#000000", "#5c4033", "#654321"],
-
-  sizes: [37, 38, 39, 40],
-
-  material: {
-    en: "Leather",
-    fa: "چرم",
-  },
+      category: {
+        en: "Ankle Boots",
+        fa: "بوت کوتاه",
+      },
+      gender: {
+        en: "Women",
+        fa: "زنانه",
+      },
+      color: ["#000000", "#5c4033", "#654321"],
+      sizes: [37, 38, 39, 40],
+      material: {
+        en: "Leather",
+        fa: "چرم",
+      },
     },
-    },
+  },
   // ================= PRODUCT 6 =================
   6: {
     brand: {
@@ -177,26 +158,22 @@ export const bagShoesPdpData = {
       "https://i.pinimg.com/736x/94/6a/de/946ade3e36c5a643ae10a00828f40b88.jpg",
     ],
     specifications: {
-  category: {
-    en: "Long Boots",
-    fa: "بوت بلند",
+      category: {
+        en: "Long Boots",
+        fa: "بوت بلند",
+      },
+      gender: {
+        en: "Women",
+        fa: "زنانه",
+      },
+      color: ["#000000", "#8b4513"],
+      sizes: [37, 38, 39, 40],
+      material: {
+        en: "Premium Leather",
+        fa: "چرم باکیفیت",
+      },
+    },
   },
-
-  gender: {
-    en: "Women",
-    fa: "زنانه",
-  },
-
-  color: ["#000000", "#8b4513"],
-
-  sizes: [37, 38, 39, 40],
-
-  material: {
-    en: "Premium Leather",
-    fa: "چرم باکیفیت",
-  },
-},
-},
   // ================= PRODUCT 7 =================
   7: {
     brand: {
@@ -210,25 +187,21 @@ export const bagShoesPdpData = {
       "https://i.pinimg.com/736x/0b/e1/13/0be113b2b42663c9afa4c47f2e593668.jpg",
     ],
     specifications: {
-  category: {
-    en: "Flat Sandals",
-    fa: "صندل تخت",
-  },
-
-  gender: {
-    en: "Women",
-    fa: "زنانه",
-  },
-
-  color: ["#f5deb3", "#ffffff", "#000000"],
-
-  sizes: [36, 37, 38, 39],
-
-  material: {
-    en: "Soft Leather",
-    fa: "چرم نرم",
-  },
-},
+      category: {
+        en: "Flat Sandals",
+        fa: "صندل تخت",
+      },
+      gender: {
+        en: "Women",
+        fa: "زنانه",
+      },
+      color: ["#f5deb3", "#ffffff", "#000000"],
+      sizes: [36, 37, 38, 39],
+      material: {
+        en: "Soft Leather",
+        fa: "چرم نرم",
+      },
+    },
   },
   // ================= PRODUCT 8 =================
   8: {
@@ -243,25 +216,21 @@ export const bagShoesPdpData = {
       "https://i.pinimg.com/1200x/4b/b0/53/4bb0534c831110aef53cbd8ff007e2f2.jpg",
     ],
     sspecifications: {
-  category: {
-    en: "Handbag",
-    fa: "کیف دستی",
-  },
-
-  gender: {
-    en: "Women",
-    fa: "زنانه",
-  },
-
-  color: ["#000000", "#8B4513", "#D4AF37"],
-
-  sizes: ["Small", "Medium"],
-
-  material: {
-    en: "Premium Leather",
-    fa: "چرم لوکس",
-  },
-},
+      category: {
+        en: "Handbag",
+        fa: "کیف دستی",
+      },
+      gender: {
+        en: "Women",
+        fa: "زنانه",
+      },
+      color: ["#000000", "#8B4513", "#D4AF37"],
+      sizes: ["Small", "Medium"],
+      material: {
+        en: "Premium Leather",
+        fa: "چرم لوکس",
+      },
+    },
   },
 
   // ================= PRODUCT 9 =================
@@ -277,25 +246,21 @@ export const bagShoesPdpData = {
       "https://i.pinimg.com/736x/ce/61/8e/ce618e831424dc75fa8b4b8f0f6aab56.jpg",
     ],
     specifications: {
-  category: {
-    en: "Classic Bag",
-    fa: "کیف کلاسیک",
-  },
-
-  gender: {
-    en: "Women",
-    fa: "زنانه",
-  },
-
-  color: ["#964B00", "#000000", "#FFFFFF"],
-
-  sizes: ["Medium", "Large"],
-
-  material: {
-    en: "Natural Leather",
-    fa: "چرم طبیعی",
-  },
-},
+      category: {
+        en: "Classic Bag",
+        fa: "کیف کلاسیک",
+      },
+      gender: {
+        en: "Women",
+        fa: "زنانه",
+      },
+      color: ["#964B00", "#000000", "#FFFFFF"],
+      sizes: ["Medium", "Large"],
+      material: {
+        en: "Natural Leather",
+        fa: "چرم طبیعی",
+      },
+    },
   },
 
   // ================= PRODUCT 10 =================
@@ -311,25 +276,21 @@ export const bagShoesPdpData = {
       "https://i.pinimg.com/736x/79/2a/f3/792af33f4f3e52afb6a9c6efa6483acb.jpg",
     ],
     specifications: {
-  category: {
-    en: "Shoulder Bag",
-    fa: "کیف دوشی",
-  },
-
-  gender: {
-    en: "Women",
-    fa: "زنانه",
-  },
-
-  color: ["#000000", "#C0C0C0", "#F5F5DC"],
-
-  sizes: ["Medium"],
-
-  material: {
-    en: "Synthetic Leather",
-    fa: "چرم مصنوعی",
-  },
-},
+      category: {
+        en: "Shoulder Bag",
+        fa: "کیف دوشی",
+      },
+      gender: {
+        en: "Women",
+        fa: "زنانه",
+      },
+      color: ["#000000", "#C0C0C0", "#F5F5DC"],
+      sizes: ["Medium"],
+      material: {
+        en: "Synthetic Leather",
+        fa: "چرم مصنوعی",
+      },
+    },
   },
   // ================= PRODUCT 11 =================
   11: {
@@ -344,25 +305,21 @@ export const bagShoesPdpData = {
       "https://i.pinimg.com/1200x/e6/25/53/e625537a70169c687c5dd885345a0b41.jpg",
     ],
     specifications: {
-  category: {
-    en: "Shoulder Bag",
-    fa: "کیف دوشی",
-  },
-
-  gender: {
-    en: "Women",
-    fa: "زنانه",
-  },
-
-  color: ["#000000", "#FFFFFF", "#A52A2A"],
-
-  sizes: ["Medium", "Large"],
-
-  material: {
-    en: "Soft Leather",
-    fa: "چرم نرم",
-  },
-},
+      category: {
+        en: "Shoulder Bag",
+        fa: "کیف دوشی",
+      },
+      gender: {
+        en: "Women",
+        fa: "زنانه",
+      },
+      color: ["#000000", "#FFFFFF", "#A52A2A"],
+      sizes: ["Medium", "Large"],
+      material: {
+        en: "Soft Leather",
+        fa: "چرم نرم",
+      },
+    },
   },
 
   // ================= PRODUCT 12 =================
@@ -378,25 +335,21 @@ export const bagShoesPdpData = {
       "https://i.pinimg.com/1200x/8f/48/78/8f48787b8192b4b294f54aa4699a199b.jpg",
     ],
     specifications: {
-  category: {
-    en: "Backpack",
-    fa: "کوله‌پشتی",
-  },
-
-  gender: {
-    en: "Women",
-    fa: "زنانه",
-  },
-
-  color: ["#000000", "#808080", "#4169E1"],
-
-  sizes: ["Medium", "Large"],
-
-  material: {
-    en: "Water Resistant Fabric",
-    fa: "پارچه مقاوم در برابر آب",
-  },
-},
+      category: {
+        en: "Backpack",
+        fa: "کوله‌پشتی",
+      },
+      gender: {
+        en: "Women",
+        fa: "زنانه",
+      },
+      color: ["#000000", "#808080", "#4169E1"],
+      sizes: ["Medium", "Large"],
+      material: {
+        en: "Water Resistant Fabric",
+        fa: "پارچه مقاوم در برابر آب",
+      },
+    },
   },
 
   // ================= PRODUCT 13 =================
@@ -405,7 +358,6 @@ export const bagShoesPdpData = {
       en: "Fashion Trend",
       fa: "فشن ترند",
     },
-
     images: [
       "https://i.pinimg.com/736x/76/e3/2a/76e32ab397a2c0d4244c794b56c6a763.jpg",
       "https://i.pinimg.com/1200x/f0/08/4f/f0084fdc11d845ae1224fd2601e8ec2c.jpg",
@@ -413,24 +365,20 @@ export const bagShoesPdpData = {
       "https://i.pinimg.com/1200x/cf/0b/17/cf0b17c9c9cc6843fcd604b0a0c2690e.jpg",
     ],
     specifications: {
-  category: {
-    en: "Fashion Backpack",
-    fa: "کوله‌پشتی فشن",
-  },
-
-  gender: {
-    en: "Women",
-    fa: "زنانه",
-  },
-
-  color: ["#000000", "#FF69B4", "#FFFFFF"],
-
-  sizes: ["Medium", "Large"],
-
-  material: {
-    en: "Premium Fabric",
-    fa: "پارچه باکیفیت",
-  },
-},
+      category: {
+        en: "Fashion Backpack",
+        fa: "کوله‌پشتی فشن",
+      },
+      gender: {
+        en: "Women",
+        fa: "زنانه",
+      },
+      color: ["#000000", "#FF69B4", "#FFFFFF"],
+      sizes: ["Medium", "Large"],
+      material: {
+        en: "Premium Fabric",
+        fa: "پارچه باکیفیت",
+      },
+    },
   },
 };
