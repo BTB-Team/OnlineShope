@@ -13,11 +13,7 @@ if (lang !== "en" && lang !== "fa") {
   lang = "en";
 }
 
-// ===============================
-// CART
-// ===============================
-
-const CART_STORAGE_KEY = "shoeCart";
+const CART_STORAGE_KEY = "bagCart";
 
 let cart = JSON.parse(
   localStorage.getItem(CART_STORAGE_KEY)

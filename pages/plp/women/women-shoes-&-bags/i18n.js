@@ -1,6 +1,6 @@
 export const i18n = {
   en: {
-    pageTitle: "Women's Shoes & Bags",
+    pageTitle: "Women's Shoes",
     pageDescription: "Discover our latest collection.",
     searchPlaceholder: "Search products...",
     breadcrumbHome: "Home",
@@ -9,11 +9,11 @@ export const i18n = {
   },
 
   fa: {
-    pageTitle: "کیف و کفش زنانه",
-    pageDescription: "جدیدترین مجموعه کیف و کفش زنانه را کشف کنید.",
+    pageTitle: "کفش زنانه",
+    pageDescription: "جدیدترین مجموعه کفش زنانه را کشف کنید.",
     searchPlaceholder: "جستجوی محصولات...",
     breadcrumbHome: "خانه",
     breadcrumbWomen: "زنانه",
-    breadcrumbCollection: "کیف و کفش",
+    breadcrumbCollection: "کفش",
   },
 };
