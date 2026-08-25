@@ -18,9 +18,6 @@ newPrice:"$7,790",
 image:"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton1.jpg",
 images:[
 "../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton1.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton2.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton3.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton4.jpg"
 ],
 url:"../pdp/pdp.html?brand=louis-vuitton&id=1",
 description:"Elegant Louis Vuitton ring crafted with premium materials and timeless design.",
@@ -47,9 +44,6 @@ newPrice:"$2,090",
 image:"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton2.jpg",
 images:[
 "../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton2.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton3.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton4.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton5.jpg"
 ],
 url:"../pdp/pdp.html?brand=louis-vuitton&id=2",
 description:"Luxury Neverfull MM bag with iconic Louis Vuitton craftsmanship.",
@@ -76,9 +70,6 @@ newPrice:"$2,190",
 image:"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton3.jpg",
 images:[
 "../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton3.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton4.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton5.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton6.jpg"
 ],
 url:"../pdp/pdp.html?brand=louis-vuitton&id=3",
 description:"Classic Speedy Bandoulière 25 handbag with elegant finish.",
@@ -105,9 +96,6 @@ newPrice:"$1,950",
 image:"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton4.jpg",
 images:[
 "../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton4.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton5.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton6.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton7.jpg"
 ],
 url:"../pdp/pdp.html?brand=louis-vuitton&id=4",
 description:"Elegant Alma BB handbag with Louis Vuitton signature craftsmanship.",
@@ -134,9 +122,6 @@ newPrice:"$4,990",
 image:"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton5.jpg",
 images:[
 "../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton5.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton6.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton7.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton8.jpg"
 ],
 url:"../pdp/pdp.html?brand=louis-vuitton&id=5",
 description:"Modern Twist MM bag designed for luxury and everyday elegance.",
@@ -163,9 +148,6 @@ newPrice:"$2,990",
 image:"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton6.jpg",
 images:[
 "../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton6.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton7.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton8.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton9.jpg"
 ],
 url:"../pdp/pdp.html?brand=louis-vuitton&id=6",
 description:"Iconic Pochette Métis crafted with premium Louis Vuitton materials.",
@@ -192,9 +174,7 @@ newPrice:"$2,850",
 image:"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton7.jpg",
 images:[
 "../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton7.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton8.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton9.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton10.jpg"
+
 ],
 url:"../pdp/pdp.html?brand=louis-vuitton&id=7",
 description:"Luxury Loop Hobo bag with elegant Louis Vuitton design.",
@@ -221,9 +201,6 @@ newPrice:"$3,090",
 image:"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton8.jpg",
 images:[
 "../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton8.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton9.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton10.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton11.jpg"
 ],
 url:"../pdp/pdp.html?brand=louis-vuitton&id=8",
 description:"CarryAll PM handbag with premium craftsmanship and timeless style.",
@@ -250,9 +227,6 @@ newPrice:"$2,490",
 image:"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton9.jpg",
 images:[
 "../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton9.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton10.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton11.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton12.jpg"
 ],
 url:"../pdp/pdp.html?brand=louis-vuitton&id=9",
 description:"Elegant Boulogne shoulder bag with iconic Louis Vuitton details.",
@@ -279,9 +253,6 @@ newPrice:"$2,690",
 image:"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton10.jpg",
 images:[
 "../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton10.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton11.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton12.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton13.jpg"
 ],
 url:"../pdp/pdp.html?brand=louis-vuitton&id=10",
 description:"Classic Diane handbag combining elegance and practicality.",
@@ -308,9 +279,6 @@ newPrice:"$3,490",
 image:"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton11.jpg",
 images:[
 "../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton11.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton12.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton13.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton14.jpg"
 ],
 url:"../pdp/pdp.html?brand=louis-vuitton&id=11",
 description:"Spacious OnTheGo MM tote designed for everyday luxury.",
@@ -337,9 +305,6 @@ newPrice:"$3,790",
 image:"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton12.jpg",
 images:[
 "../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton12.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton13.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton14.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton15.jpg"
 ],
 url:"../pdp/pdp.html?brand=louis-vuitton&id=12",
 description:"Elegant Bella Tote crafted with luxurious Louis Vuitton materials.",
@@ -366,9 +331,6 @@ newPrice:"$1,790",
 image:"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton13.jpg",
 images:[
 "../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton13.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton14.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton15.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton16.jpg"
 ],
 url:"../pdp/pdp.html?brand=louis-vuitton&id=13",
 description:"Compact Nano Speedy handbag with timeless Louis Vuitton elegance.",
@@ -395,9 +357,6 @@ newPrice:"$1,850",
 image:"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton14.jpg",
 images:[
 "../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton14.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton15.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton16.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton17.jpg"
 ],
 url:"../pdp/pdp.html?brand=louis-vuitton&id=14",
 description:"Elegant Wallet On Chain Ivy with signature Louis Vuitton style.",
@@ -424,9 +383,6 @@ newPrice:"$1,650",
 image:"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton15.jpg",
 images:[
 "../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton15.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton16.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton17.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton18.jpg"
 ],
 url:"../pdp/pdp.html?brand=louis-vuitton&id=15",
 description:"Luxury Félicie Pochette designed for elegant everyday use.",
@@ -453,9 +409,6 @@ newPrice:"$2,090",
 image:"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton16.jpg",
 images:[
 "../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton16.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton17.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton18.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton19.jpg"
 ],
 url:"../pdp/pdp.html?brand=louis-vuitton&id=16",
 description:"Fashionable Mini Bumbag with premium Louis Vuitton craftsmanship.",
@@ -482,9 +435,6 @@ newPrice:"$5,390",
 image:"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton17.jpg",
 images:[
 "../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton17.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton18.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton19.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton20.jpg"
 ],
 url:"../pdp/pdp.html?brand=louis-vuitton&id=17",
 description:"Exclusive Side Trunk MM combining heritage and modern luxury.",
@@ -511,9 +461,6 @@ newPrice:"$6,690",
 image:"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton18.jpg",
 images:[
 "../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton18.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton19.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton20.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton21.jpg"
 ],
 url:"../pdp/pdp.html?brand=louis-vuitton&id=18",
 description:"Luxury GO-14 MM handbag crafted with exceptional attention to detail.",
@@ -540,9 +487,6 @@ newPrice:"$1,990",
 image:"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton19.jpg",
 images:[
 "../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton19.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton20.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton21.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton22.jpg"
 ],
 url:"../pdp/pdp.html?brand=louis-vuitton&id=19",
 description:"Elegant Liv Pochette with iconic Louis Vuitton craftsmanship.",
@@ -569,9 +513,6 @@ newPrice:"$3,890",
 image:"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton20.jpg",
 images:[
 "../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton20.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton21.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton22.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton23.jpg"
 ],
 url:"../pdp/pdp.html?brand=louis-vuitton&id=20",
 description:"Classic Dauphine MM handbag designed with timeless elegance.",
@@ -598,9 +539,6 @@ newPrice:"$3,450",
 image:"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton21.jpg",
 images:[
 "../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton21.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton22.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton23.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton24.jpg"
 ],
 url:"../pdp/pdp.html?brand=louis-vuitton&id=21",
 description:"Elegant Lockme Ever MM handbag for everyday luxury.",
@@ -627,9 +565,6 @@ newPrice:"$4,690",
 image:"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton22.jpg",
 images:[
 "../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton22.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton23.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton24.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton1.jpg"
 ],
 url:"../pdp/pdp.html?brand=louis-vuitton&id=22",
 description:"Premium Coussin PM crafted with luxurious Louis Vuitton details.",
@@ -656,9 +591,6 @@ newPrice:"$2,990",
 image:"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton23.jpg",
 images:[
 "../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton23.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton24.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton1.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton2.jpg"
 ],
 url:"../pdp/pdp.html?brand=louis-vuitton&id=23",
 description:"Sophisticated Oxford handbag with premium Louis Vuitton craftsmanship.",
@@ -685,9 +617,6 @@ newPrice:"$3,590",
 image:"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton24.jpg",
 images:[
 "../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton24.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton1.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton2.jpg",
-"../../../../../src/assets/images/acs-images/Louis Vuitton/Louis Vuitton3.jpg"
 ],
 url:"../pdp/pdp.html?brand=louis-vuitton&id=24",
 description:"Luxury Grand Palais handbag with timeless Louis Vuitton style.",
