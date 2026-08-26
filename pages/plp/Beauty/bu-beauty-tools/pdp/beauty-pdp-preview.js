@@ -421,10 +421,11 @@ function showToast(message) {
   if (!toastContainer) {
     return;
   }
-  const toast =
-    document.createElement("div");
-  toast.className =
-    "toast toast-success";
+
+  const toast = document.createElement("div");
+
+  toast.className = "toast toast-success";
+
   toast.innerHTML = `
     <span class="toast__icon">✓</span>
     <span class="toast__message">

@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="stylesheet" href="/src/css/pages/contact.css" />
+  </head>
+  <body>
+    <main class="contact-main">
+      <section class="contact-hero">
+        <div class="container">
+          <button class="language-btn btn btn-primary">FA</button>
+          <div class="contact-hero__content">
+            <h5 class="contact-hero__subtitle" data-lang="hero.subtitle"></h5>
+
+            <h1 class="contact-hero__title" data-lang="hero.title"></h1>
+
+            <p class="contact-hero__caption" data-lang="hero.caption"></p>
+          </div>
+
+          <div class="contact-hero-achievment">
+            <div class="contact-hero-achievment__item">
+              <div class="contact-hero-achievment__icon">
+                <img src="/src/assets/icons/clock-four.svg" alt="" />
+              </div>
+              <div class="contact-hero-achievment__text">
+                <h6
+                  class="contact-hero-achievment__title"
+                  data-lang="achievements.0.title"
+                ></h6>
+
+                <p
+                  class="contact-hero-achievment__caption"
+                  data-lang="achievements.0.caption"
+                ></p>
+              </div>
+            </div>
+
+            <div class="contact-hero-achievment__item">
+              <div class="contact-hero-achievment__icon">
+                <img src="/src/assets/icons/heart.svg" alt="" />
+              </div>
+
+              <div class="contact-hero-achievment__text">
+                <h6
+                  class="contact-hero-achievment__title"
+                  data-lang="achievements.1.title"
+                ></h6>
+
+                <p
+                  class="contact-hero-achievment__caption"
+                  data-lang="achievements.1.caption"
+                ></p>
+              </div>
+            </div>
+
+            <div class="contact-hero-achievment__item">
+              <div class="contact-hero-achievment__icon">
+                <img src="/src/assets/icons/shield-alt.svg" alt="" />
+              </div>
+
+              <div class="contact-hero-achievment__text">
+                <h6
+                  class="contact-hero-achievment__title"
+                  data-lang="achievements.2.title"
+                ></h6>
+
+                <p
+                  class="contact-hero-achievment__caption"
+                  data-lang="achievements.2.caption"
+                ></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-info">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-title" data-lang="info.title"></h2>
+
+            <p class="section-caption" data-lang="info.caption"></p>
+          </div>
+
+          <div class="contact-info__cards">
+            <div class="contact-info__card">
+              <div class="contact-info-card__icon">
+                <img src="/src/assets/icons/message.svg" alt="" />
+              </div>
+
+              <div class="contact-info-card__content">
+                <h5
+                  class="contact-info-card__title"
+                  data-lang="cards.0.title"
+                ></h5>
+
+                <p
+                  class="contact-info-card__caption"
+                  data-lang="cards.0.caption"
+                ></p>
+
+                <a
+                  href="mailto: example@gmail.com"
+                  class="contact-info-card__link btn-ghost"
+                  data-lang="cards.0.link"
+                ></a>
+              </div>
+            </div>
+
+            <div class="contact-info__card">
+              <div class="contact-info-card__icon">
+                <img src="/src/assets/icons/phone.svg" alt="" />
+              </div>
+
+              <div class="contact-info-card__content">
+                <h5
+                  class="contact-info-card__title"
+                  data-lang="cards.1.title"
+                ></h5>
+
+                <p
+                  class="contact-info-card__caption"
+                  data-lang="cards.1.caption"
+                ></p>
+
+                <a
+                  href="tel:700100200"
+                  class="contact-info-card__link btn-ghost"
+                  data-lang="cards.1.link"
+                ></a>
+              </div>
+            </div>
+
+            <div class="contact-info__card">
+              <div class="contact-info-card__icon">
+                <img src="/src/assets/icons/user-group.svg" alt="" />
+              </div>
+
+              <div class="contact-info-card__content">
+                <h5
+                  class="contact-info-card__title"
+                  data-lang="cards.2.title"
+                ></h5>
+
+                <p
+                  class="contact-info-card__caption"
+                  data-lang="cards.2.caption"
+                ></p>
+
+                <div class="contact-info-card__links">
+                  <img src="/src/assets/icons/facebook.svg" alt="" />
+                  <img src="/src/assets/icons/instagram.svg" alt="" />
+                  <img src="/src/assets/icons/tiktok.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-form">
+        <div class="container">
+          <div class="contact-form__wrapper">
+            <div class="section-head">
+              <h2 class="section-title" data-lang="form.title"></h2>
+
+              <p class="section-caption" data-lang="form.caption"></p>
+            </div>
+            <form action="#" id="form" method="">
+              <div class="form-row">
+                <div class="contact-form-input__wrapper">
+                  <label for="fullName" data-lang="form.fullName.label"></label>
+
+                  <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    data-placeholder="form.fullName.placeholder"
+                    required
+                  />
+                </div>
+
+                <div class="contact-form-input__wrapper">
+                  <label for="email" data-lang="form.email.label"></label>
+
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    data-placeholder="form.email.placeholder"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="contact-form-input__wrapper">
+                  <label for="phone" data-lang="form.phone.label"></label>
+
+                  <input
+                    type="number"
+                    id="phone"
+                    name="phone"
+                    data-placeholder="form.phone.placeholder"
+                    required
+                  />
+                </div>
+
+                <div class="contact-form-input__wrapper">
+                  <label for="subject" data-lang="form.subject.label"></label>
+
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    data-placeholder="form.subject.placeholder"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="contact-form-input__wrapper">
+                <label for="message" data-lang="form.message.label"></label>
+
+                <textarea
+                  name="message"
+                  id="message"
+                  data-placeholder="form.message.placeholder"
+                  required
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-primary contact-form__btn"
+                data-lang="form.button"
+              ></button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+
+  <script src="/pages/contact/contact-i18n.js" defer></script>
+  <script src="/src/js/engines/contact-engine.js" defer></script>
+  <script src="/pages/contact/contact.preview.js" defer></script>
+</html>
