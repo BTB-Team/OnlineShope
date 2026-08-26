@@ -64,7 +64,11 @@ CATEGORY CARD
 .plp-category-card {
 width: 100%;
 /*max-width: 280px;*/
+<<<<<<< HEAD
   max-width: 300px; /* ✅ از 280px به 300px افزایش یافت */
+=======
+max-width:260px;
+>>>>>>> main
 justify-self: center;
 text-decoration: none;
 color: inherit;
@@ -81,8 +85,13 @@ box-shadow: var(--shadow-md);
 }
 .plp-category-card img {
 width: 100%;
+<<<<<<< HEAD
 aspect-ratio: 1/1;
 object-fit: contain;
+=======
+aspect-ratio: 4/5;
+object-fit: cover;
+>>>>>>> main
 display: block; 
 }
 .plp-category-card__body {
@@ -115,7 +124,10 @@ gap: var(--space-4);
 }
 .plp-category-card {
 max-width: none; 
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 } 
 }
     
@@ -228,4 +240,48 @@ border-radius: var(--radius-sm);
 .plp-category-skeleton__grid {
   grid-template-columns: repeat(2, 1fr); 
 }
+<<<<<<< HEAD
+=======
+}
+
+/* language button  */
+.language-switcher {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-bottom: 24px;
+
+}
+
+
+.language-switcher__button {
+
+    min-width: 50px;
+
+    height: 36px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 20px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+
+}
+
+
+.language-switcher__button:hover {
+
+    background: #111;
+
+    color: white;
+
+>>>>>>> main
 }
