@@ -382,34 +382,8 @@ html[dir="ltr"] .pdp-specs th{
 .cart-item__actions {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
   gap: 8px;
+  height: 100%;
 }
-
-.quantity-controls {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.cart-item__quantity {
-  min-width: 20px;
-  text-align: center;
-  font-size: 16px;
-}
-
-.cart-plus,
-.cart-minus {
-  border: none;
-  background: transparent;
-  padding: 0;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-.cart-remove {
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
-
