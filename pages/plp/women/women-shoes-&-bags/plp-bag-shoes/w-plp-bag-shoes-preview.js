@@ -59,7 +59,6 @@ function handleProductClick(event) {
     window.location.href = `../pdp-bag-shoes/w-pdp-bag-shoes.html?id=${product.id}`;
   }
 }
-
 function init() {
   initializeLanguage();
   updateStaticContent();
@@ -105,11 +104,10 @@ function renderProducts(products) {
   productGrid.innerHTML = "";
   productsCount.textContent = translateCount(products.length);
   if (products.length === 0) {
-    emptyState.classList.remove("hidden");
+    emptyState.style.display = "block";
     return;
   }
-  emptyState.classList.add("hidden");
-  console.log(emptyState.className);
+  emptyState.style.display = "none";
   const fragment = document.createDocumentFragment();
   products.forEach((product) => {
     fragment.appendChild(createProductCard(product));
@@ -198,17 +196,17 @@ ${
 // ================= EVENTS =================
 const CART_KEY = "bagShoesCart";
 function showToast(message) {
-  console.log("TOAST:", message);
+  if (!toastContainer) return;
   const toast = document.createElement("div");
-  toast.className = "toast toast-success";
-  toast.style.position = "fixed";
-  toast.style.top = "24px";
-  toast.style.right = "24px";
-  toast.style.zIndex = "99999";
-  toast.innerHTML = `
-    <span class="toast__icon">✓</span>
-    <span class="toast__message">${message}</span>
-  `;
+  toast.classList.add("toast", "toast-success");
+  const icon = document.createElement("span");
+  icon.classList.add("toast__icon");
+  icon.textContent = "✓";
+  const text = document.createElement("span");
+  text.classList.add("toast__message");
+  text.textContent = message;
+  toast.appendChild(icon);
+  toast.appendChild(text);
   toastContainer.appendChild(toast);
   setTimeout(() => {
     toast.remove();

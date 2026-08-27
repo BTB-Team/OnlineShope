@@ -73,7 +73,6 @@ const cartCheckout = document.getElementById("cartCheckout");
 const toastContainer = document.getElementById("toastContainer");
 
 // ================= STATIC TEXT =================
-
 function renderStaticTexts() {
   const language = getLanguage();
 
@@ -219,6 +218,11 @@ function renderSpecifications() {
   specificationsTable.innerHTML = "";
   const specifications =
     productDetails?.specifications || [];
+  const language = getLanguage();
+
+  // جهت جدول بر اساس زبان
+  specificationsTable.dir =
+    language === "fa" ? "rtl" : "ltr";
   if (specifications.length === 0) {
     specificationsTable.innerHTML = `
       <tr>
@@ -229,7 +233,7 @@ function renderSpecifications() {
     `;
     return;
   }
-  const language = getLanguage();
+
   specifications.forEach((item) => {
     const row = document.createElement("tr");
     const name =
@@ -241,13 +245,12 @@ function renderSpecifications() {
       item.value?.en ||
       "";
     row.innerHTML = `
-      <td>${name}</td>
-      <td>${value}</td>
-    `;
+  <td style="text-align: ${language === "fa" ? "right" : "left"};">${name}</td>
+  <td style="text-align: ${language === "fa" ? "right" : "left"};">${value}</td>
+`;
     specificationsTable.appendChild(row);
   });
 }
-
 // ================= ADD TO CART =================
 function addToCart() {
   let cart =
@@ -285,22 +288,29 @@ function addToCart() {
 // ================= OPEN CART =================
 function openCart() {
   if (cartDrawer) {
-    cartDrawer.classList.add("active");
+    cartDrawer.hidden = false;
+    cartDrawer.style.display = "flex";
+    cartDrawer.style.transform = "translateX(0)";
   }
   if (cartOverlay) {
-    cartOverlay.classList.add("active");
+    cartOverlay.hidden = false;
+    cartOverlay.style.display = "block";
   }
 }
 
 // ================= CLOSE CART =================
 function closeCart() {
   if (cartDrawer) {
-    cartDrawer.classList.remove("active");
+    cartDrawer.hidden = true;
+    cartDrawer.style.display = "none";
+    cartDrawer.style.transform = "translateX(100%)";
   }
   if (cartOverlay) {
-    cartOverlay.classList.remove("active");
+    cartOverlay.hidden = true;
+    cartOverlay.style.display = "none";
   }
 }
+closeCart();
 
 // ================= RENDER CART =================
 function renderCart() {
@@ -421,11 +431,8 @@ function showToast(message) {
   if (!toastContainer) {
     return;
   }
-
   const toast = document.createElement("div");
-
   toast.className = "toast toast-success";
-
   toast.innerHTML = `
     <span class="toast__icon">✓</span>
     <span class="toast__message">

@@ -143,25 +143,23 @@ function renderStaticTexts() {
   if (languageSwitcher) {
     languageSwitcher.textContent = getLanguage().toUpperCase();
   }
-}
-if (descriptionTitle) {
+  }
+  if (descriptionTitle) {
   descriptionTitle.textContent = translate("description");
-}
-if (cartTitle) {
+  }
+  if (cartTitle) {
   cartTitle.textContent = translate("yourCart");
-}
-
-if (subtotalTitle) {
+  }
+  if (subtotalTitle) {
   subtotalTitle.textContent = translate("subtotal");
-}
-if (cartCheckout) {
+  }
+  if (cartCheckout) {
   cartCheckout.textContent = translate("checkout");
-}
+  }
 
 // ================= SPECIFICATIONS =================
 function renderSpecifications() {
   if (!specificationsTable) return;
-
   specificationsTable.innerHTML = "";
   const specifications = productDetails?.specifications;
   if (!specifications) {
@@ -222,6 +220,19 @@ function renderSpecifications() {
     row.appendChild(cellLabel);
     row.appendChild(cellValue);
     specificationsTable.appendChild(row);
+
+    if (language === "fa") {
+      cellLabel.style.direction = "rtl";
+      cellLabel.style.textAlign = "right";
+      cellValue.style.direction = "rtl";
+      cellValue.style.textAlign = "right";
+    } else {
+      cellLabel.style.direction = "ltr";
+      cellLabel.style.textAlign = "left";
+      cellValue.style.direction = "ltr";
+      cellValue.style.textAlign = "left";
+    }
+    specificationsTable.appendChild(row);
   });
 }
 // ================= CART =================
@@ -245,23 +256,33 @@ function addToCart() {
   showToast(translate("addedToCart"));
 }
 
-// ================= CART DRAWER =================
+// ================= OPEN CART =================
 function openCart() {
   if (cartDrawer) {
-    cartDrawer.classList.add("active");
+    cartDrawer.hidden = false;
+    cartDrawer.style.display = "flex";
+    cartDrawer.style.transform = "translateX(0)";
   }
   if (cartOverlay) {
-    cartOverlay.classList.add("active");
+    cartOverlay.hidden = false;
+    cartOverlay.style.display = "block";
   }
 }
+
+// ================= CLOSE CART =================
 function closeCart() {
   if (cartDrawer) {
-    cartDrawer.classList.remove("active");
+    cartDrawer.hidden = true;
+    cartDrawer.style.display = "none";
+    cartDrawer.style.transform = "translateX(100%)";
   }
   if (cartOverlay) {
-    cartOverlay.classList.remove("active");
+    cartOverlay.hidden = true;
+    cartOverlay.style.display = "none";
   }
 }
+closeCart();
+
 function renderCart() {
   if (!cartItems) {
     return;
@@ -286,21 +307,21 @@ function renderCart() {
     const cartItem = document.createElement("div");
     cartItem.className = "cart-item";
     cartItem.innerHTML = `
-  <img class="cart-item__image" src="${item.image}" alt=""/>
+    <img class="cart-item__image" src="${item.image}" alt=""/>
   <div class="cart-item__content">
-  <h3 class="cart-item__title"> ${item.title[getLanguage()] || item.title.en} </h3>
-  <span class="cart-item__price"> ${formatPrice(item.price)} </span>
-</div>
-<div class="cart-item__actions">
+    <h3 class="cart-item__title"> ${item.title[getLanguage()] || item.title.en} </h3>
+    <span class="cart-item__price"> ${formatPrice(item.price)} </span>
+  </div>
+  <div class="cart-item__actions">
   <div class="cart-qty">
     <button class="cart-minus" data-id="${item.id}"> - </button>
     <span class="cart-item__quantity"> ${item.quantity}</span>
     <button class="cart-plus" data-id="${item.id}"> + </button>
   </div>
 
-  <button class="cart-remove" data-id="${item.id}"> ${translate("remove")} </button>
-</div>
-`;
+    <button class="cart-remove" data-id="${item.id}"> ${translate("remove")} </button>
+  </div>
+  `;
     cartItems.appendChild(cartItem);
   });
   if (cartSubtotal) {
