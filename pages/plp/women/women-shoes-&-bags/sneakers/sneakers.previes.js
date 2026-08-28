@@ -1,5 +1,5 @@
-import { products } from "./data.js";
-import { i18n } from "./i18n.js";
+import { products } from "./sneakers.data.js";
+import { i18n } from "./sneakers.i18n.js";
 
 const root = document.getElementById("root");
 
@@ -13,7 +13,11 @@ if (lang !== "en" && lang !== "fa") {
   lang = "en";
 }
 
-const CART_STORAGE_KEY = "bagCart";
+// ===============================
+// CART
+// ===============================
+
+const CART_STORAGE_KEY = "shoeCart";
 
 let cart = JSON.parse(
   localStorage.getItem(CART_STORAGE_KEY)

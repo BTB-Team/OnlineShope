@@ -1,4 +1,4 @@
-import { i18n } from "./i18n.js";
+import { i18n } from "./pdp.i18n.js";
 
 const root = document.getElementById("root");
 

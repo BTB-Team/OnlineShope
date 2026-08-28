@@ -1,6 +1,6 @@
 export const products = [
   {
-    id: 1,
+    id: 1001,
     name: {
       en: "Dior",
       fa: "دیور"
@@ -15,12 +15,16 @@ export const products = [
       en: "Black",
       fa: "مشکی"
     },
+    size: {
+      en: "36-41",
+      fa: "۳۶ تا ۴۱"
+    },
     image: "../../images/dior.jpg",
-    link: "../pdp/pdp.html?id=1"
+    link: "../pdp/pdp.html?id=1001"
   },
 
   {
-    id: 2,
+    id: 1002,
     name: {
       en: "Dior",
       fa: "دیور"
@@ -35,12 +39,16 @@ export const products = [
       en: "Brown",
       fa: "قهوه‌ای"
     },
+    size: {
+      en: "35-40",
+      fa: "۳۵ تا ۴۰"
+    },
     image: "../../images/dior2.jpg",
-    link: "../pdp/pdp.html?id=2"
+    link: "../pdp/pdp.html?id=1002"
   },
 
   {
-    id: 3,
+    id: 1003,
     name: {
       en: "Dior",
       fa: "دیور"
@@ -55,12 +63,16 @@ export const products = [
       en: "Beige",
       fa: "بژ"
     },
+    size: {
+      en: "36-41",
+      fa: "۳۶ تا ۴۱"
+    },
     image: "../../images/dior3.jpg",
-    link: "../pdp/pdp.html?id=3"
+    link: "../pdp/pdp.html?id=1003"
   },
 
   {
-    id: 4,
+    id: 1004,
     name: {
       en: "Dior",
       fa: "دیور"
@@ -75,12 +87,16 @@ export const products = [
       en: "Red",
       fa: "قرمز"
     },
+    size: {
+      en: "36-41",
+      fa: "۳۶ تا ۴۱"
+    },
     image: "../../images/dior4.jpg",
-    link: "../pdp/pdp.html?id=4"
+    link: "../pdp/pdp.html?id=1004"
   },
 
   {
-    id: 5,
+    id: 1005,
     name: {
       en: "Dior",
       fa: "دیور"
@@ -95,12 +111,16 @@ export const products = [
       en: "Cream",
       fa: "کرم"
     },
+    size: {
+      en: "36-41",
+      fa: "۳۶ تا ۴۱"
+    },
     image: "../../images/dior5.jpg",
-    link: "../pdp/pdp.html?id=5"
+    link: "../pdp/pdp.html?id=1005"
   },
 
   {
-    id: 6,
+    id: 1006,
     name: {
       en: "Dior",
       fa: "دیور"
@@ -115,12 +135,16 @@ export const products = [
       en: "Gold",
       fa: "طلایی"
     },
+    size: {
+      en: "36-41",
+      fa: "۳۶ تا ۴۱"
+    },
     image: "../../images/dior6.jpg",
-    link: "../pdp/pdp.html?id=6"
+    link: "../pdp/pdp.html?id=1006"
   },
 
   {
-    id: 7,
+    id: 1007,
     name: {
       en: "Dior",
       fa: "دیور"
@@ -135,12 +159,16 @@ export const products = [
       en: "White",
       fa: "سفید"
     },
+    size: {
+      en: "36-41",
+      fa: "۳۶ تا ۴۱"
+    },
     image: "../../images/dior7.jpg",
-    link: "../pdp/pdp.html?id=7"
+    link: "../pdp/pdp.html?id=1007"
   },
 
   {
-    id: 8,
+    id: 1008,
     name: {
       en: "Dior",
       fa: "دیور"
@@ -155,12 +183,16 @@ export const products = [
       en: "Silver",
       fa: "نقره‌ای"
     },
+    size: {
+      en: "36-41",
+      fa: "۳۶ تا ۴۱"
+    },
     image: "../../images/dior8.jpg",
-    link: "../pdp/pdp.html?id=8"
+    link: "../pdp/pdp.html?id=1008"
   },
 
   {
-    id: 9,
+    id: 1009,
     name: {
       en: "Dior",
       fa: "دیور"
@@ -175,12 +207,16 @@ export const products = [
       en: "Pink",
       fa: "صورتی"
     },
+    size: {
+      en: "36-41",
+      fa: "۳۶ تا ۴۱"
+    },
     image: "../../images/dior9.jpg",
-    link: "../pdp/pdp.html?id=9"
+    link: "../pdp/pdp.html?id=1009"
   },
 
   {
-    id: 10,
+    id: 1010,
     name: {
       en: "Dior",
       fa: "دیور"
@@ -195,12 +231,16 @@ export const products = [
       en: "Blue",
       fa: "آبی"
     },
+    size: {
+      en: "36-41",
+      fa: "۳۶ تا ۴۱"
+    },
     image: "../../images/dior10.jpg",
-    link: "../pdp/pdp.html?id=10"
+    link: "../pdp/pdp.html?id=1010"
   },
 
   {
-    id: 11,
+    id: 1011,
     name: {
       en: "Dior",
       fa: "دیور"
@@ -214,12 +254,17 @@ export const products = [
     color: {
       en: "Black",
       fa: "مشکی"
+    },
+    size: {
+      en: "36-41",
+      fa: "۳۶ تا ۴۱"
     },
     image: "../../images/dior11.jpg",
-    link: "../pdp/pdp.html?id=11"
+    link: "../pdp/pdp.html?id=1011"
   },
+
   {
-    id: 12,
+    id: 1012,
     name: {
       en: "Dior",
       fa: "دیور"
@@ -233,12 +278,17 @@ export const products = [
     color: {
       en: "Black",
       fa: "مشکی"
+    },
+    size: {
+      en: "36-41",
+      fa: "۳۶ تا ۴۱"
     },
     image: "../../images/dior12.jpg",
-    link: "../pdp/pdp.html?id=11"
-  }, 
+    link: "../pdp/pdp.html?id=1012"
+  },
+
   {
-    id: 13,
+    id: 1013,
     name: {
       en: "Dior",
       fa: "دیور"
@@ -253,7 +303,11 @@ export const products = [
       en: "Black",
       fa: "مشکی"
     },
+    size: {
+      en: "36-41",
+      fa: "۳۶ تا ۴۱"
+    },
     image: "../../images/dior13.jpg",
-    link: "../pdp/pdp.html?id=11"
+    link: "../pdp/pdp.html?id=1013"
   }
 ];

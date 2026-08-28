@@ -11,10 +11,7 @@ export const products = [
       en: "SALE",
       fa: "تخفیف"
     },
-    brand: {
-      en: "Nike",
-      fa: "نایک"
-    },
+
     color: {
       en: "White",
       fa: "سفید"
@@ -39,10 +36,7 @@ export const products = [
       en: "NEW",
       fa: "جدید"
     },
-    brand: {
-      en: "Adidas",
-      fa: "آدیداس"
-    },
+
     color: {
       en: "Black",
       fa: "مشکی"
@@ -67,10 +61,7 @@ export const products = [
       en: "HOT",
       fa: "پرفروش"
     },
-    brand: {
-      en: "Puma",
-      fa: "پوما"
-    },
+
     color: {
       en: "Gray",
       fa: "طوسی"
@@ -95,10 +86,7 @@ export const products = [
       en: "SALE",
       fa: "تخفیف"
     },
-    brand: {
-      en: "New Balance",
-      fa: "نیو بالانس"
-    },
+
     color: {
       en: "Silver",
       fa: "نقره‌ای"
@@ -123,10 +111,7 @@ export const products = [
       en: "NEW",
       fa: "جدید"
     },
-    brand: {
-      en: "Converse",
-      fa: "کانورس"
-    },
+
     color: {
       en: "White",
       fa: "سفید"
@@ -151,10 +136,7 @@ export const products = [
       en: "HOT",
       fa: "پرفروش"
     },
-    brand: {
-      en: "Vans",
-      fa: "ونس"
-    },
+
     color: {
       en: "Black",
       fa: "مشکی"
@@ -179,10 +161,7 @@ export const products = [
       en: "SALE",
       fa: "تخفیف"
     },
-    brand: {
-      en: "Nike",
-      fa: "نایک"
-    },
+
     color: {
       en: "White",
       fa: "سفید"
@@ -207,10 +186,7 @@ export const products = [
       en: "NEW",
       fa: "جدید"
     },
-    brand: {
-      en: "Adidas",
-      fa: "آدیداس"
-    },
+
     color: {
       en: "Black",
       fa: "مشکی"
@@ -235,10 +211,7 @@ export const products = [
       en: "HOT",
       fa: "پرفروش"
     },
-    brand: {
-      en: "Puma",
-      fa: "پوما"
-    },
+
     color: {
       en: "Gray",
       fa: "طوسی"
@@ -263,10 +236,7 @@ export const products = [
       en: "SALE",
       fa: "تخفیف"
     },
-    brand: {
-      en: "New Balance",
-      fa: "نیو بالانس"
-    },
+
     color: {
       en: "Silver",
       fa: "نقره‌ای"
@@ -291,10 +261,7 @@ export const products = [
       en: "NEW",
       fa: "جدید"
     },
-    brand: {
-      en: "Converse",
-      fa: "کانورس"
-    },
+
     color: {
       en: "White",
       fa: "سفید"
@@ -319,10 +286,7 @@ export const products = [
       en: "HOT",
       fa: "پرفروش"
     },
-    brand: {
-      en: "Vans",
-      fa: "ونس"
-    },
+
     color: {
       en: "Black",
       fa: "مشکی"
@@ -347,10 +311,7 @@ export const products = [
       en: "NEW",
       fa: "جدید"
     },
-    brand: {
-      en: "Converse",
-      fa: "کانورس"
-    },
+
     color: {
       en: "White",
       fa: "سفید"

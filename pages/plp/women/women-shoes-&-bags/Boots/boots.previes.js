@@ -1,5 +1,5 @@
-import { products } from "./data.js";
-import { i18n } from "./i18n.js";
+import { products } from "./boots.data.js";
+import { i18n } from "./boots.i18n.js";
 
 const root = document.getElementById("root");
 
