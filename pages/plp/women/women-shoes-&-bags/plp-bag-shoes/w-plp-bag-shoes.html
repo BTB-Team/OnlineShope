@@ -5,12 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Women Bags & Shoes Products</title>
     <link rel="stylesheet" href="../../../../../src/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="../../../../../src/css/pages/plp-product.css"
-    />
-  </head>
+    <link rel="stylesheet" href="../../../../../src/css/pages/plp-product.css"/>
+    <style>
+  .toast-container {
+    position: fixed;
+    top: var(--space-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    z-index: 9999;
+  }
 
+  [dir="ltr"] .toast-container {
+    right: var(--space-5);
+    left: auto;
+  }
+  [dir="rtl"] .toast-container {
+    left: var(--space-5);
+    right: auto;
+  }
+  .toast {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 22px;
+    background: #faf9fb;
+    border-left: 4px solid #4d3b68;
+    border-radius: 12px;
+    color: #40364f;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: clamp(15px, 1.5vw, 20px);
+    font-weight: 400;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+    width: min(520px, calc(100vw = 40px));
+    box-sizing: flex;
+    display: flex;
+  }
+</style>
+  </head>
   <body>
     <!-- Breadcrumb -->
     <nav class="breadcrumb">
@@ -33,16 +65,11 @@
     <header class="plp-header">
       <div class="container">
         <div class="language-switcher">
-          <button id="languageToggle" class="language-switcher__button" type="button">
-            FA
-          </button>
+        <button id="languageToggle" class="btn btn-secondary">EN</button>
+      </div>
         </div>
-        <h1 id="pageTitle" class="plp-header__title">
-  Women Bags & Shoes Products
-</h1>
-        <p id="pageDescription" class="plp-header__description">
-          Discover stylish bags and shoes collection.
-        </p>
+        <h1 id="pageTitle" class="plp-header__title"> Women Bags & Shoes Products </h1>
+        <p id="pageDescription" class="plp-header__description"> Discover stylish bags and shoes collection. </p>
         <p id="productsCount" class="plp-header__count"></p>
       </div>
     </header>
@@ -64,7 +91,7 @@
           <div id="productGrid" class="product-grid"></div>
 
           <!-- EMPTY STATE -->
-          <div id="emptyState" class="empty-state hidden">
+          <div id="emptyState" class="empty-state" style="display: none;">
             <h2 id="emptyTitle">No Products Found</h2>
             <p id="emptyDescription">Try another keyword.</p>
           </div>
@@ -78,7 +105,6 @@
       </div>
       <div id="toastContainer" class="toast-container"></div>
     </main>
-
     <script type="module" src="./w-plp-bag-shoes-preview.js"></script>
   </body>
 </html>

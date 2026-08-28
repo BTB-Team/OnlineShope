@@ -6,6 +6,43 @@
     <title> Beauty Products</title>
     <link rel="stylesheet" href="./../../../../src/css/style.css">
     <link rel="stylesheet" href="../../../../src/css/pages/plp-product.css">
+    <style>
+  .toast-container {
+    position: fixed;
+    top: var(--space-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    z-index: 9999;
+  }
+
+  [dir="ltr"] .toast-container {
+    right: var(--space-5);
+    left: auto;
+  }
+
+  [dir="rtl"] .toast-container {
+    left: var(--space-5);
+    right: auto;
+  }
+  .toast {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 22px;
+    background: #faf9fb;
+    border-left: 4px solid #4d3b68;
+    border-radius: 12px;
+    color: #40364f;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: clamp(15px, 1.5vw, 20px);
+    font-weight: 400;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+    width: min(520px, calc(100vw = 40px));
+    box-sizing: flex;
+    display: flex;
+  }
+</style>
 </head>
 <body>
     <nav class="breadcrumb">
@@ -22,13 +59,13 @@
     </a>
     <span>/</span>
     <span id="breadcrumbTitle"> Beauty Products</span>
-</nav>
+    </nav>
     <!-- PLP HEADER -->
     <header class="plp-header">
         <div class="container">
             <div class="language-switcher">
-                <button id="languageToggle" class="language-switcher__button" type="button"> FA </button>
-            </div>
+        <button id="languageToggle" class="btn btn-secondary">EN</button>
+      </div>
             <h1 id="pageTitle" class="plp-header__title"> Beauty Products </h1>
             <p id="pageDescription" class="plp-header__description"> Discover our beauty collection. </p>
             <p id="productsCount" class="plp-header__count"> </p>
@@ -65,7 +102,7 @@
         <div class="preview-content">
         </div>
     </div>
-<div id="toastContainer"></div>
+    <div id="toastContainer"></div>
 
     <script type="module" src="./beauty-products-preview.js"> </script>
 </main>
