@@ -1,5 +1,10 @@
 import { i18n } from "./pdp.i18n.js";
 
+import { products as diorProducts } from "../dior/dior.data.js";
+import { products as hermesProducts } from "../hermes/hermes.data.js";
+import { products as lvProducts } from "../lv/lv.data.js";
+import { products as yslProducts } from "../ysl/ysl.data.js";
+
 const root = document.getElementById("root");
 
 let lang = localStorage.getItem("lang") || "en";
@@ -8,12 +13,56 @@ if (lang !== "en" && lang !== "fa") {
   lang = "en";
 }
 
+const allProducts = [
+  ...diorProducts,
+  ...hermesProducts,
+  ...lvProducts,
+  ...yslProducts
+];
+
+const params = new URLSearchParams(window.location.search);
+const productId = params.get("id");
+
+
+const product = allProducts.find(
+  (item) => String(item.id) === String(productId)
+);
+
+
 function renderPage() {
+  if (!product) {
+    root.innerHTML = `
+      <div class="pdp-not-found">
+        ${i18n[lang].productNotFound}
+      </div>
+    `;
+
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === "fa" ? "rtl" : "ltr";
+
+    return;
+  }
+
+  const productName = product.name?.[lang] || product.name?.en || "";
+
+  const productColor = product.color?.[lang] || product.color?.en || "";
+
+  const productSize = product.size?.[lang] || product.size?.en || "";
+
+  const productBadge = product.badge?.[lang] || product.badge?.en || "";
+
+  const discount = product.oldPrice
+    ? Math.round(
+        ((product.oldPrice - product.newPrice) / product.oldPrice) * 100
+      )
+    : 0;
+
   root.innerHTML = `
-   <div class="language-switcher">
-     <button type="button" data-lang="en">EN</button>
-     <button type="button" data-lang="fa">FA</button>
-   </div>
+    <div class="language-switcher">
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="fa">FA</button>
+    </div>
+
     <nav class="breadcrumb" id="breadcrumb"></nav>
 
     <div class="pdp">
@@ -23,34 +72,10 @@ function renderPage() {
         <div class="pdp-thumbnails">
 
           <img
-            src="../../images/dior9.jpg"
-            data-full="../../images/dior9.jpg"
+            src="${product.image}"
+            data-full="${product.image}"
             class="active"
-            alt="${i18n[lang].productImage}"
-          >
-
-          <img
-            src="../../images/ysl7.jpg"
-            data-full="../../images/ysl7.jpg"
-            alt="${i18n[lang].productImage}"
-          >
-
-          <img
-            src="../../images/lv5.jpg"
-            data-full="../../images/lv5.jpg"
-            alt="${i18n[lang].productImage}"
-          >
-
-          <img
-            src="../../images/dior12.jpg"
-            data-full="../../images/dior12.jpg"
-            alt="${i18n[lang].productImage}"
-          >
-
-          <img
-            src="../../images/hermes9.jpg"
-            data-full="../../images/hermes9.jpg"
-            alt="${i18n[lang].productImage}"
+            alt="${productName}"
           >
 
         </div>
@@ -59,13 +84,14 @@ function renderPage() {
 
           <img
             id="mainImage"
-            src="../../images/dior9.jpg"
-            alt="${i18n[lang].productImage}"
+            src="${product.image}"
+            alt="${productName}"
           >
 
         </div>
 
       </div>
+
 
       <div class="pdp-info">
 
@@ -74,25 +100,25 @@ function renderPage() {
         </span>
 
         <h1 class="pdp-title">
-          ${i18n[lang].title}
+          ${productName}
         </h1>
 
         <p class="pdp-subtitle">
-          ${i18n[lang].subtitle}
+          ${productBadge}
         </p>
 
         <div class="pdp-price">
 
           <span class="pdp-old-price number">
-            $120
+            $${product.oldPrice}
           </span>
 
           <span class="pdp-current-price number">
-            $96
+            $${product.newPrice}
           </span>
 
           <span class="pdp-discount number">
-            -20%
+            -${discount}%
           </span>
 
         </div>
@@ -109,6 +135,7 @@ function renderPage() {
 
     </div>
 
+
     <section class="pdp-description">
 
       <h2>
@@ -120,6 +147,7 @@ function renderPage() {
       </p>
 
     </section>
+
 
     <section class="pdp-specs">
 
@@ -143,35 +171,20 @@ function renderPage() {
           <th>${i18n[lang].colorLabel}</th>
 
           <td>
-            <div class="spec-colors">
-
-              <span
-                class="color-dot"
-                style="background:#000;">
-              </span>
-
-              <span
-                class="color-dot"
-                style="background:#fff; border:1px solid #ddd;">
-              </span>
-
-              <span
-                class="color-dot"
-                style="background:#8B5E3C;">
-              </span>
-
-            </div>
+            <span class="spec-color-name">
+              ${productColor}
+            </span>
           </td>
         </tr>
 
         <tr>
           <th>${i18n[lang].sizesLabel}</th>
-          <td>36, 37, 38, 39</td>
+          <td>${productSize}</td>
         </tr>
 
         <tr>
-          <th>${i18n[lang].materialLabel}</th>
-          <td>${i18n[lang].materialValue}</td>
+          <th>${i18n[lang].badgeLabel}</th>
+          <td>${productBadge}</td>
         </tr>
 
       </table>
@@ -187,10 +200,13 @@ function renderPage() {
   document.documentElement.dir = lang === "fa" ? "rtl" : "ltr";
 }
 
+
 function renderBreadcrumb() {
   const breadcrumb = document.getElementById("breadcrumb");
 
   if (!breadcrumb) return;
+
+  const productName = product?.name?.[lang] || "";
 
   breadcrumb.innerHTML = `
     <a href="#">
@@ -212,10 +228,11 @@ function renderBreadcrumb() {
     <span>/</span>
 
     <span>
-      ${i18n[lang].breadcrumbProduct}
+      ${productName}
     </span>
   `;
 }
+
 
 function attachGalleryEvents() {
   const thumbnails = document.querySelectorAll(".pdp-thumbnails img");
@@ -225,6 +242,7 @@ function attachGalleryEvents() {
 
   thumbnails.forEach((thumbnail) => {
     thumbnail.addEventListener("click", () => {
+
       mainImage.src =
         thumbnail.dataset.full || thumbnail.src;
 
@@ -237,6 +255,7 @@ function attachGalleryEvents() {
   });
 }
 
+
 function attachCartEvent() {
   const button = document.getElementById("add-to-cart");
 
@@ -246,6 +265,7 @@ function attachCartEvent() {
     alert(i18n[lang].addedToCart);
   });
 }
+
 
 window.addEventListener("languageChanged", (event) => {
   const newLang = event.detail?.lang;
@@ -258,6 +278,7 @@ window.addEventListener("languageChanged", (event) => {
 
   renderPage();
 });
+
 
 document.addEventListener("click", (event) => {
   const button = event.target.closest("[data-lang]");
@@ -274,5 +295,6 @@ document.addEventListener("click", (event) => {
 
   renderPage();
 });
+
 
 renderPage();

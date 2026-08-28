@@ -1,57 +1,61 @@
 export const i18n = {
   en: {
-    category: "Heels",
-    title: "Classic Leather Heels",
-    subtitle: "Elegant leather heels designed for comfort and style.",
     addToCart: "Add to Cart",
     addedToCart: "Product added to cart.",
-    close: "Close",
     productImage: "Product image",
 
     breadcrumbHome: "Home",
     breadcrumbCollection: "Shoes & Bags",
     breadcrumbWomen: "Women",
-    breadcrumbProduct: "Classic Leather Heels",
+
+    productSubtitle:
+      "A stylish product designed for comfort and everyday elegance.",
 
     descriptionTitle: "Description",
-    description: "Elegant leather heels crafted with premium materials.",
+
+    productDescription:
+      "A stylish and carefully designed product made with quality materials for comfort and everyday use.",
 
     specificationsTitle: "Specifications",
+
     categoryLabel: "Category",
-    categoryValue: "Shoes",
     genderLabel: "Gender",
-    genderValue: "Women",
     colorLabel: "Color",
     sizesLabel: "Sizes",
-    materialLabel: "Material",
-    materialValue: "Leather"
+
+    genderValue: "Women",
+
+    productNotFound:
+      "Product not found."
   },
 
   fa: {
-    category: "کفش پاشنه‌بلند",
-    title: "کفش پاشنه‌بلند چرمی کلاسیک",
-    subtitle: "کفش پاشنه‌بلند چرمی زیبا، طراحی‌شده برای راحتی و استایل.",
     addToCart: "افزودن به سبد خرید",
     addedToCart: "محصول به سبد خرید اضافه شد.",
-    close: "بستن",
     productImage: "تصویر محصول",
 
     breadcrumbHome: "خانه",
     breadcrumbCollection: "کیف و کفش",
     breadcrumbWomen: "زنانه",
-    breadcrumbProduct: "کفش پاشنه‌بلند چرمی کلاسیک",
+
+    productSubtitle:
+      "محصولی شیک که برای راحتی و استفاده روزمره طراحی شده است.",
 
     descriptionTitle: "توضیحات",
-    description: "کفش پاشنه‌بلند چرمی زیبا که با استفاده از مواد باکیفیت ساخته شده است.",
+
+    productDescription:
+      "محصولی شیک و باکیفیت که با طراحی مناسب برای راحتی و استفاده روزمره ساخته شده است.",
 
     specificationsTitle: "مشخصات",
+
     categoryLabel: "دسته‌بندی",
-    categoryValue: "کفش",
     genderLabel: "جنسیت",
-    genderValue: "زنانه",
     colorLabel: "رنگ",
     sizesLabel: "سایزها",
-    materialLabel: "جنس",
-    materialValue: "چرم"
+
+    genderValue: "زنانه",
+
+    productNotFound:
+      "محصول پیدا نشد."
   }
 };

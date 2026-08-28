@@ -1,3 +1,8 @@
+import { products as boots } from "../Boots/boots.data.js";
+import { products as heels } from "../Heels/heels.data.js";
+import { products as sandals } from "../sandals/sandals.data.js";
+import { products as sneakers } from "../sneakers/sneakers.data.js";
+
 import { i18n } from "./pdp.i18n.js";
 
 const root = document.getElementById("root");
@@ -8,12 +13,107 @@ if (lang !== "en" && lang !== "fa") {
   lang = "en";
 }
 
-function renderPage() {
+/* --------------------------------
+   Get product ID from URL
+-------------------------------- */
+
+const params = new URLSearchParams(window.location.search);
+const productId = Number(params.get("id"));
+
+/* --------------------------------
+   All PLP products
+-------------------------------- */
+
+const allProducts = [
+  ...boots,
+  ...heels,
+  ...sandals,
+  ...sneakers
+];
+
+/* --------------------------------
+   Find selected product
+-------------------------------- */
+
+const product = allProducts.find(
+  (item) => Number(item.id) === productId
+);
+
+/* --------------------------------
+   Find product category
+-------------------------------- */
+
+function getCategory() {
+  if (productId >= 1 && productId <= 99) {
+    return {
+      en: "Boots",
+      fa: "بوت"
+    };
+  }
+
+  if (productId >= 100 && productId <= 199) {
+    return {
+      en: "Heels",
+      fa: "کفش پاشنه‌بلند"
+    };
+  }
+
+  if (productId >= 200 && productId <= 299) {
+    return {
+      en: "Sandals",
+      fa: "صندل"
+    };
+  }
+
+  if (productId >= 300 && productId <= 399) {
+    return {
+      en: "Sneakers",
+      fa: "کتانی"
+    };
+  }
+
+  return {
+    en: "Shoes",
+    fa: "کفش"
+  };
+}
+
+/* --------------------------------
+   Product not found
+-------------------------------- */
+
+if (!product) {
   root.innerHTML = `
-   <div class="language-switcher">
-     <button type="button" data-lang="en">EN</button>
-     <button type="button" data-lang="fa">FA</button>
-   </div>
+    <div class="pdp-error">
+      <h2>${i18n[lang].productNotFound}</h2>
+    </div>
+  `;
+} else {
+  renderPage();
+}
+
+/* --------------------------------
+   Render page
+-------------------------------- */
+
+function renderPage() {
+  const category = getCategory();
+
+  const discount =
+    product.oldPrice > product.newPrice
+      ? Math.round(
+          ((product.oldPrice - product.newPrice) /
+            product.oldPrice) *
+            100
+        )
+      : 0;
+
+  root.innerHTML = `
+    <div class="language-switcher">
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="fa">FA</button>
+    </div>
+
     <nav class="breadcrumb" id="breadcrumb"></nav>
 
     <div class="pdp">
@@ -23,33 +123,9 @@ function renderPage() {
         <div class="pdp-thumbnails">
 
           <img
-            src="../images/heel8.jpg"
-            data-full="../images/heel8.jpg"
+            src="${product.image}"
+            data-full="${product.image}"
             class="active"
-            alt="${i18n[lang].productImage}"
-          >
-
-          <img
-            src="../images/boot10.jpg"
-            data-full="../images/boot10.jpg"
-            alt="${i18n[lang].productImage}"
-          >
-
-          <img
-            src="../images/heel3.jpg"
-            data-full="../images/heel3.jpg"
-            alt="${i18n[lang].productImage}"
-          >
-
-          <img
-            src="../images/heel4.jpg"
-            data-full="../images/heel4.jpg"
-            alt="${i18n[lang].productImage}"
-          >
-
-          <img
-            src="../images/boot6.jpg"
-            data-full="../images/boot6.jpg"
             alt="${i18n[lang].productImage}"
           >
 
@@ -59,7 +135,7 @@ function renderPage() {
 
           <img
             id="mainImage"
-            src="../images/heel8.jpg"
+            src="${product.image}"
             alt="${i18n[lang].productImage}"
           >
 
@@ -70,29 +146,29 @@ function renderPage() {
       <div class="pdp-info">
 
         <span class="pdp-category">
-          ${i18n[lang].category}
+          ${category[lang]}
         </span>
 
         <h1 class="pdp-title">
-          ${i18n[lang].title}
+          ${product.name[lang]}
         </h1>
 
         <p class="pdp-subtitle">
-          ${i18n[lang].subtitle}
+          ${i18n[lang].productSubtitle}
         </p>
 
         <div class="pdp-price">
 
           <span class="pdp-old-price number">
-            $120
+            $${product.oldPrice}
           </span>
 
           <span class="pdp-current-price number">
-            $96
+            $${product.newPrice}
           </span>
 
           <span class="pdp-discount number">
-            -20%
+            -${discount}%
           </span>
 
         </div>
@@ -116,7 +192,7 @@ function renderPage() {
       </h2>
 
       <p>
-        ${i18n[lang].description}
+        ${i18n[lang].productDescription}
       </p>
 
     </section>
@@ -131,7 +207,7 @@ function renderPage() {
 
         <tr>
           <th>${i18n[lang].categoryLabel}</th>
-          <td>${i18n[lang].categoryValue}</td>
+          <td>${category[lang]}</td>
         </tr>
 
         <tr>
@@ -141,37 +217,12 @@ function renderPage() {
 
         <tr>
           <th>${i18n[lang].colorLabel}</th>
-
-          <td>
-            <div class="spec-colors">
-
-              <span
-                class="color-dot"
-                style="background:#000;">
-              </span>
-
-              <span
-                class="color-dot"
-                style="background:#fff; border:1px solid #ddd;">
-              </span>
-
-              <span
-                class="color-dot"
-                style="background:#8B5E3C;">
-              </span>
-
-            </div>
-          </td>
+          <td>${product.color[lang]}</td>
         </tr>
 
         <tr>
           <th>${i18n[lang].sizesLabel}</th>
-          <td>36, 37, 38, 39</td>
-        </tr>
-
-        <tr>
-          <th>${i18n[lang].materialLabel}</th>
-          <td>${i18n[lang].materialValue}</td>
+          <td>${product.size[lang]}</td>
         </tr>
 
       </table>
@@ -184,11 +235,17 @@ function renderPage() {
   attachCartEvent();
 
   document.documentElement.lang = lang;
-  document.documentElement.dir = lang === "fa" ? "rtl" : "ltr";
+  document.documentElement.dir =
+    lang === "fa" ? "rtl" : "ltr";
 }
 
+/* --------------------------------
+   Breadcrumb
+-------------------------------- */
+
 function renderBreadcrumb() {
-  const breadcrumb = document.getElementById("breadcrumb");
+  const breadcrumb =
+    document.getElementById("breadcrumb");
 
   if (!breadcrumb) return;
 
@@ -212,21 +269,31 @@ function renderBreadcrumb() {
     <span>/</span>
 
     <span>
-      ${i18n[lang].breadcrumbProduct}
+      ${product.name[lang]}
     </span>
   `;
 }
 
+/* --------------------------------
+   Gallery
+-------------------------------- */
+
 function attachGalleryEvents() {
-  const thumbnails = document.querySelectorAll(".pdp-thumbnails img");
-  const mainImage = document.getElementById("mainImage");
+  const thumbnails =
+    document.querySelectorAll(
+      ".pdp-thumbnails img"
+    );
+
+  const mainImage =
+    document.getElementById("mainImage");
 
   if (!mainImage || !thumbnails.length) return;
 
   thumbnails.forEach((thumbnail) => {
     thumbnail.addEventListener("click", () => {
       mainImage.src =
-        thumbnail.dataset.full || thumbnail.src;
+        thumbnail.dataset.full ||
+        thumbnail.src;
 
       thumbnails.forEach((item) => {
         item.classList.remove("active");
@@ -237,8 +304,13 @@ function attachGalleryEvents() {
   });
 }
 
+/* --------------------------------
+   Add to cart
+-------------------------------- */
+
 function attachCartEvent() {
-  const button = document.getElementById("add-to-cart");
+  const button =
+    document.getElementById("add-to-cart");
 
   if (!button) return;
 
@@ -247,32 +319,51 @@ function attachCartEvent() {
   });
 }
 
-window.addEventListener("languageChanged", (event) => {
-  const newLang = event.detail?.lang;
-
-  if (newLang !== "en" && newLang !== "fa") return;
-
-  lang = newLang;
-
-  localStorage.setItem("lang", lang);
-
-  renderPage();
-});
+/* --------------------------------
+   Language buttons
+-------------------------------- */
 
 document.addEventListener("click", (event) => {
-  const button = event.target.closest("[data-lang]");
+  const button =
+    event.target.closest("[data-lang]");
 
   if (!button) return;
 
   const newLang = button.dataset.lang;
 
-  if (newLang !== "en" && newLang !== "fa") return;
+  if (newLang !== "en" && newLang !== "fa") {
+    return;
+  }
 
   lang = newLang;
 
   localStorage.setItem("lang", lang);
 
-  renderPage();
+  if (product) {
+    renderPage();
+  }
 });
 
-renderPage();
+/* --------------------------------
+   External language change
+-------------------------------- */
+
+window.addEventListener(
+  "languageChanged",
+  (event) => {
+    const newLang =
+      event.detail?.lang;
+
+    if (newLang !== "en" && newLang !== "fa") {
+      return;
+    }
+
+    lang = newLang;
+
+    localStorage.setItem("lang", lang);
+
+    if (product) {
+      renderPage();
+    }
+  }
+);
