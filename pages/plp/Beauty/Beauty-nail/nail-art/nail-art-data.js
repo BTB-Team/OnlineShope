@@ -13,9 +13,11 @@ export const nailArtProducts = [
     oldPrice: 820,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=500&h=600&fit=crop&q=80"
+      "https://m.media-amazon.com/images/I/61DcLtXyptL.jpg",
+      "https://nailorder.co.uk/cdn/shop/files/nail-art-brush-kit-833.jpg?v=1728566612&width=1200",
+      "https://vainpot.com.sg/cdn/shop/files/MrNailNailArtBrushSet_CoverNoLogo_shopify.jpg?crop=center&height=1200&v=1756799770&width=1200",
+      "https://www.gosupps.com/media/catalog/product/cache/25/image/9df78eab33525d08d6e5fb8d27136e95/7/1/71apI5WmoGL.jpg",
+      "https://m.media-amazon.com/images/I/71hyvGzsGXL.jpg"
     ],
     video: "",
     shortDescription: "Professional nail art brushes.",
@@ -44,9 +46,11 @@ export const nailArtProducts = [
     oldPrice: 480,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&h=600&fit=crop&q=80"
+      "https://ae-pic-a1.aliexpress-media.com/kf/Sf4786353f33949df81b9fa03f328198dy.jpg",
+      "https://m.media-amazon.com/images/I/81icZLiS3DL.jpg",
+      "https://www.puttisu-usa.com/cdn/shop/files/puttisu_nordstrom_product_moms-fave.jpg?v=1753138100&width=2240",
+      "https://tm-prd-cdn.themarket.co.nz/resizer/view?key=d94af7209e10ffffc77bf67b9d693f86&b=productimages&w=1080&h=1080",
+      "https://img.kwcdn.com/product/fancy/30ef103d-5f6e-4eef-a4be-56dc9186aa2e.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp"
     ],
     video: "",
     shortDescription: "Easy-apply nail stickers.",
@@ -76,8 +80,11 @@ export const nailArtProducts = [
     oldPrice: 600,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&h=600&fit=crop&q=80"
+      "https://m.media-amazon.com/images/I/71NLOgf-OAL._AC_UF1000,1000_QL80_.jpg",
+      "https://www.instyle.com/thmb/gNkG8IkOZgRn0NKqOfoPVg0iZD4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/497876083_18069581645502725_6218793193265165108_n-d52d8ec997be45e4a252bfa653d9d4f3.jpeg",
+      "https://i.etsystatic.com/36153620/r/il/d6f2fa/6789989159/il_fullxfull.6789989159_6ifo.jpg",
+      "https://m.media-amazon.com/images/I/71QqvMe554L.jpg",
+      "https://thepinkissue.com/wp-content/uploads/2024/12/Milky-mani-with-rhinestone-studs.jpg"
     ],
     video: "",
     shortDescription: "Sparkling nail rhinestones.",
@@ -108,8 +115,11 @@ export const nailArtProducts = [
     oldPrice: 920,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=500&h=600&fit=crop&q=80"
+      "https://www.pinkiou.com/wp-content/uploads/2022/03/5-01-0304-a.jpg",
+      "https://ae-pic-a1.aliexpress-media.com/kf/S35b01f73661d409fa68d55357a92cab91.jpg",
+      "https://img.joomcdn.net/a8e72185846b25117961c1b79407a78e2cef2d6a_original.jpeg",
+      "https://www.gosupps.com/media/catalog/product/cache/25/image/1500x/040ec09b1e35df139433887a97daa66f/7/1/71AwHEkneuL._SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61aQmg6x3yL.jpg"
     ],
     video: "",
     shortDescription: "Complete stamping system.",
@@ -138,8 +148,11 @@ export const nailArtProducts = [
     oldPrice: 420,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=500&h=600&fit=crop&q=80"
+      "https://yanacosmetic.com/wp-content/uploads/2025/03/21C33FB608432A0FAA7A00C45595051D.jpg",
+      "https://m.media-amazon.com/images/I/71ZFbflJa8L.jpg",
+      "https://beautyspotwarehouse.com/cdn/shop/files/Nail_Dotting_Tools_1.jpg?v=1776167475&width=3840",
+      "https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/f9dd58925a17a5e1e56bac2026d371aa.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp",
+      "https://ae-pic-a1.aliexpress-media.com/kf/Sae631537c5d5410d8e1ddb81013433b3y.png"
     ],
     video: "",
     shortDescription: "Precision dotting tools.",
@@ -168,8 +181,11 @@ export const nailArtProducts = [
     oldPrice: 550,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&h=600&fit=crop&q=80"
+      "https://m.media-amazon.com/images/I/71uoUCwl0JL.jpg",
+      "https://img.kwcdn.com/product/fancy/8f1c3c07-0d44-458e-85d1-57f57347e5f4.jpg",
+      "https://i.pinimg.com/736x/ea/5d/d5/ea5dd502dc5b29d24bc60b0defd390c7.jpg",
+      "https://img.kwcdn.com/product/fancy/cdf5a7de-b2be-4bca-b673-3df06460c5e2.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp",
+      "https://i-spa.co.za/cdn/shop/files/foil.jpg?v=1684739580"
     ],
     video: "",
     shortDescription: "Metallic nail foils.",

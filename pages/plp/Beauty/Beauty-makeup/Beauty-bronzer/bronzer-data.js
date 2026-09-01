@@ -1,10 +1,10 @@
-// bronze-data.js
+// bronzer-data.js
 // Mock Data for Bronze Collection
 // This file contains ONLY data, no functions
 
 export const bronzeProducts = [
   {
-    id: 901,
+    id: 106,
     title: "Matte Bronzer",
     category: "Beauty",
     subCategory: "Makeup",
@@ -35,7 +35,7 @@ export const bronzeProducts = [
     featured: true
   },
   {
-    id: 902,
+    id: 107,
     title: "Shimmer Bronzer",
     category: "Beauty",
     subCategory: "Makeup",
@@ -66,7 +66,7 @@ export const bronzeProducts = [
     featured: false
   },
   {
-    id: 903,
+    id: 108,
     title: "Bronzing Powder",
     category: "Beauty",
     subCategory: "Makeup",
@@ -97,7 +97,7 @@ export const bronzeProducts = [
     featured: false
   },
   {
-    id: 904,
+    id: 109,
     title: "Bronzing Balm",
     category: "Beauty",
     subCategory: "Makeup",
@@ -127,7 +127,7 @@ export const bronzeProducts = [
     featured: false
   },
   {
-    id: 905,
+    id: 110,
     title: "Bronzing Cream",
     category: "Beauty",
     subCategory: "Makeup",
@@ -158,7 +158,7 @@ export const bronzeProducts = [
     featured: true
   },
   {
-    id: 906,
+    id: 111,
     title: "Mousse Bronzer",
     category: "Beauty",
     subCategory: "Makeup",

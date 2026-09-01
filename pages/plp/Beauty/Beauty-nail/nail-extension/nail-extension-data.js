@@ -13,9 +13,12 @@ export const nailExtensionProducts = [
     oldPrice: 900,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=500&h=600&fit=crop&q=80"
+      "https://m.media-amazon.com/images/I/610YRTBfw0L.jpg",
+      "https://img4.dhresource.com/webp/m/0x0/f3/albu/bw/s/11/6fecad7e-ff64-4ea1-b28c-7eb10335e3b3.jpg",
+      "https://c5d726099a76b68eeb00-7a01b9302ceb91366912645e73661123.ssl.cf2.rackcdn.com/product-hugerect-3392821-519310-1717926379-1d5ef1f812dc79afc1525d03c3601281.717926380_type_hugerect_nid_3392821_uid_519310_9",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOX78GYknTdVV1zR_SxjzykJa9xYHP4XUIpLHp10CBJeneylO8h7YkWMpm&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiRCa2wOcrAZphqu7Oa48zLyCcvULTeDYcheGhlwnL5y4QeEl42e4sKe85&s=10"
+      
     ],
     video: "",
     shortDescription: "Natural-looking acrylic tips.",
@@ -45,9 +48,11 @@ export const nailExtensionProducts = [
     oldPrice: 1650,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&h=600&fit=crop&q=80"
+      "https://m.media-amazon.com/images/I/71m6qTVVRyL.jpg",
+      "https://www.nsinails.com.au/cdn/shop/files/soft-gel-nail-extension-kit-full-cover-starter-kit-gel-kit-nsi-australia-419046_750x750.jpg?v=1784260450",
+      "https://www.gosupps.com/media/catalog/product/cache/25/image/1500x/040ec09b1e35df139433887a97daa66f/6/1/61inR4Ia8ZL._SL1280_.jpg",
+      "https://www.gosupps.com/media/catalog/product/8/1/815ipJDcVNL.jpg",
+      "https://m.media-amazon.com/images/I/51-ayQSPQYL.jpg"
     ],
     video: "",
     shortDescription: "Complete gel extension system.",
@@ -76,8 +81,11 @@ export const nailExtensionProducts = [
     oldPrice: 680,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&h=600&fit=crop&q=80"
+      "https://m.media-amazon.com/images/I/71TuJj8QL5L.jpg",
+      "https://ae-pic-a1.aliexpress-media.com/kf/Se6f6d03c50284bb596f74a8e4a3623bda.jpg",
+      "https://m.media-amazon.com/images/I/71iMxLxsQsL.jpg",
+      "https://www.gosupps.com/media/catalog/product/cache/25/image/1500x/040ec09b1e35df139433887a97daa66f/6/1/61W0stusgPL._SL1000_.jpg",
+      "https://img.kwcdn.com/product/fancy/b21e0267-3268-47ba-a359-6cb607271ea3.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp"
     ],
     video: "",
     shortDescription: "Easy press-on nail set.",
@@ -106,8 +114,11 @@ export const nailExtensionProducts = [
     oldPrice: 550,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=500&h=600&fit=crop&q=80"
+      "https://thumbs.dreamstime.com/b/big-set-different-nail-shapes-manicure-guide-vector-illustration-133484663.jpg",
+      "https://dynamicnailsupply.com/cdn/shop/products/butterfly-fish-shape-2_800x.jpg?v=1597036067",
+      "https://m.media-amazon.com/images/I/71M8PjaJufL._AC_UF894,1000_QL80_.jpg",
+      "https://maniology.com/cdn/shop/articles/SOFT_GEL_NAIL_TIPS_c84af75f-0fa3-4c85-8421-e08a596ad881.png?v=1781063959&width=1600",
+      "https://i5.walmartimages.com/asr/15569f07-3e40-4f84-8515-43c3d45b2c42.391e82aec1ebd66caa3c02ed92ea09b7.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF"
     ],
     video: "",
     shortDescription: "Professional nail forms.",
@@ -136,8 +147,11 @@ export const nailExtensionProducts = [
     oldPrice: 980,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=500&h=600&fit=crop&q=80"
+      "https://m.media-amazon.com/images/I/51rq+9Ry7WL.jpg",
+      "https://m.media-amazon.com/images/I/61k4b8nMTHL.jpg",
+      "https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/3c75c91e413c180cfc0d10fdf8dcf9e7.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp",
+      "https://m.media-amazon.com/images/I/810Kwsuu-gL.jpg",
+      "https://www.gosupps.com/media/catalog/product/cache/25/image/1500x/040ec09b1e35df139433887a97daa66f/6/1/619Ep8eG8EL._AC_SL1266_.jpg"
     ],
     video: "",
     shortDescription: "Strengthening fiberglass wraps.",
@@ -166,8 +180,11 @@ export const nailExtensionProducts = [
     oldPrice: 1150,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&h=600&fit=crop&q=80"
+      "https://img.ltwebstatic.com/v4/j/spmp/2025/11/03/d7/1762171474d99348cfac1f647a6b8963e25ce36dce_thumbnail_750x999.jpg",
+      "https://americanbeauty.com.au/cdn/shop/files/form_2.jpg?v=1768359950",
+      "https://twentypro.co.uk/cdn/shop/files/Sandwich_Forms_MyGirl.jpg?v=1769519813&width=1080",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzI-RCBgeQjVG9xfQ7Derek1kp8fjgIpNbsWA6_xy0k1kc8WBAbCmKF-k&s=10",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs5xZc1AfvOb1GlfQmHgeANSLRE5deI8Ce15rgOpo_5uoRbwHGqS6F3Fz6&s=10"
     ],
     video: "",
     shortDescription: "Reusable dual forms.",

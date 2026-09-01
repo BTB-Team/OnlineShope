@@ -168,7 +168,7 @@ function renderHero() {
 
       <div class="plp__media">
         <img 
-          src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1200&h=500&fit=crop&q=80" 
+          src="https://static.vecteezy.com/system/resources/thumbnails/052/665/527/small/woman-showing-long-almond-shaped-ombre-nails-manicure-on-gray-background-photo.jpg" 
           alt="${t.heroTitle}"
           onerror="this.src='https://via.placeholder.com/1200x500/F6F0F4/6F4E63?text=Nail+Collection'"
         >

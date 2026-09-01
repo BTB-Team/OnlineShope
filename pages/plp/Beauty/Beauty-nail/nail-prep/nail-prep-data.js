@@ -13,9 +13,11 @@ export const nailPrepProducts = [
     oldPrice: 650,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=500&h=600&fit=crop&q=80"
+      "https://purespadirect.com/cdn/shop/articles/the-best-nail-primer-and-dehydrator-combinations-for-your-acrylic-system_20260204012001_20260204-ai.jpg?v=1780947686",
+      "https://kweenstudio.pk/cdn/shop/files/24_a1a8f4da-5be3-462c-a5ac-0beb2d3678b9.jpg?v=1739615713",
+      "https://makartt.com/cdn/shop/files/Makartt_33.jpg?v=1757476009",
+      "https://nailsoftheday.es/cdn/shop/files/flakon_prozrachn_dehydrator-2-2048x2048_png.webp?v=1749121060&width=1946",
+      "https://ae-pic-a1.aliexpress-media.com/kf/Sffefe138fbdc4ba9a4332afe2b57db8f7.jpg?has_lang=1&ver=1"
     ],
     video: "",
     shortDescription: "Removes oils for better adhesion.",
@@ -44,9 +46,11 @@ export const nailPrepProducts = [
     oldPrice: 680,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=500&h=600&fit=crop&q=80"
+      "https://www.uv-farbgele.de/images/product_images/original_images/Primer-n6.jpg",
+      "https://www.debellecosmetix.com/cdn/shop/files/Debelle_made_in_india_nail_primer_Nail_primer_1000x.jpg?v=1782552512",
+      "https://cdn.shopify.com/s/files/1/0682/9701/files/Bottle_Small_Black_Primer_back.jpg?v=1712793338",
+      "https://bearel.fi/wp-content/uploads/2024/08/ohora-Pro-Nail-Primer-Plus-model.jpg",
+      "https://koreanskincare.com/cdn/shop/files/square-min_PC-NP-003_pronailprimerplus_cover_4_60f619ca-c3c5-4f1c-b917-0b6fbe7c3446_785x.webp?v=1715604888"
     ],
     video: "",
     shortDescription: "Creates strong bond for polish.",
@@ -76,8 +80,11 @@ export const nailPrepProducts = [
     oldPrice: 600,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&h=600&fit=crop&q=80"
+      "https://www.bebeautyproducts.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0577%2F2119%2F2548%2Farticles%2FCuticle_Remover_for_Perfect_Nails_ed4550d0-4574-43a4-93c6-05ce15bfb11f.png%3Fv%3D1766487852&w=3840&q=75",
+      "https://www.bornpretty.com/cdn/shop/files/62064_ZHU_3.jpg?v=1758023657",
+      "https://miliacosmetics.com/cdn/shop/files/11_6194847e-1280-488b-a376-da1d426ebb0d.png?v=1753705111",
+      "https://media.naheed.pk/catalog/product/cache/2f2d0cb0c5f92580479e8350be94f387/1/2/1232911-19.2.25-1.jpg",
+      "https://cdn.shopify.com/s/files/1/0577/2119/2548/files/Cuticle_Remover.png?v=1766151446"
     ],
     video: "",
     shortDescription: "Softens and removes cuticles.",
@@ -106,8 +113,11 @@ export const nailPrepProducts = [
     oldPrice: 550,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=500&h=600&fit=crop&q=80"
+      "https://www.uv-farbgele.de/images/product_images/info_images/Milky-Pink-Primer-Cleaner1.jpg",
+      "https://www.nsinails.com.au/cdn/shop/files/cleanse-nail-cleanser-nail-preparation-nsi-australia-250ml-717159.jpg?v=1765844082",
+      "https://blueskycosmetics.co.uk/cdn/shop/files/1_63112c6f-5e51-44d0-9a8f-05d0341fd1a6.jpg?v=1729457592",
+      "https://down-ph.img.susercontent.com/file/ph-11134207-81ztk-mg7n89fdlzild8",
+      "https://cdn11.bigcommerce.com/s-12568/images/stencil/1280x1280/products/1163/22924/Squeakyclean_nailplatecleaner_tns__30771.1753677892.png?c=2"
     ],
     video: "",
     shortDescription: "Cleanses nails before application.",
@@ -137,8 +147,11 @@ export const nailPrepProducts = [
     oldPrice: 480,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=500&h=600&fit=crop&q=80"
+      "https://glowtips.co.uk/cdn/shop/products/Untitleddesign_4_1200x1200.png?v=1680101342",
+      "https://preview.redd.it/highly-buffed-natural-nails-v0-3jh9fsj0h19h1.jpg?width=1080&crop=smart&auto=webp&s=cef6e77dec1b4998f23502310ea2254a386fef3a",
+      "https://www.tonesproducts.com/cdn/shop/files/Buffer-WEB.jpg?v=1760450826",
+      "https://www.cosmeticsbulgaria.com/uploads/products/1009/bigThumbs/lilavi-blok-pili-60-100-snb.jpg",
+      "https://www.londontownusa.com/cdn/shop/files/file_-_nail_1080x.jpg?v=1723195545"
     ],
     video: "",
     shortDescription: "Smooths and shines nails.",
@@ -167,8 +180,11 @@ export const nailPrepProducts = [
     oldPrice: 720,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&h=600&fit=crop&q=80"
+      "https://www.seyecosmetic.com/manus-storage/cuticle_oil_img_00_4416c711.webp",
+      "https://cdn.shopify.com/s/files/1/0919/0817/8227/files/pure-anada-cuticle-oil.jpg?v=1741282644",
+      "https://www.honori.com.au/cdn/shop/files/DSC_0424.jpg?v=1738408838",
+      "https://unicornlab.com.au/cdn/shop/articles/aftercare_blog_cover.png?v=1783334060",
+      "https://www.ellieyoungbeauty.com/cdn/shop/files/6_d8e39391-e99f-4438-b2c7-c1ab90b13459.jpg?v=1757304398&width=1445"
     ],
     video: "",
     shortDescription: "Nourishes cuticles and nails.",

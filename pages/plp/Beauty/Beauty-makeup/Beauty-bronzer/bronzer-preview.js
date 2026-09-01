@@ -1,8 +1,8 @@
 // bronze-preview.js
 // Preview logic for Bronze Collection with Shopping Cart
 
-import { bronzeProducts } from './bronze-data.js';
-import { bronzeTranslations } from './bronze-i18n.js';
+import { bronzeProducts } from './bronzer-data.js';
+import { bronzeTranslations } from './bronzer-i18n.js';
 
 // ==================== STATE ====================
 let currentLanguage = localStorage.getItem('selectedLanguage') || 'en';
@@ -439,7 +439,7 @@ function renderProductCard(product) {
           <span class="product-card__new-price number">${priceText}</span>
         </div>
         <div class="product-card__details">
-          <a href="../../../../../pages/pdp/pdp.html?id=${product.id}">${t.viewDetails} →</a>
+          <a href="../../Beauty-makeup/Beauty-pdp2/pdp2.html?id=${product.id}">${t.viewDetails} →</a>
         </div>
       </div>
     </article>
