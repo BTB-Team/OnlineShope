@@ -615,9 +615,6 @@ p, .number, table{
     background-position:-200% 0;
   } 
   }
-
-      
-
   /* ==============   TOAST============== */
   .toast{
     display:flex;
@@ -1062,4 +1059,3 @@ body.rtl .cat-card__count {
   font-size: 13px;
   color: var(--color-text-muted);
 }
-
