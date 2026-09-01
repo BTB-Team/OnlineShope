@@ -1,0 +1,262 @@
+import { bagShoesProducts } from "./w-plp-bag-shoes-data.js";
+import {
+  initializeLanguage,
+  getLanguage,
+  toggleLanguage,
+  translate,
+  translateCount,
+  getProductTitle,
+  getProductDescription,
+  formatPrice,
+} from "./w-plp-bag-shoes-i18n.js";
+
+// ================= DOM =================
+const productGrid = document.getElementById("productGrid");
+const productSearch = document.getElementById("productSearch");
+const productsCount = document.getElementById("productsCount");
+const emptyState = document.getElementById("emptyState");
+const languageToggle = document.getElementById("languageToggle");
+const pageTitle = document.getElementById("pageTitle");
+const pageDescription = document.getElementById("pageDescription");
+const toastContainer = document.getElementById("toastContainer");
+
+// Breadcrumb
+const breadcrumbHome = document.getElementById("breadcrumbHome");
+const breadcrumbWomen = document.getElementById("breadcrumbWomen");
+const breadcrumbBagsShoes = document.getElementById("breadcrumbBagsShoes");
+const breadCrumbTitle = document.getElementById("breadcrumbTitle");
+
+// Empty
+const emptyTitle = document.getElementById("emptyTitle");
+const emptyDescription = document.getElementById("emptyDescription");
+
+// ================= STATE =================
+const urlParams = new URLSearchParams(window.location.search);
+const selectedCategory = urlParams.get("category");
+console.log("Selected Category:", selectedCategory);
+console.log("Products:", bagShoesProducts);
+let currentProducts = selectedCategory
+  ? bagShoesProducts.filter((product) => product.category === selectedCategory)
+  : [...bagShoesProducts];
+
+// ================= INIT =================
+function handleProductClick(event) {
+  const card = event.target.closest(".product-card");
+  if (!card) return;
+  const productId = Number(card.dataset.id);
+  const product = bagShoesProducts.find((item) => item.id === productId);
+  if (!product) return;
+  const cartButton = event.target.closest("[data-action='cart']");
+  if (cartButton) {
+    event.preventDefault();
+    event.stopPropagation();
+    addToCart(product);
+    return;
+  }
+  const details = event.target.closest("[data-action='details']");
+  if (details) {
+    event.preventDefault();
+    window.location.href = `../pdp-bag-shoes/w-pdp-bag-shoes.html?id=${product.id}`;
+  }
+}
+function init() {
+  initializeLanguage();
+  updateStaticContent();
+  renderProducts(currentProducts);
+  bindEvents();
+}
+
+// ================= STATIC CONTENT =================
+function updateStaticContent() {
+  const language = getLanguage();
+  document.documentElement.lang = language;
+  document.documentElement.dir = language === "fa" ? "rtl" : "ltr";
+  pageTitle.textContent = translate("pageTitle");
+  pageDescription.textContent = translate("pageDescription");
+  if (productSearch) {
+    productSearch.placeholder = translate("searchPlaceholder");
+  }
+  if (languageToggle) {
+    languageToggle.textContent = language === "en" ? "FA" : "EN";
+  }
+  if (emptyTitle) {
+    emptyTitle.textContent = translate("emptyTitle");
+  }
+  if (emptyDescription) {
+    emptyDescription.textContent = translate("emptyDescription");
+  }
+  if (breadcrumbHome) {
+    breadcrumbHome.textContent = translate("home");
+  }
+  if (breadcrumbWomen) {
+    breadcrumbWomen.textContent = translate("women");
+  }
+  if (breadcrumbBagsShoes) {
+    breadcrumbBagsShoes.textContent = translate("bagsShoes");
+  }
+  if (breadCrumbTitle) {
+    breadcrumbTitle.textContent = translate("products");
+  }
+}
+
+// ================= RENDER =================
+function renderProducts(products) {
+  productGrid.innerHTML = "";
+  productsCount.textContent = translateCount(products.length);
+  if (products.length === 0) {
+    emptyState.style.display = "block";
+    return;
+  }
+  emptyState.style.display = "none";
+  const fragment = document.createDocumentFragment();
+  products.forEach((product) => {
+    fragment.appendChild(createProductCard(product));
+  });
+  productGrid.appendChild(fragment);
+}
+
+// ================= CARD =================
+function createProductCard(product) {
+  const card = document.createElement("article");
+  card.className = "product-card";
+  card.dataset.id = product.id;
+  card.innerHTML = `
+<div class="product-card__media">
+<img
+class="product-card__image"
+src="${product.image}"
+alt="${getProductTitle(product)}"
+loading="lazy">
+${
+  product.badge
+    ? `
+<span class="product-card__badge">
+${product.badge} </span>
+`
+    : ""
+}
+<button class="product-card__floating-cart" data-action="cart" type="button">
+  <svg height="24" width="24" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+    <path
+      fill="#ffffff"
+      d="M456.169,230.305c-31.675-12.846-55.203-36.078-78.763-73.623
+      c-27.405-43.677-29.413-80.099-41.628-104.848
+      C322.908,25.733,293.11,0,256.13,0
+      c-36.971,0-66.778,25.733-79.648,51.834
+      c-12.214,24.749-14.231,68.025-34.774,110.833
+      c-19.183,39.971-56.507,59.941-85.617,67.638
+      c-25.396,6.73-17.854,28.864-17.854,28.864
+      l22.338,161.51C67.814,473.028,112.557,512,165.399,512
+      h181.463c52.842,0,97.584-38.972,104.832-91.322
+      l22.33-161.51C474.024,259.169,480.516,240.182,456.169,230.305z
+      M311.981,181.635c0,17.748-4.476,34.168-7.829,40.972
+      c-7.672,15.543-25.97,22.264-48.022,22.264
+      c-22.051,0-40.348-6.722-48.022-22.264
+      c-3.344-6.804-7.829-23.224-7.829-40.972v-56.416
+      c0-17.74,4.484-34.168,7.829-40.955
+      c7.673-15.55,25.97-32.282,48.022-32.282
+      c22.052,0,40.349,16.732,48.022,32.282
+      c3.353,6.788,7.829,23.216,7.829,40.955V181.635z"/>
+  </svg>
+</button>
+</div>
+<div class="product-card__content">
+<h3 class="product-card__title">
+${getProductTitle(product)}
+</h3>
+<p class="product-card__description">
+${getProductDescription(product)}
+</p>
+<div class="product-card__price">
+${
+  product.oldPrice
+    ? `
+<span class="product-card__old-price number">
+${formatPrice(product.oldPrice)} </span>
+`
+    : ""
+}
+<span class="product-card__new-price number">
+${formatPrice(product.price)} </span>
+</div>
+<div class="product-card__details">
+<a href="#" class="btn btn-ghost" data-action="details">
+${
+  getLanguage() === "fa"
+    ? translate("viewDetails") + " ←"
+    : translate("viewDetails") + " →"
+}
+</a>
+</div>
+</div>
+`;
+  return card;
+}
+
+// ================= EVENTS =================
+const CART_KEY = "bagShoesCart";
+function showToast(message) {
+  if (!toastContainer) return;
+  const toast = document.createElement("div");
+  toast.classList.add("toast", "toast-success");
+  const icon = document.createElement("span");
+  icon.classList.add("toast__icon");
+  icon.textContent = "✓";
+  const text = document.createElement("span");
+  text.classList.add("toast__message");
+  text.textContent = message;
+  toast.appendChild(icon);
+  toast.appendChild(text);
+  toastContainer.appendChild(toast);
+  setTimeout(() => {
+    toast.remove();
+  }, 2500);
+}
+function addToCart(product) {
+  let cart = JSON.parse(localStorage.getItem(CART_KEY)) || [];
+  const existing = cart.find((item) => item.id === product.id);
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cart.push({
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      image: product.image,
+      quantity: 1,
+    });
+  }
+  localStorage.setItem(CART_KEY, JSON.stringify(cart));
+  showToast(translate("addedToCart"));
+}
+function bindEvents() {
+  productSearch?.addEventListener(
+    "input",
+    handleSearch,
+  );
+  languageToggle?.addEventListener("click", handleLanguageChange);
+  productGrid?.addEventListener("click", handleProductClick);
+}
+
+// ================= SEARCH =================
+function handleSearch(event) {
+  const value = event.target.value.trim().toLowerCase();
+  currentProducts = bagShoesProducts.filter((product) => {
+    const text = `
+${product.title.en}
+${product.title.fa}
+${product.description.en}
+${product.description.fa}
+`.toLowerCase();
+    return text.includes(value);
+  });
+  renderProducts(currentProducts);
+}
+
+// ================= LANGUAGE =================
+function handleLanguageChange() {
+  toggleLanguage();
+  updateStaticContent();
+  renderProducts(currentProducts);
+}
+init();

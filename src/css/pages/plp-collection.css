@@ -81,8 +81,8 @@ box-shadow: var(--shadow-md);
 }
 .plp-category-card img {
 width: 100%;
-aspect-ratio: 1/1;
-object-fit: contain;
+aspect-ratio: 4/5;
+object-fit: cover;
 display: block; 
 }
 .plp-category-card__body {
