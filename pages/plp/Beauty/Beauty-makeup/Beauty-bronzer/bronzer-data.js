@@ -13,9 +13,11 @@ export const bronzeProducts = [
     oldPrice: 1150,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?w=500&h=600&fit=crop&q=80"
+      "https://i0.wp.com/volumesofbeauty.com/wp-content/uploads/2024/01/best-bronzer-from-sephora.png?resize=683%2C1024&ssl=1",
+      "https://assets.woolworthsstatic.co.za/Hoola-Matte-Bronzer-HOOLA-LITE-506420178.jpg?V=Xv3N&o=eyJidWNrZXQiOiJ3dy1vbmxpbmUtaW1hZ2UtcmVzaXplIiwia2V5IjoiaW1hZ2VzL2VsYXN0aWNlcmEvcHJvZHVjdHMvaGVyby8yMDIyLTA4LTAyLzUwNjQyMDE3OF9IT09MQUxJVEVfaGVyby5qcGcifQ&q=75",
+      "https://i0.wp.com/littlemissmelanie.com/wp-content/uploads/2017/08/enlight163.jpg",
+      "https://cdn.shopify.com/s/files/1/0909/3726/2464/collections/1000X1000_TERRE.jpg?v=1757693996",
+      "https://jouercosmetics.com/cdn/shop/files/JouerWeb-Cheek-SunsweptBronzerDuo-Product-Light_Medium_e732a9b1-1ec5-4164-b1c8-511817ee4e24.jpg?v=1751487938&width=1000"
     ],
     video: "",
     shortDescription: "Natural sun-kissed look for contouring.",
@@ -24,7 +26,7 @@ export const bronzeProducts = [
       category: "Makeup",
       subcategory: "Bronze",
       type: "Powder",
-      finish: "Matte",
+      Product: "Matte",
       shades: [
         { name: "Light Bronze", color: "#C19A6B" },
         { name: "Medium Bronze", color: "#B87333" },
@@ -44,9 +46,11 @@ export const bronzeProducts = [
     oldPrice: 1200,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1596704017254-9b121068ec31?w=500&h=600&fit=crop&q=80"
+      "https://dermocosmetics.co.uk/cdn/shop/files/02_Bronze_and_shimmer_bronzing_powder_face_and_body_bronzer_wynik.webp?v=1779636721&width=1920",
+      "https://centpurcent.com/cdn/shop/files/SF_summer_soleil_deluxe_5278v_web.jpg?v=1750710630&width=800",
+      "https://www.discountbeautyboutique.com.au/cdn/shop/products/spray_tan.jpg?v=1594455582",
+      "https://tajsalonspa.com/cdn/shop/files/PureBronze_Shimmer_Swatch_CopperDusk.jpg?v=1716480993&width=2000",
+      "https://www.bys.com.au/wp/wp-content/uploads/2026/02/CO_BPDSUB.jpg"
     ],
     video: "",
     shortDescription: "Luminous glow with shimmer finish.",
@@ -55,7 +59,7 @@ export const bronzeProducts = [
       category: "Makeup",
       subcategory: "Bronze",
       type: "Powder",
-      finish: "Shimmer",
+      Product: "Shimmer",
       shades: [
         { name: "Golden Bronze", color: "#CD7F32" },
         { name: "Rose Bronze", color: "#B76E79" },
@@ -75,9 +79,11 @@ export const bronzeProducts = [
     oldPrice: 1050,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1619451334792-150fd785ee74?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=500&h=600&fit=crop&q=80"
+      "https://athrbeauty.com/cdn/shop/files/ATHR_DiffusedReflectionsBronzingPowder_Ethereal_Full-ATHRCHK1061633-Editorial.jpg?v=1755727753&width=1350",
+      "https://taylormadeorganics.com/cdn/shop/files/Pressed_Mineral_Bronzer_Swatch.png?v=1770517251",
+      "https://oggi.shop/wp-content/uploads/2024/09/flormar-bronzing-powder-copper-bronze-photo-1.jpg",
+      "https://caudalie-europe.imgix.net/media/catalog/product/h/o/hoover_poudre-vinocrush.jpg?auto=format,compress&cs=srgb&fm=auto&w=600",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaq-SRzsf6Yqf618ZgVsyP-ZXb_I20ShdVW-BBXIycQKSLqYfcfmjEXsqp&s=10"
     ],
     video: "",
     shortDescription: "Finely milled for smooth finish.",
@@ -86,7 +92,7 @@ export const bronzeProducts = [
       category: "Makeup",
       subcategory: "Bronze",
       type: "Powder",
-      finish: "Natural",
+      Product: "Natural",
       shades: [
         { name: "Warm Bronze", color: "#C68642" },
         { name: "Neutral Bronze", color: "#B87333" },
@@ -106,9 +112,11 @@ export const bronzeProducts = [
     oldPrice: 1250,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1596704017254-9b121068ec31?w=500&h=600&fit=crop&q=80"
+      "https://cld.accentuate.io/89913721018/1660334853446/Split_Module_4.jpg?v=1660334853446&options=w_800,f_pjpg",
+      "https://images.squarespace-cdn.com/content/v1/5981f42b4c0dbf1358494125/1623677097276-0027CYCIGHCAFPORRE6P/Screenshot+2021-06-14+at+12.54.17.png",
+      "https://assets.boots.com/content/dam/boots/brands/brand---s/sleek/sleek_cp_discover-sleek-get-the-looks/sleep_cp_discover-sleek-get-the-looks_2024-11/2024-09_sleek_content-page_get-the-look_33-teaser_dew-dream_feelin-bronzed-radiant-bronzing-balm-shade-madrid.dam.ts%3D1730736040664.jpg",
+      "https://oahuorganicsinc.com/cdn/shop/files/natural-tinted-mineral-barrier-balm-warm-glow-4811331.png?v=1760401213",
+      "https://www.colorstreet.com/cdn/shop/files/CFB113Image1.jpg?v=1771874842"
     ],
     video: "",
     shortDescription: "Blends easily for soft glow.",
@@ -117,7 +125,7 @@ export const bronzeProducts = [
       category: "Makeup",
       subcategory: "Bronze",
       type: "Balm",
-      finish: "Natural",
+      Product: "Natural",
       shades: [
         { name: "Sun-Kissed", color: "#D2691E" },
         { name: "Honey Bronze", color: "#CD853F" }
@@ -136,9 +144,11 @@ export const bronzeProducts = [
     oldPrice: 1350,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=500&h=600&fit=crop&q=80"
+      "https://static1.squarespace.com/static/5d14e8bfa505890001205e37/5d1e2226cedf7500010cec8c/60df1340d779dd18d070409e/1784227707006/revue-chanel-bronzer-soleil-tan-les-beiges-creme-belle-mine-ensoleillee-avis-pauuulette+%282%29.jpg?format=1500w",
+      "https://myer-media.com.au/wcsstore/MyerCatalogAssetStore/images/15/151/1636/11/21/761403070/761403070_Colour_761410720_2_1_720x928.webp?w=1920&q=75",
+      "https://us.no7beauty.com/images?url=https://static.thcdn.com/productimg/original/15634203-5895225829978465.jpg&format=webp&auto=avif&width=1000&height=1000&fit=cover&v=2",
+      "https://makeupempire.in/cdn/shop/files/30_190d0040-1f71-4dab-807f-43527471c7b0_1120x.jpg?v=1765521446",
+      "https://swederm.pl/cdn/shop/files/bronzingcream-light_packshot.jpg?v=1738020553"
     ],
     video: "",
     shortDescription: "Radiant, buildable glow.",
@@ -147,7 +157,7 @@ export const bronzeProducts = [
       category: "Makeup",
       subcategory: "Bronze",
       type: "Cream",
-      finish: "Radiant",
+      Product: "Radiant",
       shades: [
         { name: "Soft Bronze", color: "#C19A6B" },
         { name: "Rich Bronze", color: "#8B4513" },
@@ -167,9 +177,11 @@ export const bronzeProducts = [
     oldPrice: 1450,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=500&h=600&fit=crop&q=80"
+      "https://www.gosupps.com/media/catalog/product/cache/25/image/1500x/040ec09b1e35df139433887a97daa66f/7/1/71XWFbQ8wdL._SL1500_.jpg",
+      "https://conceptcshop.com/cdn/shop/files/nuda-mousse-autobronzante-bronzefoam-moyen-190-ml-5792819.png?v=1763415347&width=2048",
+      "https://images.squarespace-cdn.com/content/v1/68921564b36c550c4d6d5bfb/c7c19060-ba87-499a-ab8c-27857fbed152/bronzefoam-travel-size-9526589+%281%29.webp",
+      "https://www.alanhoward.co.uk/Images/Product/Default/xlarge/39166-magic-mousse-a-bronzer.jpg",
+      "https://img.fruugo.com/product/4/00/2532315004_max.jpg"
     ],
     video: "",
     shortDescription: "Airy mousse for soft finish.",
@@ -178,7 +190,7 @@ export const bronzeProducts = [
       category: "Makeup",
       subcategory: "Bronze",
       type: "Mousse",
-      finish: "Natural",
+      Product: "Natural",
       shades: [
         { name: "Caramel", color: "#C68642" },
         { name: "Toffee", color: "#A0826D" }

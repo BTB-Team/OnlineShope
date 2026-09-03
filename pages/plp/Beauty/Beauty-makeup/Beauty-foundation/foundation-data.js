@@ -13,8 +13,11 @@ export const foundationProducts = [
     oldPrice: 1600,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1596704017254-9b121068ec31?w=500&h=600&fit=crop&q=80"
+      "https://benaturalorganics.com/wp-content/uploads/foundation02.webp",
+      "https://keautybeauty.in/cdn/shop/files/KB_LIQUID_FOUNDATION_S_07.png?v=1746259063&width=1080",
+      "https://cdn.shopify.com/s/files/1/0018/5997/7334/files/maybelline-dream-radiant-liquid-hydrating-foundation-with-hyaluronic-acid-and-collagen-814840.jpg?v=1726671165",
+      "https://m.media-amazon.com/images/I/51iox8ZtXlL._AC_UF1000,1000_QL80_.jpg",
+      "https://img.magnific.com/free-photo/still-life-beauty-products-spreading-out_23-2151345112.jpg?semt=ais_hybrid&w=740&q=80"
     ],
     video: "",
     shortDescription: "Flawless coverage for all skin types.",
@@ -23,7 +26,7 @@ export const foundationProducts = [
       category: "Makeup",
       subcategory: "Foundation",
       type: "Liquid",
-      finish: "Natural",
+      Product: "Natural",
       shades: [
         { name: "Fair", color: "#FFE4C4" },
         { name: "Light", color: "#F5DEB3" },
@@ -44,8 +47,11 @@ export const foundationProducts = [
     oldPrice: 1550,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1583241800698-c318c76ca4e6?w=500&h=600&fit=crop&q=80"
+      "https://cdn.mos.cms.futurecdn.net/2Zb3y2mAY7JTnavDUgdM97.jpg",
+      "https://cdn.salla.sa/onxjbX/cea11017-a45f-4716-8051-9f30567da9bc-1000x1000-hyxOMAhICmg2a7dAVNNufTLlOtRx4NzRLMY7Ikfq.jpg",
+      "https://www.collectioncosmetics.com/cdn/shop/files/LP_Matte__11W_Maple_Warm.png?v=1765283427&width=800",
+      "https://merchantmanila.com/cdn/shop/files/Screenshot2026-02-08at1.22.47PM_1024x1024.png?v=1770528459",
+      "https://klassy.com.bd/_next/image?url=https%3A%2F%2Fcdn.klassy.com.bd%2Fuploads%2Fproducts%2Fsheglam-complexion-pro-long-lasting-breathable-matte-foundation-almond-30ml-0fbb-products.webp&w=3840&q=75"
     ],
     video: "",
     shortDescription: "Oil-free matte finish foundation.",
@@ -54,7 +60,7 @@ export const foundationProducts = [
       category: "Makeup",
       subcategory: "Foundation",
       type: "Liquid",
-      finish: "Matte",
+      Product: "Matte",
       shades: [
         { name: "Porcelain", color: "#FFF5EE" },
         { name: "Ivory", color: "#FFFFF0" },
@@ -75,7 +81,11 @@ export const foundationProducts = [
     oldPrice: 1700,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?w=500&h=600&fit=crop&q=80"
+      "https://emiliie.com/wp-content/uploads/2024/10/Wet-n-wild-Photo-Focus-DEWY-Foundation-2.webp",
+      "https://www.gopicky.com/_next/image?url=https%3A%2F%2Fmedia.gopicky.com%2Fproducts%2Fimages%2FSkintific-AllDayPerfectSerumFoundation-340614543&w=3840&q=75",
+      "https://vader-prod.s3.amazonaws.com/1746698396-untitled-design-84-681c80869c8fc.png",
+      "https://www.caretobeauty.com/cdn-cgi/image/width=1600,height=1600,f=auto/media/catalog/product//w/e/wet-n-wild-photo-focus-dewy-foundation-soft-ivory-28ml..jpg",
+      "https://cobhpharmacy.ie/cdn/shop/files/SecondSkinDewy2.75_1200x.webp?v=1757695510"
     ],
     video: "",
     shortDescription: "Radiant dewy finish.",
@@ -84,7 +94,7 @@ export const foundationProducts = [
       category: "Makeup",
       subcategory: "Foundation",
       type: "Liquid",
-      finish: "Dewy",
+      Product: "Dewy",
       shades: [
         { name: "Light", color: "#F5DEB3" },
         { name: "Medium", color: "#D2B48C" },
@@ -104,7 +114,11 @@ export const foundationProducts = [
     oldPrice: 1800,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?w=500&h=600&fit=crop&q=80"
+      "https://tartecosmetics.com/cdn/shop/files/common__travel-size-Amazonian-clay-16-hour-full-coverage-foundation__06.jpg?v=1762804751&width=990",
+      "https://lagirlpakistan.com/cdn/shop/products/Pro_Coverage_Illuminating_Foundation_400x_2x_8ca75b54-6c68-41e5-9e4d-d4a6fe8387a1.jpg?v=1678902551",
+      "https://media.matsuyaginza.com/images/10/102b64e3a0b059e040f0340e8f7011f8d9e90116e9517a93d8c10a13d392df85",
+      "https://media.glamour.com/photos/6a6257a35fdf3554872b79ce/3:4/w_748%2Cc_limit/Product%2520(3).png",
+      "https://cdn.mos.cms.futurecdn.net/rAy45T4KwyrrDpiJYDZoJn.png"
     ],
     video: "",
     shortDescription: "Maximum coverage foundation.",
@@ -113,7 +127,7 @@ export const foundationProducts = [
       category: "Makeup",
       subcategory: "Foundation",
       type: "Liquid",
-      finish: "Matte",
+      Product: "Matte",
       shades: [
         { name: "Ivory", color: "#FFFFF0" },
         { name: "Beige", color: "#F5F5DC" },
@@ -133,7 +147,11 @@ export const foundationProducts = [
     oldPrice: 1500,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500&h=600&fit=crop&q=80"
+      "https://i0.wp.com/reviewsandotherstuff.com/wp-content/uploads/2019/07/dior-dreamskin-cushion-foundation.jpg?resize=980%2C937&ssl=1",
+      "https://www.lorealparis.com.au/-/media/project/loreal/brand-sites/oap/apac/au/articles/foundation/which-type-of-foundation-is-suitable-for-combination-skin/02232026_oap_infaillible_cushion-foundation_product-stills-multipack_stage-2000x815_dmi_website.jpg?cx=0.5&cy=0.45&cw=2000&ch=815&hash=6EF770CEB711915817E7178607E4EEE2",
+      "https://media.glamour.com/photos/6a84ba1d0607f8041c223b78/3:4/w_748%2Cc_limit/Product%2520(25).png",
+      "https://makeupforeverhk.shop/cdn/shop/files/HDSkinCushionRefill_1N00_a8ba21fc-51ba-4197-bea2-4ba14206b204.jpg?v=1709218672",
+      "https://uae.skintific.com/cdn/shop/files/27-03A.jpg?v=1784165319&width=1600"
     ],
     video: "",
     shortDescription: "Portable cushion compact.",
@@ -142,7 +160,7 @@ export const foundationProducts = [
       category: "Makeup",
       subcategory: "Foundation",
       type: "Cushion",
-      finish: "Natural",
+      Product: "Natural",
       shades: [
         { name: "Light", color: "#F5DEB3" },
         { name: "Medium", color: "#D2B48C" },
@@ -162,7 +180,11 @@ export const foundationProducts = [
     oldPrice: 1450,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=500&h=600&fit=crop&q=80"
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgadXqawIncKbBFTRvj4o2ZKXfMg8eiXxc78N4nTdcGzxRA998KpJKujZw8vccbDTGbdSP8g8g1RXiuNXJyK3mzVEx7X4KyJTMx5evIn1z_JqN26fS4_rcVLk7-Hk7WEsotOPglojelbKc/s2048/DSC06292_004.jpg",
+      "https://www.lancome.ca/dw/image/v2/AATL_PRD/on/demandware.static/-/Sites-lancome-master-catalog/default/dwe9a3014e/images/pdp/01335-LAC/3614274485394-01335-LAC_teint-idole-shape-stick-foundation_045-SABLE-BEIGE-alt1.jpg",
+      "https://static-01.daraz.com.bd/p/a78051b0cdfd56f600e7c1b8a5d6df2d.png",
+      "https://signaturecosmetics.co.za/cdn/shop/files/Xtracoverstick_000_001.jpg..jpg?v=1783006771",
+      "https://www.meritbeauty.com/cdn/shop/files/MERIT-Minimalist-BISTRE_9c8e7037-626f-4126-a64c-0244c1932acf_2000x.jpg?v=1744400819"
     ],
     video: "",
     shortDescription: "Convenient stick format.",
@@ -171,7 +193,7 @@ export const foundationProducts = [
       category: "Makeup",
       subcategory: "Foundation",
       type: "Stick",
-      finish: "Natural",
+      Product: "Natural",
       shades: [
         { name: "Fair", color: "#FFE4C4" },
         { name: "Tan", color: "#D2B48C" },
