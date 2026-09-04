@@ -1,0 +1,1518 @@
+/* ==========================================================
+   PRODUCT DATA IMPORTS
+========================================================== */
+import { lipCareProducts } from "../Beauty-lip-care/Bu-li-lc-data.js";
+import { lipstickProducts } from "../Beauty-lipstick/Bu-li-lipstick-data.js";
+import { liquidLipstickProducts } from "../Beauty-liquid-lipstick/Bu-li-lls-data.js";
+import { lipGlossProducts } from "../Beauty-lip-gloss/Bu-li-lg-data.js";
+import { lipLinerProducts } from "../Beauty-lip-liner/Bu-li-ll-data.js";
+import { lipTintProducts } from "../Beauty-lip-tint/Bu-li-lt-data.js";
+import { lipPlumperProducts } from "../Beauty-lip-plumper/Bu-li-lp-data.js";
+import { lipSetsProducts } from "../Beauty-lip-sets/Bu-li-lsets-data.js";
+
+/* ==========================================================
+   PRODUCT TRANSLATIONS
+========================================================== */
+import lipCareTranslations from "../Beauty-lip-care/Bu-li-lc-i18n.js";
+import lipstickTranslations from "../Beauty-lipstick/Bu-li-lipstick-i18n.js";
+import liquidLipstickTranslations from "../Beauty-liquid-lipstick/Bu-li-lls-i18n.js";
+import lipGlossTranslations from "../Beauty-lip-gloss/Bu-li-lg-i18n.js";
+import lipLinerTranslations from "../Beauty-lip-liner/Bu-li-ll-i18n.js";
+import lipTintTranslations from "../Beauty-lip-tint/Bu-li-lt-i18n.js";
+import lipPlumperTranslations from "../Beauty-lip-plumper/Bu-li-lp-i18n.js";
+import lipSetsTranslations from "../Beauty-lip-sets/Bu-li-lsets-i18n.js";
+
+import translations from "./Bu-lip-pdp-i18n.js";
+
+/* ==========================================================
+   CONSTANTS
+========================================================== */
+const DEFAULT_LANGUAGE = "en";
+const SKELETON_DELAY = 1200;
+const LANGUAGE_STORAGE_KEY = "selectedLanguage";
+const CART_STORAGE_KEY = "beautyLipCart";
+
+// =====================================================
+// SPECIFICATION ICONS
+// =====================================================
+const SPECIFICATION_ICONS = {
+    category: `
+        <svg height="24px" width="24px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 503.322 503.322" xml:space="preserve" fill="#000000"> <g id="SVGRepo_bgCarrier" stroke-width="0"></g> <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g> <g id="SVGRepo_iconCarrier"> <g> <path style="fill:#6F4E63;" d="M295.047,156.203h-78.102v78.102l-43.39-34.712l-43.39,34.712v-78.102H52.063 c-19.17,0-34.712,15.542-34.712,34.712v190.915c0,19.17,15.542,34.712,34.712,34.712h242.983c19.17,0,34.712-15.542,34.712-34.712 V190.915C329.758,171.746,314.216,156.203,295.047,156.203"></path> <path style="fill:#A77A95;" d="M451.25,8.678H338.436v104.136l-52.068-43.39l-52.068,43.39V8.678H121.487 c-19.17,0-34.712,15.542-34.712,34.712v112.814h43.39v78.102l43.39-34.712l43.39,34.712v-78.102h78.102 c19.17,0,34.712,15.542,34.712,34.712v190.915c0,19.17-15.542,34.712-34.712,34.712H451.25c19.17,0,34.712-15.542,34.712-34.712 V43.39C485.962,24.22,470.42,8.678,451.25,8.678"></path> <polygon style="fill:#6F4E63;" points="0,468.61 503.322,468.61 503.322,416.542 0,416.542 "></polygon> <g> <polygon style="fill:#6F4E63;" points="17.356,503.322 86.78,503.322 86.78,468.61 17.356,468.61 "></polygon> <polygon style="fill:#6F4E63;" points="416.542,503.322 485.966,503.322 485.966,468.61 416.542,468.61 "></polygon> <polygon style="fill:#6F4E63;" points="216.949,503.322 286.373,503.322 286.373,468.61 216.949,468.61 "></polygon> </g> <polygon style="fill:#F6F0F4;" points="338.436,112.814 286.369,69.424 234.301,112.814 234.301,0 338.436,0 "></polygon> <g> <path style="fill:#F6F0F4;" d="M442.572,390.508h-39.667c-4.799,0-8.678-3.879-8.678-8.678s3.879-8.678,8.678-8.678h39.667 c4.79,0,8.678,3.879,8.678,8.678S447.362,390.508,442.572,390.508"></path> <path style="fill:#F6F0F4;" d="M442.572,355.797h-59.505c-4.79,0-8.678-3.879-8.678-8.678s3.888-8.678,8.678-8.678h59.505 c4.79,0,8.678,3.879,8.678,8.678S447.362,355.797,442.572,355.797"></path> </g> <polygon style="fill:#F6F0F4;" points="216.945,234.305 173.555,199.593 130.165,234.305 130.165,138.847 216.945,138.847 "></polygon> <g> <path style="fill:#F6F0F4;" d="M295.047,390.508h-26.034c-4.79,0-8.678-3.879-8.678-8.678s3.888-8.678,8.678-8.678h26.034 c4.79,0,8.678,3.879,8.678,8.678S299.837,390.508,295.047,390.508"></path> <path style="fill:#F6F0F4;" d="M295.047,355.797h-43.39c-4.79,0-8.678-3.879-8.678-8.678s3.888-8.678,8.678-8.678h43.39 c4.79,0,8.678,3.879,8.678,8.678S299.837,355.797,295.047,355.797"></path> </g> </g> </g> </svg> 
+    `,
+    gender: `
+        <svg height="24px" width="24px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path style="fill:#6F4E63;" d="M512,396.063v63.141c0,5.888-4.768,10.666-10.666,10.666H240.993c-5.898,0-10.666-4.778-10.666-10.666V410.44h-29.587c-0.523,0.085-1.067,0.128-1.621,0.128H10.666C4.768,410.568,0,405.801,0,399.903v-63.141c0-31.635,25.182-57.489,56.55-58.608c0.352-0.032,0.704-0.053,1.067-0.053c23.145,0,42.279-17.513,44.86-39.986c-20.084-14.601-34.76-40.413-38.983-71.439c-0.768-0.864-1.419-1.867-1.888-2.997c-1.696-4.149-3.136-8.501-4.256-12.916c-11.21-43.922,9.525-88.281,46.215-98.882c3.669-1.056,7.477-1.76,11.37-2.09c10.41-5.088,21.417-7.658,32.765-7.658c43.89,0,79.588,38.418,79.588,85.636c0,12.276-2.368,24.137-7.029,35.24c-0.491,1.173-1.173,2.197-1.984,3.082c-2.656,20.158-9.802,38.791-20.82,53.702c-5.45,7.37-11.594,13.535-18.26,18.377c2.613,22.451,21.726,39.933,44.86,39.933c0.405,0,0.789,0.032,1.173,0.075c7.221,0.267,14.26,1.877,20.766,4.65c6.506,2.773,12.5,6.709,17.652,11.658l0.064-0.064c11.082,10.666,17.993,25.651,17.993,42.215v1.237c1.707-0.213,3.434-0.352,5.184-0.416c0.341-0.032,0.693-0.053,1.056-0.053c23.145,0,42.279-17.503,44.86-39.975c-4.48-3.242-8.735-7.05-12.671-11.412c-9.226-10.25-16.5-23.23-21.246-37.672c-1.216,1.707-2.325,3.456-3.178,4.864c-2.058,3.36-5.823,5.322-9.738,5.077c-3.936-0.235-7.423-2.624-9.066-6.208c-5.152-11.274-8.639-23.411-10.378-36.093c-0.651-4.416-1.045-9.066-1.205-14.1c-0.949-29.758,7.711-58.118,24.403-79.855c17.172-22.366,40.743-35.144,66.373-35.965c12.404-0.395,24.457,2.026,35.858,7.199c0.469-0.032,3.402-0.139,4.576-0.085c22.195,0.213,43.143,10.474,59.014,28.915c15.497,18.004,24.478,42.002,25.299,67.557c0.832,26.057-6.901,50.929-21.78,70.042c-2.058,2.645-5.184,4.117-8.415,4.117c-1.056,0-2.122-0.16-3.157-0.48c-3.424-1.056-6.026-3.744-7.05-7.071c-7.093,17.353-17.865,31.613-30.931,41.127c2.57,22.483,21.705,40.018,44.871,40.018c0.363,0,0.715,0.021,1.067,0.053C486.818,338.564,512,364.428,512,396.063z M490.668,448.539v-52.476c0-20.585-16.745-37.33-37.33-37.33c-0.352,0-0.704-0.021-1.056-0.053c-3.669-0.117-7.263-0.512-10.772-1.205c-9.269,30.419-37.608,52.113-70.341,52.113c-32.744,0-61.083-21.694-70.351-52.113c-3.498,0.693-7.103,1.088-10.772,1.205c-0.352,0.032-0.704,0.053-1.056,0.053c-2.496,0-4.928,0.245-7.285,0.715c-8.501,1.685-15.967,6.271-21.332,12.671c-4.021,4.789-6.858,10.612-8.063,16.991c-0.427,2.25-0.651,4.576-0.651,6.954v14.378v38.098L490.668,448.539L490.668,448.539z M454.959,222.573c3.349-10.058,4.928-20.99,4.565-32.243c-0.661-20.702-7.818-39.997-20.148-54.331c-11.839-13.748-27.187-21.385-43.207-21.492c-0.16,0-5.632,0.256-5.834,0.256c-1.76,0.053-3.573-0.309-5.141-1.099c-14.025-7.071-27.784-6.303-28.414-6.282c-19.124,0.608-36.925,10.431-50.129,27.635c-13.695,17.844-20.798,41.341-20.009,66.181c0.139,4.234,0.469,8.095,1.003,11.796c0.587,4.309,1.419,8.522,2.464,12.628c8.938-9.61,23.145-17.62,31.603-20.809c8.565-3.189,17.556-4.949,26.782-5.248c1.877-0.053,3.786-0.053,5.664,0.011c12.522,0.437,23.785-5.504,29.363-15.487c1.973-3.53,3.701-7.274,5.12-11.103c1.003-2.73,3.093-4.928,5.76-6.09c2.666-1.152,5.696-1.173,8.373-0.043c21.182,8.906,38.514,25.875,48.817,47.783C452.826,217.241,453.946,219.886,454.959,222.573z M428.007,216.974c0.032-0.331,0.075-0.64,0.128-0.96c-6.25-10.25-14.569-18.697-24.297-24.691c-0.544,1.067-1.109,2.133-1.696,3.178c-9.503,16.991-28.126,27.102-48.721,26.398c-1.408-0.053-2.837-0.053-4.245-0.011c-6.911,0.224-13.631,1.536-19.966,3.893c-4.512,1.707-8.81,3.936-12.863,6.645c7.317,33.736,29.662,57.606,54.769,57.606c13.588,0,26.803-7.018,37.234-19.764C419.389,255.787,426.375,237.207,428.007,216.974z M371.169,388.256c23.689,0,44.156-16.009,50.321-38.269c-15.785-9.023-27.539-24.329-31.816-42.492c-5.962,1.867-12.17,2.869-18.558,2.869c-6.261,0-12.458-0.992-18.462-2.869c-4.277,18.164-16.02,33.469-31.816,42.492C327.002,372.246,347.47,388.256,371.169,388.256z M260.373,344.878v-8.245c0-7.605-2.293-14.687-6.218-20.596c-0.235-0.256-0.427-0.512-0.629-0.789c-6.997-9.898-18.409-15.817-30.515-15.817c-0.352,0-0.704-0.021-1.056-0.053c-7.679-0.235-15.039-1.781-21.854-4.426l-50.502,72.879c-1.984,2.88-5.269,4.597-8.767,4.597c-3.498,0-6.773-1.717-8.767-4.597l-50.492-72.879c-6.815,2.645-14.175,4.192-21.854,4.426c-0.352,0.032-0.704,0.053-1.056,0.053c-20.585,0-37.33,16.745-37.33,37.33v52.476h61.254v-0.128h148.148C232.994,370.103,244.374,353.848,260.373,344.878z M182.865,117.889c8.65,0,16.628,2.88,23.038,7.733c-1.024-34.472-26.728-62.16-58.203-62.16c-8.618,0-17.012,2.112-24.937,6.271c-1.387,0.725-2.912,1.141-4.48,1.216c-3.04,0.139-5.994,0.619-8.799,1.429c-24.275,7.007-38.205,36.594-32.669,67.514c6.901-8.266,11.988-17.993,14.708-28.446c1.365-5.258,5.92-9.023,11.338-9.365c5.376-0.341,10.367,2.794,12.383,7.807c0.875,2.176,2.325,4.064,4.224,5.482c2.208,1.643,4.842,2.517,7.626,2.517C127.093,117.889,182.865,117.889,182.865,117.889z M180.294,207.119c11.423-15.465,17.737-36.168,17.812-58.32c-2.752-5.653-8.533-9.578-15.241-9.578h-55.771c-7.413,0-14.463-2.336-20.393-6.762c-0.032-0.021-0.064-0.053-0.107-0.075c-5.269,11.434-12.799,21.78-22.121,30.323c2.314,18.27,9.002,34.898,19.124,47.26c10.431,12.746,23.657,19.764,37.234,19.764C155.507,229.73,169.522,221.699,180.294,207.119z M140.831,343.033l40.829-58.918c-10.943-9.077-18.921-21.598-22.302-35.869c-5.984,1.856-12.191,2.816-18.526,2.816c-6.367,0-12.564-0.992-18.505-2.848c-3.381,14.292-11.359,26.814-22.313,35.901L140.831,343.033z"></path><path style="fill:#A77A95;" d="M490.668,396.063v52.476H251.659V410.44v-14.377c0-2.378,0.224-4.704,0.651-6.954c1.205-6.378,4.042-12.202,8.063-16.991c5.365-6.399,12.831-10.986,21.332-12.671c2.357-0.469,4.789-0.715,7.285-0.715c0.352,0,0.704-0.021,1.056-0.053c3.669-0.117,7.274-0.512,10.772-1.205c9.269,30.419,37.608,52.113,70.351,52.113c32.733,0,61.072-21.694,70.341-52.113c3.509,0.693,7.103,1.088,10.772,1.205c0.352,0.032,0.704,0.053,1.056,0.053C473.923,358.733,490.668,375.478,490.668,396.063z"></path><path style="fill:#4A4549;" d="M459.524,190.331c0.363,11.252-1.216,22.185-4.565,32.243c-1.013-2.688-2.133-5.333-3.37-7.935c-10.303-21.908-27.635-38.877-48.817-47.783c-2.677-1.131-5.706-1.109-8.373,0.043c-2.666,1.163-4.757,3.36-5.76,6.09c-1.419,3.829-3.146,7.573-5.12,11.103c-5.578,9.983-16.841,15.924-29.363,15.487c-1.877-0.064-3.786-0.064-5.664-0.011c-9.226,0.299-18.217,2.058-26.782,5.248c-8.458,3.189-22.665,11.199-31.603,20.809c-1.045-4.106-1.877-8.319-2.464-12.628c-0.533-3.701-0.864-7.562-1.003-11.796c-0.789-24.841,6.314-48.337,20.009-66.181c13.204-17.204,31.005-27.027,50.129-27.635c0.629-0.021,14.388-0.789,28.414,6.282c1.568,0.789,3.381,1.152,5.141,1.099c0.203,0,5.674-0.256,5.834-0.256c16.02,0.107,31.368,7.743,43.207,21.492C451.706,150.334,458.863,169.629,459.524,190.331z"></path><g><path style="fill:#F6F0F4;" d="M428.135,216.014c-0.053,0.32-0.096,0.629-0.128,0.96c-1.632,20.233-8.618,38.813-19.657,52.294c-10.431,12.746-23.646,19.764-37.234,19.764c-25.107,0-47.452-23.87-54.769-57.606c4.053-2.709,8.351-4.938,12.863-6.645c6.335-2.357,13.055-3.669,19.966-3.893c1.408-0.043,2.837-0.043,4.245,0.011c20.596,0.704,39.218-9.407,48.721-26.398c0.587-1.045,1.152-2.112,1.696-3.178C413.566,197.317,421.885,205.764,428.135,216.014z"></path><path style="fill:#F6F0F4;" d="M421.49,349.987c-6.165,22.259-26.632,38.269-50.321,38.269c-23.699,0-44.167-16.009-50.332-38.269c15.796-9.023,27.539-24.329,31.816-42.492c6.005,1.877,12.202,2.869,18.462,2.869c6.389,0,12.596-1.003,18.558-2.869C393.951,325.658,405.705,340.964,421.49,349.987z"></path></g><path style="fill:#C9A3B9;" d="M260.373,336.633v8.245c-15.999,8.97-27.379,25.225-29.64,44.231H82.585v0.128H21.332v-52.476c0-20.585,16.745-37.33,37.33-37.33c0.352,0,0.704-0.021,1.056-0.053c7.679-0.235,15.039-1.781,21.854-4.426l50.492,72.879c1.994,2.88,5.269,4.597,8.767,4.597c3.498,0,6.783-1.717,8.767-4.597l50.502-72.879c6.815,2.645,14.175,4.192,21.854,4.426c0.352,0.032,0.704,0.053,1.056,0.053c12.106,0,23.518,5.919,30.515,15.817c0.203,0.277,0.395,0.533,0.629,0.789C258.08,321.947,260.373,329.029,260.373,336.633z"></path><path style="fill:#4A4549;" d="M205.903,125.622c-6.41-4.853-14.388-7.733-23.038-7.733h-55.771c-2.784,0-5.418-0.875-7.626-2.517c-1.899-1.419-3.349-3.306-4.224-5.482c-2.016-5.013-7.007-8.149-12.383-7.807c-5.418,0.341-9.973,4.106-11.338,9.365c-2.72,10.452-7.807,20.18-14.708,28.446c-5.536-30.92,8.394-60.507,32.669-67.514c2.805-0.811,5.76-1.291,8.799-1.429c1.568-0.075,3.093-0.491,4.48-1.216c7.925-4.16,16.319-6.271,24.937-6.271C179.174,63.461,204.879,91.15,205.903,125.622z"></path><g><path style="fill:#F6F0F4;" d="M198.106,148.798c-0.075,22.153-6.389,42.855-17.812,58.32c-10.772,14.58-24.787,22.611-39.463,22.611c-13.578,0-26.803-7.018-37.234-19.764c-10.122-12.362-16.809-28.99-19.124-47.26c9.322-8.543,16.852-18.889,22.121-30.323c0.043,0.021,0.075,0.053,0.107,0.075c5.93,4.426,12.98,6.762,20.393,6.762h55.771C189.574,139.22,195.354,143.145,198.106,148.798z"></path><path style="fill:#F6F0F4;" d="M181.66,284.115l-40.829,58.918l-40.818-58.918c10.954-9.087,18.932-21.609,22.313-35.901c5.941,1.856,12.138,2.848,18.505,2.848c6.335,0,12.543-0.96,18.526-2.816C162.738,262.517,170.716,275.038,181.66,284.115z"></path></g></g></svg>
+    `,
+    color: `
+        <svg fill="#6F4E63" width="24px" height="24px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" stroke="#6F4E63"> <g id="SVGRepo_bgCarrier" stroke-width="0"></g> <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g> <g id="SVGRepo_iconCarrier"> <title>ionicons-v5-m</title> <path d="M441,336.2l-.06-.05c-9.93-9.18-22.78-11.34-32.16-12.92l-.69-.12c-9.05-1.49-10.48-2.5-14.58-6.17-2.44-2.17-5.35-5.65-5.35-9.94s2.91-7.77,5.34-9.94l30.28-26.87c25.92-22.91,40.2-53.66,40.2-86.59S449.73,119.92,423.78,97c-35.89-31.59-85-49-138.37-49C223.72,48,162,71.37,116,112.11c-43.87,38.77-68,90.71-68,146.24s24.16,107.47,68,146.23c21.75,19.24,47.49,34.18,76.52,44.42a266.17,266.17,0,0,0,86.87,15h1.81c61,0,119.09-20.57,159.39-56.4,9.7-8.56,15.15-20.83,15.34-34.56C456.14,358.87,450.56,345.09,441,336.2ZM112,208a32,32,0,1,1,32,32A32,32,0,0,1,112,208Zm40,135a32,32,0,1,1,32-32A32,32,0,0,1,152,343Zm40-199a32,32,0,1,1,32,32A32,32,0,0,1,192,144Zm64,271a48,48,0,1,1,48-48A48,48,0,0,1,256,415Zm72-239a32,32,0,1,1,32-32A32,32,0,0,1,328,176Z"></path> </g> </svg> 
+    `,
+    sizes: `
+        <svg version="1.0" height="24px" width="24px" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve" fill="#ffffff"> <g id="SVGRepo_bgCarrier" stroke-width="0"></g> <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" ></g> <g id="SVGRepo_iconCarrier"> <g> <path fill="#C9A3B9" d="M61.448,19.393L44.631,2.575c-0.773-0.772-2.029-0.772-2.804,0l-2.102,2.104l2.803,2.802 c0.388,0.387,0.388,1.014,0,1.401c-0.387,0.388-1.014,0.388-1.401,0L38.324,6.08l-2.804,2.802l5.606,5.606 c0.388,0.387,0.388,1.014,0,1.401c-0.387,0.386-1.014,0.386-1.401,0l-5.605-5.604l-2.803,2.801l2.803,2.804 c0.387,0.386,0.387,1.015,0,1.402c-0.388,0.387-1.016,0.387-1.401,0l-2.804-2.803l-2.803,2.803l2.803,2.803 c0.389,0.387,0.389,1.014,0,1.402c-0.386,0.385-1.013,0.385-1.4-0.002l-2.805-2.803l-2.801,2.805l5.605,5.605 c0.388,0.387,0.388,1.014,0,1.4c-0.388,0.389-1.015,0.389-1.401,0l-5.605-5.605l-2.805,2.803l2.805,2.803 c0.386,0.389,0.386,1.016,0,1.402c-0.39,0.387-1.015,0.387-1.403,0l-2.802-2.803l-2.804,2.803l2.804,2.803 c0.386,0.389,0.386,1.014,0,1.402c-0.388,0.385-1.015,0.385-1.402,0l-2.803-2.805l-2.802,2.805l5.604,5.605 c0.388,0.387,0.388,1.014,0,1.402c-0.387,0.387-1.013,0.387-1.401,0L8.894,35.51l-2.803,2.803l2.803,2.805 c0.388,0.387,0.388,1.014,0.001,1.398c-0.389,0.389-1.016,0.389-1.402,0l-2.803-2.801l-2.104,2.1 c-0.773,0.773-0.773,2.031,0.001,2.805l16.817,16.818c0.774,0.773,2.029,0.773,2.804,0l39.24-39.242 C62.223,21.422,62.223,20.166,61.448,19.393z M51,23.006c-1.104,0-2-0.896-2-2c0-1.105,0.896-2,2-2s2,0.895,2,2 C53,22.109,52.104,23.006,51,23.006z"></path> <g> <path fill="#6F4E63" d="M62.851,17.992L46.033,1.173c-1.551-1.549-4.058-1.549-5.606,0L1.185,40.414 c-1.547,1.551-1.547,4.057,0,5.607l16.817,16.816c1.55,1.549,4.059,1.549,5.608,0l39.24-39.24 C64.398,22.049,64.398,19.541,62.851,17.992z M61.448,22.195l-39.24,39.242c-0.774,0.773-2.029,0.773-2.804,0L2.587,44.619 c-0.774-0.773-0.774-2.031-0.001-2.805l2.104-2.1l2.803,2.801c0.387,0.389,1.014,0.389,1.402,0 c0.387-0.385,0.387-1.012-0.001-1.398l-2.803-2.805l2.803-2.803l5.605,5.607c0.389,0.387,1.015,0.387,1.401,0 c0.388-0.389,0.388-1.016,0-1.402l-5.604-5.605l2.802-2.805l2.803,2.805c0.388,0.385,1.015,0.385,1.402,0 c0.386-0.389,0.386-1.014,0-1.402l-2.804-2.803l2.804-2.803l2.802,2.803c0.389,0.387,1.014,0.387,1.403,0 c0.386-0.387,0.386-1.014,0-1.402l-2.805-2.803l2.805-2.803l5.605,5.605c0.387,0.389,1.014,0.389,1.401,0 c0.388-0.387,0.388-1.014,0-1.4l-5.605-5.605l2.801-2.805l2.805,2.803c0.388,0.387,1.015,0.387,1.4,0.002 c0.389-0.389,0.389-1.016,0-1.402l-2.803-2.803l2.803-2.803l2.804,2.803c0.386,0.387,1.014,0.387,1.401,0 c0.387-0.387,0.387-1.016,0-1.402l-2.803-2.804l2.803-2.801l5.605,5.604c0.388,0.386,1.015,0.386,1.401,0 c0.388-0.388,0.388-1.015,0-1.401l-5.606-5.606l2.804-2.802l2.803,2.802c0.388,0.388,1.015,0.388,1.401,0 c0.388-0.388,0.388-1.015,0-1.401l-2.803-2.802l2.102-2.104c0.774-0.772,2.03-0.772,2.804,0l16.817,16.818 C62.223,20.166,62.223,21.422,61.448,22.195z"></path> <path fill="#ffffff" d="M51.019,17.006c-2.209,0-4,1.791-4,4s1.791,4,4,4s4-1.791,4-4S53.228,17.006,51.019,17.006z M51.019,23.006c-1.104,0-2-0.896-2-2c0-1.105,0.896-2,2-2s2,0.895,2,2C53.019,22.109,52.123,23.006,51.019,23.006z"></path> </g> </g> </g> </svg>
+    `,
+    material: `
+        <svg fill="#6F4E63" height="24px" width="24px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.002 512.002" xml:space="preserve" stroke="#6F4E63"> <g id="SVGRepo_bgCarrier" stroke-width="0"></g> <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g> <g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M480.177,307.042l-104.466-30.473l-0.441,0.265l-0.282-0.477l-60.69-17.699l-0.591,0.38l-0.424-0.671l-24.444-7.133 l4.943-16.949l17.779,5.182l144.825-92.16c19.58-5.217,35.081-13.038,44.685-22.607l6.841,10.752L334.115,246.052l39.168,11.423 L512,175.113v-73.596c0-17.223-16.084-32.318-44.138-42.099V39.725c0-23.181-35.522-35.31-70.621-35.31 c-35.098,0-70.621,12.129-70.621,35.31v19.694c-28.054,9.781-44.138,24.876-44.138,42.099v100.864l85.045-49.611 c9.437,1.077,19.341,1.713,29.714,1.713c0.839,0,1.642-0.044,2.481-0.053l-117.239,68.387v59.595l151.985,49.558L480.177,307.042 z M397.241,22.069c32.856,0,52.966,11.432,52.966,17.655S430.098,57.38,397.241,57.38s-52.966-11.432-52.966-17.655 S364.385,22.069,397.241,22.069z M344.276,63.859c0.327,0.177,0.706,0.327,1.042,0.503c1.289,0.671,2.595,1.315,3.981,1.924 c0.556,0.238,1.148,0.459,1.721,0.689c1.307,0.538,2.631,1.059,4.008,1.536c0.512,0.185,1.042,0.344,1.571,0.521 c1.563,0.512,3.151,0.997,4.785,1.448c0.335,0.088,0.671,0.177,1.015,0.265c10.699,2.825,22.784,4.29,34.842,4.29 s24.143-1.465,34.843-4.29c0.344-0.088,0.68-0.177,1.015-0.265c1.633-0.45,3.222-0.936,4.785-1.448 c0.53-0.177,1.059-0.335,1.571-0.521c1.377-0.477,2.701-0.997,4.008-1.536c0.574-0.23,1.165-0.45,1.721-0.689 c1.386-0.609,2.692-1.253,3.981-1.924c0.335-0.177,0.715-0.327,1.042-0.503V91.56c-3.708,3.619-22.263,9.958-52.966,9.958 s-49.258-6.338-52.966-9.958V63.859z M397.241,136.828c-55.578,0-97.103-18.644-97.103-35.31 c0-7.998,10.081-16.693,26.483-23.367V92.69c0,25.741,63.4,26.483,70.621,26.483s70.621-0.742,70.621-26.483V78.151 c16.402,6.674,26.483,15.369,26.483,23.367C494.345,118.184,452.82,136.828,397.241,136.828z"></path> <polygon points="396.484,264.239 434.619,275.362 512.002,228.929 512.002,195.649 "></polygon> <polygon points="511.998,289.681 511.998,249.525 457.709,282.098 502.147,295.057 "></polygon> <polygon points="282.483,354.812 282.483,414.875 350.923,377.543 "></polygon> <polygon points="413.166,343.592 282.483,300.981 282.483,336.203 372.127,365.979 "></polygon> <path d="M326.621,461.596v19.509c0,25.741,63.4,26.483,70.621,26.483s70.621-0.742,70.621-26.483v-19.518 C495.007,452.08,512,436.985,512,419.312v-46.866l-145.752,80.163c-9.207-1.236-17.911-3.081-26.041-5.385l-0.177-0.335 L512,352.301v-42.514l-225.827,123.18C292.476,444.709,306.829,454.649,326.621,461.596z M344.276,466.636 c15.678,3.602,33.58,5.641,52.966,5.641c19.377,0,37.279-2.039,52.966-5.632v13.33c-3.708,3.619-22.263,9.957-52.966,9.957 s-49.258-6.338-52.966-9.957V466.636z"></path> <path d="M211.862,57.38c-19.474,0-35.31,15.837-35.31,35.31c0,12.226,6.259,23.014,15.731,29.352l-68.696,165.005L54.89,122.042 c9.472-6.338,15.731-17.126,15.731-29.352c0-19.474-15.837-35.31-35.31-35.31C15.837,57.38,0,73.216,0,92.69 C0,112.164,15.837,128,35.31,128c0.971,0,1.88-0.212,2.825-0.282l75.891,182.29L62.588,433.576 c-1.88,4.493,0.247,9.666,4.749,11.538c1.112,0.468,2.26,0.68,3.399,0.68c3.452,0,6.735-2.039,8.148-5.438l44.703-107.388 l44.703,107.388c1.412,3.399,4.696,5.438,8.148,5.438c1.139,0,2.286-0.212,3.399-0.68c4.502-1.872,6.63-7.044,4.749-11.538 l-51.438-123.569l75.891-182.29c0.945,0.071,1.854,0.282,2.825,0.282c19.474,0,35.31-15.837,35.31-35.31 C247.172,73.216,231.336,57.38,211.862,57.38z"></path> </g> </g> </g> </g> </svg>
+    `
+};
+
+/* ==========================================================
+   RENDER COLOR SWATCHES
+========================================================== */
+function renderColorSwatches(colors) {
+    if (!Array.isArray(colors) || colors.length === 0) {
+        return "";
+    }
+    return `
+        <div class="spec-colors">
+            ${colors.map(item => {
+        const colorValue =
+            typeof item === "object" && item !== null
+                ? item.value
+                : item;
+        const colorName =
+            typeof item === "object" && item !== null
+                ? item.name || colorValue
+                : colorValue;
+        if (!colorValue) {
+            return "";
+        }
+        const needsBorder =
+            colorValue.toLowerCase() === "#fff" ||
+            colorValue.toLowerCase() === "#ffffff";
+        return `
+                    <span
+                        class="color-dot"
+                        style="
+                            background:${colorValue};
+                            ${needsBorder ? "border:1px solid #ddd;" : ""}
+                        "
+                        title="${colorName}"
+                        aria-label="${colorName}"
+                    ></span>
+                `;
+    }).join("")}
+        </div>
+    `;
+}
+
+/* ==========================================================
+   GET CURRENT LANGUAGE
+========================================================== */
+function getCurrentLanguage() {
+    return (
+        localStorage.getItem(LANGUAGE_STORAGE_KEY) ||
+        DEFAULT_LANGUAGE
+    );
+}
+
+/* ==========================================================
+   APPLICATION STATE
+========================================================== */
+let currentLanguage = getCurrentLanguage();
+let productList = [
+    ...lipCareProducts,
+    ...lipstickProducts,
+    ...liquidLipstickProducts,
+    ...lipGlossProducts,
+    ...lipLinerProducts,
+    ...lipTintProducts,
+    ...lipPlumperProducts,
+    ...lipSetsProducts
+];
+
+/* ==========================================================
+   PRODUCT TRANSLATION SOURCES
+   Each product uses its own category data.js + i18n.js.
+========================================================== */
+const PRODUCT_TRANSLATION_SOURCES = [
+    {
+        products: lipCareProducts,
+        translations: lipCareTranslations
+    },
+    {
+        products: lipstickProducts,
+        translations: lipstickTranslations
+    },
+    {
+        products: liquidLipstickProducts,
+        translations: liquidLipstickTranslations
+    },
+    {
+        products: lipGlossProducts,
+        translations: lipGlossTranslations
+    },
+    {
+        products: lipLinerProducts,
+        translations: lipLinerTranslations
+    },
+    {
+        products: lipTintProducts,
+        translations: lipTintTranslations
+    },
+    {
+        products: lipPlumperProducts,
+        translations: lipPlumperTranslations
+    },
+    {
+        products: lipSetsProducts,
+        translations: lipSetsTranslations
+    }
+];
+
+let cartItems = JSON.parse(
+    localStorage.getItem(CART_STORAGE_KEY)
+) || [];
+
+/* ==========================================================
+   PAGE ELEMENTS
+========================================================== */
+const elements = {
+    pageTitle: document.getElementById("page-title"),
+    skeletonContainer: document.getElementById("skeleton-container"),
+    skeletonTemplate: document.getElementById("pdp-skeleton"),
+    cartSkeletonTemplate: document.getElementById("shopping-cart-skeleton"),
+    pdpContainer: document.getElementById("pdp-container"),
+    breadcrumbHome: document.getElementById("breadcrumb-home"),
+    breadcrumbCategory: document.getElementById("breadcrumb-category"),
+    breadcrumbCollection: document.getElementById("breadcrumb-collection"),
+    breadcrumbProduct: document.getElementById("breadcrumb-product"),
+    languageEnglish: document.getElementById("lang-en"),
+    languageDari: document.getElementById("lang-fa"),
+    shoppingCartButton: document.getElementById(
+        "shopping-cart-button"
+    )
+};
+
+/* ==========================================================
+   CART ELEMENTS
+========================================================== */
+const cartElements = {
+    drawer: null,
+    overlay: null,
+    closeButton: null,
+    body: null,
+    footer: null,
+    total: null
+};
+
+/* ==========================================================
+   GET PRODUCT ID FROM URL
+   Supports string IDs such as:
+   bu-li-ls-001
+   bu-li-ll-001
+========================================================== */
+const params = new URLSearchParams(
+    window.location.search
+);
+const productId = params.get("id");
+
+/* ==========================================================
+   LANGUAGE DATA
+========================================================== */
+function getLanguageData() {
+    return translations[currentLanguage];
+}
+
+/* ==========================================================
+   UPDATE PAGE DIRECTION
+========================================================== */
+function updateDirection() {
+    document.documentElement.lang = currentLanguage;
+    document.documentElement.dir =
+        currentLanguage === "fa" ? "rtl" : "ltr";
+}
+
+// =====================================================
+// SPECIFICATION TABLE RTL / LTR
+// =====================================================
+function updateSpecificationDirection() {
+    const table = document.querySelector(".pdp-specs table");
+    if (!table) return;
+    const isRTL = currentLanguage === "fa";
+    // Table direction
+    table.dir = isRTL ? "rtl" : "ltr";
+    // Alignment
+    const headers = table.querySelectorAll("th");
+    const cells = table.querySelectorAll("td");
+    headers.forEach(th => {
+        th.style.textAlign = isRTL ? "right" : "left";
+    });
+    cells.forEach(td => {
+        td.style.textAlign = isRTL ? "right" : "left";
+    });
+    // Icon + specification label direction
+    headers.forEach(th => {
+        th.style.direction = isRTL ? "rtl" : "ltr";
+        th.style.flexDirection = isRTL ? "row-reverse" : "row";
+    });
+}
+
+/* ==========================================================
+   SAVE CART
+========================================================== */
+function saveCart() {
+    localStorage.setItem(
+        CART_STORAGE_KEY,
+        JSON.stringify(cartItems)
+    );
+}
+
+/* ==========================================================
+   PRICE FORMAT
+========================================================== */
+function formatCartPrice(price) {
+    return currentLanguage === "fa"
+        ? `${price} افغانی`
+        : `${price} AFN`;
+}
+
+/* ==========================================================
+   CALCULATE CART TOTAL
+========================================================== */
+function calculateCartTotal() {
+    return cartItems.reduce(
+        (total, item) => {
+            return total + (
+                item.price * item.quantity
+            );
+        },
+        0
+    );
+}
+
+/* ==========================================================
+   PDP LOADING SKELETON
+========================================================== */
+function showSkeleton() {
+    if (
+        !elements.skeletonContainer ||
+        !elements.skeletonTemplate
+    ) {
+        return;
+    }
+    // Hide the real PDP completely
+    document.querySelector(".pdp-page").style.display = "none";
+    // Show only the skeleton
+    elements.skeletonContainer.style.display = "block";
+    elements.skeletonContainer.innerHTML = "";
+    const skeleton =
+        elements.skeletonTemplate.content.cloneNode(true);
+    elements.skeletonContainer.appendChild(skeleton);
+}
+
+/* ==========================================================
+   HIDE PDP SKELETON
+========================================================== */
+function hideSkeleton() {
+    if (!elements.skeletonContainer) {
+        return;
+    }
+    // Remove skeleton completely
+    elements.skeletonContainer.innerHTML = "";
+    elements.skeletonContainer.style.display = "none";
+    // Show real PDP
+    const page = document.querySelector(".pdp-page");
+    if (page) {
+        page.style.display = "";
+    }
+}
+
+/* ==========================================================
+   GET PRODUCT BY ID
+   Product data comes directly from category data.js files.
+========================================================== */
+function getProductById(id) {
+    return productList.find(
+        product => product.id === id
+    );
+}
+
+/* ==========================================================
+   GET CURRENT PRODUCT
+   Product ID comes from the URL.
+========================================================== */
+function getProduct() {
+    return getProductById(productId);
+}
+
+/* ==========================================================
+   GET PRODUCT TITLE
+========================================================== */
+function getProductTitle(product) {
+    const languageData =
+        getProductTranslationData(product);
+    if (
+        product.translationKey &&
+        languageData[product.translationKey]
+    ) {
+        return languageData[product.translationKey];
+    }
+    if (
+        product.titleKey &&
+        languageData[product.titleKey]
+    ) {
+        return languageData[product.titleKey];
+    }
+    return product.title || "";
+}
+
+/* ==========================================================
+   GET PRODUCT CATEGORY
+========================================================== */
+function getProductCategory(product) {
+    const languageData =
+        getProductTranslationData(product);
+    if (
+        product.categoryKey &&
+        languageData[product.categoryKey]
+    ) {
+        return languageData[product.categoryKey];
+    }
+    return product.category || "";
+}
+
+/* ==========================================================
+   GET PRODUCT COLLECTION
+========================================================== */
+function getProductCollection(product) {
+    const languageData =
+        getProductTranslationData(product);
+    if (
+        product.collectionKey &&
+        languageData[product.collectionKey]
+    ) {
+        return languageData[product.collectionKey];
+    }
+    return product.collection || "";
+}
+
+/* ==========================================================
+   COLLECTION BREADCRUMB
+========================================================== */
+function getCollectionBreadcrumb(product) {
+    if (!product) {
+        return {
+            name: "",
+            url: "#"
+        };
+    }
+    const collectionMap = {
+        "Lip Care": { url: "../Beauty-lip-care/Bu-li-lip-care.html" },
+        "Lipstick": { url: "../Beauty-lipstick/Bu-li-lipstick.html" },
+        "Liquid Lipstick": { url: "../Beauty-liquid-lipstick/Bu-li-liquid-lipstick.html" },
+        "Lip Gloss": { url: "../Beauty-lip-gloss/Bu-li-lip-gloss.html" },
+        "Lip Liner": { url: "../Beauty-lip-liner/Bu-li-lip-liner.html" },
+        "Lip Tint": { url: "../Beauty-lip-tint/Bu-li-lip-tint.html" },
+        "Lip Plumper": { url: "../Beauty-lip-plumper/Bu-li-lip-plumper.html" },
+        "Lip Sets": { url: "../Beauty-lip-sets/Bu-li-lip-sets.html" }
+    };
+    const collection =
+        product.collection ||
+        product.category ||
+        "";
+    const breadcrumb =
+        collectionMap[collection];
+    return {
+        name: getProductCollection(product),
+        url: breadcrumb?.url || "#"
+    };
+}
+
+/* ==========================================================
+   GET PRODUCT TRANSLATION DATA
+   Finds the correct category i18n.js using the product ID.
+========================================================== */
+function getProductTranslationData(product) {
+    const source =
+        PRODUCT_TRANSLATION_SOURCES.find(
+            source =>
+                source.products.some(
+                    item =>
+                        item.id === product.id
+                )
+        );
+
+    if (!source) {
+        return {};
+    }
+    return (
+        source.translations[currentLanguage] ||
+        {}
+    );
+}
+
+/* ==========================================================
+   GET PRODUCT DESCRIPTION
+========================================================== */
+function getProductDescription(product) {
+    const languageData =
+        getProductTranslationData(product);
+    if (
+        product.descriptionKey &&
+        languageData[product.descriptionKey]
+    ) {
+        return languageData[product.descriptionKey];
+    }
+    return product.description || "";
+}
+
+/* ==========================================================
+   GET SHORT DESCRIPTION
+========================================================== */
+function getProductShortDescription(product) {
+    const languageData =
+        getProductTranslationData(product);
+    if (
+        product.shortDescriptionKey &&
+        languageData[product.shortDescriptionKey]
+    ) {
+        return languageData[product.shortDescriptionKey];
+    }
+    return product.shortDescription || "";
+}
+
+/* ==========================================================
+   RENDER PDP
+========================================================== */
+function renderProduct() {
+    const product = getProduct();
+    if (!product) {
+        renderProductNotFound();
+        return;
+    }
+    const languageData = getLanguageData();
+    const productTitle =
+        getProductTitle(product);
+    const productCategory =
+        getProductCategory(product);
+    const productCollection =
+        getProductCollection(product);
+    const shortDescription =
+        getProductShortDescription(product);
+    const description =
+        getProductDescription(product);
+    if (elements.pageTitle) {
+        elements.pageTitle.textContent =
+            languageData.pageTitle;
+    }
+    renderBreadcrumb(product);
+    elements.pdpContainer.innerHTML = `
+        <section class="pdp">
+            <div class="pdp-media">
+                <div class="pdp-thumbnails">
+                    ${product.images.map(
+        (image, index) => `
+                            <img
+                                src="${image}"
+                                class="${index === 0 ? "active" : ""}"
+                                data-image="${image}"
+                                alt="${productTitle}"
+                                loading="${index === 0 ? "eager" : "lazy"}"
+                            >
+                        `
+    ).join("")}
+                </div>
+                <div class="pdp-main-media">
+                    <img
+                        id="main-product-image"
+                        src="${product.images[0]}"
+                        alt="${productTitle}"
+                    >
+                </div>
+            </div>
+            <div class="pdp-info">
+                <span class="pdp-category">
+                    ${productCategory}
+                </span>
+                <h1 class="pdp-title">
+                    ${productTitle}
+                </h1>
+                <p class="pdp-subtitle">
+                    ${shortDescription}
+                </p>
+                <div class="pdp-price">
+                    ${product.oldPrice
+            ? `
+                                <span class="pdp-old-price number">
+                                    ${formatCartPrice(
+                product.oldPrice
+            )}
+                                </span>
+                            `
+            : ""
+        }
+                    <span class="pdp-current-price number">
+                        ${formatCartPrice(product.price)}
+                    </span>
+                    ${product.oldPrice
+            ? `
+                                <span class="pdp-discount number">
+                                    -${calculateDiscount(product)}%
+                                </span>
+                            `
+            : ""
+        }
+                </div>
+                <button
+                    class="btn btn-primary add-to-cart"
+                    data-id="${product.id}"
+                    type="button"
+                >
+                    ${languageData.addToCart}
+                </button>
+            </div>
+        </section>
+        <section class="pdp-description">
+            <h2>
+                ${languageData.descriptionTitle}
+            </h2>
+            <p>
+                ${description}
+            </p>
+        </section>
+        <section class="pdp-specs">
+            <h2>
+                ${languageData.specificationsTitle}
+            </h2>
+            <table>
+                <tbody>
+                    ${renderSpecifications(
+            product
+        )}
+                </tbody>
+            </table>
+        </section>
+    `;
+
+    // Apply RTL/LTR to specification table
+    updateSpecificationDirection();
+
+    registerThumbnailEvents();
+    registerProductCartEvent();
+}
+
+/* ==========================================================
+   RENDER PRODUCT NOT FOUND
+========================================================== */
+function renderProductNotFound() {
+    const languageData = getLanguageData();
+    elements.pdpContainer.innerHTML = `
+        <section class="pdp-error">
+            <h1>
+                ${languageData.productNotFound}
+            </h1>
+        </section>
+    `;
+}
+
+/* ==========================================================
+   RENDER BREADCRUMB
+   Home / Beauty-Lip / Collection / Product
+========================================================== */
+function renderBreadcrumb(product) {
+    const collectionBreadcrumb =
+        getCollectionBreadcrumb(product);
+    const collectionElement =
+        document.getElementById("breadcrumb-collection");
+    if (collectionElement) {
+        collectionElement.textContent =
+            collectionBreadcrumb.name;
+        collectionElement.href =
+            collectionBreadcrumb.url;
+    }
+    const languageData = getLanguageData();
+    if (elements.breadcrumbHome) {
+        elements.breadcrumbHome.textContent =
+            languageData.home;
+    }
+    if (elements.breadcrumbCategory) {
+        elements.breadcrumbCategory.textContent =
+            languageData.breadcrumbCategory;
+    }
+    if (elements.breadcrumbCollection) {
+        elements.breadcrumbCollection.textContent =
+            getProductCollection(product);
+    }
+    if (elements.breadcrumbProduct) {
+        elements.breadcrumbProduct.textContent =
+            getProductTitle(product);
+    }
+}
+
+/* ==========================================================
+   TRANSLATE SPECIFICATION VALUE
+========================================================== */
+function translateSpecificationValue(value) {
+    if (!value) {
+        return "";
+    }
+    if (currentLanguage === "fa") {
+        const translations = {
+            "Beauty": "زیبایی",
+            "Women": "زنانه"
+        };
+        return translations[value] || value;
+    }
+    return value;
+}
+
+/* ==========================================================
+   RENDER SPECIFICATIONS
+========================================================== */
+function renderSpecifications(product) {
+    if (!product?.specifications) {
+        return "";
+    }
+    const languageData =
+        getProductTranslationData(product);
+    return Object.entries(product.specifications)
+        .map(([key, value]) => {
+            const label =
+                languageData[`${key}Label`] ||
+                translations[currentLanguage]?.[`${key}Label`] ||
+                key;
+            const icon =
+                SPECIFICATION_ICONS[key] || "";
+            let renderedValue = "";
+
+            /* ------------------------------------------------
+               COLOR
+            ------------------------------------------------ */
+            if (key === "color") {
+                renderedValue =
+                    renderColorSwatches(value);
+
+            }
+
+            /* ------------------------------------------------
+               ARRAY
+            ------------------------------------------------ */
+            else if (Array.isArray(value)) {
+                renderedValue = value
+                    .map(item => {
+                        if (
+                            typeof item === "object" &&
+                            item !== null
+                        ) {
+                            return translateSpecificationValue(
+                                item.name
+                            );
+                        }
+                        return translateSpecificationValue(item);
+                    })
+                    .join(", ");
+            }
+            else {
+                renderedValue =
+                    translateSpecificationValue(value);
+            }
+            return `
+                <tr>
+                    <th>
+                        ${icon}
+                        ${label}
+                    </th>
+
+                    <td>
+                        ${renderedValue}
+                    </td>
+                </tr>
+            `;
+        })
+        .join("");
+}
+
+/* ==========================================================
+   CALCULATE DISCOUNT
+========================================================== */
+function calculateDiscount(product) {
+    if (
+        !product.oldPrice ||
+        product.oldPrice <= product.price
+    ) {
+        return 0;
+    }
+    return Math.round(
+        (
+            (product.oldPrice - product.price) /
+            product.oldPrice
+        ) * 100
+    );
+}
+
+/* ==========================================================
+   THUMBNAIL EVENTS
+========================================================== */
+function registerThumbnailEvents() {
+    const thumbnails =
+        document.querySelectorAll(
+            ".pdp-thumbnails img"
+        );
+    const mainImage =
+        document.querySelector(
+            "#main-product-image"
+        );
+    if (!mainImage) {
+        return;
+    }
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener(
+            "click",
+            () => {
+                thumbnails.forEach(
+                    image => {
+                        image.classList.remove(
+                            "active"
+                        );
+                    }
+                );
+                thumbnail.classList.add(
+                    "active"
+                );
+                mainImage.src =
+                    thumbnail.dataset.image;
+                mainImage.alt =
+                    thumbnail.alt;
+            }
+        );
+    });
+}
+
+/* ==========================================================
+   CREATE CART DRAWER
+========================================================== */
+function createCartDrawer() {
+    if (
+        document.querySelector(
+            ".cart-drawer"
+        )
+    ) {
+        return;
+    }
+    const languageData =
+        getLanguageData();
+    const wrapper =
+        document.createElement("div");
+    wrapper.innerHTML = `
+        <div class="cart-overlay"></div>
+        <aside class="cart-drawer">
+            <div class="cart-header">
+                <h2 class="cart-title">
+                    ${languageData.cartTitle}
+                </h2>
+                <button
+                    class="cart-close"
+                    type="button"
+                    aria-label="${languageData.cartTitle}"
+                >
+                    ✕
+                </button>
+            </div>
+            <div class="cart-body"></div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span class="number">
+                        ${languageData.subtotal}
+                    </span>
+                    <strong class="cart-total-price number">
+                        ${formatCartPrice(0)}
+                    </strong>
+                </div>
+                <button
+                    class="cart-checkout"
+                    type="button"
+                >
+                    ${languageData.checkoutWhatsapp}
+                </button>
+            </div>
+        </aside>
+    `;
+    document.body.appendChild(wrapper);
+    cartElements.drawer =
+        wrapper.querySelector(
+            ".cart-drawer"
+        );
+    cartElements.overlay =
+        wrapper.querySelector(
+            ".cart-overlay"
+        );
+    cartElements.closeButton =
+        wrapper.querySelector(
+            ".cart-close"
+        );
+    cartElements.body =
+        wrapper.querySelector(
+            ".cart-body"
+        );
+    cartElements.footer =
+        wrapper.querySelector(
+            ".cart-footer"
+        );
+    cartElements.total =
+        wrapper.querySelector(
+            ".cart-total-price"
+        );
+    cartElements.drawer.style.display =
+        "none";
+    cartElements.overlay.style.display =
+        "none";
+}
+
+/* ==========================================================
+   SHOW CART
+========================================================== */
+function showCart() {
+    if (
+        !cartElements.drawer ||
+        !cartElements.overlay
+    ) {
+        return;
+    }
+    cartElements.drawer.style.display =
+        "flex";
+    cartElements.overlay.style.display =
+        "block";
+}
+
+/* ==========================================================
+   HIDE CART
+========================================================== */
+function hideCart() {
+    if (
+        !cartElements.drawer ||
+        !cartElements.overlay
+    ) {
+        return;
+    }
+    cartElements.drawer.style.display =
+        "none";
+    cartElements.overlay.style.display =
+        "none";
+}
+
+/* ==========================================================
+   OPEN CART
+========================================================== */
+function openCart() {
+    showCart();
+    loadCartSkeleton();
+}
+
+/* ==========================================================
+   CLOSE CART
+========================================================== */
+function closeCart() {
+    hideCart();
+}
+
+/* ==========================================================
+   CART Skeleton CSS INJECTION
+   Cart Skeleton has no separate CSS file
+   Styles are created by JavaScript
+========================================================== */
+function injectCartSkeletonStyles() {
+    if (document.getElementById("cart-skeleton-style")) {
+        return;
+    }
+    const style = document.createElement("style");
+    style.id = "cart-skeleton-style";
+    style.textContent = `
+    /* ============   CART SKELETON ============ */
+        .cart-skeleton {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: var(--space-5); 
+        }
+        /* ============   ITEM============ */
+        .cart-skeleton__item {
+          display: flex;
+          gap: var(--space-3);
+          padding-bottom: var(--space-4);
+          border-bottom: 1px solid var(--color-border); 
+        }
+        /* ============   RTL SUPPORT============ */
+        /*
+        [dir="rtl"] .cart-skeleton__item {
+            flex-direction: row-reverse;
+        }
+        */
+
+        [dir="ltr"] .cart-skeleton__item {
+          flex-direction: row; 
+        }
+        /* ============   IMAGE============ */
+        .cart-skeleton__image {
+          width: var(--thumbnail-width);
+          height: var(--thumbnail-height);
+          flex-shrink: 0;
+          border-radius: var(--radius-md); 
+        }
+        /* ============   CONTENT============ */
+        .cart-skeleton__content {
+          flex: 1; 
+        }
+        .cart-skeleton__category {
+          width: 30%;
+          height: var(--space-3);
+          border-radius: var(--radius-sm);
+          margin-bottom: var(--space-2); 
+        }
+        .cart-skeleton__title {
+          width: 75%;
+          height: var(--space-5);
+          border-radius: var(--radius-sm);
+          margin-bottom: var(--space-3); 
+        }
+        .cart-skeleton__price {
+          width: 25%;
+          height: var(--space-4);
+          border-radius: var(--radius-sm); 
+        }
+        /* ============   SUMMARY============ */
+        .cart-skeleton__summary {
+          padding-top: var(--space-4); 
+        }
+        .cart-skeleton__subtotal {
+          width: 40%;
+          height: var(--space-5);
+          border-radius: var(--radius-sm);
+          margin-bottom: var(--space-4); 
+        }
+        .cart-skeleton__button {
+          width: 100%;
+          height: var(--button-height);
+          border-radius: var(--radius-md); 
+        }
+        /* ============   MOBILE============ */
+        @media(max-width:768px) {
+          .cart-skeleton__image {
+            width: 72px;
+            height: 90px; 
+          }
+          .cart-skeleton__title {
+            width: 90%; 
+          }
+          .cart-skeleton__price {
+            width: 35%; 
+          }
+          .cart-skeleton__subtotal {
+            width: 60%; 
+          }  
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+/* ==========================================================
+   CREATE CART SKELETON
+========================================================== */
+function createCartSkeleton() {
+    const template =
+        document.getElementById(
+            "shopping-cart-skeleton"
+        );
+    if (
+        !template ||
+        !cartElements.body
+    ) {
+        renderCart();
+        return;
+    }
+    cartElements.body.innerHTML = "";
+    const skeleton =
+        template.content.cloneNode(
+            true
+        );
+    cartElements.body.appendChild(
+        skeleton
+    );
+}
+
+/* ==========================================================
+   LOAD CART SKELETON
+========================================================== */
+function loadCartSkeleton() {
+    if (cartElements.footer) {
+        cartElements.footer.style.display =
+            "none";
+    }
+    createCartSkeleton();
+    setTimeout(() => {
+        if (cartElements.footer) {
+            cartElements.footer.style.display =
+                "block";
+        }
+        renderCart();
+    }, SKELETON_DELAY);
+}
+
+/* ==========================================================
+   RENDER CART
+========================================================== */
+function renderCart() {
+    if (!cartElements.body) {
+        return;
+    }
+    const languageData =
+        getLanguageData();
+    if (cartItems.length === 0) {
+        cartElements.body.innerHTML = `
+            <p class="cart-empty">
+                ${languageData.emptyCart}
+            </p>
+        `;
+        updateCartTotal();
+        return;
+    }
+    cartElements.body.innerHTML = "";
+    cartItems.forEach(item => {
+        const product =
+            productList.find(
+                product =>
+                    product.id === item.id
+            );
+
+        if (!product) {
+            return;
+        }
+        const title =
+            getProductTitle(product);
+        const category =
+            getLanguageData().beautyLip;
+        const cartItem =
+            document.createElement("div");
+        cartItem.className =
+            "cart-item";
+        cartItem.innerHTML = `
+            <img
+                class="cart-item__image"
+                src="${item.image}"
+                alt="${title}"
+                loading="lazy"
+            >
+            <div class="cart-item__content">
+                <h3 class="cart-item__title">
+                    ${title}
+                </h3>
+                <p class="cart-item__category">
+                    ${category}
+                </p>
+                <span class="cart-item__price number">
+                    ${formatCartPrice(
+            item.price
+        )}
+                </span>
+            </div>
+            <div class="cart-item__actions">
+                <div class="cart-qty">
+                    <button
+                        class="number"
+                        type="button"
+                        data-action="decrease"
+                        data-id="${item.id}"
+                    >
+                        -
+                    </button>
+                    <span class="number">
+                        ${item.quantity}
+                    </span>
+                    <button
+                        class="number"
+                        type="button"
+                        data-action="increase"
+                        data-id="${item.id}"
+                    >
+                        +
+                    </button>
+                </div>
+                <button
+                    class="cart-remove"
+                    type="button"
+                    data-action="remove"
+                    data-id="${item.id}"
+                >
+                    ${languageData.remove}
+                </button>
+            </div>
+        `;
+        cartElements.body.appendChild(
+            cartItem
+        );
+    });
+    updateCartTotal();
+}
+
+/* ==========================================================
+   UPDATE CART TOTAL
+========================================================== */
+function updateCartTotal() {
+    if (!cartElements.total) {
+        return;
+    }
+    cartElements.total.textContent =
+        formatCartPrice(
+            calculateCartTotal()
+        );
+}
+
+/* ==========================================================
+   ADD PRODUCT TO CART
+   PDP does NOT open the cart automatically.
+========================================================== */
+function addProductToCart(product) {
+    if (product.stock <= 0) {
+        showToast(
+            "warning",
+            "productOutOfStock"
+        );
+        return;
+    }
+    const existingProduct =
+        cartItems.find(
+            item =>
+                item.id === product.id
+        );
+    if (existingProduct) {
+        existingProduct.quantity++;
+    } else {
+        cartItems.push({
+            id: product.id,
+            image: product.images[0],
+            price: product.price,
+            quantity: 1
+        });
+    }
+    saveCart();
+    showToast(
+        "success",
+        "productAdded"
+    );
+}
+
+/* ==========================================================
+   PDP ADD TO CART EVENT
+========================================================== */
+function registerProductCartEvent() {
+    const button =
+        document.querySelector(
+            ".add-to-cart"
+        );
+    button?.addEventListener(
+        "click",
+        () => {
+            const id =
+                button.dataset.id;
+            const product =
+                productList.find(
+                    item =>
+                        item.id === id
+                );
+            if (product) {
+                addProductToCart(
+                    product
+                );
+            }
+        }
+    );
+}
+
+/* ==========================================================
+   CART EVENTS
+========================================================== */
+function registerCartEvents() {
+    elements.shoppingCartButton?.addEventListener(
+        "click",
+        openCart
+    );
+    cartElements.closeButton?.addEventListener(
+        "click",
+        closeCart
+    );
+    cartElements.overlay?.addEventListener(
+        "click",
+        closeCart
+    );
+    cartElements.body?.addEventListener(
+        "click",
+        event => {
+            const button =
+                event.target.closest(
+                    "[data-action]"
+                );
+            if (!button) {
+                return;
+            }
+            const id =
+                button.dataset.id;
+            const action =
+                button.dataset.action;
+            if (action === "increase") {
+                changeQuantity(
+                    id,
+                    1
+                );
+            }
+            if (action === "decrease") {
+                changeQuantity(
+                    id,
+                    -1
+                );
+            }
+            if (action === "remove") {
+                removeCartItem(id);
+            }
+        }
+    );
+}
+
+/* ==========================================================
+   CHANGE CART QUANTITY
+========================================================== */
+function changeQuantity(
+    id,
+    value
+) {
+    const item =
+        cartItems.find(
+            product =>
+                product.id === id
+        );
+    if (!item) {
+        return;
+    }
+    item.quantity += value;
+    if (item.quantity <= 0) {
+        removeCartItem(id);
+        return;
+    }
+    saveCart();
+    renderCart();
+}
+
+/* ==========================================================
+   REMOVE CART ITEM
+========================================================== */
+function removeCartItem(id) {
+    cartItems =
+        cartItems.filter(
+            item =>
+                item.id !== id
+        );
+    saveCart();
+    renderCart();
+    showToast(
+        "remove",
+        "productRemoved"
+    );
+}
+
+/* ==========================================================
+   TOAST STYLES
+========================================================== */
+function injectToastStyles() {
+    if (
+        document.getElementById(
+            "pdp-toast-style"
+        )
+    ) {
+        return;
+    }
+
+    const style =
+        document.createElement("style");
+    style.id =
+        "pdp-toast-style";
+    style.textContent = `
+        .toast-container {
+            position: fixed;
+            top: var(--space-5);
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-3);
+            z-index: 9999;
+        }
+        [dir="rtl"] .toast-container {
+            left: var(--space-5);
+            right: auto;
+        }
+        [dir="ltr"] .toast-container {
+            right: var(--space-5);
+            left: auto;
+        }
+    `;
+    document.head.appendChild(
+        style
+    );
+}
+
+/* ==========================================================
+   CREATE TOAST CONTAINER
+========================================================== */
+function createToastContainer() {
+    if (
+        document.querySelector(
+            ".toast-container"
+        )
+    ) {
+        return;
+    }
+    const container =
+        document.createElement("div");
+    container.className =
+        "toast-container";
+    document.body.appendChild(
+        container
+    );
+}
+
+/* ==========================================================
+   SHOW TOAST
+========================================================== */
+function showToast(
+    type,
+    messageKey
+) {
+    const languageData =
+        getLanguageData();
+    const messages = {
+        productAdded:
+            languageData.productAdded,
+        productRemoved:
+            languageData.productRemoved,
+        productOutOfStock:
+            languageData.productOutOfStock,
+        productError:
+            languageData.productError
+    };
+    const icons = {
+        success: "✓",
+        remove: "✓",
+        warning: "⚠",
+        error: "✕"
+    };
+    const toast =
+        document.createElement("div");
+    toast.className =
+        `toast toast-${type}`;
+    toast.innerHTML = `
+        <span class="toast__icon">
+            ${icons[type]}
+        </span>
+        <span class="toast__message">
+            ${messages[messageKey]}
+        </span>
+    `;
+    const toastContainer =
+        document.querySelector(
+            ".toast-container"
+        );
+    if (toastContainer) {
+        toastContainer.style.setProperty(
+            "z-index",
+            "99999",
+            "important"
+        );
+        toastContainer.appendChild(toast);
+    }
+
+    setTimeout(() => {
+        toast.remove();
+    }, 3000);
+}
+
+/* ==========================================================
+   UPDATE CART TEXTS
+========================================================== */
+function updateCartTexts() {
+    const languageData =
+        getLanguageData();
+    const cartTitle =
+        document.querySelector(
+            ".cart-title"
+        );
+    const subtotal =
+        document.querySelector(
+            ".cart-total span"
+        );
+    const checkout =
+        document.querySelector(
+            ".cart-checkout"
+        );
+    if (cartTitle) {
+        cartTitle.textContent =
+            languageData.cartTitle;
+    }
+    if (subtotal) {
+        subtotal.textContent =
+            languageData.subtotal;
+    }
+    if (checkout) {
+        checkout.textContent =
+            languageData.checkoutWhatsapp;
+    }
+}
+
+/* ==========================================================
+   CHANGE LANGUAGE
+========================================================== */
+function changeLanguage(language) {
+    currentLanguage =
+        language;
+    localStorage.setItem(
+        LANGUAGE_STORAGE_KEY,
+        language
+    );
+    updateDirection();
+    renderProduct();
+    updateCartTexts();
+    updateCartTotal();
+    if (
+        cartElements.drawer &&
+        cartElements.drawer.style.display ===
+        "flex"
+    ) {
+        renderCart();
+    }
+}
+
+/* ==========================================================
+   LANGUAGE EVENTS
+========================================================== */
+function registerLanguageEvents() {
+    elements.languageEnglish?.addEventListener(
+        "click",
+        () => {
+            changeLanguage("en");
+        }
+    );
+    elements.languageDari?.addEventListener(
+        "click",
+        () => {
+            changeLanguage("fa");
+        }
+    );
+}
+
+/* ==========================================================
+   INITIALIZE PAGE
+========================================================== */
+function initializePage() {
+    currentLanguage = getCurrentLanguage();
+    updateDirection();
+    injectToastStyles();
+    injectCartSkeletonStyles();
+    createToastContainer();
+    createCartDrawer();
+    registerCartEvents();
+    registerLanguageEvents();
+    showSkeleton();
+    setTimeout(() => {
+        hideSkeleton();
+        renderProduct();
+        updateCartTexts();
+    }, SKELETON_DELAY);
+}
+
+/* ==========================================================
+   START PDP
+========================================================== */
+initializePage();
