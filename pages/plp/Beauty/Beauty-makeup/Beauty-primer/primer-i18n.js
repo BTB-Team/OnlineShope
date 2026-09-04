@@ -67,7 +67,7 @@ export const primerTranslations = {
     category: "Category",
     subcategory: "Subcategory",
     type: "Type",
-    finish: "Finish",
+    Product: "Product",
     skinType: "Skin Type",
     volume: "Volume",
     
@@ -163,7 +163,7 @@ export const primerTranslations = {
     category: "دسته‌بندی",
     subcategory: "زیردسته",
     type: "نوع",
-    finish: "پرداخت نهایی",
+    Product: "محصول",
     skinType: "نوع پوست",
     volume: "حجم",
     

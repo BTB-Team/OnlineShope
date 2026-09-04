@@ -13,9 +13,11 @@ export const highlighterProducts = [
     oldPrice: 1050,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=500&h=600&fit=crop&q=80"
+      "https://row.iconiclondoninc.com/cdn/shop/files/Lit-and-Luminous-With-Swatch.jpg?v=1705581460",
+      "https://patrickta.com/cdn/shop/files/Major-Glow-Creme-_-Powder-Light-Reflecting-Translucent-Highlighter-Duo---Baby.jpg?v=1787331593&width=2000",
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhjbfkANYeSUTe3m-amP4Ko8iuBbvuCKD8aCTOSnaMPBCZcRwxnrw4V8U9psnm3QsDO3HVKQlw24EwWoD_U7JP8H7aLb3gIt0cg1FMPG7sdemGS3YsYRg4DlaC1F-6ok_l7CQ3A0u-a4k7w8-F3cvqnUZZOB4_7GyFFiQABklfmEBtkOoXeICudLD2dOobW/h480-w640-c/kikomilanoglowfusionpowderhighlighter01brilliantchampagne_2.jpg",
+      "https://auroracos.com/wp-content/uploads/2018/09/Face-makeup-single-jar-main.jpg",
+      "https://kla-kbeauty.com/cdn/shop/files/6295157770522_WITHBOX.jpg?v=1778314598&width=1200"
     ],
     video: "",
     shortDescription: "Luminous glow for radiant skin.",
@@ -24,7 +26,7 @@ export const highlighterProducts = [
       category: "Makeup",
       subcategory: "Highlighter",
       type: "Powder",
-      finish: "Shimmer",
+      Product: "Shimmer",
       shades: [
         { name: "Champagne", color: "#F7E7CE" },
         { name: "Gold", color: "#FFD700" },
@@ -45,9 +47,11 @@ export const highlighterProducts = [
     oldPrice: 1150,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1596704017254-9b121068ec31?w=500&h=600&fit=crop&q=80"
+      "https://d1flfk77wl2xk4.cloudfront.net/Assets/65/292/XXL_p0210329265.jpg",
+      "https://swissbeauty.in/cdn/shop/files/SB-810_02_FOP2.jpg?v=1748634610&width=620",
+      "https://www.milanicosmetics.com/cdn/shop/products/Facelift_Highlighter_01_Lunar_PDP_Product_Swatch_2048x.png?v=1659569799",
+      "https://cdn.salla.sa/DGdDlG/24317da4-6813-4810-9a92-cf2748e80cf5-1000x1000-DxECLrftwKHOotHgbLvpeZCxnbjtq7SwHTSxCHtZ.jpg",
+      "https://www.pupamilano.com/on/demandware.static/-/Sites-masterCatalog_Pupa/default/dw340a323a/Immagini/zoom/050132A002_8011607306213_GLOW-OBSESSION-LIQUID-HIGHLIGHTER_big_23072020181339.png"
     ],
     video: "",
     shortDescription: "Dewy liquid glow.",
@@ -56,7 +60,7 @@ export const highlighterProducts = [
       category: "Makeup",
       subcategory: "Highlighter",
       type: "Liquid",
-      finish: "Dewy",
+      Product: "Dewy",
       shades: [
         { name: "Moonlight", color: "#E6E6FA" },
         { name: "Sunbeam", color: "#FAFAD2" },
@@ -76,8 +80,11 @@ export const highlighterProducts = [
     oldPrice: 1100,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1596704017254-9b121068ec31?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=500&h=600&fit=crop&q=80"
+      "https://weareneen.com/cdn/shop/files/Pretty_Shiny_Main_New.webp?v=1765470747",
+      "https://cdn.ewshopping.com/uploads/product/81319fe1-fe8c-4f55-95f9-44bfae20e706.webp",
+      "https://inglotcosmetics.com/18778-large_default/cream-stick-highlighter.jpg",
+      "https://natashadenona.com/cdn/shop/files/FaceGlowCreamShimmer_PACKSHOT_LIGHT.jpg?v=1762440912",
+      "https://pastelarabia.com/cdn/shop/files/DayLightCreamHighlightergroup.webp?v=1687526614"
     ],
     video: "",
     shortDescription: "Smooth cream formula.",
@@ -86,7 +93,7 @@ export const highlighterProducts = [
       category: "Makeup",
       subcategory: "Highlighter",
       type: "Cream",
-      finish: "Natural",
+      Product: "Natural",
       shades: [
         { name: "Ivory", color: "#FFFFF0" },
         { name: "Golden", color: "#FFD700" },
@@ -106,8 +113,11 @@ export const highlighterProducts = [
     oldPrice: 1000,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=500&h=600&fit=crop&q=80"
+      "https://evelinecosmetics.com/cdn/shop/files/6782330ce74dc8.13906915.jpg?v=1738582695",
+      "https://youngbloodmineralcosmetics.com.au/cdn/shop/files/06204_tryst_1.png?v=1786687507&width=2000",
+      "https://www.bysmaquillage.fr/media/catalog/product/h/i/highlighter-en-stick-2.jpg",
+      "https://zinbeautyshop.ma/cdn/shop/files/nyx-jumbo-multi-use-highlighter-stick-4575341.jpg?v=1781048728",
+      "https://korcatrading.ca/cdn/shop/files/28D090940303A00__Dong-A_-Jet-Stick-Oval-Highlighter-Crayon-Markers_-3-Colors-WB2.jpg?v=1731447102&width=1946"
     ],
     video: "",
     shortDescription: "Portable stick format.",
@@ -116,7 +126,7 @@ export const highlighterProducts = [
       category: "Makeup",
       subcategory: "Highlighter",
       type: "Stick",
-      finish: "Shimmer",
+      Product: "Shimmer",
       shades: [
         { name: "Pearl", color: "#F0EAD6" },
         { name: "Gold", color: "#FFD700" },
@@ -136,8 +146,11 @@ export const highlighterProducts = [
     oldPrice: 1200,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500&h=600&fit=crop&q=80"
+      "https://acdn-us.mitiendanube.com/stores/346/493/products/fotos-shop-online-2022-12-10t174208-3551-8a722ff64680c2e73816707055391361-1024-1024.webp",
+      "https://us-i.makeupstore.com/0/04/04ljpageqc0e.jpg",
+      "https://www.gosupps.com/media/catalog/product/cache/25/image/1500x/040ec09b1e35df139433887a97daa66f/7/1/71GTOWCyToL._SL1500__1.jpg",
+      "https://media.very.co.uk/i/very/VXJAV_SQ1_0000000099_N_A_SLf?$pdp_300x400_x2$&fmt=jpg",
+      "https://tkmakeoverstore.com/cdn/shop/files/Zikel-Web-Images-Baked-Highlighter.png?v=1698362319"
     ],
     video: "",
     shortDescription: "Intense baked glow.",
@@ -146,7 +159,7 @@ export const highlighterProducts = [
       category: "Makeup",
       subcategory: "Highlighter",
       type: "Powder",
-      finish: "Intense Shimmer",
+      Product: "Intense Shimmer",
       shades: [
         { name: "Diamond", color: "#E0E0E0" },
         { name: "Copper", color: "#B87333" },
@@ -166,8 +179,11 @@ export const highlighterProducts = [
     oldPrice: 1250,
     badge: "SALE",
     images: [
-      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500&h=600&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=500&h=600&fit=crop&q=80"
+      "https://shop.celesty.com/cdn/shop/files/SoGlow_HighlighterDuo-2.jpg?v=1775236076&width=840",
+      "https://m.media-amazon.com/images/I/61zAQkGeg8L.jpg",
+      "https://www.byrdie.com/thmb/nUokd7mVeHWtYarfQiRUro93oNs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/patricktahighlkighters-e4a9171ab97448d5943ff2a3fa7279d8.png",
+      "https://beautifulbrowsandlashes.com/cdn/shop/products/BB-1711_11ef58c5-f7ff-45ab-b431-26779b2f4f8c.jpg?v=1720521533&width=1080",
+      "https://shop.ipsy.com/_next/image?url=https%3A%2F%2Fproduct-images.prod.ipsy.com%2Fproduct_images%2Fresized_media%2FChicaBeautyChicaGlowHighlighterDuoSwatchinBronzeGlow.jpeg&w=3840&q=75"
     ],
     video: "",
     shortDescription: "Two shades in one compact.",
@@ -176,7 +192,7 @@ export const highlighterProducts = [
       category: "Makeup",
       subcategory: "Highlighter",
       type: "Powder",
-      finish: "Shimmer",
+      Product: "Shimmer",
       shades: [
         { name: "Champagne & Gold", color: "#F7E7CE" },
         { name: "Rose & Pearl", color: "#FFB6C1" },
