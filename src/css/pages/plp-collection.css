@@ -64,7 +64,7 @@ CATEGORY CARD
 .plp-category-card {
 width: 100%;
 /*max-width: 280px;*/
-max-width:260px;
+  max-width: 300px; /* ✅ از 280px به 300px افزایش یافت */
 justify-self: center;
 text-decoration: none;
 color: inherit;
@@ -81,8 +81,8 @@ box-shadow: var(--shadow-md);
 }
 .plp-category-card img {
 width: 100%;
-aspect-ratio: 4/5;
-object-fit: cover;
+aspect-ratio: 1/1;
+object-fit: contain;
 display: block; 
 }
 .plp-category-card__body {
@@ -115,6 +115,7 @@ gap: var(--space-4);
 }
 .plp-category-card {
 max-width: none; 
+
 } 
 }
     

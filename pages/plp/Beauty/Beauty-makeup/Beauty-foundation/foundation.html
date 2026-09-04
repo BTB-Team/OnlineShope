@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation Products - Laxura</title>
+    <link rel="stylesheet" href="../../../../../src/css/style.css">
+    <link rel="stylesheet" href="../../../../../src/css/pages/plp-product.css">
+</head>
+<body>
+    <main id="beauty-foundation-root"></main>
+
+    <!-- ==================== CART DRAWER ==================== -->
+    <div class="cart-overlay" style="display:none;"></div>
+    <aside class="cart-drawer" style="display:none;">
+      <!-- Header -->
+      <div class="cart-header">
+        <h2 class="cart-title">Your Cart</h2>
+        <button class="cart-close" aria-label="Close Cart">✕</button>
+      </div>
+      
+      <!-- Body -->
+      <div class="cart-body" id="cart-items-container">
+        <!-- محصولات به صورت داینامیک اینجا اضافه می‌شوند -->
+      </div>
+      
+      <!-- Footer -->
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span class="number">Subtotal</span>
+          <span class="number"><strong id="cart-total-price">0</strong></span>
+        </div>
+        <button class="cart-checkout">
+          Checkout via WhatsApp
+        </button>
+      </div>
+    </aside>
+
+    <script type="module" src="./foundation-preview.js"></script>
+</body>
+</html>
