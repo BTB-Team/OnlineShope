@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title"></title>
+    <!-- =====================================================
+         GLOBAL DESIGN SYSTEM
+    ====================================================== -->
+    <link rel="stylesheet" href="../../../../../src/css/style.css">
+    <!-- =====================================================
+         PLP PRODUCT TEMPLATE
+    ====================================================== -->
+    <link rel="stylesheet" href="../../../../../src/css/pages/plp-product.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+        plp-pro LOADING SKELETON TEMPLATE
+        Displayed before product data loads
+        Controlled by preview.js
+    ====================================================== -->
+    <template id="plp-product-skeleton">
+        <section class="ui-section">
+            <div class="container">
+                <!-- Header Skeleton -->
+                <section class="hero-skeleton">
+                    <div class="skeleton hero-skeleton__image"></div>
+                    <div class="hero-skeleton__content">
+                        <div class="skeleton hero-skeleton__subtitle"></div>
+                        <div class="skeleton hero-skeleton__title"></div>
+                        <div class="skeleton hero-skeleton__text"></div>
+                    </div>
+                </section>
+                <!-- Product Grid Skeleton -->
+                <div class="skeleton-grid">
+                    <!-- Card 1 -->
+                    <article class="product-card-skeleton">
+                        <div class="product-card-skeleton__media">
+                            <div class="skeleton skeleton-badge"></div>
+                            <div class="skeleton skeleton-cart"></div>
+                            <div class="skeleton skeleton-media"></div>
+                        </div>
+                        <div class="product-card-skeleton__content">
+                            <div class="skeleton skeleton-title"></div>
+                            <div class="skeleton-price-row">
+                                <div class="skeleton skeleton-old-price"></div>
+                                <div class="skeleton skeleton-new-price"></div>
+                            </div>
+                            <div class="skeleton skeleton-link"></div>
+                        </div>
+                    </article>
+                    <!-- Card 2 -->
+                    <article class="product-card-skeleton">
+                        <div class="product-card-skeleton__media">
+                            <div class="skeleton skeleton-badge"></div>
+                            <div class="skeleton skeleton-cart"></div>
+                            <div class="skeleton skeleton-media"></div>
+                        </div>
+                        <div class="product-card-skeleton__content">
+                            <div class="skeleton skeleton-title"></div>
+                            <div class="skeleton-price-row">
+                                <div class="skeleton skeleton-old-price"></div>
+                                <div class="skeleton skeleton-new-price"></div>
+                            </div>
+                            <div class="skeleton skeleton-link"></div>
+                        </div>
+                    </article>
+                    <!-- Card 3 -->
+                    <article class="product-card-skeleton">
+                        <div class="product-card-skeleton__media">
+                            <div class="skeleton skeleton-badge"></div>
+                            <div class="skeleton skeleton-cart"></div>
+                            <div class="skeleton skeleton-media"></div>
+                        </div>
+                        <div class="product-card-skeleton__content">
+                            <div class="skeleton skeleton-title"></div>
+                            <div class="skeleton-price-row">
+                                <div class="skeleton skeleton-old-price"></div>
+                                <div class="skeleton skeleton-new-price"></div>
+                            </div>
+                            <div class="skeleton skeleton-link"></div>
+                        </div>
+                    </article>
+                    <!-- Card 4 -->
+                    <article class="product-card-skeleton">
+                        <div class="product-card-skeleton__media">
+                            <div class="skeleton skeleton-badge"></div>
+                            <div class="skeleton skeleton-cart"></div>
+                            <div class="skeleton skeleton-media"></div>
+                        </div>
+                        <div class="product-card-skeleton__content">
+                            <div class="skeleton skeleton-title"></div>
+                            <div class="skeleton-price-row">
+                                <div class="skeleton skeleton-old-price"></div>
+                                <div class="skeleton skeleton-new-price"></div>
+                            </div>
+                            <div class="skeleton skeleton-link"></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- =====================================================
+        plp-pro SKELETON CONTAINER
+        preview.js inserts/removes skeleton here
+    ====================================================== -->
+    <div id="skeleton-container"></div>
+
+    <!-- =====================================================
+        SHOPPING CART LOADING SKELETON TEMPLATE
+    ====================================================== -->
+    <template id="shopping-cart-skeleton">
+        <section class="cart-skeleton">
+            <div class="cart-skeleton__item">
+                <div class="skeleton cart-skeleton__image"></div>
+                <div class="cart-skeleton__content">
+                    <div class="skeleton cart-skeleton__category"></div>
+                    <div class="skeleton cart-skeleton__title"></div>
+                    <div class="skeleton cart-skeleton__price"></div>
+                </div>
+            </div>
+            <div class="cart-skeleton__item">
+                <div class="skeleton cart-skeleton__image"></div>
+                <div class="cart-skeleton__content">
+                    <div class="skeleton cart-skeleton__category"></div>
+                    <div class="skeleton cart-skeleton__title"></div>
+                    <div class="skeleton cart-skeleton__price"></div>
+                </div>
+            </div>
+            <div class="cart-skeleton__item">
+                <div class="skeleton cart-skeleton__image"></div>
+                <div class="cart-skeleton__content">
+                    <div class="skeleton cart-skeleton__category"></div>
+                    <div class="skeleton cart-skeleton__title"></div>
+                    <div class="skeleton cart-skeleton__price"></div>
+                </div>
+            </div>
+            <div class="cart-skeleton__summary">
+                <div class="skeleton cart-skeleton__subtotal"></div>
+                <div class="skeleton cart-skeleton__button"></div>
+            </div>
+        </section>
+    </template>
+
+    <!-- =====================================================
+        SHOPPING CART SKELETON CONTAINER
+        preview.js inserts/removes skeleton here
+    ====================================================== -->
+    <div id="cart-skeleton-container"></div>
+
+    <!-- =====================================================
+         MAIN PAGE
+    ====================================================== -->
+    <main class="plp-page">
+        <section class="ui-section">
+            <div class="container">
+                <!-- =====================================================
+                     TEMPORARY LANGUAGE SWITCH BUTTONS
+                ====================================================== -->
+                <div class="language-switch" style="margin-bottom:20px; display: flex; gap: 6px;">
+                    <button id="lang-en" class="btn btn-primary" type="button">
+                        EN
+                    </button>
+                    <button id="lang-fa" class="btn btn-secondary" type="button">
+                        دری
+                    </button>
+                    <!-- =====================================================
+                     TEMPORARY SHOPPING CART BUTTON
+                    ====================================================== -->
+                    <button id="shopping-cart-button" class="btn btn-primary" type="button"
+                        style="align-items: center;">
+                        <svg height="30" width="30" viewBox="0 0 512 512">
+                            <path fill="#CCD1D9"
+                                d="M479 213v-21h-63l8-52-21-3-8 55h-74v-51h-22v51h-71l-9-55-21 3 8 52h-65v21h68l8 54h-57v21h60l10 66 21-3-9-63h57v62h22v-62h59l-9 63 21 3 10-66h55v-21h-52l8-54zm-241 54l-8-54h69v54zm145 0h-63v-54h71z" />
+                            <path fill="#E6E9ED"
+                                d="M448 384H181c-6 0-11-5-11-11 0-6 5-11 11-11h267l64-234H129L111 61l-9-7V53L13 43l-1 1c0 0-1 0-1 0C5 43 0 48 0 54c0 5 4 10 10 10l82 10 15 54h0l59 217c-10 6-16 16-16 28 0 18 14 32 32 32h266c6 0 11-5 11-11s-5-11-11-11zm36-235l-52 192H187L135 149h349z" />
+                            <path fill="#434A54"
+                                d="M384 384c-24 0-43 19-43 43s19 43 43 43 43-19 43-43-19-43-43-43zm-171 0c-23 0-42 19-42 43s19 43 42 43c24 0 43-19 43-43s-19-43-43-43z" />
+                            <path fill="#F5F7FA"
+                                d="M395 427c0 6-5 11-11 11s-11-5-11-11 5-11 11-11 11 5 11 11zm-171 0c0 6-5 11-11 11s-11-5-11-11 5-11 11-11 11 5 11 11z" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- =====================================================
+                     BREADCRUMB
+                     Home → Beauty-Fragrance → Perfume Sets
+                ====================================================== -->
+                <nav class="breadcrumb" aria-label="breadcrumb">
+                    <a id="breadcrumb-home" class="breadcrumb__item" href="../../../../../index.html"></a>
+                    <span>/</span>
+                    <a id="breadcrumb-beauty-fragrance" class="breadcrumb__item" href="../beauty-fragrance.html"></a>
+                    <span>/</span>
+                    <span id="breadcrumb-perfume-sets" class="breadcrumb__item breadcrumb__item--current"></span>
+                </nav>
+
+                <!-- =====================================================
+                     CATEGORY HEADER
+                     Dynamic content from Bu-fr-ps-preview.js
+                ====================================================== -->
+                <section class="plp-header">
+                    <h1 id="category-title" class="plp-header__title"></h1>
+                    <p id="category-description" class="plp-header__description"></p>
+                    <span id="product-count" class="plp-header__count number"></span>
+                </section>
+
+                <!-- =====================================================
+                     SEARCH BOX
+                     Dynamic Search handled by preview.js
+                ====================================================== -->
+                <section class="plp-search-section search-box">
+                    <svg class="search-box__icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M10 18a8 8 0 1 1 5.292-14.002A8 8 0 0 1 10 18zm11 3-6-6" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        </path>
+                    </svg>
+                    <input id="search-products" class="search-box__input" type="search" autocomplete="off"
+                        placeholder="">
+                </section>
+
+                <!-- =====================================================
+                     PRODUCT GRID
+                     Product cards are generated dynamically
+                     by Bu-fr-ps-preview.js
+                ====================================================== -->
+                <section class="plp-product-section">
+                    <div id="product-grid" class="product-grid"></div>
+                    <!-- =====================================================
+                         EMPTY STATE
+                         Displayed when search has no result
+                    ====================================================== -->
+                    <div id="empty-state" class="plp-empty-state" hidden>
+                        <h3 id="empty-title"></h3>
+                        <p id="empty-description"></p>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <!-- =====================================================
+         PAGE JAVASCRIPT MODULE
+    ====================================================== -->
+    <script type="module" src="./Bu-fr-ps-preview.js"></script>
+
+</body>
+
+</html>
