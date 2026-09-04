@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title id="page-title"></title>
+
+    <!-- =========================================
+         GLOBAL DESIGN SYSTEM
+    ========================================== -->
+    <link rel="stylesheet" href="../../../../../src/css/style.css">
+
+    <!-- =========================================
+         PDP PAGE
+    ========================================== -->
+    <link rel="stylesheet" href="../../../../../src/css/pages/pdp.css">
+
+</head>
+
+<body>
+
+    <!-- =====================================================
+        SHOPPING CART LOADING SKELETON TEMPLATE
+    ====================================================== -->
+    <template id="shopping-cart-skeleton">
+
+        <section class="cart-skeleton">
+            <div class="cart-skeleton__item">
+                <div class="skeleton cart-skeleton__image"></div>
+                <div class="cart-skeleton__content">
+                    <div class="skeleton cart-skeleton__category"></div>
+                    <div class="skeleton cart-skeleton__title"></div>
+                    <div class="skeleton cart-skeleton__price"></div>
+                </div>
+            </div>
+            <div class="cart-skeleton__item">
+                <div class="skeleton cart-skeleton__image"></div>
+                <div class="cart-skeleton__content">
+                    <div class="skeleton cart-skeleton__category"></div>
+                    <div class="skeleton cart-skeleton__title"></div>
+                    <div class="skeleton cart-skeleton__price"></div>
+                </div>
+            </div>
+            <div class="cart-skeleton__item">
+                <div class="skeleton cart-skeleton__image"></div>
+                <div class="cart-skeleton__content">
+                    <div class="skeleton cart-skeleton__category"></div>
+                    <div class="skeleton cart-skeleton__title"></div>
+                    <div class="skeleton cart-skeleton__price"></div>
+                </div>
+            </div>
+            <div class="cart-skeleton__summary">
+                <div class="skeleton cart-skeleton__subtotal"></div>
+                <div class="skeleton cart-skeleton__button"></div>
+            </div>
+        </section>
+
+    </template>
+
+    <!-- =====================================================
+        SHOPPING CART SKELETON CONTAINER
+        preview.js inserts/removes skeleton here
+    ====================================================== -->
+    <div id="cart-skeleton-container"></div>
+
+    <!-- =========================================
+         PDP LOADING SKELETON TEMPLATE
+         Rendered by Bu-lip-pdp-preview.js
+    ========================================== -->
+    <template id="pdp-skeleton">
+        <section class="pdp-skeleton">
+            <!-- Media -->
+            <section class="pdp-skeleton-media-wrapper">
+                <div class="pdp-skeleton__media">
+                    <div class="pdp-skeleton__thumbnails">
+                        <div class="skeleton skeleton-thumb"></div>
+                        <div class="skeleton skeleton-thumb"></div>
+                        <div class="skeleton skeleton-thumb"></div>
+                        <div class="skeleton skeleton-thumb"></div>
+                    </div>
+                    <div class="skeleton skeleton-main-image"></div>
+                </div>
+                <!-- Product Info -->
+                <div class="pdp-skeleton__content">
+                    <div class="skeleton skeleton-collection"></div>
+                    <div class="skeleton skeleton-product-title"></div>
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text short"></div>
+                    <div class="skeleton skeleton-price"></div>
+                    <div class="skeleton skeleton-cart-button"></div>
+                </div>
+            </section>
+            <!-- Description -->
+            <section class="pdp-description-skeleton">
+                <div class="skeleton skeleton-section-title"></div>
+                <div class="skeleton skeleton-paragraph"></div>
+                <div class="skeleton skeleton-paragraph"></div>
+                <div class="skeleton skeleton-paragraph short"></div>
+            </section>
+            <!-- Specifications -->
+            <section class="pdp-specs-skeleton">
+                <div class="skeleton skeleton-section-title"></div>
+                <div class="skeleton skeleton-spec-row"></div>
+                <div class="skeleton skeleton-spec-row"></div>
+                <div class="skeleton skeleton-spec-row"></div>
+                <div class="skeleton skeleton-spec-row"></div>
+            </section>
+        </section>
+    </template>
+
+    <!-- =========================================
+         PDP SKELETON CONTAINER
+    ========================================== -->
+    <div id="skeleton-container"></div>
+
+    <!-- =========================================
+         MAIN PAGE
+    ========================================== -->
+
+    <main class="pdp-page">
+
+        <section class="ui-section">
+
+            <div class="container">
+
+                <!-- =========================================
+                     TEMP LANGUAGE SWITCH
+                ========================================== -->
+
+                <div class="language-switch" style="margin-bottom:20px;display:flex;gap:6px;">
+
+                    <button id="lang-en" class="btn btn-primary" type="button">
+                        EN
+                    </button>
+
+                    <button id="lang-fa" class="btn btn-secondary" type="button">
+                        دری
+                    </button>
+
+                    <!-- =====================================================
+                     TEMPORARY SHOPPING CART BUTTON
+                    ====================================================== -->
+                    <button id="shopping-cart-button" class="btn btn-primary" type="button"
+                        style="align-items: center;">
+                        <svg height="30" width="30" viewBox="0 0 512 512">
+                            <path fill="#CCD1D9"
+                                d="M479 213v-21h-63l8-52-21-3-8 55h-74v-51h-22v51h-71l-9-55-21 3 8 52h-65v21h68l8 54h-57v21h60l10 66 21-3-9-63h57v62h22v-62h59l-9 63 21 3 10-66h55v-21h-52l8-54zm-241 54l-8-54h69v54zm145 0h-63v-54h71z" />
+                            <path fill="#E6E9ED"
+                                d="M448 384H181c-6 0-11-5-11-11 0-6 5-11 11-11h267l64-234H129L111 61l-9-7V53L13 43l-1 1c0 0-1 0-1 0C5 43 0 48 0 54c0 5 4 10 10 10l82 10 15 54h0l59 217c-10 6-16 16-16 28 0 18 14 32 32 32h266c6 0 11-5 11-11s-5-11-11-11zm36-235l-52 192H187L135 149h349z" />
+                            <path fill="#434A54"
+                                d="M384 384c-24 0-43 19-43 43s19 43 43 43 43-19 43-43-19-43-43-43zm-171 0c-23 0-42 19-42 43s19 43 42 43c24 0 43-19 43-43s-19-43-43-43z" />
+                            <path fill="#F5F7FA"
+                                d="M395 427c0 6-5 11-11 11s-11-5-11-11 5-11 11-11 11 5 11 11zm-171 0c0 6-5 11-11 11s-11-5-11-11 5-11 11-11 11 5 11 11z" />
+                        </svg>
+                    </button>
+
+                </div>
+
+                <!-- =========================================
+                     BREADCRUMB
+                     Home / Beauty-Lip / Collection / Product
+                ========================================== -->
+                <nav class="breadcrumb" aria-label="breadcrumb">
+
+                    <a id="breadcrumb-home" class="breadcrumb__item" href="../../../../../index.html"></a>
+                    <span>/</span>
+                    <a id="breadcrumb-category" class="breadcrumb__item" href="../beauty-lip.html"></a>
+                    <span>/</span>
+                    <a id="breadcrumb-collection" class="breadcrumb__item" href="#"></a>
+                    <span>/</span>
+                    <span id="breadcrumb-product" class="breadcrumb__item breadcrumb__item--current"></span>
+
+                </nav>
+
+                <!-- =========================================
+                     PDP CONTAINER
+                     Everything below is rendered dynamically
+                ========================================== -->
+
+                <div id="pdp-container"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- =========================================
+         PAGE SCRIPT
+    ========================================== -->
+
+    <script type="module" src="./Bu-lip-pdp-preview.js"></script>
+
+</body>
+
+</html>
