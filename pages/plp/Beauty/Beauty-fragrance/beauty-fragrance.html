@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title id="page-title"></title>
+
+    <!-- Global Design System -->
+    <link rel="stylesheet" href="../../../../src/css/style.css">
+
+    <!-- PLP Collection Template -->
+    <link rel="stylesheet" href="../../../../src/css/pages/plp-collection.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         LOADING SKELETON TEMPLATE
+    ====================================================== -->
+    <template id="plp-skeleton">
+
+        <section class="plp-category-skeleton">
+
+            <!-- Hero Skeleton -->
+            <div class="skeleton plp-category-skeleton__hero"></div>
+
+            <!-- Category Grid Skeleton -->
+            <div class="plp-category-skeleton__grid">
+
+                <div class="category-skeleton-card">
+                    <div class="skeleton category-skeleton-card__image"></div>
+
+                    <div class="category-skeleton-card__content">
+                        <div class="skeleton category-skeleton-card__title"></div>
+                        <div class="skeleton category-skeleton-card__count"></div>
+                    </div>
+                </div>
+
+                <div class="category-skeleton-card">
+                    <div class="skeleton category-skeleton-card__image"></div>
+
+                    <div class="category-skeleton-card__content">
+                        <div class="skeleton category-skeleton-card__title"></div>
+                        <div class="skeleton category-skeleton-card__count"></div>
+                    </div>
+                </div>
+
+                <div class="category-skeleton-card">
+                    <div class="skeleton category-skeleton-card__image"></div>
+
+                    <div class="category-skeleton-card__content">
+                        <div class="skeleton category-skeleton-card__title"></div>
+                        <div class="skeleton category-skeleton-card__count"></div>
+                    </div>
+                </div>
+
+                <div class="category-skeleton-card">
+                    <div class="skeleton category-skeleton-card__image"></div>
+
+                    <div class="category-skeleton-card__content">
+                        <div class="skeleton category-skeleton-card__title"></div>
+                        <div class="skeleton category-skeleton-card__count"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </template>
+
+
+    <!-- =====================================================
+         SKELETON CONTAINER
+    ====================================================== -->
+    <div id="skeleton-container"></div>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+    <main class="plp-page">
+
+        <section class="ui-section">
+
+            <div class="container">
+
+                <!-- =====================================================
+                     TEMPORARY LANGUAGE SWITCH BUTTON
+                ====================================================== -->
+                <div class="language-switch" style="margin-bottom:20px; display: flex; gap: 6px;">
+
+                    <button id="lang-en" class="btn btn-primary" type="button">
+                        EN
+                    </button>
+
+                    <button id="lang-fa" class="btn btn-secondary" type="button">
+                        دری
+                    </button>
+                </div>
+
+                <!-- =====================================================
+                     BREADCRUMB
+                     Home / Beauty-Fragrance
+                ====================================================== -->
+                <nav class="breadcrumb" aria-label="breadcrumb">
+
+                    <a href="../../../../index.html" id="breadcrumb-home" class="breadcrumb__item"></a>
+                    <span>/</span>
+                    <span id="breadcrumb-beauty-fragrance" class="breadcrumb__item breadcrumb__item--current"></span>
+
+                </nav>
+
+                <!-- =====================================================
+                     HERO SECTION
+                ====================================================== -->
+                <section class="plp-hero">
+
+                    <div class="plp-hero__content">
+                        <h1 id="hero-title" class="plp-hero__title"></h1>
+                        <p id="hero-description" class="plp-hero__description"></p>
+                    </div>
+
+                    <div class="plp__media">
+                        <img id="hero-image" src="" alt="" loading="eager">
+                    </div>
+
+                </section>
+
+                <!-- =====================================================
+                     SEARCH BOX
+                     Dynamic Search handled by preview.js
+                ====================================================== -->
+                <section class="plp-search-section search-box">
+
+                    <svg class="search-box__icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M10 18a8 8 0 1 1 5.292-14.002A8 8 0 0 1 10 18zm11 3-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                    </svg>
+                    <input id="search-products" class="search-box__input" type="search" autocomplete="off" placeholder="">
+
+                </section>
+
+                <!-- =====================================================
+                     CATEGORY GRID
+                     Cards are generated dynamically by preview.js
+                ====================================================== -->
+                <section class="plp-category-section">
+
+                    <div id="category-grid"
+                         class="plp-category-grid"
+                         hidden>
+                    </div>
+
+                    <!-- Empty Search Result -->
+                    <div id="empty-state"
+                         class="plp-empty-state"
+                         hidden>
+
+                        <h3 id="empty-title"></h3>
+                        <p id="empty-description"></p>
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         PAGE JAVASCRIPT
+    ====================================================== -->
+    <script type="module" src="./beauty-fragrance-preview.js"></script>
+
+</body>
+
+</html>
