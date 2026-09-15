@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Bags</title>
+<link rel="stylesheet" href="../../../src/css/style.css">
+<link rel="stylesheet" href="../../../src/css/pages/plp-product.css">
+<script src="./bags.en.js" defer></script>
+<script src="./bags.fa.js" defer></script>
+<script src="./bags.data.js" defer></script>
+<script src="./bags.preview.js" defer></script>
+
+<style>
+/* ============================================================
+   بخش: رفع مشکل سبد خرید (Cart Drawer) - همیشه باز بودن
+============================================================ */
+.cart-drawer {
+  overflow: hidden;
+  visibility: hidden;
+  transition: visibility 0s linear var(--transition-normal);
+}
+.cart-drawer.is-open {
+  visibility: visible;
+  transition: visibility 0s linear 0s;
+}
+
+.cart-drawer__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .35);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+.cart-drawer.is-open .cart-drawer__overlay {
+  opacity: 1;
+}
+
+.cart-drawer__panel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  transform: translateX(100%);
+  transition: transform var(--transition-normal);
+}
+.cart-drawer.is-open .cart-drawer__panel {
+  transform: translateX(0);
+}
+
+.cart-drawer__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+.cart-drawer__title {
+  font-family: var(--font-heading-en);
+  color: var(--color-text-primary);
+}
+.cart-drawer__close {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+}
+.cart-drawer__body {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-4);
+}
+.cart-drawer__empty {
+  text-align: center;
+  color: var(--color-text-muted);
+  padding: var(--space-8) 0;
+}
+.cart-drawer__footer {
+  padding: var(--space-5);
+  border-top: 1px solid var(--color-border);
+}
+.cart-drawer__subtotal {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+  color: var(--color-text-primary);
+}
+.cart-drawer__checkout {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--color-mauve-dusty);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+.cart-drawer__checkout:hover {
+  background: var(--color-mauve-deep);
+}
+
+/* بخش: زیرالمان‌های آیتم‌های داخل سبد خرید */
+.cart-item__image-wrap {
+  width: 72px;
+  flex-shrink: 0;
+}
+.cart-item__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.cart-item__actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.cart-item__quantity {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.cart-item__quantity-button {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--color-mauve-dusty);
+  color: #fff;
+  cursor: pointer;
+}
+.cart-item__quantity-value {
+  min-width: 20px;
+  text-align: center;
+}
+.cart-item__remove {
+  border: none;
+  background: none;
+  color: #D64545;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .cart-drawer {
+    width: 90%;
+  }
+}
+
+/* ============================================================
+   بخش: رفع مشکل به‌هم‌ریختگی سرچ‌بار
+============================================================ */
+.plp-page .search-box {
+  width: 100%;
+  max-width: none;
+  margin: 0 0 var(--space-6);
+}
+</style>
+</head>
+<body>
+</body>
+</html>
